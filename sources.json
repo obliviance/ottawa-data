@@ -1,0 +1,788 @@
+{
+  "$comment": "Catalogue of public data and information sources for the governance of Ottawa, Ontario.",
+  "version": "0.1.0",
+  "compiled": "2026-08-17",
+  "verification_status": "unverified",
+  "verification_note": "Compiled from web search result metadata only. The compiling environment blocked all outbound HTTP, so no URL below was opened and read. Treat urls and especially access methods as leads to verify.",
+  "access_vocabulary": {
+    "api": "Live queryable endpoint (REST, GTFS-RT, ArcGIS GeoServices, Open311).",
+    "bulk": "Downloadable CSV / GeoJSON / shapefile / XLS.",
+    "html": "Web pages or PDFs only; requires scraping or parsing.",
+    "request": "On-site, by freedom-of-information request, or by written request."
+  },
+  "categories": {
+    "foundational": "Cross-cutting portals and the spatial services root",
+    "elections": "Electoral process, candidates, campaign finance",
+    "council": "Council proceedings, decisions, legislation",
+    "accountability": "Oversight offices, lobbying, disclosure",
+    "finance": "Budgets, financial reporting, procurement, assessment",
+    "planning": "Development applications, zoning, land use, appeals",
+    "transportation": "Transit, roads, collisions, enforcement",
+    "safety": "Policing, fire, paramedic services",
+    "social": "Public health, housing, homelessness, social services",
+    "environment": "Water, waste, watershed, utilities, green space",
+    "services": "311, consultation, library, recreation",
+    "statistics": "Neighbourhood and demographic statistics",
+    "thirdparty": "Independent trackers and civic-technology projects",
+    "otherjurisdiction": "Non-municipal bodies governing land or services in Ottawa",
+    "archives": "Historical record"
+  },
+  "sources": [
+    {
+      "id": "open-ottawa",
+      "name": "Open Ottawa / Donnees ouvertes",
+      "category": "foundational",
+      "operator": "City of Ottawa",
+      "urls": ["https://open.ottawa.ca/", "https://ouverte.ottawa.ca/", "https://open.ottawa.ca/pages/developer-resources"],
+      "access": ["api", "bulk"],
+      "licence": "Open Government Licence",
+      "description": "The city's ArcGIS Hub catalogue. Every dataset exposes GeoService and GeoJSON endpoints alongside CSV, shapefile and KML download.",
+      "verify": false
+    },
+    {
+      "id": "arcgis-rest-root",
+      "name": "City ArcGIS REST services root",
+      "category": "foundational",
+      "operator": "City of Ottawa",
+      "urls": ["https://maps.ottawa.ca/arcgis/rest/services/"],
+      "access": ["api"],
+      "description": "Raw ArcGIS MapServer directory behind geoOttawa. Observed services include Zoning, Basemap_Ottawa and TopographicMapping (contours, building footprints, pathways). Cleanest bulk-ingestion path for anything spatial.",
+      "verify": false
+    },
+    {
+      "id": "geoottawa",
+      "name": "geoOttawa",
+      "category": "foundational",
+      "operator": "City of Ottawa",
+      "urls": ["https://maps.ottawa.ca/geoottawa/"],
+      "access": ["html"],
+      "description": "Public map viewer over the ArcGIS services. Search by address, intersection, street segment or facility. Use for reconnaissance, then pull the layer from REST.",
+      "verify": false
+    },
+    {
+      "id": "open-data-policy",
+      "name": "Open Data policy and programme",
+      "category": "foundational",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/open-data"],
+      "access": ["html"],
+      "description": "Licence terms, publication commitments, and the request channel for datasets not yet released.",
+      "verify": false
+    },
+    {
+      "id": "candidate-list",
+      "name": "Certified candidate list",
+      "category": "elections",
+      "operator": "City of Ottawa (City Clerk)",
+      "urls": ["https://elections.ottawa.ca/CandidateList/CandidateList"],
+      "access": ["html"],
+      "description": "Authoritative roster of registered candidates: mayor, 24 wards, four school boards. Source of truth for who is on the ballot.",
+      "verify": false
+    },
+    {
+      "id": "who-is-running",
+      "name": "Who is running in my ward?",
+      "category": "elections",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/city-hall/elections/voters/who-running-my-ward"],
+      "access": ["html"],
+      "description": "Same roster behind an address lookup. Useful as a ward-boundary geocoding check.",
+      "verify": false
+    },
+    {
+      "id": "campaign-finance",
+      "name": "Campaign financial statements and contributions",
+      "category": "elections",
+      "operator": "City of Ottawa (City Clerk)",
+      "urls": [
+        "https://ottawa.ca/en/city-hall/elections/candidates/candidate-campaign-finances-and-contributions",
+        "https://ottawa.ca/en/city-hall/elections/previous-elections-and-appointment-processes/financial-statements-2022-municipal-elections/candidate-and-third-party-advertiser-compliance-reports"
+      ],
+      "access": ["html"],
+      "description": "Filed under Municipal Elections Act s.88.25, published free under s.88(9.1). Discloses name, address, date and amount for every contributor of $100 or more. Contribution cap $1,200 per candidate. Filing deadline 2pm the last Friday in March following the election, so 2026 filings land around March 2027.",
+      "verify": false
+    },
+    {
+      "id": "election-key-dates",
+      "name": "Election key dates and candidate information",
+      "category": "elections",
+      "operator": "City of Ottawa",
+      "urls": [
+        "https://ottawa.ca/en/city-hall/elections/learn-more-about-municipal-elections/key-dates-2026-municipal-elections",
+        "https://ottawa.ca/en/city-hall/elections/candidates/information-candidates"
+      ],
+      "access": ["html"],
+      "description": "Statutory calendar, nomination rules, third-party advertiser registration. 2026: nominations opened 1 May, close 21 August 2pm, Clerk certifies by 24 August, election 26 October.",
+      "verify": false
+    },
+    {
+      "id": "election-results-history",
+      "name": "Historical results and ward boundaries",
+      "category": "elections",
+      "operator": "City of Ottawa / Wikipedia",
+      "urls": [
+        "https://open.ottawa.ca/",
+        "https://en.wikipedia.org/wiki/2022_Ottawa_municipal_election",
+        "https://en.wikipedia.org/wiki/2026_Ottawa_municipal_election"
+      ],
+      "access": ["bulk"],
+      "description": "Poll-level results and ward boundary geometries publish to the open data portal. Wikipedia articles are the most convenient freely-licensed tabular version.",
+      "verify": false
+    },
+    {
+      "id": "escribe",
+      "name": "eScribe: agendas, minutes, staff reports",
+      "category": "council",
+      "operator": "City of Ottawa",
+      "urls": ["https://pub-ottawa.escribemeetings.com/"],
+      "access": ["html"],
+      "description": "Every Council, standing committee and board meeting from 18 June 2012 onward. Staff reports attach as filestream.ashx?DocumentId=NNNNNN, a sequential integer, which makes systematic harvesting tractable. Richest untapped corpus in the catalogue.",
+      "verify": false
+    },
+    {
+      "id": "legacy-agendas",
+      "name": "Legacy agenda system (pre-2012)",
+      "category": "council",
+      "operator": "City of Ottawa",
+      "urls": ["https://app06.ottawa.ca/cgi-bin/docs.pl?lang=en"],
+      "access": ["html", "request"],
+      "description": "Older documents. Anything before 2012 not here is held by the City Archives. Video from 2006 to 2012 is by request to Committees@ottawa.ca.",
+      "verify": false
+    },
+    {
+      "id": "council-video",
+      "name": "Council meeting video and audio",
+      "category": "council",
+      "operator": "City of Ottawa",
+      "urls": ["https://www.youtube.com/channel/UCUR3i_hvk3-3i8vtrPg6v1Q"],
+      "access": ["api"],
+      "description": "Live streams plus archived webcasts migrating from the old portal. Auto-captions make this searchable as text, a realistic route to a speech-level record of debate.",
+      "verify": false
+    },
+    {
+      "id": "bylaws-az",
+      "name": "By-laws A to Z",
+      "category": "council",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z"],
+      "access": ["html"],
+      "description": "Consolidated by-laws in HTML. Includes Procurement (2000-50), Lobbyist Registry, Integrity Commissioner (2021-7), Zoning (2026-50).",
+      "verify": false
+    },
+    {
+      "id": "documents-repo",
+      "name": "Document repository",
+      "category": "council",
+      "operator": "City of Ottawa",
+      "urls": ["https://documents.ottawa.ca/"],
+      "access": ["html"],
+      "description": "Where most linked PDFs live: annual reports, manuals, primers, guides.",
+      "verify": false
+    },
+    {
+      "id": "council-structure",
+      "name": "Council and committee structure",
+      "category": "council",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/city-hall/council-committees-and-boards"],
+      "access": ["html"],
+      "description": "Membership, mandates and terms of reference for standing committees, sub-committees, adjudicative bodies and local boards.",
+      "verify": false
+    },
+    {
+      "id": "auditor-general",
+      "name": "Office of the Auditor General",
+      "category": "accountability",
+      "operator": "City of Ottawa (independent statutory officer)",
+      "urls": ["https://www.oagottawa.ca/"],
+      "access": ["html"],
+      "description": "Performance, financial and compliance audits across all departments and agencies. Standalone site, separate from ottawa.ca. Example: Council Expenses Audit, November 2025.",
+      "verify": false
+    },
+    {
+      "id": "integrity-commissioner",
+      "name": "Integrity Commissioner",
+      "category": "accountability",
+      "operator": "City of Ottawa (independent statutory officer)",
+      "urls": ["https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/integrity-commissioner"],
+      "access": ["html"],
+      "description": "Codes of conduct, Municipal Conflict of Interest Act ss.5/5.1/5.2, closed-meeting investigations. Also serves as Lobbyist Registrar and Meetings Investigator: three mandates, one office.",
+      "verify": false
+    },
+    {
+      "id": "lobbyist-registry",
+      "name": "Lobbyist Registry",
+      "category": "accountability",
+      "operator": "City of Ottawa",
+      "urls": ["https://lobbyist.ottawa.ca/search/searchlobbyist.aspx?lang=en", "https://lobbyist.ottawa.ca/"],
+      "access": ["html"],
+      "description": "Every substantive communication (call, meeting, email) between lobbyists and members of Council or staff. In force since 1 September 2012. Public search requires no login. Pairs naturally with development applications and council votes.",
+      "verify": false
+    },
+    {
+      "id": "mfippa-disclosure",
+      "name": "MFIPPA disclosure log and access requests",
+      "category": "accountability",
+      "operator": "City of Ottawa (Access to Information and Privacy Office)",
+      "urls": [
+        "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/public-disclosure/disclosure-mfippa-requests/general-information",
+        "https://forms.ottawa.ca/en/form/occ/policy/mfippa-access-form"
+      ],
+      "access": ["html", "request"],
+      "description": "Quarterly list of completed freedom-of-information requests of public interest. Records obtained by quoting the request number to mfippa@ottawa.ca. The route to anything not proactively published.",
+      "verify": false
+    },
+    {
+      "id": "office-expenses",
+      "name": "Members' office expenses and remuneration",
+      "category": "accountability",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/public-disclosure/disclosure-office-expenses"],
+      "access": ["html"],
+      "description": "Monthly per-member office expense disclosure plus the annual Statement of Remuneration, Benefits and Expenses required by the Municipal Act. Constituency Services Budget was $284,648 per ward councillor in 2023; the Mayor's was $970,646.",
+      "verify": false
+    },
+    {
+      "id": "sunshine-list",
+      "name": "Public Sector Salary Disclosure",
+      "category": "accountability",
+      "operator": "Government of Ontario",
+      "urls": ["https://www.ontario.ca/page/public-sector-salary-disclosure"],
+      "access": ["bulk"],
+      "description": "Provincial, but covers all city employees earning $100,000 or more. Published as bulk data by year and employer.",
+      "verify": false
+    },
+    {
+      "id": "financial-reports",
+      "name": "Budget and financial reports",
+      "category": "finance",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning/financial-reports-and-statements"],
+      "access": ["html"],
+      "description": "Audited annual financial statements, annual reports (2020 to 2024 online), and quarterly operating and capital budget status reports showing actual against budget by department.",
+      "verify": false
+    },
+    {
+      "id": "budget-documents",
+      "name": "Budget documents by year",
+      "category": "finance",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning"],
+      "access": ["html", "bulk"],
+      "description": "Tabled and adopted budgets, 2022 onward. Line-item detail generally in PDF; some budget data mirrored to Open Ottawa.",
+      "verify": false
+    },
+    {
+      "id": "fir",
+      "name": "Financial Information Return (FIR)",
+      "category": "finance",
+      "operator": "Ontario Ministry of Municipal Affairs and Housing",
+      "urls": ["https://efis.fma.csc.gov.on.ca/fir/", "https://data.ontario.ca/dataset/financial-information-return-fir-for-municipalities"],
+      "access": ["bulk"],
+      "description": "Province-mandated annual financial return under Municipal Act s.294(1), filed by 31 May. Data back to 1977 in a consistent schema across every Ontario municipality. The only clean way to benchmark Ottawa against peers.",
+      "verify": false
+    },
+    {
+      "id": "procurement",
+      "name": "Procurement and tenders",
+      "category": "finance",
+      "operator": "City of Ottawa (Supply Services)",
+      "urls": ["https://ottawa.ca/en/business/procurement/procurement", "https://ottawa.ca/en/business/procurement/procurement-law"],
+      "access": ["html"],
+      "description": "Supply Services administers over $1B annually under By-law 2000-50. Bid opportunities post to a third-party e-tendering platform.",
+      "verify": true,
+      "verify_note": "Search results pointed at both Biddingo and third-party aggregators. Confirm the current platform before building against it."
+    },
+    {
+      "id": "mpac",
+      "name": "MPAC property assessment",
+      "category": "finance",
+      "operator": "Municipal Property Assessment Corporation",
+      "urls": ["https://www.mpac.ca/"],
+      "access": ["request"],
+      "description": "Provincial corporation assessing all Ontario properties. Per-property values are access-restricted; aggregate assessment-roll data by class and municipality is published.",
+      "verify": false
+    },
+    {
+      "id": "devapps",
+      "name": "Development Applications Search",
+      "category": "planning",
+      "operator": "City of Ottawa",
+      "urls": ["https://devapps.ottawa.ca/"],
+      "access": ["html"],
+      "description": "Every planning application with reports, plans, status and comment windows. Stable per-application URLs of the form /en/applications/D07-12-19-0075/details, so the file-number scheme is enumerable. 28-day standard comment period.",
+      "verify": false
+    },
+    {
+      "id": "zoning-2026-50",
+      "name": "Zoning By-law 2026-50",
+      "category": "planning",
+      "operator": "City of Ottawa",
+      "urls": [
+        "https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z/zoning-law-law-no-2026-50",
+        "https://maps.ottawa.ca/arcgis/rest/services/Zoning/MapServer"
+      ],
+      "access": ["html", "api"],
+      "description": "Approved 28 January 2026, enacted 11 March 2026, replacing 2008-250 after roughly five years of consultation. Re-consolidated after every Council meeting that amends it, with margin notes flagging provisions under appeal.",
+      "verify": false
+    },
+    {
+      "id": "official-plan",
+      "name": "Official Plan",
+      "category": "planning",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/planning-development-and-construction"],
+      "access": ["html"],
+      "description": "The 2021 Official Plan and its schedules: growth management, transects, urban boundary. The policy layer above zoning.",
+      "verify": false
+    },
+    {
+      "id": "committee-of-adjustment",
+      "name": "Committee of Adjustment decisions",
+      "category": "planning",
+      "operator": "City of Ottawa / CanLII",
+      "urls": ["https://www.canlii.org/", "https://ottawa.ca/en/planning-development-and-construction/committee-adjustment/find-decision"],
+      "access": ["html"],
+      "description": "Ottawa was the first committee of adjustment in Canada to publish decisions on CanLII: keyword-searchable by street, ward or application type, in a citation-stable legal database. Also on eScribe.",
+      "verify": false
+    },
+    {
+      "id": "olt",
+      "name": "Ontario Land Tribunal",
+      "category": "planning",
+      "operator": "Government of Ontario",
+      "urls": ["https://olt.gov.on.ca/decisions/"],
+      "access": ["html"],
+      "description": "Appeals of city planning and Committee of Adjustment decisions. Searchable by municipality; also mirrored on CanLII. Decisions older than ten years are by phone request.",
+      "verify": false
+    },
+    {
+      "id": "building-permits",
+      "name": "Building permits and land management",
+      "category": "planning",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/planning-development-and-construction/building-and-renovating"],
+      "access": ["bulk"],
+      "description": "Permit applications run through the My ServiceOttawa Land Management System. Issued-permit counts appear on Open Ottawa; per-permit detail is less consistently published.",
+      "verify": false
+    },
+    {
+      "id": "octranspo-gtfs",
+      "name": "OC Transpo GTFS and GTFS-Realtime",
+      "category": "transportation",
+      "operator": "OC Transpo / City of Ottawa",
+      "urls": [
+        "https://www.octranspo.com/en/plan-your-trip/travel-tools/developers/",
+        "https://nextrip-public-api.developer.azure-api.net/",
+        "https://www.transit.land/feeds/f-f24-octranspo"
+      ],
+      "access": ["api", "bulk"],
+      "description": "Static GTFS plus GTFS-RT Vehicle Positions and Trip Updates. Free API key via the Azure developer portal; commercial use permitted. Buses report GPS roughly every 30 seconds. Contact octranspo-dev@ottawa.ca.",
+      "verify": false
+    },
+    {
+      "id": "traffic-ottawa",
+      "name": "Traffic Ottawa open data",
+      "category": "transportation",
+      "operator": "City of Ottawa",
+      "urls": ["https://traffic.ottawa.ca/en/opendata", "https://traffic.ottawa.ca/map/service/ase_camera"],
+      "access": ["api"],
+      "description": "Its own open-data surface separate from the main portal: live traffic map, cameras, incidents, and service endpoints including automated speed enforcement camera locations.",
+      "verify": false
+    },
+    {
+      "id": "collisions",
+      "name": "Traffic collision data",
+      "category": "transportation",
+      "operator": "City of Ottawa / Ontario MTO",
+      "urls": [
+        "https://open.ottawa.ca/datasets/ottawa::traffic-collision-data/about",
+        "https://ottawa.ca/en/parking-roads-and-travel/road-safety/road-safety-action-plan/fatal-and-major-injury-collision-data"
+      ],
+      "access": ["bulk", "api"],
+      "description": "All reportable collisions including property-damage-only, in CSV and shapefile. Sourced from MTO via Ottawa Police, OPP and RCMP. Every record validated at least once, roughly half twice.",
+      "verify": false
+    },
+    {
+      "id": "automated-speed-enforcement",
+      "name": "Automated speed enforcement",
+      "category": "transportation",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/parking-roads-and-travel/road-safety/enforcement/automated-speed-enforcement"],
+      "access": ["bulk"],
+      "description": "Month-by-month charge and speed data for every camera location, plus siting methodology.",
+      "verify": false
+    },
+    {
+      "id": "road-network",
+      "name": "Road network, pathways, cycling infrastructure",
+      "category": "transportation",
+      "operator": "City of Ottawa",
+      "urls": ["https://open.ottawa.ca/datasets/pathway-links/api"],
+      "access": ["api", "bulk"],
+      "description": "Centrelines, sidewalks, multi-use pathways, cycling routes, winter maintenance classes, as spatial layers with GeoJSON endpoints.",
+      "verify": false
+    },
+    {
+      "id": "ops-data-portal",
+      "name": "Ottawa Police Community Safety Data Portal",
+      "category": "safety",
+      "operator": "Ottawa Police Service",
+      "urls": ["https://data.ottawapolice.ca/"],
+      "access": ["api", "bulk"],
+      "description": "Separate ArcGIS Hub launched November 2023, reported as 11 datasets, 7 dashboards and 6 web maps. Dashboards for homicides, shootings and gun seizures, overdose calls, hate- and bias-motivated crime, auto theft, and calls for service by priority. Being an ArcGIS Hub, everything has a GeoJSON endpoint.",
+      "verify": false
+    },
+    {
+      "id": "crime-map",
+      "name": "Crime Map (year to date)",
+      "category": "safety",
+      "operator": "Ottawa Police Service / City of Ottawa",
+      "urls": ["https://open.ottawa.ca/datasets/crime-map-year-to-date/about"],
+      "access": ["bulk"],
+      "description": "Mirrored onto the city portal. Criminal offences open data also published directly by Ottawa Police.",
+      "verify": false
+    },
+    {
+      "id": "police-services-board",
+      "name": "Police Services Board",
+      "category": "safety",
+      "operator": "Ottawa Police Services Board",
+      "urls": ["https://pub-ottawa.escribemeetings.com/"],
+      "access": ["html"],
+      "description": "Board agendas, minutes and reports run through the same eScribe instance as Council: budget, chief's reports, oversight items.",
+      "verify": false
+    },
+    {
+      "id": "fire-paramedic",
+      "name": "Fire, paramedic and emergency services",
+      "category": "safety",
+      "operator": "City of Ottawa",
+      "urls": ["https://open.ottawa.ca/"],
+      "access": ["bulk"],
+      "description": "Station locations, response-time performance and call volumes publish to the open data portal. Service-level detail also appears in annual departmental reports to committee.",
+      "verify": false
+    },
+    {
+      "id": "ottawa-public-health",
+      "name": "Ottawa Public Health reports and dashboards",
+      "category": "social",
+      "operator": "Ottawa Public Health",
+      "urls": ["https://www.ottawapublichealth.ca/en/reports-research-and-statistics/reports-research-and-statistics.aspx"],
+      "access": ["html"],
+      "description": "Seasonal respiratory and enteric outbreak surveillance, Diseases of Public Health Significance, COVID-19 vaccination, and the MHASUH dashboard for mental health, addictions and substance use health. Dashboards are interactive; underlying data is not consistently exposed.",
+      "verify": false
+    },
+    {
+      "id": "housing-homelessness",
+      "name": "Housing and homelessness: plans, facts and data",
+      "category": "social",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/family-and-social-services/housing-and-homelessness/plans-facts-and-data"],
+      "access": ["html"],
+      "description": "City dashboards on housing need and homelessness, plus the 10-Year Housing and Homelessness Plan and its progress reports.",
+      "verify": false
+    },
+    {
+      "id": "social-housing-registry",
+      "name": "Social Housing Registry of Ottawa",
+      "category": "social",
+      "operator": "Social Housing Registry of Ottawa (non-profit)",
+      "urls": ["https://housingregistry.ca/"],
+      "access": ["html"],
+      "description": "Administers the centralized rent-geared-to-income wait list under the Housing Services Act, 2011, across roughly 50 providers. Wait list reported at 12,447 households (2023) rising to 15,140 (2024), with 1,155 households housed in 2024. Waits commonly exceed five years.",
+      "verify": false
+    },
+    {
+      "id": "ateh",
+      "name": "Alliance to End Homelessness Ottawa",
+      "category": "social",
+      "operator": "Alliance to End Homelessness Ottawa",
+      "urls": ["https://www.endhomelessnessottawa.ca/"],
+      "access": ["html"],
+      "description": "Independent annual progress reports and the Ottawa Housing Needs Assessment. Often more pointed than the city's own framing, and a useful cross-check.",
+      "verify": false
+    },
+    {
+      "id": "drinking-water",
+      "name": "Drinking water quality reports",
+      "category": "environment",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/living-ottawa/drinking-water-stormwater-and-wastewater/drinking-water"],
+      "access": ["html"],
+      "description": "Annual report per municipal system under the Safe Drinking Water Act, with full parameter-by-parameter test result tables. Roughly 293 million litres treated daily. Summaries also tabled at committee via eScribe.",
+      "verify": false
+    },
+    {
+      "id": "solid-waste",
+      "name": "Solid waste data and reports",
+      "category": "environment",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/garbage-and-recycling/solid-waste-data-and-reports"],
+      "access": ["html"],
+      "description": "Diversion rates by stream and tonnages by programme. Residential diversion reported at 33 percent (2009) rising to 44 percent (2018); stream rates range from 40 percent for green-bin organics to 96 percent for leaf and yard waste.",
+      "verify": false
+    },
+    {
+      "id": "riverkeeper",
+      "name": "Ottawa Riverkeeper open data",
+      "category": "environment",
+      "operator": "Ottawa Riverkeeper",
+      "urls": ["https://ottawa-riverkeeper-open-data-ork-so.hub.arcgis.com/"],
+      "access": ["api", "bulk"],
+      "description": "Independent watershed monitoring on its own ArcGIS Hub: water quality sampling and river health indicators, fully queryable.",
+      "verify": false
+    },
+    {
+      "id": "conservation-authorities",
+      "name": "Conservation authorities (RVCA, MVCA, SNC)",
+      "category": "environment",
+      "operator": "Rideau Valley, Mississippi Valley and South Nation Conservation Authorities",
+      "urls": ["https://www.rvca.ca/", "https://mvc.on.ca/", "https://www.nation.on.ca/"],
+      "access": ["html", "bulk"],
+      "description": "Three authorities cover Ottawa's watersheds. Each publishes floodplain mapping, watershed report cards and regulated-area layers: the binding constraint on much development, and often absent from city-only datasets.",
+      "verify": true,
+      "verify_note": "Individual authority URLs were not confirmed in search results."
+    },
+    {
+      "id": "hydro-ottawa",
+      "name": "Hydro Ottawa",
+      "category": "environment",
+      "operator": "Hydro Ottawa (municipally owned)",
+      "urls": ["https://hydroottawa.com/"],
+      "access": ["html"],
+      "description": "Municipally-owned distributor. Outage map is live; rate filings and performance metrics are public through the Ontario Energy Board rather than the utility.",
+      "verify": true,
+      "verify_note": "No open data programme surfaced in searching."
+    },
+    {
+      "id": "trees-parks",
+      "name": "Trees, parks and green space",
+      "category": "environment",
+      "operator": "City of Ottawa",
+      "urls": ["https://open.ottawa.ca/"],
+      "access": ["api", "bulk"],
+      "description": "Tree inventory, forest cover, park and facility locations, sports fields, as spatial layers with GeoJSON endpoints.",
+      "verify": false
+    },
+    {
+      "id": "open311",
+      "name": "Open311 and 311 service requests",
+      "category": "services",
+      "operator": "City of Ottawa (ServiceOttawa)",
+      "urls": [
+        "https://open.ottawa.ca/documents/ottawa::open311-api/about",
+        "https://city-of-ottawa-prod.apigee.net/open311/v2/"
+      ],
+      "access": ["api", "bulk"],
+      "description": "GeoReport v2 compliant, GET and POST, with test and production tiers. Raw history publishes as two rolling CSVs on Azure Blob Storage, 311opendata_currentyear.csv (updated daily) and 311opendata_lastyear.csv, carrying ward, responsible department and request description. Reported volume roughly 460,000 requests January 2025 to April 2026.",
+      "verify": true,
+      "verify_note": "apigee.net hosts are frequently migrated. Confirm the endpoint is live before depending on it."
+    },
+    {
+      "id": "engage-ottawa",
+      "name": "Engage Ottawa",
+      "category": "services",
+      "operator": "City of Ottawa",
+      "urls": ["https://engage.ottawa.ca/projects", "https://ottawa.ca/en/city-hall/public-engagement/public-engagement-project-search"],
+      "access": ["html"],
+      "description": "Consultation platform: open and closed projects, survey instruments, and published what-we-heard reports. The record of what the public actually said before a decision.",
+      "verify": false
+    },
+    {
+      "id": "opl",
+      "name": "Ottawa Public Library",
+      "category": "services",
+      "operator": "Ottawa Public Library",
+      "urls": ["https://collections.biblioottawalibrary.ca/"],
+      "access": ["html"],
+      "description": "Branch data, circulation statistics and curated local-statistics guides. Partners with the city on open-data outreach and is a practical access point for census and demographic products.",
+      "verify": false
+    },
+    {
+      "id": "recreation",
+      "name": "Recreation facilities and programmes",
+      "category": "services",
+      "operator": "City of Ottawa",
+      "urls": ["https://open.ottawa.ca/"],
+      "access": ["api"],
+      "description": "Facility locations, rinks, pools, programme registration data. Seasonal layers such as outdoor rink conditions update frequently.",
+      "verify": false
+    },
+    {
+      "id": "ons",
+      "name": "Ottawa Neighbourhood Study",
+      "category": "statistics",
+      "operator": "Ottawa Neighbourhood Study",
+      "urls": ["https://www.neighbourhoodstudy.ca/", "https://ons-sqo.ca/data-stories/"],
+      "access": ["bulk", "api"],
+      "description": "Over 300 indicators per neighbourhood: demographics, socioeconomic conditions, housing, amenities, built environment, health. Custom boundaries built from census tracts plus fieldwork and stakeholder consultation. Layers also published to Open Ottawa. The richest small-area dataset for Ottawa.",
+      "verify": false
+    },
+    {
+      "id": "nei",
+      "name": "Neighbourhood Equity Index",
+      "category": "statistics",
+      "operator": "Ottawa Neighbourhood Study / partners",
+      "urls": ["https://neighbourhoodequity.ca/"],
+      "access": ["html"],
+      "description": "Composite equity scoring across neighbourhoods, renewed 2024 with published methodology documentation. Useful as a ready-made weighting when one defensible composite is wanted rather than 300 raw indicators.",
+      "verify": false
+    },
+    {
+      "id": "community-data-program",
+      "name": "Community Data Program",
+      "category": "statistics",
+      "operator": "Canadian Council on Social Development",
+      "urls": ["https://communitydata.ca/content/ottawa-and-region"],
+      "access": ["request"],
+      "description": "Consortium purchasing custom Statistics Canada tabulations for member organizations. Some products are members-only, but the Ottawa-region catalogue shows what exists.",
+      "verify": false
+    },
+    {
+      "id": "statcan-census",
+      "name": "Statistics Canada Census Profile",
+      "category": "statistics",
+      "operator": "Statistics Canada",
+      "urls": ["https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E"],
+      "access": ["bulk"],
+      "description": "Full profiles at census subdivision, metropolitan area, census tract and dissemination area. Bulk download available. Carleton's MacOdrum Library holds Ottawa-Gatineau census geography files back to 1951 for longitudinal work.",
+      "verify": false
+    },
+    {
+      "id": "ottawa-insights",
+      "name": "Ottawa Insights",
+      "category": "statistics",
+      "operator": "Ottawa Insights (cross-sector partnership)",
+      "urls": ["https://www.ottawainsights.ca/"],
+      "access": ["html"],
+      "description": "Community indicator project pulling city, health and social data into themed narratives: environment, economy, wellbeing.",
+      "verify": false
+    },
+    {
+      "id": "ottwatch",
+      "name": "OttWatch",
+      "category": "thirdparty",
+      "operator": "Independent",
+      "urls": ["https://ottwatch.ca/", "https://ottwatch.ca/devapp/index"],
+      "access": ["html"],
+      "description": "The longest-running Ottawa civic monitor. Automatically scans ottawa.ca and eScribe for new agendas and documents, mirrors the lobbyist registry into a friendlier database, tracks new open-data publications, and maintains its own development application index. Closest thing to prior art for most projects in this space.",
+      "verify": false
+    },
+    {
+      "id": "horizon-vote-tracker",
+      "name": "Horizon Ottawa Vote Tracker",
+      "category": "thirdparty",
+      "operator": "Horizon Ottawa (advocacy)",
+      "urls": ["https://www.horizonottawa.ca/vote_tracker"],
+      "access": ["html"],
+      "description": "How each councillor voted across the 2022 to 2026 term, filterable by councillor, topic and committee. Advocacy-run, so vote selection is editorial, but fills a real gap since Ontario does not require municipalities to publish recorded votes.",
+      "verify": false
+    },
+    {
+      "id": "howtheyvoted",
+      "name": "How They Voted",
+      "category": "thirdparty",
+      "operator": "Independent",
+      "urls": ["https://howtheyvoted.ca/"],
+      "access": ["html"],
+      "description": "Dedicated Ottawa council voting-record site.",
+      "verify": true,
+      "verify_note": "Currency and maintenance status unclear from search results alone."
+    },
+    {
+      "id": "ottawa-lookout",
+      "name": "Ottawa Lookout",
+      "category": "thirdparty",
+      "operator": "Ottawa Lookout (local newsroom)",
+      "urls": ["https://www.ottawalookout.com/p/meet-the-candidates", "https://www.ottawalookout.com/"],
+      "access": ["html"],
+      "description": "Runs the most complete 2026 candidate tracker and per-ward election guides. Journalism rather than data, but consistently ahead of official publication.",
+      "verify": false
+    },
+    {
+      "id": "ottawa-civic-tech",
+      "name": "Ottawa Civic Tech",
+      "category": "thirdparty",
+      "operator": "Volunteer community",
+      "urls": ["https://www.ottawacivictech.ca/", "https://github.com/YOWCT"],
+      "access": ["html"],
+      "description": "Volunteer community with an active meetup and public GitHub organization. The obvious place to find collaborators or avoid duplicating existing work.",
+      "verify": false
+    },
+    {
+      "id": "acorn-voting-records",
+      "name": "ACORN Canada housing voting records",
+      "category": "thirdparty",
+      "operator": "ACORN Canada (advocacy)",
+      "urls": ["https://acorncanada.org/resources/ottawa-voting-records-report/"],
+      "access": ["html"],
+      "description": "Issue-specific scorecard on councillors' affordable-housing votes. Narrow and openly advocacy-framed, but sourced to actual votes.",
+      "verify": false
+    },
+    {
+      "id": "ncc",
+      "name": "National Capital Commission",
+      "category": "otherjurisdiction",
+      "operator": "National Capital Commission (federal crown corporation)",
+      "urls": [
+        "https://open.ottawa.ca/datasets/ncc-open-data-map/about",
+        "https://search.open.canada.ca/opendata/?owner_org=ncc-ccn"
+      ],
+      "access": ["bulk", "api"],
+      "description": "Owns the Greenbelt, Gatineau Park, much of the waterfront and many major parkways. Publishes through the federal open government portal and as a layer on Open Ottawa.",
+      "verify": false
+    },
+    {
+      "id": "open-canada",
+      "name": "Open Government Canada",
+      "category": "otherjurisdiction",
+      "operator": "Government of Canada",
+      "urls": ["https://open.canada.ca/"],
+      "access": ["api", "bulk"],
+      "description": "Federal datasets filterable to the National Capital Region: federal property holdings, employment, transfers to municipalities.",
+      "verify": false
+    },
+    {
+      "id": "data-ontario",
+      "name": "Ontario Open Data",
+      "category": "otherjurisdiction",
+      "operator": "Government of Ontario",
+      "urls": ["https://data.ontario.ca/"],
+      "access": ["api", "bulk"],
+      "description": "Provincial datasets that determine much of what the city can do: FIR, health, education, transfers, licensing.",
+      "verify": false
+    },
+    {
+      "id": "school-boards",
+      "name": "School boards (OCDSB, OCSB, CEPEO, CECCE)",
+      "category": "otherjurisdiction",
+      "operator": "Four Ottawa school boards",
+      "urls": ["https://ocdsb.ca/", "https://ocsb.ca/", "https://cepeo.on.ca/", "https://ecolecatholique.ca/"],
+      "access": ["html"],
+      "description": "Four boards elect trustees on the municipal ballot but govern independently, with their own budgets, minutes and enrolment data. Frequently omitted from municipal data projects despite appearing on the same ballot.",
+      "verify": true,
+      "verify_note": "Individual board URLs were not confirmed in search results."
+    },
+    {
+      "id": "city-archives",
+      "name": "City of Ottawa Archives",
+      "category": "archives",
+      "operator": "City of Ottawa",
+      "urls": ["https://ottawa.ca/en/arts-heritage-and-events/city-ottawa-archives/archives-collection"],
+      "access": ["request"],
+      "description": "Over 20 kilometres of records in climate-controlled vaults at 100 Tallwood Drive, plus photographs, maps, architectural drawings and a 16,000-volume reference library. Holds pre-amalgamation municipal records and everything predating the 2012 eScribe cutover. Mostly paper, consulted on-site; order materials two working days ahead.",
+      "verify": false
+    },
+    {
+      "id": "historical-imagery",
+      "name": "Historical aerial imagery and mapping",
+      "category": "archives",
+      "operator": "City of Ottawa / university libraries",
+      "urls": ["https://maps.ottawa.ca/geoottawa/"],
+      "access": ["html"],
+      "description": "geoOttawa carries historical air-photo layers going back decades. Carleton and uOttawa GIS libraries hold digitized historical map series for the region.",
+      "verify": false
+    }
+  ]
+}
