@@ -29,6 +29,7 @@ ROLLUP_PHRASE = {
     "pdf": "reachable — PDF",
     "reachable_html": "reachable (HTML); access tag & licence still need a human check",
     "needs_browser": "reachable but JavaScript-rendered — needs a Stage 2 browser check",
+    "blocked": "server refused our client (401/403/429) — check in a browser",
     "error": "every catalogued link is dead or erroring",
     "dead": "every catalogued link is dead or erroring",
 }
@@ -124,11 +125,12 @@ Last run **{when}** over {s['urls']} URLs across {s['sources']} sources:
 | --- | --- |
 | Machine-readable surface confirmed (API / bulk / catalogue feed) | {by.get('machine-readable', 0)} |
 | Reachable, plain HTML/PDF — tag & licence unverified | {by.get('reachable_html', 0) + by.get('pdf', 0)} |
-| Reachable but JavaScript-rendered — needs a browser | {by.get('needs_browser', 0)} |
-| One or more links dead or erroring | {by.get('error', 0) + by.get('dead', 0)} |
+| Reachable but needs a browser (JavaScript-rendered, or bot-blocked) | {by.get('needs_browser', 0) + by.get('blocked', 0)} |
+| Every catalogued link dead or erroring | {by.get('error', 0) + by.get('dead', 0)} |
 
 URL-level totals: {s['machine-readable']} machine-readable · {s['reachable_html']} HTML ·
-{s['needs_browser']} need a browser · {s['pdf']} PDF · {s['dead']} dead · {s['error']} erroring.
+{s['needs_browser']} JavaScript-rendered · {s.get('blocked', 0)} bot-blocked ·
+{s['pdf']} PDF · {s['dead']} dead · {s['error']} erroring.
 
 Entries with `"verify": true` in the JSON carry a specific known doubt and are marked
 **[verify]** below.
@@ -152,14 +154,18 @@ def verify_line(src_id: str) -> list[str]:
         detail = f" — {probes[0]}"
 
     broken = [u for u in entry["urls"] if u["outcome"] in ("dead", "error")]
+    blocked = [u for u in entry["urls"] if u["outcome"] == "blocked"]
     if broken and rollup not in ("dead", "error"):
         detail += (f". {len(broken)} of {len(entry['urls'])} links broken: "
                    + "; ".join(f"{u['url']} → {u['http_status'] or 'no DNS'}" for u in broken))
+    if blocked and rollup != "blocked":
+        detail += (f". {len(blocked)} link{'s' * (len(blocked) != 1)} bot-blocked "
+                   f"(fine in a browser): " + "; ".join(u["url"] for u in blocked))
 
     out = [f"> _Checked {when} (stage 0–1): {phrase}{detail}_"]
     if broken and rollup in ("dead", "error"):
         for u in broken:
-            out.append(f">")
+            out.append(">")
             out.append(f"> - `{u['url']}` → {u['error']}")
     return out
 

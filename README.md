@@ -23,11 +23,12 @@ Last run **2026-09-01** over 100 URLs across 72 sources:
 | --- | --- |
 | Machine-readable surface confirmed (API / bulk / catalogue feed) | 15 |
 | Reachable, plain HTML/PDF — tag & licence unverified | 50 |
-| Reachable but JavaScript-rendered — needs a browser | 6 |
-| One or more links dead or erroring | 1 |
+| Reachable but needs a browser (JavaScript-rendered, or bot-blocked) | 6 |
+| Every catalogued link dead or erroring | 1 |
 
 URL-level totals: 17 machine-readable · 68 HTML ·
-9 need a browser · 0 PDF · 3 dead · 3 erroring.
+9 JavaScript-rendered · 1 bot-blocked ·
+0 PDF · 3 dead · 2 erroring.
 
 Entries with `"verify": true` in the JSON carry a specific known doubt and are marked
 **[verify]** below.
@@ -359,7 +360,7 @@ The 2021 Official Plan and its schedules: growth management, transects, urban bo
 
 Ottawa was the first committee of adjustment in Canada to publish decisions on CanLII: keyword-searchable by street, ward or application type, in a citation-stable legal database. Also on eScribe.
 
-> _Checked 2026-09-01 (stage 0–1): reachable (HTML); access tag & licence still need a human check. 1 of 2 links broken: https://www.canlii.org/ → 403_
+> _Checked 2026-09-01 (stage 0–1): reachable (HTML); access tag & licence still need a human check. 1 link bot-blocked (fine in a browser): https://www.canlii.org/_
 - <https://www.canlii.org/>
 - <https://ottawa.ca/en/planning-development-and-construction/committee-adjustment/find-decision>
 

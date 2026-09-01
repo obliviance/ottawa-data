@@ -341,7 +341,7 @@ def fingerprint(url: str, r: dict) -> dict:
 
 # ------------------------------------------------------------------- per source
 
-ROLLUP_RANK = ["dead", "error", "needs_browser", "reachable_html", "pdf", "machine-readable"]
+ROLLUP_RANK = ["dead", "error", "blocked", "needs_browser", "reachable_html", "pdf", "machine-readable"]
 
 
 def check_url(url: str) -> dict:
@@ -362,6 +362,10 @@ def check_url(url: str) -> dict:
     }
     if r["status"] is None:
         rec["outcome"] = "dead"
+        rec["fingerprint"] = None
+        return rec
+    if r["status"] in (401, 403, 429):
+        rec["outcome"] = "blocked"  # server answered but refused this client - check in a browser
         rec["fingerprint"] = None
         return rec
     if r["status"] >= 400:
@@ -462,7 +466,8 @@ def main() -> None:
                 catalogue[sid]["urls"].append(rec)
                 done += 1
                 mark = {"machine-readable": "API ", "pdf": "PDF ", "reachable_html": "html",
-                        "needs_browser": "SPA ", "error": "ERR ", "dead": "DEAD"}[rec["outcome"]]
+                        "needs_browser": "SPA ", "blocked": "BLOK", "error": "ERR ",
+                        "dead": "DEAD"}[rec["outcome"]]
                 print(f"  [{done:>3}/{total}] {mark}  {rec['http_status'] or '---'}  {rec['url'][:88]}")
 
     for sid, entry in catalogue.items():
