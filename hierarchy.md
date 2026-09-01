@@ -570,7 +570,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | 🟢 Open | ~20% | Almost entirely **spatial** (anything with coordinates has a GeoJSON endpoint) plus a handful of well-run bulk series: FIR, GTFS, the police ArcGIS Hub, collisions, ASE, the sunshine list, StatCan, ONS. |
 | 🟡 Partial | ~50% | The bulk of municipal governance: agendas, budgets, audits, disclosure logs, planning files, health dashboards — all real, all public, all trapped in PDF, HTML or dashboards with no underlying data. |
 | 🔴 Closed | ~20% | Two sub-types: **access-restricted** (land registry, MPAC per-property, FOI-only records, collective agreements, commercial data) and **never produced** (recorded votes as data, vendor payments, contract awards, candidate platforms). |
-| ⚪ Unknown | ~10% | Whole branches nobody has checked: BIAs, rural drainage, property-standards orders, delegated-authority decisions, gift registry, most agency operational data — plus the 8 catalogued `⚑` rows. |
+| ⚪ Unknown | ~10% | Whole branches nobody has checked: BIAs, rural drainage, property-standards orders, delegated-authority decisions, gift registry, most agency operational data — plus the six verify-flagged catalogue rows (`⚑`). |
 
 ### The patterns that actually matter
 
