@@ -7,6 +7,10 @@ machine-readable each source actually is.
 **[`sources.json`](sources.json) is the source of truth.** This README is generated from it by
 [`build_readme.py`](build_readme.py). Edit the JSON, then run `python3 build_readme.py`.
 
+**[`hierarchy.md`](hierarchy.md)** is the companion map: every institution that produces
+information about Ottawa's governance and community, arranged as a tree and tagged open / closed /
+unknown — including the branches not yet in this catalogue.
+
 ## Status: unverified
 
 Every entry was compiled from web search result metadata. The environment used to compile it
