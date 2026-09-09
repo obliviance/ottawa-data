@@ -19,3 +19,169 @@ q0017,School-board trustee decisions and budgets — the ballot's forgotten half
 q0018,Recorded-vote cohesion — which councillors vote together; has the bloc structure changed over the term?,howtheyvoted,none,3,4,3,new,2026-09-09
 q0019,Lag between a staff report's recommendation and Council's decision — where does the process slow down?,escribe timeline,date,3,2,4,new,2026-09-09
 q0020,Negative space across the spatial catalogue — streets/blocks that appear in NO city dataset,spine_geography,spatial,3,3,5,new,2026-09-09
+q0021,Concentration in `Vendor` — which actors dominate? (join entity spine),open_2025_contracts_awarded_greater_than_25_000_jul_dec,,,,,new,2026-09-09
+q0022,Concentration in `Vendor` — which actors dominate? (join entity spine),open_2025_contracts_awarded_greater_than_25_000_jan_jun,,,,,new,2026-09-09
+q0023,`Ward` by `Ward` — equity gradient? (join ONS income),open_2026_municipal_elections_voting_places,,,,,new,2026-09-09
+q0024,Trend / seasonality of open_covid19_institutional_outbreaks_ottawa over `Start_Date`; structural breaks?,open_covid19_institutional_outbreaks_ottawa,,,,,new,2026-09-09
+q0025,Trend / seasonality of open_transportation_midblock_volume_2025 over `AADT_Year`; structural breaks?,open_transportation_midblock_volume_2025,,,,,new,2026-09-09
+q0026,Spatial clustering of open_transportation_midblock_volume_2025; overlay wards + the decision timeline,open_transportation_midblock_volume_2025,,,,,new,2026-09-09
+q0027,Trend / seasonality of open_transportation_intersection_volume_2025 over `Study_Date`; structural breaks?,open_transportation_intersection_volume_2025,,,,,new,2026-09-09
+q0028,Trend / seasonality of open_ottawa_public_library_most_requested_titles_of_2025 over `Hold_Created_Year`; structural breaks?,open_ottawa_public_library_most_requested_titles_of_2025,,,,,new,2026-09-09
+q0029,Trend / seasonality of open_ottawa_public_library_most_requested_titles_2024 over `Hold_Created_Year`; structural breaks?,open_ottawa_public_library_most_requested_titles_2024,,,,,new,2026-09-09
+q0030,Trend / seasonality of open_ottawa_public_library_most_requested_titles_2023 over `Hold_Created_Year`; structural breaks?,open_ottawa_public_library_most_requested_titles_2023,,,,,new,2026-09-09
+q0031,Trend / seasonality of open_ottawa_public_library_most_requested_titles_2022 over `Hold_Year`; structural breaks?,open_ottawa_public_library_most_requested_titles_2022,,,,,new,2026-09-09
+q0032,Trend / seasonality of open_benches over `YEAR_INSTALLED`; structural breaks?,open_benches,,,,,new,2026-09-09
+q0033,Concentration in `NAME` — which actors dominate? (join entity spine),open_benches,,,,,new,2026-09-09
+q0034,Trend / seasonality of open_street_lights over `YEAR_1_LE`; structural breaks?,open_street_lights,,,,,new,2026-09-09
+q0035,Spatial clustering of open_street_lights; overlay wards + the decision timeline,open_street_lights,,,,,new,2026-09-09
+q0036,Spatial clustering of open_ottawa_dissemination_areas; overlay wards + the decision timeline,open_ottawa_dissemination_areas,,,,,new,2026-09-09
+q0037,Trend / seasonality of open_road_centrelines over `GEOMETRY_CREATED_DATE`; structural breaks?,open_road_centrelines,,,,,new,2026-09-09
+q0038,Spatial clustering of open_road_centrelines; overlay wards + the decision timeline,open_road_centrelines,,,,,new,2026-09-09
+q0039,Trend / seasonality of open_transportation_intersection_volumes_2024 over `Study_Date`; structural breaks?,open_transportation_intersection_volumes_2024,,,,,new,2026-09-09
+q0040,Trend / seasonality of open_transportation_midblock_volumes_2024 over `AADT_Year`; structural breaks?,open_transportation_midblock_volumes_2024,,,,,new,2026-09-09
+q0041,Trend / seasonality of htv_meetings over `meeting_date`; structural breaks?,htv_meetings,,,,,new,2026-09-09
+q0042,Trend / seasonality of htv_motions over `meeting_date`; structural breaks?,htv_motions,,,,,new,2026-09-09
+q0043,Trend / seasonality of htv_votes over `meeting_date`; structural breaks?,htv_votes,,,,,new,2026-09-09
+q0044,Trend / seasonality of open_automated_speed_enforcement_camera_speed_data over `Camera_Install_Year`; structural breaks?,open_automated_speed_enforcement_camera_speed_data,,,,,new,2026-09-09
+q0045,Spatial clustering of open_automated_speed_enforcement_camera_speed_data; overlay wards + the decision timeline,open_automated_speed_enforcement_camera_speed_data,,,,,new,2026-09-09
+q0046,Trend / seasonality of open_housing_services_monthly_hifis_data over `Date`; structural breaks?,open_housing_services_monthly_hifis_data,,,,,new,2026-09-09
+q0047,Spatial clustering of open_upcoming_construction_facilities_culverts_parks_bridges; overlay wards + the decision timeline,open_upcoming_construction_facilities_culverts_parks_bridges,,,,,new,2026-09-09
+q0048,Spatial clustering of open_oc_transpo_stops; overlay wards + the decision timeline,open_oc_transpo_stops,,,,,new,2026-09-09
+q0049,Trend / seasonality of open_ditches over `YEAR`; structural breaks?,open_ditches,,,,,new,2026-09-09
+q0050,Concentration in `OWNER` — which actors dominate? (join entity spine),open_former_landfills,,,,,new,2026-09-09
+q0051,Trend / seasonality of open_other_park_features over `MODIFIED_DATE`; structural breaks?,open_other_park_features,,,,,new,2026-09-09
+q0052,Spatial clustering of open_other_park_features; overlay wards + the decision timeline,open_other_park_features,,,,,new,2026-09-09
+q0053,Concentration in `NAME` — which actors dominate? (join entity spine),open_other_park_features,,,,,new,2026-09-09
+q0054,Trend / seasonality of open_electric_vehicle_charging_stations_usage_data over `Session_start_date`; structural breaks?,open_electric_vehicle_charging_stations_usage_data,,,,,new,2026-09-09
+q0055,Spatial clustering of open_electric_vehicle_charging_stations_usage_data; overlay wards + the decision timeline,open_electric_vehicle_charging_stations_usage_data,,,,,new,2026-09-09
+q0056,Concentration in `Owner` — which actors dominate? (join entity spine),open_electric_vehicle_charging_stations_usage_data,,,,,new,2026-09-09
+q0057,Trend / seasonality of open_2013_tabular_transportation_collision_data over `Accident_Date`; structural breaks?,open_2013_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0058,Spatial clustering of open_2013_tabular_transportation_collision_data; overlay wards + the decision timeline,open_2013_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0059,Spatial clustering of open_traffic_collision_by_location_2019; overlay wards + the decision timeline,open_traffic_collision_by_location_2019,,,,,new,2026-09-09
+q0060,Spatial clustering of open_parking_lots_in_city_parkland; overlay wards + the decision timeline,open_parking_lots_in_city_parkland,,,,,new,2026-09-09
+q0061,`VENDORLOT` by `WARD` — equity gradient? (join ONS income),open_pay_and_display_machines,,,,,new,2026-09-09
+q0062,Trend / seasonality of open_pay_and_display_machines over `CREATED_DATE`; structural breaks?,open_pay_and_display_machines,,,,,new,2026-09-09
+q0063,Spatial clustering of open_traffic_collisions_by_location_2018; overlay wards + the decision timeline,open_traffic_collisions_by_location_2018,,,,,new,2026-09-09
+q0064,Trend / seasonality of open_pathway_links over `MODIFIED_DATE`; structural breaks?,open_pathway_links,,,,,new,2026-09-09
+q0065,Spatial clustering of open_pathway_links; overlay wards + the decision timeline,open_pathway_links,,,,,new,2026-09-09
+q0066,Concentration in `NAME` — which actors dominate? (join entity spine),open_pathway_links,,,,,new,2026-09-09
+q0067,Spatial clustering of open_traffic_collisions_by_location_2016; overlay wards + the decision timeline,open_traffic_collisions_by_location_2016,,,,,new,2026-09-09
+q0068,Spatial clustering of open_traffic_collision_by_location_2017; overlay wards + the decision timeline,open_traffic_collision_by_location_2017,,,,,new,2026-09-09
+q0069,Spatial clustering of open_traffic_collision_by_location_2015; overlay wards + the decision timeline,open_traffic_collision_by_location_2015,,,,,new,2026-09-09
+q0070,Spatial clustering of open_adult_school_crossing_guard_locations_2019; overlay wards + the decision timeline,open_adult_school_crossing_guard_locations_2019,,,,,new,2026-09-09
+q0071,Trend / seasonality of open_2015_tabular_transportation_collision_data over `Accident_Date`; structural breaks?,open_2015_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0072,Spatial clustering of open_2015_tabular_transportation_collision_data; overlay wards + the decision timeline,open_2015_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0073,Trend / seasonality of open_2019_tabular_transportation_collision_data over `Accident_Date`; structural breaks?,open_2019_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0074,Spatial clustering of open_2019_tabular_transportation_collision_data; overlay wards + the decision timeline,open_2019_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0075,Trend / seasonality of open_2018_tabular_transportation_collision_data over `Accident_Date`; structural breaks?,open_2018_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0076,Spatial clustering of open_2018_tabular_transportation_collision_data; overlay wards + the decision timeline,open_2018_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0077,Spatial clustering of open_pathways; overlay wards + the decision timeline,open_pathways,,,,,new,2026-09-09
+q0078,Trend / seasonality of open_2017_tabular_transportation_collision_data over `Accident_Date`; structural breaks?,open_2017_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0079,Spatial clustering of open_2017_tabular_transportation_collision_data; overlay wards + the decision timeline,open_2017_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0080,Trend / seasonality of open_2020_tabular_transportation_collision_data over `Accident_Date`; structural breaks?,open_2020_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0081,Spatial clustering of open_2020_tabular_transportation_collision_data; overlay wards + the decision timeline,open_2020_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0082,Trend / seasonality of open_2016_tabular_transportation_collision_data over `Accident_Date`; structural breaks?,open_2016_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0083,Spatial clustering of open_2016_tabular_transportation_collision_data; overlay wards + the decision timeline,open_2016_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0084,Spatial clustering of open_traffic_collisions_by_location_2013; overlay wards + the decision timeline,open_traffic_collisions_by_location_2013,,,,,new,2026-09-09
+q0085,Spatial clustering of open_traffic_collisions_by_location_2013_to_2017; overlay wards + the decision timeline,open_traffic_collisions_by_location_2013_to_2017,,,,,new,2026-09-09
+q0086,`FID_wards_` by `REGION` — equity gradient? (join ONS income),open_ward_boundary_geographies_based_on_2011_traffic_zones,,,,,new,2026-09-09
+q0087,Spatial clustering of open_ward_boundary_geographies_based_on_2011_traffic_zones; overlay wards + the decision timeline,open_ward_boundary_geographies_based_on_2011_traffic_zones,,,,,new,2026-09-09
+q0088,`WARD` by `WARD` — equity gradient? (join ONS income),open_elections_2014_voting_subdivision_maps,,,,,new,2026-09-09
+q0089,Spatial clustering of open_elections_2014_voting_subdivision_maps; overlay wards + the decision timeline,open_elections_2014_voting_subdivision_maps,,,,,new,2026-09-09
+q0090,Trend / seasonality of open_budget_2020_capital_status_report_q1 over `First_Year_of_Approved_Budget`; structural breaks?,open_budget_2020_capital_status_report_q1,,,,,new,2026-09-09
+q0091,`WARD_NUM` by `WARD` — equity gradient? (join ONS income),open_2022_elections_voting_subdivision_map,,,,,new,2026-09-09
+q0092,Spatial clustering of open_2022_elections_voting_subdivision_map; overlay wards + the decision timeline,open_2022_elections_voting_subdivision_map,,,,,new,2026-09-09
+q0093,Trend / seasonality of open_urban_fences over `YEAR`; structural breaks?,open_urban_fences,,,,,new,2026-09-09
+q0094,Spatial clustering of open_construction_road_resurfacing_watermain_sewer_multi_use_pathways_b; overlay wards + the decision timeline,open_construction_road_resurfacing_watermain_sewer_multi_use_pathways_b,,,,,new,2026-09-09
+q0095,Spatial clustering of open_better_buildings_ottawa_2022; overlay wards + the decision timeline,open_better_buildings_ottawa_2022,,,,,new,2026-09-09
+q0096,Trend / seasonality of open_pedestrian_network over `YEAR`; structural breaks?,open_pedestrian_network,,,,,new,2026-09-09
+q0097,Trend / seasonality of open_2014_tabular_transportation_collision_data over `Accident_Date`; structural breaks?,open_2014_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0098,Spatial clustering of open_2014_tabular_transportation_collision_data; overlay wards + the decision timeline,open_2014_tabular_transportation_collision_data,,,,,new,2026-09-09
+q0099,Spatial clustering of open_traffic_collisions_by_location_2015_to_2019; overlay wards + the decision timeline,open_traffic_collisions_by_location_2015_to_2019,,,,,new,2026-09-09
+q0100,Spatial clustering of open_traffic_collision_by_location_2014; overlay wards + the decision timeline,open_traffic_collision_by_location_2014,,,,,new,2026-09-09
+q0101,Spatial clustering of open_traffic_collisions_by_location_2014_to_2018; overlay wards + the decision timeline,open_traffic_collisions_by_location_2014_to_2018,,,,,new,2026-09-09
+q0102,`PARK_ID` by `WARD` — equity gradient? (join ONS income),open_parks_and_greenspace,,,,,new,2026-09-09
+q0103,Trend / seasonality of open_parks_and_greenspace over `MODIFIED_DATE`; structural breaks?,open_parks_and_greenspace,,,,,new,2026-09-09
+q0104,Spatial clustering of open_parks_and_greenspace; overlay wards + the decision timeline,open_parks_and_greenspace,,,,,new,2026-09-09
+q0105,Concentration in `NAME` — which actors dominate? (join entity spine),open_splash_pads,,,,,new,2026-09-09
+q0106,Trend / seasonality of open_midblock_volume_2022 over `Year`; structural breaks?,open_midblock_volume_2022,,,,,new,2026-09-09
+q0107,Trend / seasonality of open_transportation_intersection_volumes_2019 over `Date_Collected`; structural breaks?,open_transportation_intersection_volumes_2019,,,,,new,2026-09-09
+q0108,Trend / seasonality of open_automated_speed_enforcement_camera_removal_monitoring_speed_data over `Camera_Install_Year`; structural breaks?,open_automated_speed_enforcement_camera_removal_monitoring_speed_data,,,,,new,2026-09-09
+q0109,Trend / seasonality of open_city_council_meeting_attendance_2022_2026 over `meeting_date`; structural breaks?,open_city_council_meeting_attendance_2022_2026,,,,,new,2026-09-09
+q0110,Spatial clustering of open_screenline_counting_stations; overlay wards + the decision timeline,open_screenline_counting_stations,,,,,new,2026-09-09
+q0111,Spatial clustering of open_cultural_organizations_and_groups; overlay wards + the decision timeline,open_cultural_organizations_and_groups,,,,,new,2026-09-09
+q0112,Spatial clustering of open_city_facilities_for_recreation_activities; overlay wards + the decision timeline,open_city_facilities_for_recreation_activities,,,,,new,2026-09-09
+q0113,Trend / seasonality of open_covid_19_ottawa_residents_tested over `Date`; structural breaks?,open_covid_19_ottawa_residents_tested,,,,,new,2026-09-09
+q0114,Concentration in `Organization` — which actors dominate? (join entity spine),open_open_datasets_released_2019_2026,,,,,new,2026-09-09
+q0115,Trend / seasonality of open_paid_parking_spaces over `MODIFIED_DATE`; structural breaks?,open_paid_parking_spaces,,,,,new,2026-09-09
+q0116,Spatial clustering of open_paid_parking_spaces; overlay wards + the decision timeline,open_paid_parking_spaces,,,,,new,2026-09-09
+q0117,Trend / seasonality of open_covid_19_vaccine_coverage_by_day_and_location_of_vaccination_for_o over `Date`; structural breaks?,open_covid_19_vaccine_coverage_by_day_and_location_of_vaccination_for_o,,,,,new,2026-09-09
+q0118,Trend / seasonality of open_covid_19_vaccine_administration_by_vaccine_type_by_day_in_ottawa_h over `Date`; structural breaks?,open_covid_19_vaccine_administration_by_vaccine_type_by_day_in_ottawa_h,,,,,new,2026-09-09
+q0119,Trend / seasonality of open_covid_19_vaccine_coverage_by_day_by_age_by_dose_for_ottawa_residen over `Date`; structural breaks?,open_covid_19_vaccine_coverage_by_day_by_age_by_dose_for_ottawa_residen,,,,,new,2026-09-09
+q0120,Concentration in `CONTRACTOR` — which actors dominate? (join entity spine),open_solid_waste_collection_calendar_collection_days,,,,,new,2026-09-09
+q0121,Trend / seasonality of open_education over `Year_Année`; structural breaks?,open_education,,,,,new,2026-09-09
+q0122,Trend / seasonality of open_confidence_in_institutions over `Year_Année`; structural breaks?,open_confidence_in_institutions,,,,,new,2026-09-09
+q0123,Trend / seasonality of open_covid_19_reproduction_number_r_t over `Date`; structural breaks?,open_covid_19_reproduction_number_r_t,,,,,new,2026-09-09
+q0124,Trend / seasonality of open_closed_confirmed_reportable_outbreaks_excluding_covid19 over `Start_Date`; structural breaks?,open_closed_confirmed_reportable_outbreaks_excluding_covid19,,,,,new,2026-09-09
+q0125,Trend / seasonality of open_corporate_records_classification_scheme_crcs_2023_historical over `Final_Disposition`; structural breaks?,open_corporate_records_classification_scheme_crcs_2023_historical,,,,,new,2026-09-09
+q0126,`Census Tract` by `Neighbourhood` — equity gradient? (join ONS income),open_theft_of_motor_vehicle,,,,,new,2026-09-09
+q0127,Trend / seasonality of open_theft_of_motor_vehicle over `Vehicle Year`; structural breaks?,open_theft_of_motor_vehicle,,,,,new,2026-09-09
+q0128,`Reported Hour` by `Neighbourhood` — equity gradient? (join ONS income),open_shootings,,,,,new,2026-09-09
+q0129,Trend / seasonality of open_shootings over `Reported Date`; structural breaks?,open_shootings,,,,,new,2026-09-09
+q0130,Trend / seasonality of open_overdose_calls over `Reported Date`; structural breaks?,open_overdose_calls,,,,,new,2026-09-09
+q0131,`Sector` by `Neighbourhood` — equity gradient? (join ONS income),open_homicide,,,,,new,2026-09-09
+q0132,`Census Tract` by `Neighbourhood` — equity gradient? (join ONS income),open_hate_crime,,,,,new,2026-09-09
+q0133,Trend / seasonality of open_hate_crime over `Year`; structural breaks?,open_hate_crime,,,,,new,2026-09-09
+q0134,`Bicycle Speed` by `Neighbourhood` — equity gradient? (join ONS income),open_bike_theft,,,,,new,2026-09-09
+q0135,Trend / seasonality of open_bike_theft over `Year`; structural breaks?,open_bike_theft,,,,,new,2026-09-09
+q0136,Concentration in `Vendor` — which actors dominate? (join entity spine),open_contracts_awarded_under_da_january_1_2023_to_june_30_2023,,,,,new,2026-09-09
+q0137,Concentration in `Vendor` — which actors dominate? (join entity spine),open_contracts_awarded_under_delegation_of_authority_for_the_period_jul,,,,,new,2026-09-09
+q0138,Trend / seasonality of open_recovered_needles_and_glass_pipes over `Year_Month`; structural breaks?,open_recovered_needles_and_glass_pipes,,,,,new,2026-09-09
+q0139,Concentration in `Vendor` — which actors dominate? (join entity spine),open_2024_contracts_awarded_greater_than_25_000_jul_dec,,,,,new,2026-09-09
+q0140,`WARD` by `WARD` — equity gradient? (join ONS income),open_elections_2010_voting_subdivisions,,,,,new,2026-09-09
+q0141,`WARD` by `WARD` — equity gradient? (join ONS income),open_elections_2018_voting_subdivision_areas,,,,,new,2026-09-09
+q0142,Spatial clustering of open_elections_2018_voting_subdivision_areas; overlay wards + the decision timeline,open_elections_2018_voting_subdivision_areas,,,,,new,2026-09-09
+q0143,Concentration in `Vendor` — which actors dominate? (join entity spine),open_contracts_awarded_under_delegation_of_authority_for_jan_june_2024,,,,,new,2026-09-09
+q0144,Trend / seasonality of open_ottawa_paramedic_service_daily_response_volume over `Date`; structural breaks?,open_ottawa_paramedic_service_daily_response_volume,,,,,new,2026-09-09
+q0145,`UNIQUE_ID` by `COMMUNITY` — equity gradient? (join ONS income),open_cultural_spaces_inventory_food,,,,,new,2026-09-09
+q0146,Spatial clustering of open_cultural_spaces_inventory_food; overlay wards + the decision timeline,open_cultural_spaces_inventory_food,,,,,new,2026-09-09
+q0147,`UNIQUE_ID` by `COMMUNITY` — equity gradient? (join ONS income),open_cultural_spaces_inventory_heritage,,,,,new,2026-09-09
+q0148,Spatial clustering of open_cultural_spaces_inventory_heritage; overlay wards + the decision timeline,open_cultural_spaces_inventory_heritage,,,,,new,2026-09-09
+q0149,`UNIQUE_ID` by `COMMUNITY` — equity gradient? (join ONS income),open_cultural_spaces_inventory_community,,,,,new,2026-09-09
+q0150,`UNIQUE_ID` by `COMMUNITY` — equity gradient? (join ONS income),open_cultural_spaces_inventory_studio,,,,,new,2026-09-09
+q0151,`UNIQUE_ID` by `COMMUNITY` — equity gradient? (join ONS income),open_cultural_spaces_inventory_sport,,,,,new,2026-09-09
+q0152,Trend / seasonality of open_cultural_spaces_inventory_sport over `CREATED_DATE`; structural breaks?,open_cultural_spaces_inventory_sport,,,,,new,2026-09-09
+q0153,Spatial clustering of open_cultural_spaces_inventory_sport; overlay wards + the decision timeline,open_cultural_spaces_inventory_sport,,,,,new,2026-09-09
+q0154,Concentration in `NAME` — which actors dominate? (join entity spine),open_cultural_spaces_inventory_sport,,,,,new,2026-09-09
+q0155,`UNIQUE_ID` by `COMMUNITY` — equity gradient? (join ONS income),open_cultural_spaces_inventory_venue,,,,,new,2026-09-09
+q0156,Spatial clustering of open_cultural_spaces_inventory_venue; overlay wards + the decision timeline,open_cultural_spaces_inventory_venue,,,,,new,2026-09-09
+q0157,`UNIQUE_ID` by `COMMUNITY` — equity gradient? (join ONS income),open_cultural_spaces_inventory_public_art,,,,,new,2026-09-09
+q0158,`UNIQUE_ID` by `COMMUNITY` — equity gradient? (join ONS income),open_cultural_spaces_inventory_nature,,,,,new,2026-09-09
+q0159,Trend / seasonality of open_cultural_spaces_inventory_nature over `CREATED_DATE`; structural breaks?,open_cultural_spaces_inventory_nature,,,,,new,2026-09-09
+q0160,Spatial clustering of open_cultural_spaces_inventory_nature; overlay wards + the decision timeline,open_cultural_spaces_inventory_nature,,,,,new,2026-09-09
+q0161,`UNIQUE_ID` by `COMMUNITY` — equity gradient? (join ONS income),open_cultural_spaces_inventory_learning,,,,,new,2026-09-09
+q0162,Spatial clustering of open_cultural_spaces_inventory_learning; overlay wards + the decision timeline,open_cultural_spaces_inventory_learning,,,,,new,2026-09-09
+q0163,Trend / seasonality of open_dophs_cases_and_rates_in_ottawa_by_age_and_sex over `Year`; structural breaks?,open_dophs_cases_and_rates_in_ottawa_by_age_and_sex,,,,,new,2026-09-09
+q0164,Trend / seasonality of open_covid_19_cases_and_deaths_ottawa_historical_data over `Date`; structural breaks?,open_covid_19_cases_and_deaths_ottawa_historical_data,,,,,new,2026-09-09
+q0165,Trend / seasonality of open_canadian_housing_survey_chs_results_for_ottawa_level_2018_and_2021 over `year`; structural breaks?,open_canadian_housing_survey_chs_results_for_ottawa_level_2018_and_2021,,,,,new,2026-09-09
+q0166,Concentration in `NAME` — which actors dominate? (join entity spine),open_sledding_hills,,,,,new,2026-09-09
+q0167,Trend / seasonality of open_sports_fields over `MODIFIED_DATE`; structural breaks?,open_sports_fields,,,,,new,2026-09-09
+q0168,Trend / seasonality of open_play_area_structures over `MODIFIED_DATE`; structural breaks?,open_play_area_structures,,,,,new,2026-09-09
+q0169,Spatial clustering of open_play_area_structures; overlay wards + the decision timeline,open_play_area_structures,,,,,new,2026-09-09
+q0170,Concentration in `NAME` — which actors dominate? (join entity spine),open_play_area_structures,,,,,new,2026-09-09
+q0171,`Census Tract` by `Neighbourhood` — equity gradient? (join ONS income),ops_theft_of_motor_vehicle_open_data,,,,,new,2026-09-09
+q0172,Trend / seasonality of ops_theft_of_motor_vehicle_open_data over `Vehicle Year`; structural breaks?,ops_theft_of_motor_vehicle_open_data,,,,,new,2026-09-09
+q0173,`Bicycle Speed` by `Neighbourhood` — equity gradient? (join ONS income),ops_bike_theft_open_data,,,,,new,2026-09-09
+q0174,Trend / seasonality of ops_bike_theft_open_data over `Year`; structural breaks?,ops_bike_theft_open_data,,,,,new,2026-09-09
+q0175,`Sector` by `Neighbourhood` — equity gradient? (join ONS income),ops_homicide_open_data,,,,,new,2026-09-09
+q0176,Trend / seasonality of ops_overdose_calls_open_data over `Reported Date`; structural breaks?,ops_overdose_calls_open_data,,,,,new,2026-09-09
+q0177,`Census Tract` by `Neighbourhood` — equity gradient? (join ONS income),ops_hate_crime_open_data,,,,,new,2026-09-09
+q0178,Trend / seasonality of ops_hate_crime_open_data over `Year`; structural breaks?,ops_hate_crime_open_data,,,,,new,2026-09-09
+q0179,Trend / seasonality of ontario_public_sector_salary_disclosure_2015 over `Calendar Year`; structural breaks?,ontario_public_sector_salary_disclosure_2015,,,,,new,2026-09-09
+q0180,Concentration in `Last Name` — which actors dominate? (join entity spine),ontario_public_sector_salary_disclosure_2015,,,,,new,2026-09-09
+q0181,Trend / seasonality of ontario_public_sector_salary_disclosure_2013 over `Calendar Year`; structural breaks?,ontario_public_sector_salary_disclosure_2013,,,,,new,2026-09-09
+q0182,Concentration in `Last Name` — which actors dominate? (join entity spine),ontario_public_sector_salary_disclosure_2013,,,,,new,2026-09-09
+q0183,`Service Request ID | Numéro de demande` by `Ward | Quartier` — equity gradient? (join ONS income),311-current,,,,,new,2026-09-09
+q0184,Trend / seasonality of 311-current over `Opened Date | Date d'ouverture`; structural breaks?,311-current,,,,,new,2026-09-09
+q0185,`Service Request ID | Numéro de demande` by `Ward | Quartier` — equity gradient? (join ONS income),311-lastyear,,,,,new,2026-09-09
+q0186,Trend / seasonality of 311-lastyear over `Opened Date | Date d'ouverture`; structural breaks?,311-lastyear,,,,,new,2026-09-09

@@ -56,12 +56,19 @@ def col_summary(name: str, s) -> tuple[str, int, int, str]:
     pct = f"{100 * nonnull // n if n else 0}%"
 
     num = pd.to_numeric(s, errors="coerce")
-    is_num = num.notna().sum() >= 0.9 * max(nonnull, 1) and nonnull
+    try:
+        num = num.astype("float64")
+    except (TypeError, ValueError):
+        num = pd.Series([], dtype="float64")
+    is_num = num.notna().sum() >= 0.9 * max(nonnull, 1) and nonnull and s.dtype != bool
     year_like = is_num and num.dropna().between(1850, 2100).all() and (num.dropna() % 1 == 0).all()
     parsed_dt = None
     if not year_like and (DATEISH.search(name) or str(s.dtype).startswith("datetime")):
-        parsed_dt = pd.to_datetime(s, errors="coerce", format="mixed")
-        if parsed_dt.notna().sum() < 0.5 * max(nonnull, 1):
+        try:
+            parsed_dt = pd.to_datetime(s, errors="coerce", format="mixed", utc=True)
+        except Exception:  # noqa: BLE001
+            parsed_dt = None
+        if parsed_dt is not None and parsed_dt.notna().sum() < 0.5 * max(nonnull, 1):
             parsed_dt = None
 
     if parsed_dt is not None and parsed_dt.notna().any():
@@ -113,25 +120,28 @@ def tearsheet(did: str, meta: dict) -> list[str]:
 
 
 def questions_for(did: str, df) -> list[str]:
+    """Templated leads. Deliberately terse and only for datasets big enough to be worth it -
+    curate in questions/backlog.csv."""
+    if len(df) < 50:
+        return []  # lookup / reference table
+    import pandas as pd
     cols = list(df.columns)
     ward = next((c for c in cols if WARDISH.search(c)), None)
     ent = next((c for c in cols if ENTITYISH.search(c)), None)
     date = next((c for c in cols if DATEISH.search(c)), None)
-    import pandas as pd
+    spatial = {"latitude", "longitude"} <= {c.lower() for c in cols} or "geometry" in [c.lower() for c in cols]
     nums = [c for c in cols if pd.to_numeric(df[c], errors="coerce").notna().mean() > 0.8
-            and df[c].nunique() > 8 and not DATEISH.search(c)]
+            and df[c].nunique() > 8 and not DATEISH.search(c) and c.lower() not in
+            ("x", "y", "latitude", "longitude", "objectid", "id", "fid")]
     out = []
     if ward and nums:
-        out.append(f"Distribution of `{nums[0]}` across `{ward}` — is there an equity gradient? "
-                   f"(join to ONS neighbourhood income)")
-    if date and len(df) > 100:
-        out.append(f"Trend and seasonality of {did} over `{date}`; any structural break?")
-    if df.attrs.get("spatial") or {"latitude", "longitude"} <= set(c.lower() for c in cols):
-        out.append(f"Spatial clustering of {did}; overlay ward geography and the decision timeline")
-    if ent:
-        out.append(f"Concentration in `{ent}` — which entities dominate? (join to the entity spine: "
-                   f"lobbyists, contributors, applicants, contract winners)")
-    out.append(f"Negative space — which wards / streets / periods have **zero** {did} rows, and why?")
+        out.append(f"`{nums[0]}` by `{ward}` — equity gradient? (join ONS income)")
+    if date and len(df) > 500:
+        out.append(f"Trend / seasonality of {did} over `{date}`; structural breaks?")
+    if spatial and len(df) > 200:
+        out.append(f"Spatial clustering of {did}; overlay wards + the decision timeline")
+    if ent and df[ent].nunique() < 0.6 * len(df):
+        out.append(f"Concentration in `{ent}` — which actors dominate? (join entity spine)")
     return out
 
 
@@ -183,6 +193,28 @@ def main() -> None:
         print(f"  catalog/{did}.md")
     if not a.no_questions:
         print(f"\n+{total_q} questions → {BACKLOG.relative_to(REPO)}")
+    write_index(m)
+    print(f"  catalog/INDEX.md ({len(m)} datasets)")
+
+
+def write_index(m: dict) -> None:
+    by_shape: dict[str, list] = {}
+    for did, d in m.items():
+        by_shape.setdefault(d["shape"], []).append((did, d))
+    lines = ["# Warehouse index", "",
+             f"{len(m)} datasets · {sum(d['rows'] for d in m.values()):,} rows total · "
+             f"regenerate with `python3 tools/profile.py --all`", ""]
+    for shape in sorted(by_shape):
+        rows = sorted(by_shape[shape])
+        lines += [f"## {shape} ({len(rows)})", "",
+                  "| dataset | rows | spatial | source | tearsheet |",
+                  "| --- | ---: | :---: | --- | --- |"]
+        for did, d in rows:
+            lines.append(
+                f"| {d['title'][:60]} | {d['rows']:,} | {'●' if d['spatial'] else ''} "
+                f"| {d.get('source_id') or ''} | [{did}]({did}.md) |")
+        lines.append("")
+    (CATALOG / "INDEX.md").write_text("\n".join(lines))
 
 
 if __name__ == "__main__":

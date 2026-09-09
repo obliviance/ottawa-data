@@ -21,7 +21,7 @@ import time
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
 import warehouse  # noqa: E402
-from _http import download, get_json  # noqa: E402
+from _http import TooLarge, download, get_json  # noqa: E402
 
 SPATIAL_HINT = re.compile(r"(location|boundar|area|zone|route|park|road|ward|point|site|map|"
                           r"parcel|address|facilit|station|tree|path|trail|district)", re.I)
@@ -52,7 +52,9 @@ def main() -> None:
     ap.add_argument("--prefix", default="", help="dataset_id prefix (default: derived from hub)")
     ap.add_argument("--filter", default="", help="only titles containing this substring")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--max-mb", type=float, default=80, help="skip datasets larger than this")
     ap.add_argument("--delay", type=float, default=1.5)
+    ap.add_argument("--skip-existing", action="store_true", help="skip dataset_ids already in the warehouse")
     ap.add_argument("--list", action="store_true", help="print the catalogue, download nothing")
     ap.add_argument("--source-id", default=None, help="tag every dataset with this sources.json id")
     args = ap.parse_args()
@@ -71,31 +73,43 @@ def main() -> None:
             print(f"  {d['title'][:70]:70}  {fmts}")
         return
 
-    done = fail = 0
-    for d in datasets[: args.limit or None]:
+    have = set(warehouse._load_manifest()["datasets"]) if args.skip_existing else set()
+    done = fail = skip = big = 0
+    for n, d in enumerate(datasets[: args.limit or None], 1):
         title = d["title"]
-        did = f"{prefix}_{slugify(title)}"
+        did = warehouse._sanitize_id(f"{prefix}_{slugify(title)}")
+        if did in have:
+            skip += 1
+            continue
         pick = pick_distribution(d.get("distribution", []), title)
         if not pick:
-            print(f"  skip (no CSV/GeoJSON)  {title[:60]}")
+            print(f"  [{n}] skip (no CSV/GeoJSON)  {title[:58]}")
+            skip += 1
             continue
         fmt, url = pick
+        tmp = None
         try:
             with tempfile.NamedTemporaryFile(suffix=f".{fmt}", delete=False) as tf:
                 tmp = pathlib.Path(tf.name)
-            download(url, tmp)
+            download(url, tmp, max_bytes=int(args.max_mb * 1e6))
             warehouse.register(
                 did, tmp, source_id=args.source_id, shape="arcgis-hub", title=title,
                 origin_url=d.get("landingPage", f"https://{args.hub}/"),
                 notes=f"{fmt} · licence: {re.sub('<[^>]+>', '', d.get('license') or '').strip()[:80]}")
-            tmp.unlink(missing_ok=True)
             done += 1
+        except TooLarge as e:
+            print(f"  [{n}] BIG  {title[:52]}  ({e}) — ingest individually")
+            big += 1
         except Exception as e:  # noqa: BLE001 - one bad dataset shouldn't stop the run
-            print(f"  FAIL  {title[:55]}  {type(e).__name__}: {str(e)[:80]}")
+            print(f"  [{n}] FAIL {title[:52]}  {type(e).__name__}: {str(e)[:70]}")
             fail += 1
+        finally:
+            if tmp:
+                tmp.unlink(missing_ok=True)
         time.sleep(args.delay)
 
-    print(f"\n{done} ingested, {fail} failed — `python3 tools/warehouse.py list`")
+    print(f"\n{done} ingested · {fail} failed · {big} too-large · {skip} skipped"
+          f" — `python3 tools/warehouse.py list`")
 
 
 if __name__ == "__main__":

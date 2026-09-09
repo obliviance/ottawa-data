@@ -45,16 +45,28 @@ def get_json(url: str, **kw):
     return json.loads(get(url, **kw).decode("utf-8", "replace"))
 
 
-def download(url: str, dest: pathlib.Path, *, retries: int = 2, backoff: float = 3.0) -> pathlib.Path:
-    """Stream url to dest. Returns dest."""
+class TooLarge(Exception):
+    pass
+
+
+def download(url: str, dest: pathlib.Path, *, retries: int = 2, backoff: float = 3.0,
+             max_bytes: int | None = None) -> pathlib.Path:
+    """Stream url to dest. Returns dest. Raises TooLarge if it exceeds max_bytes."""
     dest.parent.mkdir(parents=True, exist_ok=True)
     last = None
     for attempt in range(retries + 1):
         try:
+            total = 0
             with _open(url) as r, open(dest, "wb") as f:
                 while chunk := r.read(1 << 16):
+                    total += len(chunk)
+                    if max_bytes and total > max_bytes:
+                        raise TooLarge(f"exceeds {max_bytes / 1e6:.0f} MB")
                     f.write(chunk)
             return dest
+        except TooLarge:
+            dest.unlink(missing_ok=True)
+            raise
         except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError) as e:
             last = e
             code = getattr(e, "code", None)
