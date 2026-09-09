@@ -13,6 +13,7 @@ ottawa-riverkeeper-open-data-ork-so.hub.arcgis.com.
 from __future__ import annotations
 
 import argparse
+import json
 import pathlib
 import re
 import sys
@@ -44,6 +45,56 @@ def pick_distribution(dists: list[dict], title: str) -> tuple[str, str] | None:
         if f in by_fmt:
             return f, by_fmt[f]
     return None
+
+
+def geoservices_url(dists: list[dict]) -> str | None:
+    for d in dists:
+        if "geoservices" in (d.get("format") or "").lower():
+            return d.get("accessURL") or d.get("downloadURL")
+    return None
+
+
+def fetch_featureserver(api_url: str, dest: pathlib.Path, *, page: int = 2000,
+                        max_records: int = 200_000) -> int:
+    """Page a Feature/MapServer layer to a GeoJSON FeatureCollection file. Returns row count."""
+    base = api_url.rstrip("/")
+    if not base.rsplit("/", 1)[-1].isdigit():
+        base += "/0"
+    feats, offset = [], 0
+    while offset < max_records:
+        q = (f"{base}/query?where=1%3D1&outFields=*&returnGeometry=true&f=geojson"
+             f"&resultOffset={offset}&resultRecordCount={page}")
+        j = get_json(q)
+        batch = j.get("features", [])
+        feats.extend(batch)
+        if not j.get("properties", {}).get("exceededTransferLimit") and not j.get("exceededTransferLimit"):
+            break
+        if not batch:
+            break
+        offset += len(batch)
+    dest.write_text(json.dumps({"type": "FeatureCollection", "features": feats}))
+    return len(feats)
+
+
+def _register_zip_csvs(did: str, zippath: pathlib.Path, source_id, title, origin, lic) -> int:
+    import io
+    import zipfile
+
+    import pandas as pd
+    total = 0
+    with zipfile.ZipFile(zippath) as zf:
+        csvs = [n for n in zf.namelist() if n.lower().endswith(".csv")]
+        for name in csvs:
+            try:
+                df = pd.read_csv(io.BytesIO(zf.read(name)), low_memory=False, on_bad_lines="skip")
+            except Exception:  # noqa: BLE001
+                continue
+            sub = did if len(csvs) == 1 else f"{did}__{slugify(name.rsplit('.', 1)[0], 24)}"
+            warehouse.register(sub, df, source_id=source_id, shape="arcgis-hub",
+                               title=title + ("" if len(csvs) == 1 else f" — {name}"),
+                               origin_url=origin, notes=f"from zip · licence: {lic}")
+            total += len(df)
+    return total
 
 
 def main() -> None:
@@ -81,21 +132,40 @@ def main() -> None:
         if did in have:
             skip += 1
             continue
-        pick = pick_distribution(d.get("distribution", []), title)
-        if not pick:
-            print(f"  [{n}] skip (no CSV/GeoJSON)  {title[:58]}")
+        dists = d.get("distribution", [])
+        pick = pick_distribution(dists, title)
+        api = geoservices_url(dists)
+        if not pick and not api:
+            print(f"  [{n}] skip (web page / doc)  {title[:56]}")
             skip += 1
             continue
-        fmt, url = pick
+        lic = re.sub("<[^>]+>", "", d.get("license") or "").strip()[:80]
+        origin = d.get("landingPage", f"https://{args.hub}/")
         tmp = None
         try:
-            with tempfile.NamedTemporaryFile(suffix=f".{fmt}", delete=False) as tf:
-                tmp = pathlib.Path(tf.name)
-            download(url, tmp, max_bytes=int(args.max_mb * 1e6))
-            warehouse.register(
-                did, tmp, source_id=args.source_id, shape="arcgis-hub", title=title,
-                origin_url=d.get("landingPage", f"https://{args.hub}/"),
-                notes=f"{fmt} · licence: {re.sub('<[^>]+>', '', d.get('license') or '').strip()[:80]}")
+            if pick:
+                fmt, url = pick
+                with tempfile.NamedTemporaryFile(suffix=f".{fmt}", delete=False) as tf:
+                    tmp = pathlib.Path(tf.name)
+                download(url, tmp, max_bytes=int(args.max_mb * 1e6))
+                warehouse.register(did, tmp, source_id=args.source_id, shape="arcgis-hub",
+                                   title=title, origin_url=origin, notes=f"{fmt} · licence: {lic}")
+            elif api.lower().split("?")[0].endswith(".zip"):  # mislabelled: it's a zip of CSVs
+                with tempfile.NamedTemporaryFile(suffix=".zip", delete=False) as tf:
+                    tmp = pathlib.Path(tf.name)
+                download(api, tmp, max_bytes=int(args.max_mb * 1e6))
+                nrows = _register_zip_csvs(did, tmp, args.source_id, title, origin, lic)
+                if not nrows:
+                    raise ValueError("zip had no loadable CSV")
+            else:  # FeatureServer fallback — no download link, query the API
+                with tempfile.NamedTemporaryFile(suffix=".geojson", delete=False) as tf:
+                    tmp = pathlib.Path(tf.name)
+                nrows = fetch_featureserver(api, tmp)
+                if nrows == 0:
+                    raise ValueError("FeatureServer query returned 0 rows")
+                warehouse.register(did, tmp, source_id=args.source_id, shape="arcgis-hub",
+                                   title=title, origin_url=origin,
+                                   notes=f"FeatureServer query ({nrows} rows) · licence: {lic}")
             done += 1
         except TooLarge as e:
             print(f"  [{n}] BIG  {title[:52]}  ({e}) — ingest individually")

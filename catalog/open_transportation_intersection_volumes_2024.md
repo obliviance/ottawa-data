@@ -1,6 +1,6 @@
 # Transportation Intersection Volumes 2024
 
-`open_transportation_intersection_volumes_2024` · shape **arcgis-hub** · source `open-ottawa`
+`open_transportation_intersection_volumes_2024` · shape **arcgis-hub**
 
 - origin: <https://open.ottawa.ca/datasets/ottawa::transportation-intersection-volumes-2024>
 - fetched 2026-09-09 · **703 rows** · 14 columns
