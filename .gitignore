@@ -1,2 +1,14 @@
 __pycache__/
 *.pyc
+.venv/
+venv/
+
+# Warehouse: the DuckDB file and Parquet extracts are rebuildable from the ingesters.
+# The manifest (small, human-readable) IS committed.
+warehouse/*.duckdb
+warehouse/*.duckdb.wal
+warehouse/*.parquet
+
+# Scratch analysis
+explorations/*.ipynb
+!explorations/*.example.ipynb

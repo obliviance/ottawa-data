@@ -35,9 +35,10 @@ in the catalogue. Edit it directly.
 ## Layout
 
 ```
-sources.json          source of truth
+sources.json          source of truth (the catalogue)
 hierarchy.md          hand-written institutional tree
 README.md             generated
+ROADMAP.md            running plan for the exploration work — keep it current
 CLAUDE.md             this file
 tools/
   build_readme.py     sources.json (+ verification/) -> README.md
@@ -45,13 +46,19 @@ tools/
   verify_stage2.py    stage 2: headless-browser render + XHR capture (needs a Chromium over CDP)
   verify_stage3.py    stage 3: access-tag + licence confirmation (heuristic)
   snapshot.py         Wayback Machine snapshot per URL
-  VERIFYING.md        the verification method, in full — read this before touching verify*.py
-  requirements.txt    playwright (stage 2 only; everything else is stdlib)
+  VERIFYING.md        the verification method, in full — read before touching verify*.py
+  warehouse.py        DuckDB + Parquet store: register() / con() / CLI
+  profile.py          dataset -> catalog/<id>.md tearsheet + questions/backlog.csv rows
+  ingest/             one ingester per source SHAPE (arcgis_hub.py, ckan.py, …)
+  _http.py            shared polite fetch helpers
+  requirements.txt
 verification/         machine-written records — DO NOT hand-edit
-  verification.json         stage 0-1
-  verification_stage2.json  stage 2
-  verification_stage3.json  stage 3
-  snapshots.json            Wayback
+  verification*.json · snapshots.json
+warehouse/            DuckDB + Parquet — GITIGNORED except manifest.json (rebuild via ingesters)
+catalog/              generated tearsheets, one per warehouse dataset
+questions/backlog.csv the running investigation list
+spine/                geography / timeline / entities reference tables (build first)
+releases/  apps/  explorations/   published datasets · visualizations · scratch
 ```
 
 ## Running verification
@@ -67,6 +74,21 @@ python3 tools/build_readme.py           # fold everything into README.md
 
 Stage 2 connects to a headless Chromium at `$CHROMIUM_CDP_URL` (default `http://chromium:9222`).
 If that isn't set, stage 2 is skipped — the other stages and `build_readme.py` still work.
+
+## Exploration workflow (see ROADMAP.md)
+
+```
+pip install -r tools/requirements.txt
+python3 tools/warehouse.py init
+python3 tools/ingest/arcgis_hub.py --limit 20        # land data (one ingester per shape)
+python3 tools/ingest/ckan.py --query "ottawa" --limit 10
+python3 tools/profile.py --all                       # tearsheets + backlog questions
+python3 tools/warehouse.py query "SELECT ..."        # ad-hoc SQL; datasets are views d_<id>
+```
+
+Two phases: **A** recon sweep (ingest + profile every source, ship cleaned data to
+`releases/`), then **B** deep builds on the top `questions/backlog.csv` rows. Build the
+`spine/` tables first. **Update `ROADMAP.md`** (status boxes + Log) whenever work moves.
 
 **Long runs:** always background them (`run_in_background`) and watch the log; the scripts flush
 output and write their JSON incrementally. Do not `pgrep -f verify` — it matches your own shell.
