@@ -1,0 +1,613 @@
+{
+  "generated_at": "2026-09-09T15:30:41+00:00",
+  "tool": "snapshot.py 0.2 (Wayback Machine Save Page Now)",
+  "summary": {
+    "urls": 94,
+    "with_snapshot": 79,
+    "rate_limited": 1
+  },
+  "urls": {
+    "https://open.ottawa.ca/": {
+      "saved_at": "2026-09-09T15:30:26+00:00",
+      "snapshot": "http://web.archive.org/web/20260904043425/https://open.ottawa.ca/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ouverte.ottawa.ca/": {
+      "saved_at": "2026-09-09T15:30:26+00:00",
+      "snapshot": "http://web.archive.org/web/20260909150638/https://ouverte.ottawa.ca/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://open.ottawa.ca/pages/developer-resources": {
+      "saved_at": "2026-09-09T15:30:26+00:00",
+      "snapshot": "http://web.archive.org/web/20260909150556/https://open.ottawa.ca/pages/developer-resources",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://maps.ottawa.ca/arcgis/rest/services/": {
+      "saved_at": "2026-09-09T15:30:26+00:00",
+      "snapshot": "http://web.archive.org/web/20260909150700/https://maps.ottawa.ca/arcgis/rest/services/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://maps.ottawa.ca/geoottawa/": {
+      "saved_at": "2026-09-09T15:30:26+00:00",
+      "snapshot": "http://web.archive.org/web/20260823140601/https://maps.ottawa.ca/geoOttawa/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/open-data": {
+      "saved_at": "2026-09-09T15:30:26+00:00",
+      "snapshot": "http://web.archive.org/web/20260909150805/https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/open-data",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://elections.ottawa.ca/CandidateList/CandidateList": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260902115758/https://elections.ottawa.ca/CandidateList/CandidateList",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/city-hall/elections/voters/who-running-my-ward": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260902115511/https://ottawa.ca/en/city-hall/elections/voters/who-running-my-ward",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/city-hall/elections/candidates/candidate-campaign-finances-and-contributions": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909150915/https://ottawa.ca/en/city-hall/elections/candidates/candidate-campaign-finances-and-contributions",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/city-hall/elections/previous-elections-and-appointment-processes/financial-statements-2022-municipal-elections/candidate-and-third-party-advertiser-compliance-reports": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909151053/https://ottawa.ca/en/city-hall/elections/previous-elections-and-appointment-processes/financial-statements-2022-municipal-elections/candidate-and-third-party-advertiser-compliance-reports",
+      "status": 200,
+      "elapsed_s": 7.0,
+      "error": null
+    },
+    "https://ottawa.ca/en/city-hall/elections/learn-more-about-municipal-elections/key-dates-2026-municipal-elections": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260903112015/https://ottawa.ca/en/city-hall/elections/learn-more-about-municipal-elections/key-dates-2026-municipal-elections",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/city-hall/elections/candidates/information-candidates": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909151128/https://ottawa.ca/en/city-hall/elections/candidates/information-candidates",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://en.wikipedia.org/wiki/2022_Ottawa_municipal_election": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260824060438/https://en.wikipedia.org/wiki/2022_Ottawa_municipal_election",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://en.wikipedia.org/wiki/2026_Ottawa_municipal_election": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": 523,
+      "error": "HTTP 523"
+    },
+    "https://pub-ottawa.escribemeetings.com/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260901061937/https://pub-ottawa.escribemeetings.com/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://app06.ottawa.ca/cgi-bin/docs.pl?lang=en": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909151302/https://ottawa.ca/en/node/1029405",
+      "status": 200,
+      "elapsed_s": 9.7,
+      "error": null
+    },
+    "https://www.youtube.com/channel/UCUR3i_hvk3-3i8vtrPg6v1Q": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260821123650/https://www.youtube.com/channel/UCUR3i_hvk3-3i8vtrPg6v1Q",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909151337/https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://documents.ottawa.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909151406/https://documents.ottawa.ca/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/city-hall/council-committees-and-boards": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909151538/https://ottawa.ca/en/city-hall/council-committees-and-boards",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://www.oagottawa.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909151708/https://www.oagottawa.ca/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/integrity-commissioner": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909151740/https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/integrity-commissioner",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://lobbyist.ottawa.ca/search/searchlobbyist.aspx?lang=en": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": 520,
+      "error": "HTTP 520"
+    },
+    "https://lobbyist.ottawa.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": 520,
+      "error": "HTTP 520"
+    },
+    "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/public-disclosure/disclosure-mfippa-requests/general-information": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909151955/https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/public-disclosure/disclosure-mfippa-requests/general-information",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://forms.ottawa.ca/en/form/occ/policy/mfippa-access-form": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909152025/https://forms.ottawa.ca/en/form/occ/policy/mfippa-access-form",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/public-disclosure/disclosure-office-expenses": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909152059/https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/public-disclosure/disclosure-office-expenses",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://www.ontario.ca/page/public-sector-salary-disclosure": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260817232014/https://www.ontario.ca/page/public-sector-salary-disclosure",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning/financial-reports-and-statements": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909152224/https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning/financial-reports-and-statements",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909152324/https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://efis.fma.csc.gov.on.ca/fir/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": 429,
+      "error": "HTTP 429"
+    },
+    "https://data.ontario.ca/dataset/financial-information-return-fir-for-municipalities": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909152436/https://data.ontario.ca/dataset/financial-information-return-fir-for-municipalities",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/business/procurement/procurement": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260824044038/https://ottawa.ca/en/business/procurement/procurement",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/business/procurement/procurement-law": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909152515/https://ottawa.ca/en/business/procurement/procurement-law",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://www.mpac.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260901200600/https://www.mpac.ca/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://devapps.ottawa.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909152550/https://devapps.ottawa.ca/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z/zoning-law-law-no-2026-50": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260905031751/https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z/zoning-law-law-no-2026-50",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://maps.ottawa.ca/arcgis/rest/services/Zoning/MapServer": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909152622/https://maps.ottawa.ca/arcgis/rest/services/Zoning/MapServer",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/planning-development-and-construction": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260909152748/https://ottawa.ca/en/planning-development-and-construction",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://www.canlii.org/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": 520,
+      "error": "HTTP 520"
+    },
+    "https://ottawa.ca/en/planning-development-and-construction/committee-adjustment/find-decision": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909152831/https://ottawa.ca/en/planning-development-and-construction/committee-adjustment/find-decision",
+      "status": 200,
+      "elapsed_s": 6.8,
+      "error": null
+    },
+    "https://olt.gov.on.ca/decisions/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260813092211/https://olt.gov.on.ca/decisions/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/planning-development-and-construction/building-and-renovating": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909152955/https://ottawa.ca/en/planning-development-and-construction/building-and-renovating",
+      "status": 200,
+      "elapsed_s": 7.0,
+      "error": null
+    },
+    "https://www.octranspo.com/en/plan-your-trip/travel-tools/developers/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": 520,
+      "error": "HTTP 520"
+    },
+    "https://nextrip-public-api.developer.azure-api.net/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909153527/https://nextrip-public-api.developer.azure-api.net/",
+      "status": 200,
+      "elapsed_s": 61.9,
+      "error": null
+    },
+    "https://www.transit.land/feeds/f-f24-octranspo": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909153706/https://www.transit.land/feeds/f-f24-octranspo",
+      "status": 200,
+      "elapsed_s": 92.5,
+      "error": null
+    },
+    "https://traffic.ottawa.ca/en/opendata": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909153847/https://traffic.ottawa.ca/en/opendata",
+      "status": 200,
+      "elapsed_s": 85.2,
+      "error": null
+    },
+    "https://traffic.ottawa.ca/map/service/ase_camera": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909154008/https://traffic.ottawa.ca/map/service/ase_camera",
+      "status": 200,
+      "elapsed_s": 61.3,
+      "error": null
+    },
+    "https://open.ottawa.ca/datasets/ottawa::traffic-collision-data/about": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": 520,
+      "error": "HTTP 520"
+    },
+    "https://ottawa.ca/en/parking-roads-and-travel/road-safety/road-safety-action-plan/fatal-and-major-injury-collision-data": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909154131/https://ottawa.ca/en/parking-roads-and-travel/road-safety/road-safety-action-plan/fatal-and-major-injury-collision-data",
+      "status": 200,
+      "elapsed_s": 67.3,
+      "error": null
+    },
+    "https://ottawa.ca/en/parking-roads-and-travel/road-safety/enforcement/automated-speed-enforcement": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909154206/https://ottawa.ca/en/parking-roads-and-travel/road-safety/enforcement/automated-speed-enforcement",
+      "status": 200,
+      "elapsed_s": 19.0,
+      "error": null
+    },
+    "https://open.ottawa.ca/datasets/pathway-links/api": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909154341/https://open.ottawa.ca/datasets/pathway-links/api",
+      "status": 200,
+      "elapsed_s": 86.1,
+      "error": null
+    },
+    "https://data.ottawapolice.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909154446/https://data.ottawapolice.ca/",
+      "status": 200,
+      "elapsed_s": 55.2,
+      "error": null
+    },
+    "https://open.ottawa.ca/datasets/crime-map-year-to-date/about": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909154621/https://open.ottawa.ca/datasets/crime-map-year-to-date/about",
+      "status": 200,
+      "elapsed_s": 86.1,
+      "error": null
+    },
+    "https://www.ottawapublichealth.ca/en/reports-research-and-statistics/reports-research-and-statistics.aspx": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909154749/https://www.ottawapublichealth.ca/en/reports-research-and-statistics/reports-research-and-statistics.aspx#gsc.tab=0",
+      "status": 200,
+      "elapsed_s": 79.3,
+      "error": null
+    },
+    "https://ottawa.ca/en/family-and-social-services/housing-and-homelessness/plans-facts-and-data": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909154918/https://ottawa.ca/en/family-and-social-services/housing-and-homelessness/plans-facts-and-data",
+      "status": 200,
+      "elapsed_s": 73.1,
+      "error": null
+    },
+    "https://housingregistry.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909155105/https://housingregistry.ca/",
+      "status": 200,
+      "elapsed_s": 97.6,
+      "error": null
+    },
+    "https://www.endhomelessnessottawa.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909155227/https://www.endhomelessnessottawa.ca/",
+      "status": 200,
+      "elapsed_s": 80.3,
+      "error": null
+    },
+    "https://ottawa.ca/en/living-ottawa/drinking-water-stormwater-and-wastewater/drinking-water": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909155310/https://ottawa.ca/en/living-ottawa/drinking-water-stormwater-and-wastewater/drinking-water",
+      "status": 200,
+      "elapsed_s": 25.5,
+      "error": null
+    },
+    "https://ottawa.ca/en/garbage-and-recycling/solid-waste-data-and-reports": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909155440/https://ottawa.ca/en/garbage-and-recycling/solid-waste-data-and-reports",
+      "status": 200,
+      "elapsed_s": 73.4,
+      "error": null
+    },
+    "https://ottawa-riverkeeper-open-data-ork-so.hub.arcgis.com/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909155512/https://ottawa-riverkeeper-open-data-ork-so.hub.arcgis.com/",
+      "status": 200,
+      "elapsed_s": 19.2,
+      "error": null
+    },
+    "https://www.rvca.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260901182025/https://www.rvca.ca/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://mvc.on.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909155647/https://mvc.on.ca/",
+      "status": 200,
+      "elapsed_s": 85.6,
+      "error": null
+    },
+    "https://www.nation.on.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909155812/https://www.nation.on.ca/en/",
+      "status": 200,
+      "elapsed_s": 73.3,
+      "error": null
+    },
+    "https://hydroottawa.com/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": 520,
+      "error": "HTTP 520"
+    },
+    "https://open.ottawa.ca/documents/ottawa::open311-api/about": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": 523,
+      "error": "HTTP 523"
+    },
+    "https://city-of-ottawa-prod.apigee.net/open311/v2/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": 523,
+      "error": "HTTP 523"
+    },
+    "https://engage.ottawa.ca/projects": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260811131421/https://engage.ottawa.ca/projects",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/city-hall/public-engagement/public-engagement-project-search": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": null,
+      "error": "TimeoutError: The read operation timed out"
+    },
+    "https://collections.biblioottawalibrary.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909160257/https://collections.biblioottawalibrary.ca/en/we-recommend",
+      "status": 200,
+      "elapsed_s": 31.4,
+      "error": null
+    },
+    "https://www.neighbourhoodstudy.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909160449/https://ons-sqo.ca/",
+      "status": 200,
+      "elapsed_s": 91.6,
+      "error": null
+    },
+    "https://ons-sqo.ca/data-stories/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909160629/https://ons-sqo.ca/data-stories/",
+      "status": 200,
+      "elapsed_s": 85.3,
+      "error": null
+    },
+    "https://neighbourhoodequity.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909160816/https://neighbourhoodequity.ca/",
+      "status": 200,
+      "elapsed_s": 97.7,
+      "error": null
+    },
+    "https://communitydata.ca/content/ottawa-and-region": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909160934/https://communitydata.ca/content/ottawa-and-region",
+      "status": 200,
+      "elapsed_s": 61.3,
+      "error": null
+    },
+    "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260908090208/https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E",
+      "status": 200,
+      "elapsed_s": 98.2,
+      "error": null
+    },
+    "https://www.ottawainsights.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909161301/https://www.ottawainsights.ca/",
+      "status": 200,
+      "elapsed_s": 85.3,
+      "error": null
+    },
+    "https://ottwatch.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909161442/https://ottwatch.ca/",
+      "status": 200,
+      "elapsed_s": 85.4,
+      "error": null
+    },
+    "https://ottwatch.ca/devapp/index": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": null,
+      "error": "TimeoutError: The read operation timed out"
+    },
+    "https://www.horizonottawa.ca/vote_tracker": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": 520,
+      "error": "HTTP 520"
+    },
+    "https://howtheyvoted.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909161947/https://howtheyvoted.ca/#/ottawa",
+      "status": 200,
+      "elapsed_s": 97.3,
+      "error": null
+    },
+    "https://www.ottawalookout.com/p/meet-the-candidates": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909162120/https://www.ottawalookout.com/p/meet-the-candidates",
+      "status": 200,
+      "elapsed_s": 87.0,
+      "error": null
+    },
+    "https://www.ottawalookout.com/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909162309/https://www.ottawalookout.com/",
+      "status": 200,
+      "elapsed_s": 98.6,
+      "error": null
+    },
+    "https://www.ottawacivictech.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909162451/https://www.ottawacivictech.ca/",
+      "status": 200,
+      "elapsed_s": 85.7,
+      "error": null
+    },
+    "https://github.com/YOWCT": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909162620/https://github.com/YOWCT",
+      "status": 200,
+      "elapsed_s": 79.4,
+      "error": null
+    },
+    "https://acorncanada.org/resources/ottawa-voting-records-report/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909162804/https://acorncanada.org/resources/ottawa-voting-records-report/",
+      "status": 200,
+      "elapsed_s": 97.4,
+      "error": null
+    },
+    "https://open.ottawa.ca/datasets/ncc-open-data-map/about": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": 520,
+      "error": "HTTP 520"
+    },
+    "https://search.open.canada.ca/opendata/?owner_org=ncc-ccn": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260909163050/https://search.open.canada.ca/opendata/?owner_org=ncc-ccn",
+      "status": 200,
+      "elapsed_s": 73.5,
+      "error": null
+    },
+    "https://open.canada.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "https://web.archive.org/web/20260903103429/https://open.canada.ca/en",
+      "status": 200,
+      "elapsed_s": 113.1,
+      "error": null
+    },
+    "https://data.ontario.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260904002934/https://data.ontario.ca/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ocdsb.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260831161247/https://www.ocdsb.ca/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ocsb.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260831061506/https://www.ocsb.ca/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://cepeo.on.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260831043255/https://cepeo.on.ca/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ecolecatholique.ca/": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": "http://web.archive.org/web/20260906071425/https://www.ecolecatholique.ca/",
+      "status": 200,
+      "note": "existing recent snapshot"
+    },
+    "https://ottawa.ca/en/arts-heritage-and-events/city-ottawa-archives/archives-collection": {
+      "saved_at": "2026-09-09T15:30:41+00:00",
+      "snapshot": null,
+      "status": null,
+      "error": "TimeoutError: The read operation timed out"
+    }
+  }
+}
