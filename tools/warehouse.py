@@ -30,9 +30,18 @@ MANIFEST = WH / "manifest.json"
 SHAPES = ("arcgis-hub", "ckan", "rolling-csv", "json-api", "pdf", "html", "manual", "spine", "derived")
 
 
-def _duck():
+def _duck(retries: int = 8):
+    import time as _t
+
     import duckdb
-    con = duckdb.connect(str(DB))
+    for i in range(retries):
+        try:
+            con = duckdb.connect(str(DB))
+            break
+        except (duckdb.IOException, duckdb.Error) as e:
+            if "lock" not in str(e).lower() or i == retries - 1:
+                raise
+            _t.sleep(0.5 * (i + 1))  # another ingester holds it; back off
     con.execute("INSTALL spatial; LOAD spatial;")
     con.execute("""
         CREATE TABLE IF NOT EXISTS _datasets (
@@ -56,6 +65,14 @@ def _view_name(dataset_id: str) -> str:
     return "d_" + re.sub(r"[^a-z0-9]+", "_", dataset_id.lower()).strip("_")
 
 
+def _sanitize_id(dataset_id: str) -> str:
+    did = re.sub(r"[^a-z0-9._-]+", "-", dataset_id.lower()).strip("-._") or "unnamed"
+    if len(did) > 80:
+        import hashlib
+        did = did[:70].rstrip("-._") + "-" + hashlib.sha1(did.encode()).hexdigest()[:8]
+    return did
+
+
 def _load_manifest() -> dict:
     if MANIFEST.exists():
         return json.loads(MANIFEST.read_text())
@@ -73,10 +90,7 @@ def register(dataset_id: str, frame, *, source_id: str | None = None, shape: str
     import pandas as pd
 
     assert shape in SHAPES, f"shape must be one of {SHAPES}"
-    dataset_id = re.sub(r"[^a-z0-9._-]+", "-", dataset_id.lower()).strip("-._") or "unnamed"
-    if len(dataset_id) > 80:
-        import hashlib
-        dataset_id = dataset_id[:70].rstrip("-._") + "-" + hashlib.sha1(dataset_id.encode()).hexdigest()[:8]
+    dataset_id = _sanitize_id(dataset_id)
     WH.mkdir(exist_ok=True)
     parquet = WH / f"{dataset_id}.parquet"
 
@@ -93,7 +107,13 @@ def register(dataset_id: str, frame, *, source_id: str | None = None, shape: str
 
     spatial = any(c.lower() in ("geometry", "the_geom", "wkt", "geom") for c in df.columns) or \
         {"latitude", "longitude"}.issubset({c.lower() for c in df.columns})
-    df.to_parquet(parquet, index=False)
+    df.columns = [str(c) for c in df.columns]
+    try:
+        df.to_parquet(parquet, index=False)
+    except Exception:  # mixed-type object columns - stringify them and retry
+        obj = df.select_dtypes(include=["object"]).columns
+        df[obj] = df[obj].astype("string")
+        df.to_parquet(parquet, index=False)
 
     cols = [{"name": str(c), "type": str(t)} for c, t in df.dtypes.items()]
     rec = {
