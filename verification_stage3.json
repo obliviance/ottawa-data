@@ -1,0 +1,1200 @@
+{
+  "generated_at": "2026-09-09T15:05:26+00:00",
+  "tool": "verify_stage3.py 0.1 (access-tag + licence confirmation)",
+  "licences": {
+    "ogl-ottawa": {
+      "name": "Open Government Licence – City of Ottawa",
+      "url": "https://open.ottawa.ca/pages/licence",
+      "confirmed": true,
+      "evidence": "HTTP 200"
+    },
+    "ogl-ontario": {
+      "name": "Open Government Licence – Ontario",
+      "url": "https://www.ontario.ca/page/open-government-licence-ontario",
+      "confirmed": true,
+      "evidence": "open government licence – ontario have been clearly labelled on the page.\" />"
+    },
+    "ogl-canada": {
+      "name": "Open Government Licence – Canada",
+      "url": "https://open.canada.ca/en/open-government-licence-canada",
+      "confirmed": true,
+      "evidence": "open government licence - canada\" />"
+    },
+    "statcan-licence": {
+      "name": "Statistics Canada Open Licence",
+      "url": "https://www.statcan.gc.ca/en/reference/licence",
+      "confirmed": true,
+      "evidence": "HTTP 200"
+    },
+    "cc-by-sa": {
+      "name": "CC BY-SA 4.0 (text)",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "confirmed": true,
+      "evidence": "HTTP 200"
+    },
+    "canlii-terms": {
+      "name": "CanLII Terms of Use – reproduction restricted",
+      "url": "https://www.canlii.org/en/info/terms.html",
+      "confirmed": null,
+      "evidence": "page bot-blocked (HTTP 403); licence name is well-known"
+    },
+    "ons-terms": {
+      "name": "Ottawa Neighbourhood Study – terms of use",
+      "url": "https://www.neighbourhoodstudy.ca/",
+      "confirmed": null,
+      "evidence": null
+    },
+    "mpac-terms": {
+      "name": "MPAC – access-restricted; aggregate roll only",
+      "url": "https://www.mpac.ca/",
+      "confirmed": null,
+      "evidence": null
+    },
+    "site-terms": {
+      "name": "Site terms – no open-data licence stated",
+      "url": "",
+      "confirmed": null,
+      "evidence": null
+    },
+    "copyright-reserved": {
+      "name": "All rights reserved (journalism)",
+      "url": "",
+      "confirmed": null,
+      "evidence": null
+    },
+    "varies": {
+      "name": "Varies by project",
+      "url": "",
+      "confirmed": null,
+      "evidence": null
+    }
+  },
+  "sources": {
+    "open-ottawa": {
+      "name": "Open Ottawa / Donnees ouvertes",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "api",
+        "bulk"
+      ],
+      "observed_access": [
+        "api",
+        "bulk"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage0-1 probe: ArcGIS Hub DCAT feed present (691 datasets)",
+        "stage0-1 probe: ArcGIS Hub DCAT feed present (691 datasets)",
+        "stage0-1 probe: ArcGIS Hub DCAT feed present (703 datasets)"
+      ]
+    },
+    "arcgis-rest-root": {
+      "name": "City ArcGIS REST services root",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "api"
+      ],
+      "observed_access": [
+        "api",
+        "bulk"
+      ],
+      "access_verdict": "understated — also found `bulk`",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage0-1 probe: ArcGIS REST catalogue: 80 services, 1 folder, v10.81"
+      ]
+    },
+    "geoottawa": {
+      "name": "geoOttawa",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "api",
+        "html"
+      ],
+      "access_verdict": "understated — also found `api`",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage2 XHR: GET https://maps.ottawa.ca/arcgis/rest/services/Basemap_Ottawa/MapServer?f=json",
+        "stage2 XHR: GET https://tiles.arcgis.com/tiles/G6F8XLCl5KtAlZ2G/arcgis/rest/services/Canopy/VectorTileServer?f=json",
+        "stage2 XHR: GET https://tiles.arcgis.com/tiles/G6F8XLCl5KtAlZ2G/arcgis/rest/services/Tree_Canopy_2022_External/VectorTileServer?f=json",
+        "stage2 XHR: GET https://maps.ottawa.ca/arcgis/rest/services/Climate_Resiliency/MapServer?f=json&dpi=96&transparent=true&format=png8",
+        "stage2 XHR: GET https://maps.ottawa.ca/arcgis/rest/services/Rail_Implementation_Office/MapServer?f=json&dpi=96&transparent=true&format=png32",
+        "stage2 XHR: GET https://maps.ottawa.ca/arcgis/rest/services/Miscellaneous/MapServer?f=json&dpi=96&transparent=true&format=png32"
+      ]
+    },
+    "open-data-policy": {
+      "name": "Open Data policy and programme",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "candidate-list": {
+      "name": "Certified candidate list",
+      "operator": "City of Ottawa (City Clerk)",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "who-is-running": {
+      "name": "Who is running in my ward?",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "campaign-finance": {
+      "name": "Campaign financial statements and contributions",
+      "operator": "City of Ottawa (City Clerk)",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "election-key-dates": {
+      "name": "Election key dates and candidate information",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "election-results-history": {
+      "name": "Historical results and ward boundaries",
+      "operator": "City of Ottawa / Wikipedia",
+      "claimed_access": [
+        "bulk"
+      ],
+      "observed_access": [
+        "api",
+        "bulk",
+        "html"
+      ],
+      "access_verdict": "understated — also found `api`",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage0-1 probe: ArcGIS Hub DCAT feed present (691 datasets)"
+      ]
+    },
+    "escribe": {
+      "name": "eScribe: agendas, minutes, staff reports",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "api",
+        "html"
+      ],
+      "access_verdict": "understated — also found `api`",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage2 XHR: POST https://pub-ottawa.escribemeetings.com/MeetingsCalendarView.aspx/GetCalendarMeetings"
+      ]
+    },
+    "legacy-agendas": {
+      "name": "Legacy agenda system (pre-2012)",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html",
+        "request"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed (Request / FOI / in-person — not auto-verifiable)",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "council-video": {
+      "name": "Council meeting video and audio",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "api"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed — page is HTML; claimed `api` needs a key / login / manual check",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "bylaws-az": {
+      "name": "By-laws A to Z",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "documents-repo": {
+      "name": "Document repository",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "council-structure": {
+      "name": "Council and committee structure",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "auditor-general": {
+      "name": "Office of the Auditor General",
+      "operator": "City of Ottawa (independent statutory officer)",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "integrity-commissioner": {
+      "name": "Integrity Commissioner",
+      "operator": "City of Ottawa (independent statutory officer)",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "lobbyist-registry": {
+      "name": "Lobbyist Registry",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "mfippa-disclosure": {
+      "name": "MFIPPA disclosure log and access requests",
+      "operator": "City of Ottawa (Access to Information and Privacy Office)",
+      "claimed_access": [
+        "html",
+        "request"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed (Request / FOI / in-person — not auto-verifiable)",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "office-expenses": {
+      "name": "Members' office expenses and remuneration",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "sunshine-list": {
+      "name": "Public Sector Salary Disclosure",
+      "operator": "Government of Ontario",
+      "claimed_access": [
+        "bulk"
+      ],
+      "observed_access": [
+        "bulk",
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ontario",
+      "licence": "Open Government Licence – Ontario",
+      "evidence": [
+        "download links: ['json']"
+      ]
+    },
+    "financial-reports": {
+      "name": "Budget and financial reports",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "budget-documents": {
+      "name": "Budget documents by year",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html",
+        "bulk"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed — page is HTML; claimed `bulk` needs a key / login / manual check",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "fir": {
+      "name": "Financial Information Return (FIR)",
+      "operator": "Ontario Ministry of Municipal Affairs and Housing",
+      "claimed_access": [
+        "bulk"
+      ],
+      "observed_access": [
+        "api",
+        "bulk",
+        "html"
+      ],
+      "access_verdict": "understated — also found `api`",
+      "licence_key": "ogl-ontario",
+      "licence": "Open Government Licence – Ontario",
+      "evidence": [
+        "stage0-1 probe: CKAN API v2.9.7, 2963 datasets"
+      ]
+    },
+    "procurement": {
+      "name": "Procurement and tenders",
+      "operator": "City of Ottawa (Supply Services)",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "mpac": {
+      "name": "MPAC property assessment",
+      "operator": "Municipal Property Assessment Corporation",
+      "claimed_access": [
+        "request"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed (Request / FOI / in-person — not auto-verifiable)",
+      "licence_key": "mpac-terms",
+      "licence": "MPAC – access-restricted; aggregate roll only",
+      "evidence": []
+    },
+    "devapps": {
+      "name": "Development Applications Search",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "api",
+        "html"
+      ],
+      "access_verdict": "understated — also found `api`",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage2 XHR: GET https://devapps-restapi.ottawa.ca/devapps/feature/all?authKey=<redacted>",
+        "stage2 XHR: GET https://devapps-restapi.ottawa.ca/devapps/apptype/all?authKey=<redacted>",
+        "stage2 XHR: GET https://devapps-restapi.ottawa.ca/devapps/ward/all?authKey=<redacted>"
+      ]
+    },
+    "zoning-2026-50": {
+      "name": "Zoning By-law 2026-50",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html",
+        "api"
+      ],
+      "observed_access": [
+        "api",
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage0-1 probe: ArcGIS service 'Layers': 8 layers, formats JSON, geoJSON"
+      ]
+    },
+    "official-plan": {
+      "name": "Official Plan",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "committee-of-adjustment": {
+      "name": "Committee of Adjustment decisions",
+      "operator": "City of Ottawa / CanLII",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "olt": {
+      "name": "Ontario Land Tribunal",
+      "operator": "Government of Ontario",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ontario",
+      "licence": "Open Government Licence – Ontario",
+      "evidence": []
+    },
+    "building-permits": {
+      "name": "Building permits and land management",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "bulk"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed — page is HTML; claimed `bulk` needs a key / login / manual check",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "octranspo-gtfs": {
+      "name": "OC Transpo GTFS and GTFS-Realtime",
+      "operator": "OC Transpo / City of Ottawa",
+      "claimed_access": [
+        "api",
+        "bulk"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed — page is HTML; claimed `api`, `bulk` needs a key / login / manual check",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "traffic-ottawa": {
+      "name": "Traffic Ottawa open data",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "api"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed — page is HTML; claimed `api` needs a key / login / manual check",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "collisions": {
+      "name": "Traffic collision data",
+      "operator": "City of Ottawa / Ontario MTO",
+      "claimed_access": [
+        "bulk",
+        "api"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed — page is HTML; claimed `api`, `bulk` needs a key / login / manual check",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "automated-speed-enforcement": {
+      "name": "Automated speed enforcement",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "bulk"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed — page is HTML; claimed `bulk` needs a key / login / manual check",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "road-network": {
+      "name": "Road network, pathways, cycling infrastructure",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "api",
+        "bulk"
+      ],
+      "observed_access": [
+        "api",
+        "bulk"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage0-1 probe: ArcGIS Hub DCAT feed present (691 datasets)",
+        "DCAT distributions: ['ArcGIS GeoServices REST API', 'CSV', 'GeoJSON', 'KML', 'OGC WMS', 'Web Page', 'ZIP']"
+      ]
+    },
+    "ops-data-portal": {
+      "name": "Ottawa Police Community Safety Data Portal",
+      "operator": "Ottawa Police Service",
+      "claimed_access": [
+        "api",
+        "bulk"
+      ],
+      "observed_access": [
+        "api",
+        "bulk"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage0-1 probe: ArcGIS Hub DCAT feed present (98 datasets)"
+      ]
+    },
+    "crime-map": {
+      "name": "Crime Map (year to date)",
+      "operator": "Ottawa Police Service / City of Ottawa",
+      "claimed_access": [
+        "bulk"
+      ],
+      "observed_access": [
+        "api",
+        "bulk"
+      ],
+      "access_verdict": "understated — also found `api`",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage0-1 probe: ArcGIS Hub DCAT feed present (691 datasets)",
+        "ArcGIS Hub dataset page (CSV/GeoJSON/Shapefile/KML + GeoServices API by default)"
+      ]
+    },
+    "police-services-board": {
+      "name": "Police Services Board",
+      "operator": "Ottawa Police Services Board",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "fire-paramedic": {
+      "name": "Fire, paramedic and emergency services",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "bulk"
+      ],
+      "observed_access": [
+        "api",
+        "bulk"
+      ],
+      "access_verdict": "understated — also found `api`",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage0-1 probe: ArcGIS Hub DCAT feed present (691 datasets)"
+      ]
+    },
+    "ottawa-public-health": {
+      "name": "Ottawa Public Health reports and dashboards",
+      "operator": "Ottawa Public Health",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "bulk",
+        "html"
+      ],
+      "access_verdict": "understated — also found `bulk`",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "download links: ['json']"
+      ]
+    },
+    "housing-homelessness": {
+      "name": "Housing and homelessness: plans, facts and data",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "social-housing-registry": {
+      "name": "Social Housing Registry of Ottawa",
+      "operator": "Social Housing Registry of Ottawa (non-profit)",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "site-terms",
+      "licence": "Site terms – no open-data licence stated",
+      "evidence": []
+    },
+    "ateh": {
+      "name": "Alliance to End Homelessness Ottawa",
+      "operator": "Alliance to End Homelessness Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "site-terms",
+      "licence": "Site terms – no open-data licence stated",
+      "evidence": []
+    },
+    "drinking-water": {
+      "name": "Drinking water quality reports",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "solid-waste": {
+      "name": "Solid waste data and reports",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "riverkeeper": {
+      "name": "Ottawa Riverkeeper open data",
+      "operator": "Ottawa Riverkeeper",
+      "claimed_access": [
+        "api",
+        "bulk"
+      ],
+      "observed_access": [
+        "api",
+        "bulk"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "site-terms",
+      "licence": "Site terms – no open-data licence stated",
+      "evidence": [
+        "stage0-1 probe: ArcGIS Hub DCAT feed present (139 datasets)",
+        "DCAT distributions: ['ArcGIS GeoServices REST API', 'Web Page']"
+      ]
+    },
+    "conservation-authorities": {
+      "name": "Conservation authorities (RVCA, MVCA, SNC)",
+      "operator": "Rideau Valley, Mississippi Valley and South Nation Conservation Authorities",
+      "claimed_access": [
+        "html",
+        "bulk"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed — page is HTML; claimed `bulk` needs a key / login / manual check",
+      "licence_key": "site-terms",
+      "licence": "Site terms – no open-data licence stated",
+      "evidence": []
+    },
+    "hydro-ottawa": {
+      "name": "Hydro Ottawa",
+      "operator": "Hydro Ottawa (municipally owned)",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "site-terms",
+      "licence": "Site terms – no open-data licence stated",
+      "evidence": []
+    },
+    "trees-parks": {
+      "name": "Trees, parks and green space",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "api",
+        "bulk"
+      ],
+      "observed_access": [
+        "api",
+        "bulk"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage0-1 probe: ArcGIS Hub DCAT feed present (691 datasets)",
+        "DCAT distributions: ['ArcGIS GeoServices REST API', 'Web Page']"
+      ]
+    },
+    "open311": {
+      "name": "Open311 and 311 service requests",
+      "operator": "City of Ottawa (ServiceOttawa)",
+      "claimed_access": [
+        "api",
+        "bulk"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed — page is HTML; claimed `api`, `bulk` needs a key / login / manual check",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "engage-ottawa": {
+      "name": "Engage Ottawa",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "api",
+        "html"
+      ],
+      "access_verdict": "understated — also found `api`",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage2 XHR: GET https://engage.ottawa.ca/api/v2/home_page_revisions?filters%5Bsort%5D%5Bid%5D=desc&filters%5Bpublished%5D=true&page=1&per_page=1",
+        "stage2 XHR: GET https://engage.ottawa.ca/api/v2/theme/",
+        "stage2 XHR: GET https://engage.ottawa.ca/api/v2/navigation_links?filters%5Bsearch%5D=header&filters%5Bsort%5D%5Bsequence%5D=asc&per_page=9999",
+        "stage2 XHR: GET https://engage.ottawa.ca/api/v2/site/",
+        "stage2 XHR: GET https://engage.ottawa.ca/api/v2/users/current",
+        "stage2 XHR: GET https://engage.ottawa.ca/api/v2/layouts/selected/"
+      ]
+    },
+    "opl": {
+      "name": "Ottawa Public Library",
+      "operator": "Ottawa Public Library",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "recreation": {
+      "name": "Recreation facilities and programmes",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "api"
+      ],
+      "observed_access": [
+        "api",
+        "bulk"
+      ],
+      "access_verdict": "understated — also found `bulk`",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage0-1 probe: ArcGIS Hub DCAT feed present (691 datasets)"
+      ]
+    },
+    "ons": {
+      "name": "Ottawa Neighbourhood Study",
+      "operator": "Ottawa Neighbourhood Study",
+      "claimed_access": [
+        "bulk",
+        "api"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed — page is HTML; claimed `api`, `bulk` needs a key / login / manual check",
+      "licence_key": "ons-terms",
+      "licence": "Ottawa Neighbourhood Study – terms of use",
+      "evidence": []
+    },
+    "nei": {
+      "name": "Neighbourhood Equity Index",
+      "operator": "Ottawa Neighbourhood Study / partners",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ons-terms",
+      "licence": "Ottawa Neighbourhood Study – terms of use",
+      "evidence": [
+        "page mentions 'download' but no direct data link found"
+      ]
+    },
+    "community-data-program": {
+      "name": "Community Data Program",
+      "operator": "Canadian Council on Social Development",
+      "claimed_access": [
+        "request"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed (Request / FOI / in-person — not auto-verifiable)",
+      "licence_key": "site-terms",
+      "licence": "Site terms – no open-data licence stated",
+      "evidence": []
+    },
+    "statcan-census": {
+      "name": "Statistics Canada Census Profile",
+      "operator": "Statistics Canada",
+      "claimed_access": [
+        "bulk"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed — page is HTML; claimed `bulk` needs a key / login / manual check",
+      "licence_key": "statcan-licence",
+      "licence": "Statistics Canada Open Licence",
+      "evidence": [
+        "page mentions 'download' but no direct data link found"
+      ]
+    },
+    "ottawa-insights": {
+      "name": "Ottawa Insights",
+      "operator": "Ottawa Insights (cross-sector partnership)",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "site-terms",
+      "licence": "Site terms – no open-data licence stated",
+      "evidence": []
+    },
+    "ottwatch": {
+      "name": "OttWatch",
+      "operator": "Independent",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "site-terms",
+      "licence": "Site terms – no open-data licence stated",
+      "evidence": []
+    },
+    "horizon-vote-tracker": {
+      "name": "Horizon Ottawa Vote Tracker",
+      "operator": "Horizon Ottawa (advocacy)",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "site-terms",
+      "licence": "Site terms – no open-data licence stated",
+      "evidence": []
+    },
+    "howtheyvoted": {
+      "name": "How They Voted",
+      "operator": "Independent",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "api",
+        "html"
+      ],
+      "access_verdict": "understated — also found `api`",
+      "licence_key": "site-terms",
+      "licence": "Site terms – no open-data licence stated",
+      "evidence": [
+        "stage2 XHR: GET https://howtheyvoted.ca/data/ottawa/index.json",
+        "stage2 XHR: GET https://howtheyvoted.ca/data/ottawa/dates/2026-09-03.json"
+      ]
+    },
+    "ottawa-lookout": {
+      "name": "Ottawa Lookout",
+      "operator": "Ottawa Lookout (local newsroom)",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "copyright-reserved",
+      "licence": "All rights reserved (journalism)",
+      "evidence": []
+    },
+    "ottawa-civic-tech": {
+      "name": "Ottawa Civic Tech",
+      "operator": "Volunteer community",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "varies",
+      "licence": "Varies by project",
+      "evidence": []
+    },
+    "acorn-voting-records": {
+      "name": "ACORN Canada housing voting records",
+      "operator": "ACORN Canada (advocacy)",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "site-terms",
+      "licence": "Site terms – no open-data licence stated",
+      "evidence": [
+        "page mentions 'download' but no direct data link found"
+      ]
+    },
+    "ncc": {
+      "name": "National Capital Commission",
+      "operator": "National Capital Commission (federal crown corporation)",
+      "claimed_access": [
+        "bulk",
+        "api"
+      ],
+      "observed_access": [
+        "api",
+        "bulk"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-canada",
+      "licence": "Open Government Licence – Canada",
+      "evidence": [
+        "stage0-1 probe: ArcGIS Hub DCAT feed present (691 datasets)",
+        "ArcGIS Hub dataset page (CSV/GeoJSON/Shapefile/KML + GeoServices API by default)"
+      ]
+    },
+    "open-canada": {
+      "name": "Open Government Canada",
+      "operator": "Government of Canada",
+      "claimed_access": [
+        "api",
+        "bulk"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed — page is HTML; claimed `api`, `bulk` needs a key / login / manual check",
+      "licence_key": "ogl-canada",
+      "licence": "Open Government Licence – Canada",
+      "evidence": []
+    },
+    "data-ontario": {
+      "name": "Ontario Open Data",
+      "operator": "Government of Ontario",
+      "claimed_access": [
+        "api",
+        "bulk"
+      ],
+      "observed_access": [
+        "api",
+        "bulk"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "ogl-ontario",
+      "licence": "Open Government Licence – Ontario",
+      "evidence": [
+        "stage0-1 probe: CKAN API v2.9.7, 2963 datasets"
+      ]
+    },
+    "school-boards": {
+      "name": "School boards (OCDSB, OCSB, CEPEO, CECCE)",
+      "operator": "Four Ottawa school boards",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "confirmed",
+      "licence_key": "site-terms",
+      "licence": "Site terms – no open-data licence stated",
+      "evidence": [
+        "page mentions 'download' but no direct data link found"
+      ]
+    },
+    "city-archives": {
+      "name": "City of Ottawa Archives",
+      "operator": "City of Ottawa",
+      "claimed_access": [
+        "request"
+      ],
+      "observed_access": [
+        "html"
+      ],
+      "access_verdict": "unconfirmed (Request / FOI / in-person — not auto-verifiable)",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": []
+    },
+    "historical-imagery": {
+      "name": "Historical aerial imagery and mapping",
+      "operator": "City of Ottawa / university libraries",
+      "claimed_access": [
+        "html"
+      ],
+      "observed_access": [
+        "api",
+        "html"
+      ],
+      "access_verdict": "understated — also found `api`",
+      "licence_key": "ogl-ottawa",
+      "licence": "Open Government Licence – City of Ottawa",
+      "evidence": [
+        "stage2 XHR: GET https://maps.ottawa.ca/arcgis/rest/services/Basemap_Ottawa/MapServer?f=json",
+        "stage2 XHR: GET https://tiles.arcgis.com/tiles/G6F8XLCl5KtAlZ2G/arcgis/rest/services/Canopy/VectorTileServer?f=json",
+        "stage2 XHR: GET https://tiles.arcgis.com/tiles/G6F8XLCl5KtAlZ2G/arcgis/rest/services/Tree_Canopy_2022_External/VectorTileServer?f=json",
+        "stage2 XHR: GET https://maps.ottawa.ca/arcgis/rest/services/Climate_Resiliency/MapServer?f=json&dpi=96&transparent=true&format=png8",
+        "stage2 XHR: GET https://maps.ottawa.ca/arcgis/rest/services/Rail_Implementation_Office/MapServer?f=json&dpi=96&transparent=true&format=png32",
+        "stage2 XHR: GET https://maps.ottawa.ca/arcgis/rest/services/Miscellaneous/MapServer?f=json&dpi=96&transparent=true&format=png32"
+      ]
+    }
+  }
+}

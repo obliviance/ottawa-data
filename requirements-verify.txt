@@ -1,0 +1,10 @@
+# Verification tooling dependencies.
+#
+#   verify.py          stdlib only
+#   verify_stage3.py   stdlib only
+#   snapshot.py        stdlib only
+#   verify_stage2.py   needs playwright (the browser binary is remote over CDP,
+#                      so `playwright install` is NOT required - just the package)
+#   build_readme.py    stdlib only
+
+playwright>=1.40

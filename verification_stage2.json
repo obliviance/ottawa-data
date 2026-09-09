@@ -1,0 +1,896 @@
+{
+  "generated_at": "2026-09-09T14:49:55+00:00",
+  "tool": "verify_stage2.py 0.1 (headless Chromium over CDP)",
+  "browser": "Chrome/151.0.7922.109",
+  "screenshots_dir": "/tmp/claude-1000/-workspace/f3bc9a0c-d3e8-4d55-956a-9a587587d110/scratchpad/stage2-shots",
+  "note": "Rendered the JavaScript-only sources. discovered_apis lists the XHR/fetch calls that look like a real data endpoint - promote to sources.json and re-run verify.py to fingerprint them.",
+  "sources": {
+    "geoottawa": {
+      "name": "geoOttawa",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://maps.ottawa.ca/geoottawa/",
+          "final_url": "https://maps.ottawa.ca/geoottawa/",
+          "title": "geoOttawa",
+          "rendered_text_chars": 3492,
+          "rendered_text_sample": "Skip To Header Tools\nSkip To Navigation Tools\nSkip To Search\nSkip To Additional Tools\n6km\nMove mouse to get coordinates\nSearch\nWelcome to the new geoOttawa!\nAbout this application\ngeoOttawa is an interactive map tool that allows you to view map layers, get information and answers about the locations in the City of Ottawa. Search by address, intersections, streets, facilities, or park names to find a location. Many different map layers of information are available, such as parks, schools, City facilities, property parcels, roads, zoning, and air photos dating back to 1928. geoOttawa is your starting point for mapping available from the City of Ottawa!\nWeb Accessibility\nThis application is designed with accessible features, in accordance with the City of Ottawa Web Accessibility practices, and the Accessibility for Ontarians with Disabilities Act (AODA) and Web Content Accessibility Guidelines (WCAG) 2.0 standards. However, the interactive map functionality has accessibility limitations; such as for individuals with low vision or blindness and or mobility limitations (motor disabilities) which would restrict the user from utilizing the mouse; and contains some features that may not be practical for all users. Accessible format or communication support request also provides an opportunity for residents and visitors to request an accessible format or communication support.\nPlease review the following Terms and Conditions\nDisclaimer applicable to this application.\nThis application",
+          "link_count": 17,
+          "table_count": 1,
+          "xhr_total": 177,
+          "discovered_apis": [
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Basemap_Ottawa/MapServer?f=json",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://tiles.arcgis.com/tiles/G6F8XLCl5KtAlZ2G/arcgis/rest/services/Canopy/VectorTileServer?f=json",
+              "status": 200,
+              "content_type": "application/json;charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://tiles.arcgis.com/tiles/G6F8XLCl5KtAlZ2G/arcgis/rest/services/Tree_Canopy_2022_External/VectorTileServer?f=json",
+              "status": 200,
+              "content_type": "application/json;charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Climate_Resiliency/MapServer?f=json&dpi=96&transparent=true&format=png8",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Rail_Implementation_Office/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Miscellaneous/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Geoscience/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/WaterInfrastructure/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/WastewaterInfrastructure/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Environmental/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/SolidWasteCollectionCalendar/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/AdministrativeAreas/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/TopographicMapping/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/SurfaceWater/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/DevelopmentCharges/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/StaffGeographicAssignmentMaps/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Planning/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Greenbelt/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Economic_Development/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/BIA/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            }
+          ],
+          "other_json_xhr": [
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/Deployment/config_Deployment.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/LocalLayer/config_LocalLayer.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/AccessifizrWidget/config_AccessifizrWidget.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/Scalebar/config_Scalebar.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/Search/config_Search.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/Coordinate/config_Coordinate.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/AdvDraw/config_Draw%20and%20Measure.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/GoToCoordinates/config_GoToCoordinates.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/Bookmark/config_Bookmark.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/LayerToggleButton/config_See%20Zoning%20Information.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/MyLocation/config_MyLocation.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/SimpleStreetView/config_SimpleStreetView.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            }
+          ],
+          "screenshot": "geoottawa-0.png",
+          "new_outcome": "machine-readable",
+          "error": null
+        }
+      ],
+      "rollup": "machine-readable"
+    },
+    "devapps": {
+      "name": "Development Applications Search",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://devapps.ottawa.ca/",
+          "final_url": "https://devapps.ottawa.ca/en",
+          "title": "Development Applications Search",
+          "rendered_text_chars": 1917,
+          "rendered_text_sample": "Skip to main content\nSign-in\nFR\nHome\nPlanning, development and construction\nWhat's happening in your neighbourhood\nDevelopment applications search\nDevelopment Applications Search\nSearch Term, Street Name, or Application Number\nSearch\nApplication Status\nActive Applications Only\nInactive Applications Only\nActive/Inactive Applications\nApplication Type\nAll\nDemolition Control\nOfficial Plan Amendment\nOntario Heritage Act\nPlan of Condominium\nPlan of Subdivision\nSite Plan Control\nZoning By-law Amendment\nWard (Find a Ward   )\nAll\nCity Wide\nMultiple Wards\nWard 01 - ORLÉANS EAST-CUMBERLAND - Matthew Luloff\nWard 02 - ORLÉANS WEST-INNES - Laura Dudas\nWard 03 - BARRHAVEN WEST - David Hill\nWard 04 - KANATA NORTH - Cathy Curry\nWard 05 - WEST CARLETON-MARCH - Clarke Kelly\nWard 06 - STITTSVILLE - Glen Gower\nWard 07 - BAY - Theresa Kavanagh\nWard 08 - COLLEGE - Laine Johnson\nWard 09 - KNOXDALE-MERIVALE - Sean Devine\nWard 10 - GLOUCESTER-SOUTHGATE - Jessica Bradley\nWard 11 - BEACON HILL-CYRVILLE - Tim Tierney\nWard 12 - RIDEAU-VANIER - Stéphanie Plante\nWard 13 - RIDEAU-ROCKCLIFFE - Rawlson King\nWard 14 - SOMERSET - Ariel Troster\nWard 15 - KITCHISSIPPI - Jeff Leiper\nWard 16 - RIVER - Riley Brockington\nWard 17 - CAPITAL - Shawn Menard\nWard 18 - ALTA VISTA - Marty Carr\nWard 19 - ORLÉANS SOUTH-NAVAN - Catherine Kitts\nWard 20 - OSGOODE - Isabelle Skalski\nWard 21 - RIDEAU-JOCK - David Brown\nWard 22 - RIVERSIDE SOUTH-FINDLAY CREEK - Steve Desroches\nWard 23 - KANATA SOUTH - Allan Hubley\nWard 24 - BARRHAVE",
+          "link_count": 25,
+          "table_count": 0,
+          "xhr_total": 87,
+          "discovered_apis": [
+            {
+              "method": "GET",
+              "url": "https://devapps-restapi.ottawa.ca/devapps/feature/all?authKey=<redacted>",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://devapps-restapi.ottawa.ca/devapps/apptype/all?authKey=<redacted>",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://devapps-restapi.ottawa.ca/devapps/ward/all?authKey=<redacted>",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            }
+          ],
+          "other_json_xhr": [
+            {
+              "method": "GET",
+              "url": "https://api.mapbox.com/styles/v1/mapbox/light-v9/sprite.json?access_token=<redacted>",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            }
+          ],
+          "screenshot": "devapps-0.png",
+          "new_outcome": "machine-readable",
+          "error": null
+        }
+      ],
+      "rollup": "machine-readable"
+    },
+    "ateh": {
+      "name": "Alliance to End Homelessness Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://www.endhomelessnessottawa.ca/",
+          "final_url": "https://www.endhomelessnessottawa.ca/",
+          "title": "Alliance to End Homelessness Ottawa",
+          "rendered_text_chars": 5511,
+          "rendered_text_sample": "Who We Are\nOur Work\nUpdates\nResources\nFacebook\nTwitter\nInstagram\nDonate\nWe Can End\nHomelessness\nThe Alliance to End Homelessness Ottawa is a member-driven coalition of people and organizations working together to end homelessness through systems planning and coordination, public education and advocacy, and community-wide mobilization.\nSunday, September 27, 2026: Race to End Homelessness - Because We Can't Go Fast Enough\n\nLet’s run, walk, and roll our way to ending homelessness!\n\nSunday, September 27, 2026, 9:00 - 11:00 am\nPine View Golf Course, 1471 Blair Road\n\nRegister now!\n\nShelter Diversion Pilot\n\nToday we’re launching a report on a 6-month shelter diversion pilot project at Shepherds of Good Hope.\n\nThe results are striking. Staff were able to successfully divert 22% to positive alternatives to emergency shelter.\n\nRead the report\n\n \n\nOur City #StartsWithHome:\nScaling Up Non-Profit Housing in Ottawa Report.\nIt's time to take action. We have the solutions!\n\nRead the Report\n\nLAND ACKNOWLEDGEMENT\nOttawa is located on unceded Algonquin, Anishnabek territory.Put simply, these lands were stolen from the traditional keepers for the purposes of settlers. Dispossession of land is just one form of ongoing colonization that has led to First Nations, Inuit, and Métis people disproportionately experiencing homelessness.\nEmbracing Indigenous leadership and collaboration is crucial to ensuring the prevention, reduction, and ultimate end of homelessness.\n\nRead more\n\nARE YOU NEEDING HELP NO",
+          "link_count": 72,
+          "table_count": 0,
+          "xhr_total": 21,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "ateh-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "horizon-vote-tracker": {
+      "name": "Horizon Ottawa Vote Tracker",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://www.horizonottawa.ca/vote_tracker",
+          "final_url": "https://www.horizonottawa.ca/vote_tracker",
+          "title": "Vote Tracker - Horizon Ottawa",
+          "rendered_text_chars": 1977,
+          "rendered_text_sample": "About Us\nOur Work\nGet Involved\nTake Action\nResources\nNews & Opinion\nFacebook\nTwitter\nInstagram\nYouTube\nDonate\nView the data:\n\nAgreement % with Mayor\n\nDecisions by topic / committee\n\nCouncillor Voting Records\n\nAlignment with other Councillors\n\nCouncillors often speak about issues that are supposedly priorities for them, but when it comes time to actually vote, they let their constituents down. Unless this is reported in the media, most residents either never know how their councillor voted, or quickly forget as the news cycle moves on.\n\nWhile the city does publish meeting agenda and minutes (most of the time), the website makes users sift through the minutes of each meeting just to find a vote.\n\nWith our Vote Tracker database, you can now see how your councillor voted on decisions throughout the 2022-2026 term of council. You can also see votes sorted by councillor, topic, or committee, and learn just how often each councillor sides with Mayor Sutcliffe's agenda.\n\nMethodology:\n\nWe went through the minutes of each meeting of this term of council, including City Council meetings and these committees:\n\nPlanning and Housing\nEnvironment and Climate Change\nFinance and Corporate Services\nAgriculture and Rural Affairs\nPublic Works and Infrastructure\nTransit Commission\n\nMany decisions are carried due to their uncontroversial nature, so we have only included decisions with a recorded vote. Statistics like the percentage that each councillor votes with the Mayor should be interpreted as ",
+          "link_count": 56,
+          "table_count": 0,
+          "xhr_total": 19,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "horizon-vote-tracker-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "howtheyvoted": {
+      "name": "How They Voted",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://howtheyvoted.ca/",
+          "final_url": "https://howtheyvoted.ca/#/ottawa",
+          "title": "Ottawa City Council Voting Records",
+          "rendered_text_chars": 9491,
+          "rendered_text_sample": "Ottawa City Council\nVoting Records\nMotions by Date\nCouncillors\nCommittees\nTopics\nAbout\nRSS\nDate\n2026-09-03\n2026-09-02\n2026-09-01\n2026-08-27\n2026-08-26\n2026-08-20\n2026-08-19\n2026-07-27\n2026-07-15\n2026-07-14\n2026-07-08\n2026-06-30\n2026-06-25\n2026-06-24\n2026-06-23\n2026-06-22\n2026-06-19\n2026-06-17\n2026-06-16\n2026-06-15\n2026-06-11\n2026-06-10\n2026-06-09\n2026-06-04\n2026-06-03\n2026-06-02\n2026-05-28\n2026-05-27\n2026-05-25\n2026-05-22\n2026-05-20\n2026-05-19\n2026-05-14\n2026-05-13\n2026-05-07\n2026-05-06\n2026-05-05\n2026-04-30\n2026-04-28\n2026-04-27\n2026-04-23\n2026-04-22\n2026-04-21\n2026-04-16\n2026-04-15\n2026-04-14\n2026-04-10\n2026-04-09\n2026-04-08\n2026-04-07\n2026-04-02\n2026-04-01\n2026-03-31\n2026-03-30\n2026-03-27\n2026-03-24\n2026-03-23\n2026-03-17\n2026-03-13\n2026-03-12\n2026-03-11\n2026-03-10\n2026-03-05\n2026-03-04\n2026-03-03\n2026-02-27\n2026-02-26\n2026-02-25\n2026-02-24\n2026-02-23\n2026-02-20\n2026-02-19\n2026-02-18\n2026-02-17\n2026-02-12\n2026-02-11\n2026-02-10\n2026-02-09\n2026-02-05\n2026-02-04\n2026-02-03\n2026-01-29\n2026-01-28\n2026-01-26\n2026-01-22\n2026-01-20\n2026-01-14\n2025-12-17\n2025-12-16\n2025-12-10\n2025-12-09\n2025-12-08\n2025-12-05\n2025-12-04\n2025-12-03\n2025-12-02\n2025-12-01\n2025-11-28\n2025-11-27\n2025-11-26\n2025-11-25\n2025-11-24\n2025-11-21\n2025-11-20\n2025-11-19\n2025-11-18\n2025-11-13\n2025-11-12\n2025-11-07\n2025-11-06\n2025-11-05\n2025-11-04\n2025-11-03\n2025-10-28\n2025-10-27\n2025-10-23\n2025-10-22\n2025-10-21\n2025-10-16\n2025-10-15\n2025-10-14\n2025-10-08\n2025-10-07\n2025-10-06\n2025-10-02\n2025-10-01\n2025-09-29\n2025-09",
+          "link_count": 17,
+          "table_count": 0,
+          "xhr_total": 3,
+          "discovered_apis": [
+            {
+              "method": "GET",
+              "url": "https://howtheyvoted.ca/data/ottawa/index.json",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://howtheyvoted.ca/data/ottawa/dates/2026-09-03.json",
+              "status": 200,
+              "content_type": "application/json"
+            }
+          ],
+          "other_json_xhr": [],
+          "screenshot": "howtheyvoted-0.png",
+          "new_outcome": "machine-readable",
+          "error": null
+        }
+      ],
+      "rollup": "machine-readable"
+    },
+    "ottawa-lookout": {
+      "name": "Ottawa Lookout",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://www.ottawalookout.com/p/meet-the-candidates",
+          "final_url": "https://www.ottawalookout.com/p/meet-the-candidates",
+          "title": "Meet the candidates",
+          "rendered_text_chars": 16502,
+          "rendered_text_sample": "About\nNeighbourhoods\nNewsletters\nPromote Your Event\nLatest News\nBecome a member\nLog in\nMeet the candidates \n\nOne day after the nomination period opened, candidates are already coming forward to run for Mayor, city councillor and school trustee\n\nCharlie Senack\n\nMay 4, 2026\n\nSponsored by\n\nGood morning!\n\nOttawa is heading into a municipal election year — and for journalists, it’s a bit like Christmas morning.\n\nOn Friday, reporters lined up outside the local election office to watch the first wave of candidates officially file their nomination papers. There were no major surprises — at least not yet — as many of the names were already expected. But with nominations open until mid-to-late August, there’s still plenty of time for the race to take shape.\n\nMunicipal elections don’t always generate the same buzz as their provincial or federal counterparts. Turnout is lower, campaigns are quieter, and the results can sometimes feel predictable. But the decisions made at city hall often have the most immediate impact on daily life — from transit and housing to parks, roads and local services.\n\nThat’s why voting matters. It’s easy to tune out or assume your vote won’t make a difference, but municipal races are often decided by slim margins. If you care about how your city is run, casting a ballot is the bare minimum. And if you don’t vote, it becomes a lot harder to justify complaining about the outcome later.\n\nThis year, there will be at least a couple of new faces around the council ta",
+          "link_count": 100,
+          "table_count": 0,
+          "xhr_total": 16,
+          "discovered_apis": [],
+          "other_json_xhr": [
+            {
+              "method": "GET",
+              "url": "https://www.ottawalookout.com/post_insights?post_id=b8fa663d-a171-43b7-908e-dd2eb1f9a8d6",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://www.ottawalookout.com/merge_tags/b8fa663d-a171-43b7-908e-dd2eb1f9a8d6?draft=false",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "POST",
+              "url": "https://www.ottawalookout.com/post_meta_information",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "POST",
+              "url": "https://www.ottawalookout.com/page_view",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://syndication.twitter.com/settings?session_id=3db056b6418e990884cc912ed2deb803bbd4f7fd",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            }
+          ],
+          "screenshot": "ottawa-lookout-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        },
+        {
+          "url": "https://www.ottawalookout.com/",
+          "final_url": "https://www.ottawalookout.com/",
+          "title": "Home | Ottawa Lookout",
+          "rendered_text_chars": 10557,
+          "rendered_text_sample": "About\nNeighbourhoods\nNewsletters\nPromote Your Event\nLatest News\nBecome a member\nLog in\nOttawa’s source for hyper-local, neighbourhood news\n\nGet our free 3x a week newsletter to help you understand what’s happening in Ottawa and neighbourhoods across the city\n\nSubscribe\n\nSee why our newsletter is read by 49,000+ Ottawa locals\n\nSep 3, 2026\n\n•\n\n7 min read\n\nHow Ottawa’s top mayoral candidates plan to address Ottawa’s housing crisis\n\nWith Ottawa’s municipal election officially underway, candidates for city council are launching their campaigns and revealing their platforms, promising change, advocacy and partnership for the nation’s capital.\n\nSarah MacFarlane-Youngdale\n\nBecome a Lookout Member\n\nWe are building reader-funded, hyper-local neighbourhood news in Ottawa. Join us today.\n\nBECOME A MEMBER\n\nMerivale\n\n+3\n\nSep 3, 2026\n\n•\n\n6 min read\n\nFor one family, 150 years of Merivale history live inside one church\n\nThis year, Merivale United Church celebrated the 150th anniversary of its current building, welcoming about 80 people for a special service and nearly 100 for lunch on June 14. \n\nCharlie Senack\n\nVietnamese\n\n+3\n\nSep 2, 2026\n\n•\n\n3 min read\n\nHong’s Kitchen offers honest Vietnamese home cooking\n\nThe husband-wife duo have opened up Hong's over in Little Italy\n\nRalf Joneikies\n\nVietnamese\n\n+2\n\nSep 2, 2026\n\n•\n\n3 min read\n\nMama Mai delivers the finest pho broth in Ottawa\n\nThe 20-our broth will leave you asking for more\n\nRalf Joneikies\n\nCommunity\n\n+2\n\nSep 1, 2026\n\n•\n\n6 min read\n\nOttawa ",
+          "link_count": 167,
+          "table_count": 0,
+          "xhr_total": 9,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "ottawa-lookout-1.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "historical-imagery": {
+      "name": "Historical aerial imagery and mapping",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://maps.ottawa.ca/geoottawa/",
+          "final_url": "https://maps.ottawa.ca/geoottawa/",
+          "title": "geoOttawa",
+          "rendered_text_chars": 3492,
+          "rendered_text_sample": "Skip To Header Tools\nSkip To Navigation Tools\nSkip To Search\nSkip To Additional Tools\n6km\nMove mouse to get coordinates\nSearch\nFR\nWelcome to the new geoOttawa!\nAbout this application\ngeoOttawa is an interactive map tool that allows you to view map layers, get information and answers about the locations in the City of Ottawa. Search by address, intersections, streets, facilities, or park names to find a location. Many different map layers of information are available, such as parks, schools, City facilities, property parcels, roads, zoning, and air photos dating back to 1928. geoOttawa is your starting point for mapping available from the City of Ottawa!\nWeb Accessibility\nThis application is designed with accessible features, in accordance with the City of Ottawa Web Accessibility practices, and the Accessibility for Ontarians with Disabilities Act (AODA) and Web Content Accessibility Guidelines (WCAG) 2.0 standards. However, the interactive map functionality has accessibility limitations; such as for individuals with low vision or blindness and or mobility limitations (motor disabilities) which would restrict the user from utilizing the mouse; and contains some features that may not be practical for all users. Accessible format or communication support request also provides an opportunity for residents and visitors to request an accessible format or communication support.\nPlease review the following Terms and Conditions\nDisclaimer applicable to this application.\nThis applicat",
+          "link_count": 17,
+          "table_count": 1,
+          "xhr_total": 177,
+          "discovered_apis": [
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Basemap_Ottawa/MapServer?f=json",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://tiles.arcgis.com/tiles/G6F8XLCl5KtAlZ2G/arcgis/rest/services/Canopy/VectorTileServer?f=json",
+              "status": 200,
+              "content_type": "application/json;charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://tiles.arcgis.com/tiles/G6F8XLCl5KtAlZ2G/arcgis/rest/services/Tree_Canopy_2022_External/VectorTileServer?f=json",
+              "status": 200,
+              "content_type": "application/json;charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Climate_Resiliency/MapServer?f=json&dpi=96&transparent=true&format=png8",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Rail_Implementation_Office/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Miscellaneous/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Geoscience/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/WaterInfrastructure/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/WastewaterInfrastructure/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Environmental/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/SolidWasteCollectionCalendar/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/AdministrativeAreas/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/TopographicMapping/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/SurfaceWater/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/DevelopmentCharges/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/StaffGeographicAssignmentMaps/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Planning/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Greenbelt/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/Economic_Development/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/arcgis/rest/services/BIA/MapServer?f=json&dpi=96&transparent=true&format=png32",
+              "status": 200,
+              "content_type": "application/json;charset=UTF-8"
+            }
+          ],
+          "other_json_xhr": [
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/Deployment/config_Deployment.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/LocalLayer/config_LocalLayer.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/AccessifizrWidget/config_AccessifizrWidget.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/Scalebar/config_Scalebar.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/Search/config_Search.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/Coordinate/config_Coordinate.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/AdvDraw/config_Draw%20and%20Measure.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/GoToCoordinates/config_GoToCoordinates.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/Bookmark/config_Bookmark.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/LayerToggleButton/config_See%20Zoning%20Information.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/MyLocation/config_MyLocation.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://maps.ottawa.ca/geoottawa/configs/SimpleStreetView/config_SimpleStreetView.json?wab_dv=2.5",
+              "status": 200,
+              "content_type": "application/json"
+            }
+          ],
+          "screenshot": "historical-imagery-0.png",
+          "new_outcome": "machine-readable",
+          "error": null
+        }
+      ],
+      "rollup": "machine-readable"
+    },
+    "lobbyist-registry": {
+      "name": "Lobbyist Registry",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://lobbyist.ottawa.ca/search/searchlobbyist.aspx?lang=en",
+          "final_url": "https://lobbyist.ottawa.ca/search/searchlobbyist.aspx?lang=en",
+          "title": "",
+          "rendered_text_chars": 1441,
+          "rendered_text_sample": "Home| Site Map| Contact Us| Feedback\n \nCity of Ottawa Lobbyist Registry\n\nSearch Criteria\nKeyword\n\nLobbyist\n\nPerson(s) Lobbied\n\nSubject Matter\n\nAffordable Housing\nAgriculture/Rural Affairs\nArts/Culture\nAttractions/Tourism\nBudget\nBy-law/Regulation\nChildcare\nEconomic Development\nEnvironment\nFinancial Services\nGarbage/Recycling\nGrants/Funding\nHealth & Safety\nInformation Technology\nInfrastructure\n- Construction\nLicences/Permits\nParking\nParks/Recreation\nPlanning and Development\n- Planning Policy\n- Environmental Assessment\n- Heritage\n- Official Plan\n- Zoning By-law\n- Plan of Subdivision\n- Plan of Condominium\n- Site Plan\n- Minor Variance\n- Consent to Sever\n- Part Lot\n- Combined Application\nProcurement\nPublic Sector Union\nReal Estate/Property\nSigns\nSocial Services\n- Long-term Care\nTax Policy\nTransit/OC Transpo\nTransportation\nWater/Sewer\nAffected Ward(s)\n\nCW - City Wide\n1 - Orléans East-Cumberland\n2 - Orléans West-Innes\n3 - Barrhaven West\n4 - Kanata North\n5 - West Carleton-March\n6 - Stittsville\n7 - Bay\n8 - College\n9 - Knoxdale-Merivale\n10 - Gloucester-Southgate\n11 - Beacon Hill-Cyrville\n12 - Rideau-Vanier\n13 - Rideau-Rockcliffe\n14 - Somerset\n15 - Kitchissippi\n16 - River\n17 - Capital\n18 - Alta Vista\n19 - Orléans South-Navan\n20 - Osgoode\n21 - Rideau-Jock\n22 - Riverside South-Findlay Creek\n23 - Kanata South\n24 - Barrhaven East\n\nDate Range\n\nFrom:      To: \n     \n\n© 2001-2026 City of Ottawa\n\nDisclaimer| Privacy| Links| Accessibility",
+          "link_count": 10,
+          "table_count": 1,
+          "xhr_total": 0,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "lobbyist-registry-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        },
+        {
+          "url": "https://lobbyist.ottawa.ca/",
+          "final_url": "https://lobbyist.ottawa.ca/",
+          "title": "",
+          "rendered_text_chars": 176,
+          "rendered_text_sample": "Lobbyist Registry\nLobbyist Registry Log In\nSearch the Registry\nRegistre des lobbyistes\nOuverture de session du registre des lobbyistes\nRecherche dans le registre des lobbyistes",
+          "link_count": 4,
+          "table_count": 0,
+          "xhr_total": 0,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "lobbyist-registry-1.png",
+          "new_outcome": "needs_browser",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "engage-ottawa": {
+      "name": "Engage Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://engage.ottawa.ca/projects",
+          "final_url": "https://engage.ottawa.ca/projects",
+          "title": "All Projects | Engage Ottawa",
+          "rendered_text_chars": 24247,
+          "rendered_text_sample": "Skip To \nMenu \nFR\nAll Projects\nSign in\nRegister\n\nYou are here:\n\nHome\nAll Projects\nAll\nPublished\nArchived\nFilter by name \nPUBLISHED\nBillings Estate National Historic Site: Help Shape the Future of the Site!\nPUBLISHED\nDécoeur Drive Traffic Calming\nPUBLISHED\nLedbury Park Renewal and New District Park\nPUBLISHED\n1495 Heron Road – Build Canada Homes\nPUBLISHED\nRiver Road Upgrades – Earl Armstrong Road to Solarium Avenue\nPUBLISHED\nBradley Craig Park Cricket Pitch\nPUBLISHED\nMobility dashboard\nPUBLISHED\nFernbank District Park: New Park Development\nPUBLISHED\nRevitalizing Public Space in the ByWard Market\nPUBLISHED\nEagleson Road &amp; Flewellyn Road Functional Design Study\nPUBLISHED\nMontrichard Park\nPUBLISHED\nShare your memories of Cumberland Heritage Village Museum\nPUBLISHED\nBarrhaven Civic Centre and Ottawa Public Library Branch\nPUBLISHED\nGreater Mosquito Creek Subwatershed Study\nPUBLISHED\nBayshore Park Splash Pad\nPUBLISHED\nByWard Square\nPUBLISHED\nWilson Cowan Municipal Drain\nPUBLISHED\nAlvin Heights Park Renewal\nPUBLISHED\nPlante Drive - Traffic Calming Project\nPUBLISHED\nMobility Hub\nPUBLISHED\nRockdale Road – Traffic Calming and Urbanization\nPUBLISHED\nZena Street, Sunnycrest Drive and Barlyn Avenue Sidewalks\nPUBLISHED\nVernon Pump Track\nPUBLISHED\nBathgate Park Remediation and Reforestation\nPUBLISHED\nOld Carp Road Traffic Calming Study\nPUBLISHED\nViewmount Drive Traffic Calming Study\nPUBLISHED\nCentrum Boulevard Public Realm Plan\nPUBLISHED\nCommunity Partnership Major Capital Program\nPUBLISH",
+          "link_count": 550,
+          "table_count": 0,
+          "xhr_total": 141,
+          "discovered_apis": [
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/home_page_revisions?filters%5Bsort%5D%5Bid%5D=desc&filters%5Bpublished%5D=true&page=1&per_page=1",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/theme/",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/navigation_links?filters%5Bsearch%5D=header&filters%5Bsort%5D%5Bsequence%5D=asc&per_page=9999",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/site/",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/users/current",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/layouts/selected/",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/settings/",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/features",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/recommendations",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/user_subscriptions",
+              "status": 404,
+              "content_type": "application/json"
+            }
+          ],
+          "other_json_xhr": [
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/token",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://views.unsplash.com/v?app_id=130915photo_id=-undefined",
+              "status": 200,
+              "content_type": "application/json"
+            }
+          ],
+          "screenshot": "engage-ottawa-0.png",
+          "new_outcome": "machine-readable",
+          "error": null
+        },
+        {
+          "url": "https://ottawa.ca/en/city-hall/public-engagement/public-engagement-project-search",
+          "final_url": "https://ottawa.ca/en/city-hall/public-engagement/public-engagement-project-search",
+          "title": "",
+          "rendered_text_chars": 0,
+          "rendered_text_sample": "",
+          "link_count": 0,
+          "table_count": 0,
+          "xhr_total": 4,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "engage-ottawa-1.png",
+          "new_outcome": "needs_browser",
+          "error": null
+        }
+      ],
+      "rollup": "machine-readable"
+    },
+    "escribe": {
+      "name": "eScribe: agendas, minutes, staff reports",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://pub-ottawa.escribemeetings.com/",
+          "final_url": "https://pub-ottawa.escribemeetings.com/",
+          "title": "eSCRIBE Published Meetings",
+          "rendered_text_chars": 1287,
+          "rendered_text_sample": "Skip to content\nSearch\nCalendar View\nSeptember 2026\nCalendar\nList\nUpcoming\nPast\nCalendar containing meetings\nSunday\n\t\nMonday\n\t\nTuesday\n\t\nWednesday\n\t\nThursday\n\t\nFriday\n\t\nSaturday\n\n\t\n\t\n1\n9:00 AM\nCommittee of Adjustment - Panel 3\n9:30 AM\nFinance and Corporate Services Committee\n1:00 PM\nCommittee of Adjustment - Panel 2\n4:00 PM\nCommunity Safety and Well-Being Advisory Committee\n\t\n2\n9:30 AM\nPlanning and Housing Committee\n1:00 PM\nCommittee of Adjustment - Panel 1\n\t\n3\n10:00 AM\nAgriculture and Rural Affairs Committee\n\t\n4\n\t\n5\n\n6\n\t\n7\n\t\n8\n9:30 AM\nBuilt Heritage Committee\n5:00 PM\nOttawa Public Library Board\n\t\n9\n10:00 AM\nCity Council\n\t\n10\n9:30 AM\nTransit Committee\n\t\n11\n\t\n12\n\n13\n\t\n14\n\t\n15\n9:30 AM\nEnvironment and Climate Change Committee\n9:30 AM\nBuilt Heritage Committee\n1:00 PM\nCommittee of Adjustment - Panel 2\n6:00 PM\nAccessibility Advisory Committee\n\t\n16\n9:30 AM\nPlanning and Housing Committee\n\t\n17\n9:30 AM\nEmergency Preparedness and Protective Services Committee\n\t\n18\n9:30 AM\nOttawa Investment Board\n\t\n19\n\n20\n\t\n21\n5:00 PM\nBoard of Health\n\t\n22\n9:30 AM\nCommunity Services Committee\n\t\n23\n10:00 AM\nCity Council\n\t\n24\n9:30 AM\nPublic Works and Infrastructure Committee\n\t\n25\n\t\n26\n\n27\n\t\n28\n10:00 AM\nOttawa Police Service Board\n4:00 PM\nOttawa Police Service Board\n\t\n29\n9:30 AM\nAudit Committee\n\t\n30",
+          "link_count": 5,
+          "table_count": 12,
+          "xhr_total": 7,
+          "discovered_apis": [
+            {
+              "method": "POST",
+              "url": "https://pub-ottawa.escribemeetings.com/MeetingsCalendarView.aspx/GetCalendarMeetings",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            }
+          ],
+          "other_json_xhr": [],
+          "screenshot": "escribe-0.png",
+          "new_outcome": "machine-readable",
+          "error": null
+        }
+      ],
+      "rollup": "machine-readable"
+    },
+    "committee-of-adjustment": {
+      "name": "Committee of Adjustment decisions",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://www.canlii.org/",
+          "final_url": "https://www.canlii.org/",
+          "title": "canlii.org",
+          "rendered_text_chars": 0,
+          "rendered_text_sample": "",
+          "link_count": 0,
+          "table_count": 0,
+          "xhr_total": 0,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "committee-of-adjustment-0.png",
+          "new_outcome": "needs_browser",
+          "error": null
+        },
+        {
+          "url": "https://ottawa.ca/en/planning-development-and-construction/committee-adjustment/find-decision",
+          "final_url": "https://ottawa.ca/en/planning-development-and-construction/committee-adjustment/find-decision",
+          "title": "",
+          "rendered_text_chars": 0,
+          "rendered_text_sample": "",
+          "link_count": 0,
+          "table_count": 0,
+          "xhr_total": 4,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "committee-of-adjustment-1.png",
+          "new_outcome": "needs_browser",
+          "error": null
+        }
+      ],
+      "rollup": "needs_browser"
+    },
+    "social-housing-registry": {
+      "name": "Social Housing Registry of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://housingregistry.ca/",
+          "final_url": "https://housingregistry.ca/",
+          "title": "Housing Registry of Ottawa, supportive housing, rgi housing",
+          "rendered_text_chars": 2737,
+          "rendered_text_sample": "Skip to Content\n\n \n\n \n\nEnglishFrançais\nApply Now\nFAQs\nSearch for\nSearch website\nHome\nThe Process\nThe People\nThe Housing\nThe Forms\nThe Challenge\nContact\nSocial Housing Registry of Ottawa\nWe are a caring team dedicated to helping people submit and update their applications for subsidized housing.\nApply Now\n\nEverything you need to submit an application for subsidized housing. Apply Now\n\nOur Role\n\nOur role within the constellation of community housing organizations is to maintain a centralized list of people awaiting subsidized housing. Explore the constellation\n\nHousing Providers\n\n50 housing providers in the Ottawa area have rent-geared -to-income housing, Affordable Housing (formerly Below Market Rent (BMR)), and supportive housing you can apply for. View options\n\nHow it Works\n\nOnce we help you apply, we have no way of knowing when units become available or when housing providers are able to make you an offer. Here’s how it works\n\nAlready Applied?\n\nWe need to hear from applicants at least once a year.  What to Expect\n\nQuestions & Answers\n\nWhat is subsidized housing? How long does it take? Who decides? Get Answers\n\nSocial Housing Registry of Ottawa (The Registry) is a caring team dedicated to helping people submit and update their applications for subsidized housing in Ottawa. Applicants are referred to The Registry by social service and government agencies or find us on their own.\n\nGuided by the vision that everyone should have a safe and affordable home, our role within the co",
+          "link_count": 30,
+          "table_count": 0,
+          "xhr_total": 0,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "social-housing-registry-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    }
+  }
+}
