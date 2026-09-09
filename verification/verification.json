@@ -1,22 +1,21 @@
 {
-  "generated_at": "2026-09-09T14:47:50+00:00",
+  "generated_at": "2026-09-09T16:56:13+00:00",
   "tool": "verify.py 0.1 (stage 0-1: liveness + fingerprint)",
   "note": "Automated. Confirms reachability and machine-readable surface only. 'needs_browser' and 'reachable_html' rows still need Stage 2 (headless browser) and Stage 3 (human: access tag + licence).",
   "summary": {
-    "dead": 4,
-    "error": 2,
+    "dead": 2,
+    "error": 0,
     "blocked": 1,
     "needs_browser": 10,
-    "reachable_html": 66,
+    "reachable_html": 67,
     "pdf": 0,
-    "machine-readable": 17,
+    "machine-readable": 20,
     "urls": 100,
     "sources": 72,
     "sources_by_rollup": {
-      "error": 1,
       "needs_browser": 7,
-      "reachable_html": 49,
-      "machine-readable": 15
+      "reachable_html": 48,
+      "machine-readable": 17
     }
   },
   "sources": {
@@ -30,13 +29,13 @@
       "urls": [
         {
           "url": "https://open.ottawa.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://open.ottawa.ca/",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 134138,
-          "elapsed_ms": 306,
+          "bytes": 143831,
+          "elapsed_ms": 314,
           "server": null,
           "title": "Open Ottawa",
           "error": null,
@@ -50,7 +49,7 @@
               {
                 "probe": "https://open.ottawa.ca/api/feed/dcat-us/1.1.json",
                 "status": 200,
-                "result": "ArcGIS Hub DCAT feed present (691 datasets)",
+                "result": "ArcGIS Hub DCAT feed present (695 datasets)",
                 "matched": true
               }
             ]
@@ -59,13 +58,13 @@
         },
         {
           "url": "https://open.ottawa.ca/pages/developer-resources",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://open.ottawa.ca/pages/developer-resources",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 134163,
-          "elapsed_ms": 374,
+          "bytes": 143856,
+          "elapsed_ms": 404,
           "server": null,
           "title": "Open Ottawa",
           "error": null,
@@ -79,7 +78,7 @@
               {
                 "probe": "https://open.ottawa.ca/api/feed/dcat-us/1.1.json",
                 "status": 200,
-                "result": "ArcGIS Hub DCAT feed present (691 datasets)",
+                "result": "ArcGIS Hub DCAT feed present (695 datasets)",
                 "matched": true
               }
             ]
@@ -88,13 +87,13 @@
         },
         {
           "url": "https://ouverte.ottawa.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ouverte.ottawa.ca/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 135193,
-          "elapsed_ms": 744,
+          "elapsed_ms": 434,
           "server": null,
           "title": "Données ouvertes de la Ville d'Ottawa",
           "error": null,
@@ -121,19 +120,20 @@
     "arcgis-rest-root": {
       "name": "City ArcGIS REST services root",
       "claimed_access": [
-        "api"
+        "api",
+        "bulk"
       ],
       "verify_flag": false,
       "urls": [
         {
           "url": "https://maps.ottawa.ca/arcgis/rest/services/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://maps.ottawa.ca/arcgis/rest/services/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 10814,
-          "elapsed_ms": 197,
+          "elapsed_ms": 212,
           "server": "",
           "title": "Folder: /",
           "error": null,
@@ -160,19 +160,20 @@
     "geoottawa": {
       "name": "geoOttawa",
       "claimed_access": [
-        "html"
+        "html",
+        "api"
       ],
       "verify_flag": false,
       "urls": [
         {
           "url": "https://maps.ottawa.ca/geoottawa/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://maps.ottawa.ca/geoottawa/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 4625,
-          "elapsed_ms": 167,
+          "elapsed_ms": 149,
           "server": "Microsoft-IIS/10.0",
           "title": "geoOttawa",
           "error": null,
@@ -201,13 +202,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/open-data",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/open-data",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 1050,
-          "elapsed_ms": 221,
+          "elapsed_ms": 239,
           "server": null,
           "title": null,
           "error": null,
@@ -233,13 +234,13 @@
       "urls": [
         {
           "url": "https://elections.ottawa.ca/CandidateList/CandidateList",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://elections.ottawa.ca/CandidateList/CandidateList",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 59963,
-          "elapsed_ms": 194,
+          "elapsed_ms": 225,
           "server": null,
           "title": "Who is running in my ward? | City of Ottawa",
           "error": null,
@@ -265,13 +266,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/city-hall/elections/voters/who-running-my-ward",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/city-hall/elections/voters/who-running-my-ward",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1050,
-          "elapsed_ms": 242,
+          "bytes": 1046,
+          "elapsed_ms": 222,
           "server": null,
           "title": null,
           "error": null,
@@ -297,13 +298,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/city-hall/elections/candidates/candidate-campaign-finances-and-contributions",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/city-hall/elections/candidates/candidate-campaign-finances-and-contributions",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1044,
-          "elapsed_ms": 231,
+          "bytes": 1050,
+          "elapsed_ms": 221,
           "server": null,
           "title": null,
           "error": null,
@@ -319,13 +320,13 @@
         },
         {
           "url": "https://ottawa.ca/en/city-hall/elections/previous-elections-and-appointment-processes/financial-statements-2022-municipal-elections/candidate-and-third-party-advertiser-compliance-reports",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/city-hall/elections/previous-elections-and-appointment-processes/financial-statements-2022-municipal-elections/candidate-and-third-party-advertiser-compliance-reports",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1051,
-          "elapsed_ms": 248,
+          "bytes": 1044,
+          "elapsed_ms": 220,
           "server": null,
           "title": null,
           "error": null,
@@ -351,13 +352,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/city-hall/elections/candidates/information-candidates",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/city-hall/elections/candidates/information-candidates",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1043,
-          "elapsed_ms": 232,
+          "bytes": 1048,
+          "elapsed_ms": 498,
           "server": null,
           "title": null,
           "error": null,
@@ -373,13 +374,13 @@
         },
         {
           "url": "https://ottawa.ca/en/city-hall/elections/learn-more-about-municipal-elections/key-dates-2026-municipal-elections",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/city-hall/elections/learn-more-about-municipal-elections/key-dates-2026-municipal-elections",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1048,
-          "elapsed_ms": 247,
+          "bytes": 1047,
+          "elapsed_ms": 226,
           "server": null,
           "title": null,
           "error": null,
@@ -399,19 +400,20 @@
     "election-results-history": {
       "name": "Historical results and ward boundaries",
       "claimed_access": [
+        "api",
         "bulk"
       ],
       "verify_flag": false,
       "urls": [
         {
           "url": "https://en.wikipedia.org/wiki/2022_Ottawa_municipal_election",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://en.wikipedia.org/wiki/2022_Ottawa_municipal_election",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 300000,
-          "elapsed_ms": 927,
+          "bytes": 1378194,
+          "elapsed_ms": 359,
           "server": "mw-web.eqiad.main-7d75c875-6q2m8",
           "title": "2022 Ottawa municipal election - Wikipedia",
           "error": null,
@@ -429,14 +431,14 @@
         },
         {
           "url": "https://en.wikipedia.org/wiki/2026_Ottawa_municipal_election",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://en.wikipedia.org/wiki/2026_Ottawa_municipal_election",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 824902,
-          "elapsed_ms": 358,
-          "server": "mw-web.eqiad.main-77bf874667-ldzgc",
+          "bytes": 825077,
+          "elapsed_ms": 344,
+          "server": "mw-web.eqiad.main-76d84f5b55-w4zdh",
           "title": "2026 Ottawa municipal election - Wikipedia",
           "error": null,
           "retried": false,
@@ -453,13 +455,13 @@
         },
         {
           "url": "https://open.ottawa.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://open.ottawa.ca/",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 134138,
-          "elapsed_ms": 364,
+          "bytes": 143831,
+          "elapsed_ms": 341,
           "server": null,
           "title": "Open Ottawa",
           "error": null,
@@ -473,7 +475,7 @@
               {
                 "probe": "https://open.ottawa.ca/api/feed/dcat-us/1.1.json",
                 "status": 200,
-                "result": "ArcGIS Hub DCAT feed present (691 datasets)",
+                "result": "ArcGIS Hub DCAT feed present (695 datasets)",
                 "matched": true
               }
             ]
@@ -486,19 +488,20 @@
     "escribe": {
       "name": "eScribe: agendas, minutes, staff reports",
       "claimed_access": [
+        "api",
         "html"
       ],
       "verify_flag": false,
       "urls": [
         {
           "url": "https://pub-ottawa.escribemeetings.com/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://pub-ottawa.escribemeetings.com/",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 266697,
-          "elapsed_ms": 390,
+          "bytes": 266700,
+          "elapsed_ms": 372,
           "server": "cloudflare",
           "title": "eSCRIBE Published Meetings",
           "error": null,
@@ -525,13 +528,13 @@
       "urls": [
         {
           "url": "https://app06.ottawa.ca/cgi-bin/docs.pl?lang=en",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/node/1029405",
           "redirected": true,
           "content_type": "text/html",
-          "bytes": 1048,
-          "elapsed_ms": 388,
+          "bytes": 1049,
+          "elapsed_ms": 385,
           "server": null,
           "title": null,
           "error": null,
@@ -551,19 +554,20 @@
     "council-video": {
       "name": "Council meeting video and audio",
       "claimed_access": [
+        "html",
         "api"
       ],
       "verify_flag": false,
       "urls": [
         {
           "url": "https://www.youtube.com/channel/UCUR3i_hvk3-3i8vtrPg6v1Q",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.youtube.com/channel/UCUR3i_hvk3-3i8vtrPg6v1Q",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 300000,
-          "elapsed_ms": 330,
+          "elapsed_ms": 304,
           "server": "ESF",
           "title": null,
           "error": null,
@@ -591,13 +595,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1052,
-          "elapsed_ms": 247,
+          "bytes": 1048,
+          "elapsed_ms": 234,
           "server": null,
           "title": null,
           "error": null,
@@ -623,13 +627,13 @@
       "urls": [
         {
           "url": "https://documents.ottawa.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://documents.ottawa.ca/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 101348,
-          "elapsed_ms": 180,
+          "elapsed_ms": 282,
           "server": null,
           "title": "Documents | City of Ottawa |",
           "error": null,
@@ -655,13 +659,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/city-hall/council-committees-and-boards",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/city-hall/council-committees-and-boards",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1046,
-          "elapsed_ms": 241,
+          "bytes": 1044,
+          "elapsed_ms": 235,
           "server": null,
           "title": null,
           "error": null,
@@ -687,13 +691,13 @@
       "urls": [
         {
           "url": "https://www.oagottawa.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.oagottawa.ca/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 74548,
-          "elapsed_ms": 296,
+          "elapsed_ms": 214,
           "server": null,
           "title": "Home | Office of the Auditor General - City of Ottawa",
           "error": null,
@@ -719,13 +723,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/integrity-commissioner",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/integrity-commissioner",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1047,
-          "elapsed_ms": 222,
+          "bytes": 1045,
+          "elapsed_ms": 224,
           "server": null,
           "title": null,
           "error": null,
@@ -751,13 +755,13 @@
       "urls": [
         {
           "url": "https://lobbyist.ottawa.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://lobbyist.ottawa.ca/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 727,
-          "elapsed_ms": 140,
+          "elapsed_ms": 98,
           "server": "Microsoft-IIS/10.0",
           "title": null,
           "error": null,
@@ -773,13 +777,13 @@
         },
         {
           "url": "https://lobbyist.ottawa.ca/search/searchlobbyist.aspx?lang=en",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://lobbyist.ottawa.ca/search/searchlobbyist.aspx?lang=en",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 34214,
-          "elapsed_ms": 155,
+          "elapsed_ms": 166,
           "server": "Microsoft-IIS/10.0",
           "title": null,
           "error": null,
@@ -806,13 +810,13 @@
       "urls": [
         {
           "url": "https://forms.ottawa.ca/en/form/occ/policy/mfippa-access-form",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://forms.ottawa.ca/en/form/occ/policy/mfippa-access-form",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 5546,
-          "elapsed_ms": 222,
+          "bytes": 5547,
+          "elapsed_ms": 152,
           "server": null,
           "title": "City of Ottawa",
           "error": null,
@@ -831,13 +835,13 @@
         },
         {
           "url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/public-disclosure/disclosure-mfippa-requests/general-information",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/public-disclosure/disclosure-mfippa-requests/general-information",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1046,
-          "elapsed_ms": 224,
+          "bytes": 1047,
+          "elapsed_ms": 220,
           "server": null,
           "title": null,
           "error": null,
@@ -863,13 +867,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/public-disclosure/disclosure-office-expenses",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/public-disclosure/disclosure-office-expenses",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1047,
-          "elapsed_ms": 226,
+          "bytes": 1046,
+          "elapsed_ms": 235,
           "server": null,
           "title": null,
           "error": null,
@@ -895,13 +899,13 @@
       "urls": [
         {
           "url": "https://www.ontario.ca/page/public-sector-salary-disclosure",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.ontario.ca/page/public-sector-salary-disclosure",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 109176,
-          "elapsed_ms": 201,
+          "elapsed_ms": 222,
           "server": null,
           "title": "Public sector salary disclosure | ontario.ca",
           "error": null,
@@ -927,13 +931,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning/financial-reports-and-statements",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning/financial-reports-and-statements",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1047,
-          "elapsed_ms": 227,
+          "bytes": 1048,
+          "elapsed_ms": 226,
           "server": null,
           "title": null,
           "error": null,
@@ -960,13 +964,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1048,
-          "elapsed_ms": 224,
+          "bytes": 1046,
+          "elapsed_ms": 219,
           "server": null,
           "title": null,
           "error": null,
@@ -986,19 +990,20 @@
     "fir": {
       "name": "Financial Information Return (FIR)",
       "claimed_access": [
+        "api",
         "bulk"
       ],
       "verify_flag": false,
       "urls": [
         {
           "url": "https://data.ontario.ca/dataset/financial-information-return-fir-for-municipalities",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://data.ontario.ca/dataset/financial-information-return-fir-for-municipalities",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 38875,
-          "elapsed_ms": 926,
+          "elapsed_ms": 422,
           "server": null,
           "title": "Financial Information Return (FIR) - Dataset - Ontario Data Catalogue",
           "error": null,
@@ -1027,13 +1032,13 @@
         },
         {
           "url": "https://efis.fma.csc.gov.on.ca/fir/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://efis.fma.csc.gov.on.ca/fir/index.php/en/financial-information-return-en/",
           "redirected": true,
           "content_type": "text/html",
           "bytes": 39555,
-          "elapsed_ms": 1153,
+          "elapsed_ms": 740,
           "server": "Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k",
           "title": "About The Financial Information Return - Financial Information Return",
           "error": null,
@@ -1059,13 +1064,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/business/procurement/procurement",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/business/procurement/procurement",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1048,
-          "elapsed_ms": 232,
+          "bytes": 1044,
+          "elapsed_ms": 230,
           "server": null,
           "title": null,
           "error": null,
@@ -1081,12 +1086,12 @@
         },
         {
           "url": "https://ottawa.ca/en/business/procurement/procurement-law",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/business/procurement/procurement-law",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1047,
+          "bytes": 1044,
           "elapsed_ms": 222,
           "server": null,
           "title": null,
@@ -1113,13 +1118,13 @@
       "urls": [
         {
           "url": "https://www.mpac.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.mpac.ca/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 103044,
-          "elapsed_ms": 247,
+          "elapsed_ms": 195,
           "server": null,
           "title": "Welcome to MPAC | MPAC",
           "error": null,
@@ -1139,19 +1144,20 @@
     "devapps": {
       "name": "Development Applications Search",
       "claimed_access": [
+        "api",
         "html"
       ],
       "verify_flag": false,
       "urls": [
         {
           "url": "https://devapps.ottawa.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://devapps.ottawa.ca/",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1378,
-          "elapsed_ms": 171,
+          "bytes": 1379,
+          "elapsed_ms": 130,
           "server": "nginx",
           "title": "Development Applications Search",
           "error": null,
@@ -1181,13 +1187,13 @@
       "urls": [
         {
           "url": "https://maps.ottawa.ca/arcgis/rest/services/Zoning/MapServer",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://maps.ottawa.ca/arcgis/rest/services/Zoning/MapServer",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 6685,
-          "elapsed_ms": 563,
+          "elapsed_ms": 243,
           "server": "",
           "title": "Zoning (MapServer)",
           "error": null,
@@ -1210,13 +1216,13 @@
         },
         {
           "url": "https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z/zoning-law-law-no-2026-50",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z/zoning-law-law-no-2026-50",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 1044,
-          "elapsed_ms": 235,
+          "elapsed_ms": 238,
           "server": null,
           "title": null,
           "error": null,
@@ -1242,13 +1248,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/planning-development-and-construction",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/planning-development-and-construction",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1045,
-          "elapsed_ms": 222,
+          "bytes": 1047,
+          "elapsed_ms": 221,
           "server": null,
           "title": null,
           "error": null,
@@ -1274,13 +1280,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/planning-development-and-construction/committee-adjustment/find-decision",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/planning-development-and-construction/committee-adjustment/find-decision",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1052,
-          "elapsed_ms": 238,
+          "bytes": 1044,
+          "elapsed_ms": 4226,
           "server": null,
           "title": null,
           "error": null,
@@ -1296,13 +1302,13 @@
         },
         {
           "url": "https://www.canlii.org/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 403,
           "final_url": "https://www.canlii.org/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 773,
-          "elapsed_ms": 117,
+          "elapsed_ms": 242,
           "server": null,
           "title": "canlii.org",
           "error": "HTTP 403 Forbidden",
@@ -1322,13 +1328,13 @@
       "urls": [
         {
           "url": "https://olt.gov.on.ca/decisions/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://olt.gov.on.ca/decisions/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 39062,
-          "elapsed_ms": 284,
+          "elapsed_ms": 337,
           "server": "cloudflare",
           "title": "Decisions | Ontario Land Tribunal",
           "error": null,
@@ -1354,13 +1360,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/planning-development-and-construction/building-and-renovating",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/planning-development-and-construction/building-and-renovating",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 1050,
-          "elapsed_ms": 245,
+          "elapsed_ms": 225,
           "server": null,
           "title": null,
           "error": null,
@@ -1387,13 +1393,13 @@
       "urls": [
         {
           "url": "https://nextrip-public-api.developer.azure-api.net/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://nextrip-public-api.developer.azure-api.net/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 12259,
-          "elapsed_ms": 276,
+          "elapsed_ms": 405,
           "server": null,
           "title": "Home - OC Transpo - developer portal",
           "error": null,
@@ -1409,13 +1415,13 @@
         },
         {
           "url": "https://www.octranspo.com/en/plan-your-trip/travel-tools/developers/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.octranspo.com/en/plan-your-trip/travel-tools/developers/",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 140668,
-          "elapsed_ms": 385,
+          "bytes": 141995,
+          "elapsed_ms": 868,
           "server": "Apache",
           "title": "Developers | OC Transpo",
           "error": null,
@@ -1431,13 +1437,13 @@
         },
         {
           "url": "https://www.transit.land/feeds/f-f24-octranspo",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.transit.land/feeds/f-f24-octranspo",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 171059,
-          "elapsed_ms": 762,
+          "bytes": 171060,
+          "elapsed_ms": 1888,
           "server": "cloudflare",
           "title": "Transitland • Ottawa-Carleton Regional Transit Commission (OC Transpo) • GTFS feed",
           "error": null,
@@ -1465,13 +1471,13 @@
       "urls": [
         {
           "url": "https://traffic.ottawa.ca/en/opendata",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://traffic.ottawa.ca/en/opendata",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 24377,
-          "elapsed_ms": 167,
+          "elapsed_ms": 126,
           "server": "nginx",
           "title": "About the data | City of Ottawa",
           "error": null,
@@ -1487,13 +1493,13 @@
         },
         {
           "url": "https://traffic.ottawa.ca/map/service/ase_camera",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://traffic.ottawa.ca/map/service/ase_camera",
           "redirected": false,
           "content_type": "application/json",
           "bytes": 9879,
-          "elapsed_ms": 99,
+          "elapsed_ms": 116,
           "server": "nginx",
           "title": null,
           "error": null,
@@ -1519,30 +1525,43 @@
       "verify_flag": false,
       "urls": [
         {
-          "url": "https://open.ottawa.ca/datasets/ottawa::traffic-collision-data/about",
-          "checked_at": "2026-09-09T14:47:50+00:00",
-          "http_status": 404,
-          "final_url": "https://open.ottawa.ca/datasets/ottawa::traffic-collision-data/about",
+          "url": "https://open.ottawa.ca/search?q=traffic%20collision",
+          "checked_at": "2026-09-09T16:56:13+00:00",
+          "http_status": 200,
+          "final_url": "https://open.ottawa.ca/search?q=traffic%20collision",
           "redirected": false,
-          "content_type": "text/plain",
-          "bytes": 30,
-          "elapsed_ms": 249,
+          "content_type": "text/html",
+          "bytes": 143859,
+          "elapsed_ms": 1217,
           "server": null,
-          "title": null,
-          "error": "HTTP 404 Not Found",
+          "title": "Open Ottawa",
+          "error": null,
           "retried": false,
-          "outcome": "error",
-          "fingerprint": null
+          "fingerprint": {
+            "content_type": "text/html",
+            "kind": "machine-readable",
+            "needs_browser": false,
+            "signals": [],
+            "probes": [
+              {
+                "probe": "https://open.ottawa.ca/api/feed/dcat-us/1.1.json",
+                "status": 200,
+                "result": "ArcGIS Hub DCAT feed present (695 datasets)",
+                "matched": true
+              }
+            ]
+          },
+          "outcome": "machine-readable"
         },
         {
           "url": "https://ottawa.ca/en/parking-roads-and-travel/road-safety/road-safety-action-plan/fatal-and-major-injury-collision-data",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/parking-roads-and-travel/road-safety/road-safety-action-plan/fatal-and-major-injury-collision-data",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1053,
-          "elapsed_ms": 236,
+          "bytes": 1046,
+          "elapsed_ms": 221,
           "server": null,
           "title": null,
           "error": null,
@@ -1557,7 +1576,7 @@
           "outcome": "reachable_html"
         }
       ],
-      "rollup": "reachable_html"
+      "rollup": "machine-readable"
     },
     "automated-speed-enforcement": {
       "name": "Automated speed enforcement",
@@ -1568,13 +1587,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/parking-roads-and-travel/road-safety/enforcement/automated-speed-enforcement",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/parking-roads-and-travel/road-safety/enforcement/automated-speed-enforcement",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1046,
-          "elapsed_ms": 232,
+          "bytes": 1048,
+          "elapsed_ms": 240,
           "server": null,
           "title": null,
           "error": null,
@@ -1601,13 +1620,13 @@
       "urls": [
         {
           "url": "https://open.ottawa.ca/datasets/pathway-links/api",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://open.ottawa.ca/datasets/pathway-links/api",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 133986,
-          "elapsed_ms": 313,
+          "bytes": 143679,
+          "elapsed_ms": 379,
           "server": null,
           "title": "Pathway Links",
           "error": null,
@@ -1621,7 +1640,7 @@
               {
                 "probe": "https://open.ottawa.ca/api/feed/dcat-us/1.1.json",
                 "status": 200,
-                "result": "ArcGIS Hub DCAT feed present (691 datasets)",
+                "result": "ArcGIS Hub DCAT feed present (695 datasets)",
                 "matched": true
               }
             ]
@@ -1641,13 +1660,13 @@
       "urls": [
         {
           "url": "https://data.ottawapolice.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://data.ottawapolice.ca/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 102661,
-          "elapsed_ms": 413,
+          "elapsed_ms": 397,
           "server": null,
           "title": "Ottawa Police Community Safety Data Portal",
           "error": null,
@@ -1674,19 +1693,20 @@
     "crime-map": {
       "name": "Crime Map (year to date)",
       "claimed_access": [
+        "api",
         "bulk"
       ],
       "verify_flag": false,
       "urls": [
         {
           "url": "https://open.ottawa.ca/datasets/crime-map-year-to-date/about",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://open.ottawa.ca/datasets/crime-map-year-to-date/about",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 134436,
-          "elapsed_ms": 384,
+          "bytes": 144129,
+          "elapsed_ms": 387,
           "server": null,
           "title": "Crime Map (Year-to-Date)",
           "error": null,
@@ -1700,7 +1720,7 @@
               {
                 "probe": "https://open.ottawa.ca/api/feed/dcat-us/1.1.json",
                 "status": 200,
-                "result": "ArcGIS Hub DCAT feed present (691 datasets)",
+                "result": "ArcGIS Hub DCAT feed present (695 datasets)",
                 "matched": true
               }
             ]
@@ -1719,13 +1739,13 @@
       "urls": [
         {
           "url": "https://pub-ottawa.escribemeetings.com/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://pub-ottawa.escribemeetings.com/",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 266699,
-          "elapsed_ms": 311,
+          "bytes": 266700,
+          "elapsed_ms": 361,
           "server": "cloudflare",
           "title": "eSCRIBE Published Meetings",
           "error": null,
@@ -1745,19 +1765,20 @@
     "fire-paramedic": {
       "name": "Fire, paramedic and emergency services",
       "claimed_access": [
+        "api",
         "bulk"
       ],
       "verify_flag": false,
       "urls": [
         {
           "url": "https://open.ottawa.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://open.ottawa.ca/",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 134138,
-          "elapsed_ms": 991,
+          "bytes": 143831,
+          "elapsed_ms": 383,
           "server": null,
           "title": "Open Ottawa",
           "error": null,
@@ -1771,7 +1792,7 @@
               {
                 "probe": "https://open.ottawa.ca/api/feed/dcat-us/1.1.json",
                 "status": 200,
-                "result": "ArcGIS Hub DCAT feed present (691 datasets)",
+                "result": "ArcGIS Hub DCAT feed present (695 datasets)",
                 "matched": true
               }
             ]
@@ -1790,13 +1811,13 @@
       "urls": [
         {
           "url": "https://www.ottawapublichealth.ca/en/reports-research-and-statistics/reports-research-and-statistics.aspx",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.ottawapublichealth.ca/en/reports-research-and-statistics/reports-research-and-statistics.aspx",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 96482,
-          "elapsed_ms": 255,
+          "elapsed_ms": 296,
           "server": "",
           "title": "Reports, Research and Statistics - Ottawa Public Health",
           "error": null,
@@ -1822,13 +1843,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/family-and-social-services/housing-and-homelessness/plans-facts-and-data",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/family-and-social-services/housing-and-homelessness/plans-facts-and-data",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1046,
-          "elapsed_ms": 241,
+          "bytes": 1049,
+          "elapsed_ms": 273,
           "server": null,
           "title": null,
           "error": null,
@@ -1854,13 +1875,13 @@
       "urls": [
         {
           "url": "https://housingregistry.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://housingregistry.ca/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 45035,
-          "elapsed_ms": 181,
+          "elapsed_ms": 198,
           "server": "LiteSpeed",
           "title": "Housing Registry of Ottawa, supportive housing, rgi housing",
           "error": null,
@@ -1886,13 +1907,13 @@
       "urls": [
         {
           "url": "https://www.endhomelessnessottawa.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.endhomelessnessottawa.ca/",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 184048,
-          "elapsed_ms": 451,
+          "bytes": 184150,
+          "elapsed_ms": 4858,
           "server": "cloudflare",
           "title": "Alliance to End Homelessness Ottawa",
           "error": null,
@@ -1921,13 +1942,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/living-ottawa/drinking-water-stormwater-and-wastewater/drinking-water",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/living-ottawa/drinking-water-stormwater-and-wastewater/drinking-water",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1048,
-          "elapsed_ms": 229,
+          "bytes": 1046,
+          "elapsed_ms": 238,
           "server": null,
           "title": null,
           "error": null,
@@ -1953,13 +1974,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/garbage-and-recycling/solid-waste-data-and-reports",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/garbage-and-recycling/solid-waste-data-and-reports",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1048,
-          "elapsed_ms": 225,
+          "bytes": 1049,
+          "elapsed_ms": 233,
           "server": null,
           "title": null,
           "error": null,
@@ -1986,13 +2007,13 @@
       "urls": [
         {
           "url": "https://ottawa-riverkeeper-open-data-ork-so.hub.arcgis.com/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa-riverkeeper-open-data-ork-so.hub.arcgis.com/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 80283,
-          "elapsed_ms": 665,
+          "elapsed_ms": 347,
           "server": null,
           "title": "Ottawa Riverkeeper Open Data",
           "error": null,
@@ -2026,13 +2047,13 @@
       "urls": [
         {
           "url": "https://mvc.on.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://mvc.on.ca/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 132740,
-          "elapsed_ms": 570,
+          "elapsed_ms": 1259,
           "server": "cloudflare",
           "title": "MVCA",
           "error": null,
@@ -2051,13 +2072,13 @@
         },
         {
           "url": "https://www.nation.on.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.nation.on.ca/en/",
           "redirected": true,
           "content_type": "text/html",
           "bytes": 54395,
-          "elapsed_ms": 1548,
+          "elapsed_ms": 622,
           "server": "Microsoft-IIS/10.0",
           "title": "Home | South Nation Conservation",
           "error": null,
@@ -2073,13 +2094,13 @@
         },
         {
           "url": "https://www.rvca.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.rvca.ca/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 193122,
-          "elapsed_ms": 1638,
+          "elapsed_ms": 1504,
           "server": "Apache",
           "title": "Rideau Valley Conservation Authority",
           "error": null,
@@ -2112,13 +2133,13 @@
       "urls": [
         {
           "url": "https://hydroottawa.com/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://hydroottawa.com/en",
           "redirected": true,
           "content_type": "text/html",
           "bytes": 127020,
-          "elapsed_ms": 312,
+          "elapsed_ms": 388,
           "server": "cloudflare",
           "title": "Hydro Ottawa",
           "error": null,
@@ -2145,13 +2166,13 @@
       "urls": [
         {
           "url": "https://open.ottawa.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://open.ottawa.ca/",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 134138,
-          "elapsed_ms": 414,
+          "bytes": 143831,
+          "elapsed_ms": 347,
           "server": null,
           "title": "Open Ottawa",
           "error": null,
@@ -2165,7 +2186,7 @@
               {
                 "probe": "https://open.ottawa.ca/api/feed/dcat-us/1.1.json",
                 "status": 200,
-                "result": "ArcGIS Hub DCAT feed present (691 datasets)",
+                "result": "ArcGIS Hub DCAT feed present (695 datasets)",
                 "matched": true
               }
             ]
@@ -2181,59 +2202,86 @@
         "api",
         "bulk"
       ],
-      "verify_flag": true,
+      "verify_flag": false,
       "urls": [
         {
-          "url": "https://city-of-ottawa-prod.apigee.net/open311/v2/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
-          "http_status": null,
-          "final_url": "https://city-of-ottawa-prod.apigee.net/open311/v2/",
+          "url": "https://open.ottawa.ca/documents/ottawa::current-year-service-requests",
+          "checked_at": "2026-09-09T16:56:13+00:00",
+          "http_status": 200,
+          "final_url": "https://open.ottawa.ca/documents/ottawa::current-year-service-requests",
           "redirected": false,
-          "content_type": null,
-          "bytes": null,
-          "elapsed_ms": 40,
+          "content_type": "text/html",
+          "bytes": 144093,
+          "elapsed_ms": 349,
           "server": null,
-          "title": null,
-          "error": "URLError: [Errno -2] Name or service not known",
-          "retried": true,
-          "outcome": "dead",
-          "fingerprint": null
+          "title": "Current Year Service Requests",
+          "error": null,
+          "retried": false,
+          "fingerprint": {
+            "content_type": "text/html",
+            "kind": "machine-readable",
+            "needs_browser": false,
+            "signals": [],
+            "probes": [
+              {
+                "probe": "https://open.ottawa.ca/api/feed/dcat-us/1.1.json",
+                "status": 200,
+                "result": "ArcGIS Hub DCAT feed present (695 datasets)",
+                "matched": true
+              }
+            ]
+          },
+          "outcome": "machine-readable"
         },
         {
-          "url": "https://open.ottawa.ca/documents/ottawa::open311-api/about",
-          "checked_at": "2026-09-09T14:47:50+00:00",
-          "http_status": 404,
-          "final_url": "https://open.ottawa.ca/documents/ottawa::open311-api/about",
+          "url": "https://open.ottawa.ca/documents/ottawa::previous-year-service-requests",
+          "checked_at": "2026-09-09T16:56:13+00:00",
+          "http_status": 200,
+          "final_url": "https://open.ottawa.ca/documents/ottawa::previous-year-service-requests",
           "redirected": false,
-          "content_type": "text/plain",
-          "bytes": 30,
-          "elapsed_ms": 271,
+          "content_type": "text/html",
+          "bytes": 144094,
+          "elapsed_ms": 346,
           "server": null,
-          "title": null,
-          "error": "HTTP 404 Not Found",
+          "title": "Previous Year Service Requests",
+          "error": null,
           "retried": false,
-          "outcome": "error",
-          "fingerprint": null
+          "fingerprint": {
+            "content_type": "text/html",
+            "kind": "machine-readable",
+            "needs_browser": false,
+            "signals": [],
+            "probes": [
+              {
+                "probe": "https://open.ottawa.ca/api/feed/dcat-us/1.1.json",
+                "status": 200,
+                "result": "ArcGIS Hub DCAT feed present (695 datasets)",
+                "matched": true
+              }
+            ]
+          },
+          "outcome": "machine-readable"
         }
       ],
-      "rollup": "error"
+      "rollup": "machine-readable"
     },
     "engage-ottawa": {
       "name": "Engage Ottawa",
       "claimed_access": [
+        "api",
         "html"
       ],
       "verify_flag": false,
       "urls": [
         {
           "url": "https://engage.ottawa.ca/projects",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://engage.ottawa.ca/projects",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 409997,
-          "elapsed_ms": 756,
+          "elapsed_ms": 799,
           "server": null,
           "title": "All Projects | Engage Ottawa",
           "error": null,
@@ -2249,13 +2297,13 @@
         },
         {
           "url": "https://ottawa.ca/en/city-hall/public-engagement/public-engagement-project-search",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/city-hall/public-engagement/public-engagement-project-search",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1043,
-          "elapsed_ms": 226,
+          "bytes": 1051,
+          "elapsed_ms": 243,
           "server": null,
           "title": null,
           "error": null,
@@ -2281,13 +2329,13 @@
       "urls": [
         {
           "url": "https://collections.biblioottawalibrary.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://collections.biblioottawalibrary.ca/en/we-recommend",
           "redirected": true,
           "content_type": "text/html",
           "bytes": 268251,
-          "elapsed_ms": 365,
+          "elapsed_ms": 359,
           "server": null,
           "title": "We Recommend | Ottawa Public Library",
           "error": null,
@@ -2307,19 +2355,20 @@
     "recreation": {
       "name": "Recreation facilities and programmes",
       "claimed_access": [
-        "api"
+        "api",
+        "bulk"
       ],
       "verify_flag": false,
       "urls": [
         {
           "url": "https://open.ottawa.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://open.ottawa.ca/",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 134138,
-          "elapsed_ms": 286,
+          "bytes": 143831,
+          "elapsed_ms": 387,
           "server": null,
           "title": "Open Ottawa",
           "error": null,
@@ -2333,7 +2382,7 @@
               {
                 "probe": "https://open.ottawa.ca/api/feed/dcat-us/1.1.json",
                 "status": 200,
-                "result": "ArcGIS Hub DCAT feed present (691 datasets)",
+                "result": "ArcGIS Hub DCAT feed present (695 datasets)",
                 "matched": true
               }
             ]
@@ -2353,13 +2402,13 @@
       "urls": [
         {
           "url": "https://ons-sqo.ca/data-stories/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ons-sqo.ca/data-stories/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 98176,
-          "elapsed_ms": 1832,
+          "elapsed_ms": 1735,
           "server": "Apache",
           "title": "Telling Stories Through Data - Ottawa Neighbourhood Study",
           "error": null,
@@ -2375,13 +2424,13 @@
         },
         {
           "url": "https://www.neighbourhoodstudy.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ons-sqo.ca/",
           "redirected": true,
           "content_type": "text/html",
-          "bytes": 121444,
-          "elapsed_ms": 1971,
+          "bytes": 121443,
+          "elapsed_ms": 2887,
           "server": "Apache",
           "title": "Welcome to ONS-SQO - Ottawa Neighbourhood Study",
           "error": null,
@@ -2407,13 +2456,13 @@
       "urls": [
         {
           "url": "https://neighbourhoodequity.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://neighbourhoodequity.ca/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 165353,
-          "elapsed_ms": 200,
+          "elapsed_ms": 210,
           "server": "cloudflare",
           "title": "Ottawa Neighbourhood Equity Index &#8211; Ottawa Neighbourhood Equity Index",
           "error": null,
@@ -2439,13 +2488,13 @@
       "urls": [
         {
           "url": "https://communitydata.ca/content/ottawa-and-region",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://communitydata.ca/content/ottawa-and-region",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 29460,
-          "elapsed_ms": 785,
+          "elapsed_ms": 142,
           "server": "Apache",
           "title": "Ottawa and Region | The Community Data Program",
           "error": null,
@@ -2478,14 +2527,14 @@
       "urls": [
         {
           "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 28270,
-          "elapsed_ms": 246,
-          "server": "Microsoft-IIS",
+          "bytes": 28269,
+          "elapsed_ms": 225,
+          "server": "",
           "title": "Census Profile, 2021 Census of Population",
           "error": null,
           "retried": false,
@@ -2510,13 +2559,13 @@
       "urls": [
         {
           "url": "https://www.ottawainsights.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.ottawainsights.ca/",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 78778,
-          "elapsed_ms": 2448,
+          "bytes": 78779,
+          "elapsed_ms": 3103,
           "server": "nginx",
           "title": "Front Page - Ottawa Insights",
           "error": null,
@@ -2542,13 +2591,13 @@
       "urls": [
         {
           "url": "https://ottwatch.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottwatch.ca/",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 11218,
-          "elapsed_ms": 435,
+          "bytes": 11247,
+          "elapsed_ms": 251,
           "server": "nginx/1.18.0 (Ubuntu)",
           "title": "OttWatch",
           "error": null,
@@ -2564,13 +2613,13 @@
         },
         {
           "url": "https://ottwatch.ca/devapp/index",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottwatch.ca/devapp/index",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 14209,
-          "elapsed_ms": 213,
+          "elapsed_ms": 184,
           "server": "nginx/1.18.0 (Ubuntu)",
           "title": "OttWatch",
           "error": null,
@@ -2596,13 +2645,13 @@
       "urls": [
         {
           "url": "https://www.horizonottawa.ca/vote_tracker",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.horizonottawa.ca/vote_tracker",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 64103,
-          "elapsed_ms": 692,
+          "bytes": 64204,
+          "elapsed_ms": 548,
           "server": "cloudflare",
           "title": "Vote Tracker - Horizon Ottawa",
           "error": null,
@@ -2625,19 +2674,20 @@
     "howtheyvoted": {
       "name": "How They Voted",
       "claimed_access": [
+        "api",
         "html"
       ],
-      "verify_flag": true,
+      "verify_flag": false,
       "urls": [
         {
           "url": "https://howtheyvoted.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://howtheyvoted.ca/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 846,
-          "elapsed_ms": 244,
+          "elapsed_ms": 438,
           "server": "cloudflare",
           "title": "Ottawa City Council Voting Records",
           "error": null,
@@ -2666,13 +2716,13 @@
       "urls": [
         {
           "url": "https://www.ottawalookout.com/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.ottawalookout.com/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 300000,
-          "elapsed_ms": 542,
+          "elapsed_ms": 568,
           "server": "cloudflare",
           "title": "Home | Ottawa Lookout",
           "error": null,
@@ -2691,13 +2741,13 @@
         },
         {
           "url": "https://www.ottawalookout.com/p/meet-the-candidates",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.ottawalookout.com/p/meet-the-candidates",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 300000,
-          "elapsed_ms": 656,
+          "elapsed_ms": 674,
           "server": "cloudflare",
           "title": "Meet the candidates",
           "error": null,
@@ -2726,13 +2776,13 @@
       "urls": [
         {
           "url": "https://github.com/YOWCT",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://github.com/YOWCT",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 282334,
-          "elapsed_ms": 772,
+          "bytes": 287364,
+          "elapsed_ms": 698,
           "server": "github.com",
           "title": "Ottawa Civic Tech · GitHub",
           "error": null,
@@ -2748,13 +2798,13 @@
         },
         {
           "url": "https://www.ottawacivictech.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": null,
           "final_url": "https://www.ottawacivictech.ca/",
           "redirected": false,
           "content_type": null,
           "bytes": null,
-          "elapsed_ms": 75,
+          "elapsed_ms": 102,
           "server": null,
           "title": null,
           "error": "URLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:992)",
@@ -2774,13 +2824,13 @@
       "urls": [
         {
           "url": "https://acorncanada.org/resources/ottawa-voting-records-report/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://acorncanada.org/resources/ottawa-voting-records-report/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 64909,
-          "elapsed_ms": 213,
+          "elapsed_ms": 763,
           "server": "cloudflare",
           "title": "Ottawa Housing Voting Records – Report - ACORN Canada",
           "error": null,
@@ -2807,13 +2857,13 @@
       "urls": [
         {
           "url": "https://open.ottawa.ca/datasets/ncc-open-data-map/about",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://open.ottawa.ca/datasets/ncc-open-data-map/about",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 133930,
-          "elapsed_ms": 348,
+          "bytes": 143623,
+          "elapsed_ms": 346,
           "server": null,
           "title": "NCC Open Data Map",
           "error": null,
@@ -2827,7 +2877,7 @@
               {
                 "probe": "https://open.ottawa.ca/api/feed/dcat-us/1.1.json",
                 "status": 200,
-                "result": "ArcGIS Hub DCAT feed present (691 datasets)",
+                "result": "ArcGIS Hub DCAT feed present (695 datasets)",
                 "matched": true
               }
             ]
@@ -2836,19 +2886,25 @@
         },
         {
           "url": "https://search.open.canada.ca/opendata/?owner_org=ncc-ccn",
-          "checked_at": "2026-09-09T14:47:50+00:00",
-          "http_status": null,
+          "checked_at": "2026-09-09T16:56:13+00:00",
+          "http_status": 200,
           "final_url": "https://search.open.canada.ca/opendata/?owner_org=ncc-ccn",
           "redirected": false,
-          "content_type": null,
-          "bytes": null,
-          "elapsed_ms": 25128,
+          "content_type": "text/html",
+          "bytes": 289865,
+          "elapsed_ms": 931,
           "server": null,
-          "title": null,
-          "error": "TimeoutError: The read operation timed out",
-          "retried": true,
-          "outcome": "dead",
-          "fingerprint": null
+          "title": "Open Government Portal",
+          "error": null,
+          "retried": false,
+          "fingerprint": {
+            "content_type": "text/html",
+            "kind": "html",
+            "needs_browser": false,
+            "signals": [],
+            "probes": []
+          },
+          "outcome": "reachable_html"
         }
       ],
       "rollup": "machine-readable"
@@ -2863,13 +2919,13 @@
       "urls": [
         {
           "url": "https://open.canada.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://open.canada.ca/en",
           "redirected": true,
           "content_type": "text/html",
           "bytes": 23233,
-          "elapsed_ms": 389,
+          "elapsed_ms": 337,
           "server": null,
           "title": "Open Government​ | Open Government - Government of Canada",
           "error": null,
@@ -2903,13 +2959,13 @@
       "urls": [
         {
           "url": "https://data.ontario.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://data.ontario.ca/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 35865,
-          "elapsed_ms": 455,
+          "elapsed_ms": 419,
           "server": null,
           "title": "Welcome - Ontario Data Catalogue",
           "error": null,
@@ -2948,13 +3004,13 @@
       "urls": [
         {
           "url": "https://cepeo.on.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://cepeo.on.ca/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 188856,
-          "elapsed_ms": 220,
+          "elapsed_ms": 194,
           "server": "Apache",
           "title": "Accueil du cepeo - CEPEO",
           "error": null,
@@ -2970,13 +3026,13 @@
         },
         {
           "url": "https://ecolecatholique.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": null,
           "final_url": "https://ecolecatholique.ca/",
           "redirected": false,
           "content_type": null,
           "bytes": null,
-          "elapsed_ms": 100,
+          "elapsed_ms": 84,
           "server": null,
           "title": null,
           "error": "URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:992)",
@@ -2986,13 +3042,13 @@
         },
         {
           "url": "https://ocdsb.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.ocdsb.ca/",
           "redirected": true,
           "content_type": "text/html",
           "bytes": 300000,
-          "elapsed_ms": 497,
+          "elapsed_ms": 498,
           "server": "nginx",
           "title": "Home | Ottawa-Carleton District School Board",
           "error": null,
@@ -3008,13 +3064,13 @@
         },
         {
           "url": "https://ocsb.ca/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://www.ocsb.ca/",
           "redirected": true,
           "content_type": "text/html",
-          "bytes": 165296,
-          "elapsed_ms": 380,
+          "bytes": 165682,
+          "elapsed_ms": 446,
           "server": "cloudflare",
           "title": "OCSB Homepage - The Ottawa Catholic School Board",
           "error": null,
@@ -3040,13 +3096,13 @@
       "urls": [
         {
           "url": "https://ottawa.ca/en/arts-heritage-and-events/city-ottawa-archives/archives-collection",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://ottawa.ca/en/arts-heritage-and-events/city-ottawa-archives/archives-collection",
           "redirected": false,
           "content_type": "text/html",
-          "bytes": 1043,
-          "elapsed_ms": 225,
+          "bytes": 1050,
+          "elapsed_ms": 216,
           "server": null,
           "title": null,
           "error": null,
@@ -3066,19 +3122,20 @@
     "historical-imagery": {
       "name": "Historical aerial imagery and mapping",
       "claimed_access": [
-        "html"
+        "html",
+        "api"
       ],
       "verify_flag": false,
       "urls": [
         {
           "url": "https://maps.ottawa.ca/geoottawa/",
-          "checked_at": "2026-09-09T14:47:50+00:00",
+          "checked_at": "2026-09-09T16:56:13+00:00",
           "http_status": 200,
           "final_url": "https://maps.ottawa.ca/geoottawa/",
           "redirected": false,
           "content_type": "text/html",
           "bytes": 4625,
-          "elapsed_ms": 189,
+          "elapsed_ms": 159,
           "server": "Microsoft-IIS/10.0",
           "title": "geoOttawa",
           "error": null,

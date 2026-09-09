@@ -1,6 +1,6 @@
 # Verifying the catalogue
 
-Every entry in [`sources.json`](sources.json) started as a guess: it was compiled from
+Every entry in [`sources.json`](../sources.json) started as a guess: it was compiled from
 search-result snippets in an environment with no outbound HTTP. This file describes how the
 guesses become confirmed facts, and what the tooling here does automatically.
 
@@ -19,7 +19,7 @@ open than its tag claims (an ArcGIS/CKAN API behind a `Bulk` tag), and honest wh
 reach a keyed or JS-gated download (`unconfirmed`), but its verdicts are leads, not gospel.
 `Request` (FOI / in-person) it cannot check at all.
 
-Each run writes its own JSON, checked into the repo as the record; `build_readme.py` folds them
+Each run writes its own JSON, checked into `verification/` as the record; `build_readme.py` folds them
 all into README.md. The files are machine-written — do not hand-edit them. Stage 2 captures live
 XHR URLs, so `redact()` strips any `access_token` / `authKey` / `key` query value before writing
 (some Ottawa apps ship a client-side key to every browser — public, but not ours to republish).
@@ -117,7 +117,7 @@ grant — usable as sources, but not re-publishable as open data without asking.
 ## Cost, in short
 
 Money: ~zero. Every target is public. The only pay-per-hit surface in the wider
-[`hierarchy.md`](hierarchy.md) is the Ontario land registry (Teranet / OnLand); confirming it is
+[`hierarchy.md`](../hierarchy.md) is the Ontario land registry (Teranet / OnLand); confirming it is
 paywalled needs no purchase. Optional spend: an LLM for Stage 3 triage (cents per source), a
 hosted headless browser if you have none.
 
