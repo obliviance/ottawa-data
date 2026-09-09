@@ -1,37 +1,57 @@
 #!/usr/bin/env python3
-"""Regenerate README.md from sources.json (+ verification.json if present).
+"""Regenerate README.md from sources.json, folding in whatever verification has run.
 
 sources.json is the source of truth. Edit it, then run:
 
     python3 build_readme.py
 
-If verification.json exists (written by verify.py), each entry also gets a one-line
-Stage 0-1 check result and the status section is regenerated from it.
+Optional inputs, each written by its stage's script:
+    verification.json         verify.py         stage 0-1  liveness + fingerprint
+    verification_stage2.json  verify_stage2.py  stage 2    headless-browser render + XHR
+    verification_stage3.json  verify_stage3.py  stage 3    access-tag + licence confirmation
+    snapshots.json            snapshot.py       Wayback Machine snapshot per URL
 """
 import datetime as dt
 import json
 import pathlib
+import re
 
 ROOT = pathlib.Path(__file__).parent
-DATA = json.loads((ROOT / "sources.json").read_text())
-VERIFY_PATH = ROOT / "verification.json"
-VERIFY = json.loads(VERIFY_PATH.read_text()) if VERIFY_PATH.exists() else None
 
-TAG = {
-    "api": "`API`",
-    "bulk": "`Bulk`",
-    "html": "`HTML`",
-    "request": "`Request`",
-}
+_SECRET = re.compile(r"((?:access_?token|auth_?key|api_?key|apikey|key|token|sig|signature)=)"
+                     r"[^&#`'\" ]+", re.I)
+
+
+def _safe(s: str) -> str:
+    return _SECRET.sub(r"\1<redacted>", s)
+DATA = json.loads((ROOT / "sources.json").read_text())
+
+
+def _load(name):
+    p = ROOT / name
+    return json.loads(p.read_text()) if p.exists() else None
+
+
+V1 = _load("verification.json")
+V2 = _load("verification_stage2.json")
+V3 = _load("verification_stage3.json")
+SNAP = _load("snapshots.json")
+
+TAG = {"api": "`API`", "bulk": "`Bulk`", "html": "`HTML`", "request": "`Request`"}
 
 ROLLUP_PHRASE = {
-    "machine-readable": "reachable — machine-readable surface confirmed",
-    "pdf": "reachable — PDF",
-    "reachable_html": "reachable (HTML); access tag & licence still need a human check",
-    "needs_browser": "reachable but JavaScript-rendered — needs a Stage 2 browser check",
-    "blocked": "server refused our client (401/403/429) — check in a browser",
-    "error": "every catalogued link is dead or erroring",
-    "dead": "every catalogued link is dead or erroring",
+    "machine-readable": "machine-readable surface confirmed",
+    "pdf": "serves a PDF",
+    "reachable_html": "reachable, server-rendered HTML",
+    "needs_browser": "reachable but JavaScript-rendered",
+    "blocked": "server refused our client (401/403/429)",
+    "error": "every catalogued link dead or erroring",
+    "dead": "every catalogued link dead or erroring",
+}
+S2_PHRASE = {
+    "machine-readable": "a real backing data API turned up in the browser",
+    "reachable_html": "renders fully — a headless scrape works",
+    "needs_browser": "still would not yield content in a browser",
 }
 
 HEADER_TOP = """# ottawa-data
@@ -70,6 +90,9 @@ ACCESS_TAGS = """
 | `Bulk` | Downloadable CSV / GeoJSON / shapefile / XLS. |
 | `HTML` | Web pages or PDFs only; requires scraping or parsing. |
 | `Request` | On-site, by freedom-of-information request, or by written request. |
+
+Where verification has run, each entry below carries a **Verified** line: the access tag and
+licence as confirmed (or corrected), and the stage-by-stage trail. See [`VERIFYING.md`](VERIFYING.md).
 """
 
 GAPS = """
@@ -80,12 +103,14 @@ Patterns worth noting when deciding what to build.
 1. **Recorded votes are not published as data.** Ontario does not require municipalities to
    publish councillor voting records. Ottawa's votes exist only as prose inside eScribe minutes.
    Every vote tracker in the catalogue is a volunteer or advocacy group re-keying them by hand —
-   the clearest unmet need here.
+   the clearest unmet need here. (Stage 2 note: `howtheyvoted.ca` ships its compiled record as
+   JSON at `/data/ottawa/…`, and is current — a usable secondary source.)
 
 2. **eScribe is a corpus, not an API.** Fourteen years of agendas, minutes and staff reports sit
    behind sequential `DocumentId` integers with no search API, no bulk export, and no structured
    metadata. Everything downstream — votes, spending decisions, planning history — is locked in
-   PDFs.
+   PDFs. (Stage 2 note: the meeting *index* is reachable via
+   `MeetingsCalendarView.aspx/GetCalendarMeetings`; the documents still are not.)
 
 3. **Nothing links the accountability datasets to each other.** The lobbyist registry,
    development applications, campaign contributions and council votes are four separate systems
@@ -102,76 +127,128 @@ Patterns worth noting when deciding what to build.
 
 The catalogue itself (`sources.json`, this README) is offered under CC0 — do what you like with
 it. The sources it points at carry their own licences; most City of Ottawa data is under the
-Open Government Licence, but check each one.
+Open Government Licence – City of Ottawa, but check each one.
 """
+
+
+def _count(d, key):
+    return sum(1 for v in d.values() if key(v))
 
 
 def status_section() -> str:
-    """The '## Status' block: regenerated from verification.json when it exists."""
-    if not VERIFY:
+    if not V1:
         return STATUS_UNVERIFIED
-    s = VERIFY["summary"]
-    when = VERIFY["generated_at"][:10]
+
+    s, when1 = V1["summary"], V1["generated_at"][:10]
     by = s.get("sources_by_rollup", {})
-    return f"""
-## Status: Stage 0–1 checked, {when}
+    out = [f"""
+## Status: verified in stages, through {max(x['generated_at'][:10] for x in (V1, V2, V3) if x)}
 
-Every entry was first compiled from search-result metadata with no outbound HTTP. A
-liveness-and-fingerprint pass ([`verify.py`](verify.py), written to
-[`verification.json`](verification.json)) has since **opened every URL** and probed for a
-machine-readable surface. It does **not** confirm the access tag or the licence — a page that
-loads is not the same as a dataset you can use — so those still need Stage 2 (headless browser)
-and Stage 3 (human judgement).
+Every entry was first compiled from search-result metadata with no outbound HTTP. Verification
+runs in stages ([`VERIFYING.md`](VERIFYING.md)); each entry below shows how far it has got.
 
-Last run **{when}** over {s['urls']} URLs across {s['sources']} sources:
+**Stage 0–1** ([`verify.py`](verify.py), {when1}) — opened every URL and probed for a
+machine-readable surface. {s['urls']} URLs / {s['sources']} sources:
+{by.get('machine-readable', 0)} machine-readable · {by.get('reachable_html', 0) + by.get('pdf', 0)} plain HTML/PDF ·
+{by.get('needs_browser', 0) + by.get('blocked', 0)} JavaScript-rendered or bot-blocked ·
+{by.get('error', 0) + by.get('dead', 0)} with a dead link.
+"""]
 
-| Best result for the source | Sources |
-| --- | --- |
-| Machine-readable surface confirmed (API / bulk / catalogue feed) | {by.get('machine-readable', 0)} |
-| Reachable, plain HTML/PDF — tag & licence unverified | {by.get('reachable_html', 0) + by.get('pdf', 0)} |
-| Reachable but needs a browser (JavaScript-rendered, or bot-blocked) | {by.get('needs_browser', 0) + by.get('blocked', 0)} |
-| Every catalogued link dead or erroring | {by.get('error', 0) + by.get('dead', 0)} |
+    if V2:
+        s2 = V2["sources"]
+        mr = _count(s2, lambda v: v["rollup"] == "machine-readable")
+        rh = _count(s2, lambda v: v["rollup"] == "reachable_html")
+        nb = _count(s2, lambda v: v["rollup"] == "needs_browser")
+        apis = sorted({a["url"] for v in s2.values() for u in v["url_results"]
+                       for a in u.get("discovered_apis", [])})
+        out.append(f"""
+**Stage 2** ([`verify_stage2.py`](verify_stage2.py), {V2['generated_at'][:10]}) — rendered the
+{len(s2)} JavaScript / interactive sources in a real headless Chromium and captured their XHR.
+**{mr}** turned out to have a real backing API (council votes as JSON from `howtheyvoted.ca`,
+a REST API behind `devapps`, an EngagementHQ API behind Engage Ottawa, an AJAX meeting index
+behind eScribe); **{rh}** render fully and can be scraped headlessly; **{nb}** still would not
+yield (ottawa.ca and CanLII intermittently serve a bot challenge to headless browsers).
+""")
 
-URL-level totals: {s['machine-readable']} machine-readable · {s['reachable_html']} HTML ·
-{s['needs_browser']} JavaScript-rendered · {s.get('blocked', 0)} bot-blocked ·
-{s['pdf']} PDF · {s['dead']} dead · {s['error']} erroring.
+    if V3:
+        s3 = V3["sources"]
+        conf = _count(s3, lambda v: v["access_verdict"].startswith("confirmed"))
+        under = _count(s3, lambda v: v["access_verdict"].startswith("understated"))
+        over = _count(s3, lambda v: v["access_verdict"].startswith("overstated"))
+        unc = _count(s3, lambda v: v["access_verdict"].startswith("unconfirmed"))
+        ogl = _count(s3, lambda v: v["licence_key"].startswith("ogl") or v["licence_key"] == "statcan-licence")
+        out.append(f"""
+**Stage 3** ([`verify_stage3.py`](verify_stage3.py), {V3['generated_at'][:10]}) — confirmed the
+access tag and resolved the licence. **{conf}** access tags confirmed as-is; **{under}** are
+*understated* (more open than the tag claims — usually an ArcGIS/CKAN API behind a "Bulk" or
+"HTML" tag); **{over}** overstated; **{unc}** could not be confirmed automatically (needs an API
+key, a login, or is a genuine FOI request). Licence resolved by operator: **{ogl}** sources fall
+under an Open Government Licence; the rest carry site terms or access restrictions, flagged per
+entry.
+""")
 
-Entries with `"verify": true` in the JSON carry a specific known doubt and are marked
-**[verify]** below.
-"""
+    if SNAP:
+        sn = SNAP["summary"]
+        out.append(f"\n**Snapshots** ([`snapshot.py`](snapshot.py), {SNAP['generated_at'][:10]}) — "
+                   f"{sn['with_snapshot']}/{sn['urls']} URLs captured to the Wayback Machine.\n")
+
+    out.append('\nEntries with `"verify": true` in the JSON carried a specific known doubt and '
+               "are marked **[verify]** below.\n")
+    return "".join(out)
 
 
 def verify_line(src_id: str) -> list[str]:
-    if not VERIFY:
+    if not V1:
         return []
-    entry = VERIFY["sources"].get(src_id)
-    if not entry:
+    e1 = V1["sources"].get(src_id)
+    if not e1:
         return []
-    when = entry["urls"][0]["checked_at"][:10] if entry["urls"] else VERIFY["generated_at"][:10]
-    rollup = entry["rollup"]
-    phrase = ROLLUP_PHRASE.get(rollup, rollup)
+    e2 = V2["sources"].get(src_id) if V2 else None
+    e3 = V3["sources"].get(src_id) if V3 else None
 
-    detail = ""
-    probes = [p["result"] for u in entry["urls"] for p in (u.get("fingerprint") or {}).get("probes", [])
-              if p.get("matched")]
-    if rollup in ("machine-readable", "pdf") and probes:
-        detail = f" — {probes[0]}"
+    out = []
 
-    broken = [u for u in entry["urls"] if u["outcome"] in ("dead", "error")]
-    blocked = [u for u in entry["urls"] if u["outcome"] == "blocked"]
-    if broken and rollup not in ("dead", "error"):
-        detail += (f". {len(broken)} of {len(entry['urls'])} links broken: "
-                   + "; ".join(f"{u['url']} → {u['http_status'] or 'no DNS'}" for u in broken))
-    if blocked and rollup != "blocked":
-        detail += (f". {len(blocked)} link{'s' * (len(blocked) != 1)} bot-blocked "
-                   f"(fine in a browser): " + "; ".join(u["url"] for u in blocked))
+    # headline: the stage-3 verdict, if we have one
+    if e3:
+        v = e3["access_verdict"]
+        apis = [a["url"] for u in (e2 or {}).get("url_results", []) for a in u.get("discovered_apis", [])]
+        hint = f" — e.g. `{_safe(apis[0])}`" if apis and "understated" in v and "api" in v else ""
+        out.append(f"> **Verified** — access: {v}{hint}")
+        out.append(f"> licence: *{e3['licence']}*")
 
-    out = [f"> _Checked {when} (stage 0–1): {phrase}{detail}_"]
-    if broken and rollup in ("dead", "error"):
-        for u in broken:
-            out.append(">")
-            out.append(f"> - `{u['url']}` → {u['error']}")
+    # trail: stage 0-1 phrase, stage 2 phrase, broken links
+    when1 = e1["urls"][0]["checked_at"][:10] if e1["urls"] else V1["generated_at"][:10]
+    bits = [f"stage 0–1 {when1}: {ROLLUP_PHRASE.get(e1['rollup'], e1['rollup'])}"]
+    probes = [p["result"] for u in e1["urls"]
+              for p in (u.get("fingerprint") or {}).get("probes", []) if p.get("matched")]
+    if e1["rollup"] == "machine-readable" and probes:
+        bits[0] += f" ({probes[0]})"
+    if e2:
+        bits.append(f"stage 2 {V2['generated_at'][:10]}: {S2_PHRASE.get(e2['rollup'], e2['rollup'])}")
+
+    broken = [u for u in e1["urls"] if u["outcome"] in ("dead", "error")]
+    blocked = [u for u in e1["urls"] if u["outcome"] == "blocked"]
+    if broken:
+        bits.append("broken — " + "; ".join(
+            f"{u['url']} → {u['http_status'] or 'no DNS'}" for u in broken))
+    if blocked:
+        bits.append(f"{len(blocked)} link{'s' * (len(blocked) != 1)} bot-blocked (fine in a browser)")
+
+    snap_n = 0
+    if SNAP:
+        snap_n = sum(1 for u in _src_urls(src_id) if SNAP["urls"].get(u, {}).get("snapshot"))
+    if snap_n:
+        bits.append(f"{snap_n} archived")
+
+    out.append("> _" + " · ".join(bits) + "_")
     return out
+
+
+def _src_urls(src_id):
+    for s in DATA["sources"]:
+        if s["id"] == src_id:
+            return s["urls"]
+    return []
 
 
 def main() -> None:
@@ -206,9 +283,10 @@ def main() -> None:
 
     out = "\n".join(lines).rstrip() + "\n"
     (ROOT / "README.md").write_text(out)
-    extra = f" (+ verification.json, {VERIFY['generated_at'][:10]})" if VERIFY else ""
+    stamps = " + ".join(f"{n} {x['generated_at'][:10]}" for n, x in
+                        (("s0-1", V1), ("s2", V2), ("s3", V3), ("snap", SNAP)) if x)
     print(f"wrote README.md — {len(DATA['sources'])} sources across "
-          f"{len(DATA['categories'])} categories{extra}")
+          f"{len(DATA['categories'])} categories" + (f" ({stamps})" if stamps else ""))
 
 
 if __name__ == "__main__":
