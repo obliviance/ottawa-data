@@ -38,8 +38,9 @@ import urllib.parse
 import urllib.request
 
 ROOT = pathlib.Path(__file__).parent
-STAGE01 = ROOT / "verification.json"
-OUT = ROOT / "verification_stage2.json"
+REPO = ROOT.parent
+STAGE01 = REPO / "verification" / "verification.json"
+OUT = REPO / "verification" / "verification_stage2.json"
 
 NOW = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
 CDP_DEFAULT = os.environ.get("CHROMIUM_CDP_URL", "http://chromium:9222")
@@ -200,7 +201,7 @@ def main() -> None:
     except ImportError:
         sys.exit("playwright not installed - `pip install playwright` (browser binary is remote)")
 
-    data = json.loads((ROOT / "sources.json").read_text())
+    data = json.loads((REPO / "sources.json").read_text())
     by_id = {s["id"]: s for s in data["sources"]}
     stage01 = json.loads(STAGE01.read_text())
 

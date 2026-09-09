@@ -20,9 +20,12 @@ yet catalogued so the shape of the gap is visible.
 The catalogue column links to `sources.json` ids: `[id]` = catalogued, `[id] ⚑` = catalogued
 with an open verify-flag, `—` = not yet catalogued.
 
-> **Same caveat as the catalogue.** Almost nothing here has been fetched and confirmed. A 🟢 on
-> an uncatalogued row means "believed public, on the strength of general knowledge" — treat it as
-> a lead. The honest global status of this document is ⚪; the marks are best current estimates.
+> **Verification status.** The **72 catalogued rows** (`[id]`) have been opened and checked in
+> stages 0–3 — liveness, machine-readable surface, a headless-browser render, and access-tag +
+> licence confirmation (records in [`verification/`](verification/), method in
+> [`tools/VERIFYING.md`](tools/VERIFYING.md)); their `sources.json` tags and descriptions are
+> now corrected. The **uncatalogued rows** (`—`) are still unverified: a 🟢 there means "believed
+> public on general knowledge", a lead to check. Marks on split-status rows are best estimates.
 
 ---
 
@@ -32,7 +35,7 @@ with an open verify-flag, `—` = not yet catalogued.
 
 | Source | Status | Catalogue |
 | --- | --- | --- |
-| Council agendas, minutes, staff reports (eScribe, 2012–present) | 🟡 corpus of PDFs behind sequential `DocumentId`; no search API, no bulk export | `[escribe]` |
+| Council agendas, minutes, staff reports (eScribe, 2012–present) | 🟡 corpus of PDFs behind sequential `DocumentId`; the meeting *index* is queryable (`MeetingsCalendarView.aspx/GetCalendarMeetings`), the documents are not | `[escribe]` |
 | Pre-2012 agendas & reports (legacy system + Archives) | 🟡 / 🔴 older material by request | `[legacy-agendas]` |
 | Council & committee video / audio (YouTube, auto-captioned) | 🟢 stream + captions; 🔴 pre-2012 video by email request | `[council-video]` |
 | **Recorded councillor votes as structured data** | 🔴 **not published** — exist only as prose in minutes; Ontario imposes no requirement | — |
@@ -116,7 +119,7 @@ with an open verify-flag, `—` = not yet catalogued.
 
 | Source | Status | Catalogue |
 | --- | --- | --- |
-| Development Applications Search (OPA, ZBA, subdivision, site plan, consent, minor variance) | 🟡 stable enumerable per-file URLs; HTML + PDF, no API | `[devapps]` |
+| Development Applications Search (OPA, ZBA, subdivision, site plan, consent, minor variance) | 🟢 a JSON REST API backs the search (`devapps-restapi.ottawa.ca/devapps/…`, client-side key); reports still PDF | `[devapps]` |
 | Zoning By-law 2026-50 (enacted 11 Mar 2026) | 🟡 HTML text + 🟢 spatial layer | `[zoning-2026-50]` |
 | Official Plan (2021) + secondary/​community plans + schedules | 🟡 PDF policy layer | `[official-plan]` |
 | Committee of Adjustment decisions | 🟢 on CanLII (citation-stable, searchable) + eScribe | `[committee-of-adjustment]` |
@@ -252,9 +255,8 @@ with an open verify-flag, `—` = not yet catalogued.
 
 | Source | Status | Catalogue |
 | --- | --- | --- |
-| Open311 / GeoReport v2 endpoint + rolling 311 CSVs (current + last year) | 🟢 if live — apigee host migrates; needs confirming | `[open311] ⚑` |
-| 311 service-request history (ward, department, description) | 🟢 via the CSVs above | `[open311] ⚑` |
-| Engage Ottawa — open/closed consultations, surveys, what-we-heard reports | 🟡 HTML / PDF | `[engage-ottawa]` |
+| 311 service requests — rolling CSVs (current + last year) + yearly archives to 2012 | 🟢 `311opendatastorage.blob.core.windows.net/311data/…`; the GeoReport v2 API is **gone** (apigee host dead) | `[open311]` |
+| Engage Ottawa — open/closed consultations, surveys, what-we-heard reports | 🟢 EngagementHQ REST API (`engage.ottawa.ca/api/v2/…`) behind the HTML | `[engage-ottawa]` |
 | Public notices (planning, road, statutory) | 🟡 HTML feeds | — |
 | Media releases / newsroom | 🟡 HTML | — |
 | Councillor & city social-media output | 🟡 platform-dependent | — |
@@ -474,7 +476,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | --- | --- | --- |
 | OttWatch | Scrapes ottawa.ca + eScribe for new documents; mirrors lobbyist registry; tracks open-data publications; own dev-app index | 🟡 web app — `[ottwatch]` |
 | Horizon Ottawa Vote Tracker | Hand-keyed councillor votes 2022–26 | 🟡 — `[horizon-vote-tracker]` |
-| How They Voted (howtheyvoted.ca) | Dedicated Ottawa voting-record site | 🟡 currency unverified — `[howtheyvoted] ⚑` |
+| How They Voted (howtheyvoted.ca) | Dedicated Ottawa voting-record site | 🟢 ships the compiled record as JSON at `/data/ottawa/*.json`, verified current — `[howtheyvoted]` (site terms, not open data) |
 | ACORN housing-vote scorecard | Issue-specific vote compilation | 🟡 — `[acorn-voting-records]` |
 | Ottawa Civic Tech / YOWCT | Volunteer community + GitHub org | 🟡 — `[ottawa-civic-tech]` |
 | Bike Ottawa PODS / maps | Network-stress & collision mapping | 🟢 |
@@ -570,7 +572,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | 🟢 Open | ~20% | Almost entirely **spatial** (anything with coordinates has a GeoJSON endpoint) plus a handful of well-run bulk series: FIR, GTFS, the police ArcGIS Hub, collisions, ASE, the sunshine list, StatCan, ONS. |
 | 🟡 Partial | ~50% | The bulk of municipal governance: agendas, budgets, audits, disclosure logs, planning files, health dashboards — all real, all public, all trapped in PDF, HTML or dashboards with no underlying data. |
 | 🔴 Closed | ~20% | Two sub-types: **access-restricted** (land registry, MPAC per-property, FOI-only records, collective agreements, commercial data) and **never produced** (recorded votes as data, vendor payments, contract awards, candidate platforms). |
-| ⚪ Unknown | ~10% | Whole branches nobody has checked: BIAs, rural drainage, property-standards orders, delegated-authority decisions, gift registry, most agency operational data — plus the six verify-flagged catalogue rows (`⚑`). |
+| ⚪ Unknown | ~10% | Whole branches nobody has checked: BIAs, rural drainage, property-standards orders, delegated-authority decisions, gift registry, most agency operational data — plus four catalogue rows verification could not settle (`procurement`, `hydro-ottawa`, `conservation-authorities`, `school-boards`). |
 
 ### The patterns that actually matter
 
@@ -587,7 +589,9 @@ with an open verify-flag, `—` = not yet catalogued.
    of Health, OCH's AGM and school-board-adjacent items all flow through one meeting-management
    system with sequential `DocumentId` integers and no search, no bulk export, no structured
    metadata. Unlock eScribe and a dozen downstream datasets become possible: votes, spending
-   decisions, planning history, lobbying-to-decision chains.
+   decisions, planning history, lobbying-to-decision chains. (Verification did find a hook: the
+   meeting *calendar* is queryable at `MeetingsCalendarView.aspx/GetCalendarMeetings` — enough
+   to enumerate meetings, not the documents.)
 
 4. **The accountability datasets don't share keys.** Lobbyist registry, development
    applications, campaign contributions, council votes, contract awards — five systems, no
@@ -597,7 +601,8 @@ with an open verify-flag, `—` = not yet catalogued.
 5. **"Never produced" is a policy gap, not a technical one.** Recorded votes, vendor payments,
    contract awards and candidate platforms are missing because nobody is required to publish
    them — not because they are hard. These are the items where advocacy moves the needle faster
-   than code.
+   than code. (Partial exception on votes: `howtheyvoted.ca` publishes its hand-compiled record
+   as JSON and is current — a usable secondary source, though on site terms, not open data.)
 
 6. **The non-municipal layer is real and unstitched.** The NCC, three conservation authorities,
    four school boards, Hydro Ottawa, the airport authority, the province and the federal
@@ -616,8 +621,10 @@ with an open verify-flag, `—` = not yet catalogued.
 `Ottawa Community Foundation Vital Signs` · `Ottawa Food Bank Hunger Report` ·
 `Combined-sewage-overflow real-time data` · `Provincial Offences Act court (city-administered)`.
 
-**Verification priorities** (the `⚑` rows plus the riskiest new claims):
-Open311 endpoint liveness · procurement platform identity · conservation-authority URLs & data ·
-Hydro Ottawa open-data programme (likely none) · school-board data portals · howtheyvoted.ca currency ·
+**Verification priorities.** Done for the catalogued sources (stages 0–3, 2026-09-09): 55 access
+tags confirmed, 2 understated, 15 unconfirmed. Still open:
+`procurement` platform identity · `conservation-authorities` URLs & data · `hydro-ottawa`
+open-data programme (likely none) · `school-boards` data portals ·
 whether budget line-items are mirrored to Open Ottawa in any usable form · whether OCH publishes
-any portfolio data below the annual-report level.
+portfolio data below the annual-report level · `ecolecatholique.ca` / `ottawacivictech.ca` (both
+failed to resolve at verification — may be transient) · and all of the uncatalogued rows above.

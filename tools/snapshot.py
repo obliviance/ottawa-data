@@ -26,7 +26,8 @@ import urllib.parse
 import urllib.request
 
 ROOT = pathlib.Path(__file__).parent
-OUT = ROOT / "snapshots.json"
+REPO = ROOT.parent
+OUT = REPO / "verification" / "snapshots.json"
 NOW = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
 UA = "ottawa-data-verify/0.2 (+https://github.com/obliviance/ottawa-data)"
 
@@ -89,7 +90,7 @@ def main() -> None:
     ap.add_argument("--delay", type=float, default=10.0, help="seconds between saves (default 10)")
     args = ap.parse_args()
 
-    data = json.loads((ROOT / "sources.json").read_text())
+    data = json.loads((REPO / "sources.json").read_text())
     prev = json.loads(OUT.read_text()) if OUT.exists() else {"urls": {}}
     cutoff = NOW - dt.timedelta(days=args.max_age)
     cutoff_ts = cutoff.strftime("%Y%m%d000000")

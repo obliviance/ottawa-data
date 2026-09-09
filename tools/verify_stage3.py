@@ -37,6 +37,7 @@ from verify import fetch_retry, _json, _origin  # noqa: E402
 from verify_stage2 import redact  # noqa: E402  (query-string credential redaction)
 
 ROOT = pathlib.Path(__file__).parent
+REPO = ROOT.parent
 NOW = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
 
 # operator name fragment  ->  licence key
@@ -235,9 +236,9 @@ def main() -> None:
     ap.add_argument("--only", nargs="+", metavar="ID")
     args = ap.parse_args()
 
-    data = json.loads((ROOT / "sources.json").read_text())
-    stage01 = json.loads((ROOT / "verification.json").read_text())["sources"]
-    s2path = ROOT / "verification_stage2.json"
+    data = json.loads((REPO / "sources.json").read_text())
+    stage01 = json.loads((REPO / "verification" / "verification.json").read_text())["sources"]
+    s2path = REPO / "verification" / "verification_stage2.json"
     stage2 = json.loads(s2path.read_text())["sources"] if s2path.exists() else {}
 
     print("confirming umbrella licences ...")
@@ -273,7 +274,7 @@ def main() -> None:
         "licences": licences,
         "sources": sources,
     }
-    (ROOT / "verification_stage3.json").write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")
+    (REPO / "verification" / "verification_stage3.json").write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")
 
     verdicts = [s["access_verdict"] for s in sources.values()]
     print("\n" + "-" * 60)

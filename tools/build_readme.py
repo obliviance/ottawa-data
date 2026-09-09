@@ -17,6 +17,7 @@ import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).parent
+REPO = ROOT.parent
 
 _SECRET = re.compile(r"((?:access_?token|auth_?key|api_?key|apikey|key|token|sig|signature)=)"
                      r"[^&#`'\" ]+", re.I)
@@ -24,11 +25,11 @@ _SECRET = re.compile(r"((?:access_?token|auth_?key|api_?key|apikey|key|token|sig
 
 def _safe(s: str) -> str:
     return _SECRET.sub(r"\1<redacted>", s)
-DATA = json.loads((ROOT / "sources.json").read_text())
+DATA = json.loads((REPO / "sources.json").read_text())
 
 
 def _load(name):
-    p = ROOT / name
+    p = REPO / "verification" / name
     return json.loads(p.read_text()) if p.exists() else None
 
 
@@ -61,11 +62,15 @@ electoral, legislative, financial, spatial, operational — grouped by domain an
 machine-readable each source actually is.
 
 **[`sources.json`](sources.json) is the source of truth.** This README is generated from it by
-[`build_readme.py`](build_readme.py). Edit the JSON, then run `python3 build_readme.py`.
+[`tools/build_readme.py`](tools/build_readme.py). Edit the JSON, then run `python3 tools/build_readme.py`.
 
 **[`hierarchy.md`](hierarchy.md)** is the companion map: every institution that produces
 information about Ottawa's governance and community, arranged as a tree and tagged open / closed /
 unknown — including the branches not yet in this catalogue.
+
+Contributing: [`CLAUDE.md`](CLAUDE.md) for the layout and workflow, [`tools/VERIFYING.md`](tools/VERIFYING.md)
+for how sources get verified. The scripts live in [`tools/`](tools/), the verification records in
+[`verification/`](verification/).
 """
 
 STATUS_UNVERIFIED = """
@@ -92,7 +97,7 @@ ACCESS_TAGS = """
 | `Request` | On-site, by freedom-of-information request, or by written request. |
 
 Where verification has run, each entry below carries a **Verified** line: the access tag and
-licence as confirmed (or corrected), and the stage-by-stage trail. See [`VERIFYING.md`](VERIFYING.md).
+licence as confirmed (or corrected), and the stage-by-stage trail. See [`tools/VERIFYING.md`](tools/VERIFYING.md).
 """
 
 GAPS = """
@@ -145,9 +150,9 @@ def status_section() -> str:
 ## Status: verified in stages, through {max(x['generated_at'][:10] for x in (V1, V2, V3) if x)}
 
 Every entry was first compiled from search-result metadata with no outbound HTTP. Verification
-runs in stages ([`VERIFYING.md`](VERIFYING.md)); each entry below shows how far it has got.
+runs in stages ([`tools/VERIFYING.md`](tools/VERIFYING.md)); each entry below shows how far it has got.
 
-**Stage 0–1** ([`verify.py`](verify.py), {when1}) — opened every URL and probed for a
+**Stage 0–1** ([`tools/verify.py`](tools/verify.py), {when1}) — opened every URL and probed for a
 machine-readable surface. {s['urls']} URLs / {s['sources']} sources:
 {by.get('machine-readable', 0)} machine-readable · {by.get('reachable_html', 0) + by.get('pdf', 0)} plain HTML/PDF ·
 {by.get('needs_browser', 0) + by.get('blocked', 0)} JavaScript-rendered or bot-blocked ·
@@ -162,7 +167,7 @@ machine-readable surface. {s['urls']} URLs / {s['sources']} sources:
         apis = sorted({a["url"] for v in s2.values() for u in v["url_results"]
                        for a in u.get("discovered_apis", [])})
         out.append(f"""
-**Stage 2** ([`verify_stage2.py`](verify_stage2.py), {V2['generated_at'][:10]}) — rendered the
+**Stage 2** ([`tools/verify_stage2.py`](tools/verify_stage2.py), {V2['generated_at'][:10]}) — rendered the
 {len(s2)} JavaScript / interactive sources in a real headless Chromium and captured their XHR.
 **{mr}** turned out to have a real backing API (council votes as JSON from `howtheyvoted.ca`,
 a REST API behind `devapps`, an EngagementHQ API behind Engage Ottawa, an AJAX meeting index
@@ -178,7 +183,7 @@ yield (ottawa.ca and CanLII intermittently serve a bot challenge to headless bro
         unc = _count(s3, lambda v: v["access_verdict"].startswith("unconfirmed"))
         ogl = _count(s3, lambda v: v["licence_key"].startswith("ogl") or v["licence_key"] == "statcan-licence")
         out.append(f"""
-**Stage 3** ([`verify_stage3.py`](verify_stage3.py), {V3['generated_at'][:10]}) — confirmed the
+**Stage 3** ([`tools/verify_stage3.py`](tools/verify_stage3.py), {V3['generated_at'][:10]}) — confirmed the
 access tag and resolved the licence. **{conf}** access tags confirmed as-is; **{under}** are
 *understated* (more open than the tag claims — usually an ArcGIS/CKAN API behind a "Bulk" or
 "HTML" tag); **{over}** overstated; **{unc}** could not be confirmed automatically (needs an API
@@ -189,7 +194,7 @@ entry.
 
     if SNAP:
         sn = SNAP["summary"]
-        out.append(f"\n**Snapshots** ([`snapshot.py`](snapshot.py), {SNAP['generated_at'][:10]}) — "
+        out.append(f"\n**Snapshots** ([`tools/snapshot.py`](tools/snapshot.py), {SNAP['generated_at'][:10]}) — "
                    f"{sn['with_snapshot']}/{sn['urls']} URLs captured to the Wayback Machine.\n")
 
     out.append('\nEntries with `"verify": true` in the JSON carried a specific known doubt and '
@@ -282,7 +287,7 @@ def main() -> None:
     lines.append(GAPS)
 
     out = "\n".join(lines).rstrip() + "\n"
-    (ROOT / "README.md").write_text(out)
+    (REPO / "README.md").write_text(out)
     stamps = " + ".join(f"{n} {x['generated_at'][:10]}" for n, x in
                         (("s0-1", V1), ("s2", V2), ("s3", V3), ("snap", SNAP)) if x)
     print(f"wrote README.md — {len(DATA['sources'])} sources across "

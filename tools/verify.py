@@ -48,9 +48,10 @@ import urllib.parse
 import urllib.request
 import zipfile
 
-ROOT = pathlib.Path(__file__).parent
-SOURCES = ROOT / "sources.json"
-OUT = ROOT / "verification.json"
+ROOT = pathlib.Path(__file__).parent          # tools/
+REPO = ROOT.parent
+SOURCES = REPO / "sources.json"
+OUT = REPO / "verification" / "verification.json"
 
 UA = "ottawa-data-verify/0.1 (+https://github.com/obliviance/ottawa-data; catalogue verification)"
 TIMEOUT = 25

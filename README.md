@@ -5,40 +5,44 @@ electoral, legislative, financial, spatial, operational — grouped by domain an
 machine-readable each source actually is.
 
 **[`sources.json`](sources.json) is the source of truth.** This README is generated from it by
-[`build_readme.py`](build_readme.py). Edit the JSON, then run `python3 build_readme.py`.
+[`tools/build_readme.py`](tools/build_readme.py). Edit the JSON, then run `python3 tools/build_readme.py`.
 
 **[`hierarchy.md`](hierarchy.md)** is the companion map: every institution that produces
 information about Ottawa's governance and community, arranged as a tree and tagged open / closed /
 unknown — including the branches not yet in this catalogue.
 
+Contributing: [`CLAUDE.md`](CLAUDE.md) for the layout and workflow, [`tools/VERIFYING.md`](tools/VERIFYING.md)
+for how sources get verified. The scripts live in [`tools/`](tools/), the verification records in
+[`verification/`](verification/).
+
 
 ## Status: verified in stages, through 2026-09-09
 
 Every entry was first compiled from search-result metadata with no outbound HTTP. Verification
-runs in stages ([`VERIFYING.md`](VERIFYING.md)); each entry below shows how far it has got.
+runs in stages ([`tools/VERIFYING.md`](tools/VERIFYING.md)); each entry below shows how far it has got.
 
-**Stage 0–1** ([`verify.py`](verify.py), 2026-09-09) — opened every URL and probed for a
+**Stage 0–1** ([`tools/verify.py`](tools/verify.py), 2026-09-09) — opened every URL and probed for a
 machine-readable surface. 100 URLs / 72 sources:
-15 machine-readable · 49 plain HTML/PDF ·
+17 machine-readable · 48 plain HTML/PDF ·
 7 JavaScript-rendered or bot-blocked ·
-1 with a dead link.
+0 with a dead link.
 
-**Stage 2** ([`verify_stage2.py`](verify_stage2.py), 2026-09-09) — rendered the
+**Stage 2** ([`tools/verify_stage2.py`](tools/verify_stage2.py), 2026-09-09) — rendered the
 12 JavaScript / interactive sources in a real headless Chromium and captured their XHR.
 **6** turned out to have a real backing API (council votes as JSON from `howtheyvoted.ca`,
 a REST API behind `devapps`, an EngagementHQ API behind Engage Ottawa, an AJAX meeting index
 behind eScribe); **5** render fully and can be scraped headlessly; **1** still would not
 yield (ottawa.ca and CanLII intermittently serve a bot challenge to headless browsers).
 
-**Stage 3** ([`verify_stage3.py`](verify_stage3.py), 2026-09-09) — confirmed the
-access tag and resolved the licence. **42** access tags confirmed as-is; **13** are
+**Stage 3** ([`tools/verify_stage3.py`](tools/verify_stage3.py), 2026-09-09) — confirmed the
+access tag and resolved the licence. **55** access tags confirmed as-is; **2** are
 *understated* (more open than the tag claims — usually an ArcGIS/CKAN API behind a "Bulk" or
-"HTML" tag); **0** overstated; **17** could not be confirmed automatically (needs an API
+"HTML" tag); **0** overstated; **15** could not be confirmed automatically (needs an API
 key, a login, or is a genuine FOI request). Licence resolved by operator: **55** sources fall
 under an Open Government Licence; the rest carry site terms or access restrictions, flagged per
 entry.
 
-**Snapshots** ([`snapshot.py`](snapshot.py), 2026-09-09) — 79/94 URLs captured to the Wayback Machine.
+**Snapshots** ([`tools/snapshot.py`](tools/snapshot.py), 2026-09-09) — 79/94 URLs captured to the Wayback Machine.
 
 Entries with `"verify": true` in the JSON carried a specific known doubt and are marked **[verify]** below.
 
@@ -53,7 +57,7 @@ Entries with `"verify": true` in the JSON carried a specific known doubt and are
 | `Request` | On-site, by freedom-of-information request, or by written request. |
 
 Where verification has run, each entry below carries a **Verified** line: the access tag and
-licence as confirmed (or corrected), and the stage-by-stage trail. See [`VERIFYING.md`](VERIFYING.md).
+licence as confirmed (or corrected), and the stage-by-stage trail. See [`tools/VERIFYING.md`](tools/VERIFYING.md).
 
 
 ## Contents
@@ -85,29 +89,29 @@ The city's ArcGIS Hub catalogue. Every dataset exposes GeoService and GeoJSON en
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (691 datasets)) · 3 archived_
+> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (695 datasets)) · 3 archived_
 - <https://open.ottawa.ca/>
 - <https://ouverte.ottawa.ca/>
 - <https://open.ottawa.ca/pages/developer-resources>
 
 ### City ArcGIS REST services root
 
-`API` · *City of Ottawa*
+`API` `Bulk` · *City of Ottawa*
 
-Raw ArcGIS MapServer directory behind geoOttawa. Observed services include Zoning, Basemap_Ottawa and TopographicMapping (contours, building footprints, pathways). Cleanest bulk-ingestion path for anything spatial.
+Raw ArcGIS MapServer directory behind geoOttawa. Observed services include Zoning, Basemap_Ottawa and TopographicMapping (contours, building footprints, pathways). Cleanest bulk-ingestion path for anything spatial. Verified: services answer f=json/pjson; FeatureServer layers export GeoJSON/CSV.
 
-> **Verified** — access: understated — also found `bulk`
+> **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
 > _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS REST catalogue: 80 services, 1 folder, v10.81) · 1 archived_
 - <https://maps.ottawa.ca/arcgis/rest/services/>
 
 ### geoOttawa
 
-`HTML` · *City of Ottawa*
+`HTML` `API` · *City of Ottawa*
 
-Public map viewer over the ArcGIS services. Search by address, intersection, street segment or facility. Use for reconnaissance, then pull the layer from REST.
+Public map viewer over the ArcGIS services. Search by address, intersection, street segment or facility. Use for reconnaissance, then pull the layer from REST. Verified: a Web AppBuilder viewer over the maps.ottawa.ca/arcgis services (see the ArcGIS REST services root) plus tiles.arcgis.com vector tiles.
 
-> **Verified** — access: understated — also found `api` — e.g. `https://maps.ottawa.ca/arcgis/rest/services/Basemap_Ottawa/MapServer?f=json`
+> **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
 > _stage 0–1 2026-09-09: reachable but JavaScript-rendered · stage 2 2026-09-09: a real backing data API turned up in the browser · 1 archived_
 - <https://maps.ottawa.ca/geoottawa/>
@@ -174,13 +178,13 @@ Statutory calendar, nomination rules, third-party advertiser registration. 2026:
 
 ### Historical results and ward boundaries
 
-`Bulk` · *City of Ottawa / Wikipedia*
+`API` `Bulk` · *City of Ottawa / Wikipedia*
 
-Poll-level results and ward boundary geometries publish to the open data portal. Wikipedia articles are the most convenient freely-licensed tabular version.
+Poll-level results and ward boundary geometries publish to the open data portal. Wikipedia articles are the most convenient freely-licensed tabular version. Verified: on Open Ottawa's ArcGIS Hub (GeoServices API + CSV/GeoJSON/shapefile/KML).
 
-> **Verified** — access: understated — also found `api`
+> **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (691 datasets)) · 2 archived_
+> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (695 datasets)) · 2 archived_
 - <https://open.ottawa.ca/>
 - <https://en.wikipedia.org/wiki/2022_Ottawa_municipal_election>
 - <https://en.wikipedia.org/wiki/2026_Ottawa_municipal_election>
@@ -190,11 +194,11 @@ Poll-level results and ward boundary geometries publish to the open data portal.
 
 ### eScribe: agendas, minutes, staff reports
 
-`HTML` · *City of Ottawa*
+`API` `HTML` · *City of Ottawa*
 
-Every Council, standing committee and board meeting from 18 June 2012 onward. Staff reports attach as filestream.ashx?DocumentId=NNNNNN, a sequential integer, which makes systematic harvesting tractable. Richest untapped corpus in the catalogue.
+Every Council, standing committee and board meeting from 18 June 2012 onward. Staff reports attach as filestream.ashx?DocumentId=NNNNNN, a sequential integer, which makes systematic harvesting tractable. Richest untapped corpus in the catalogue. Verified: the meeting index (not the documents) is queryable at MeetingsCalendarView.aspx/GetCalendarMeetings; staff reports remain PDFs.
 
-> **Verified** — access: understated — also found `api` — e.g. `https://pub-ottawa.escribemeetings.com/MeetingsCalendarView.aspx/GetCalendarMeetings`
+> **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
 > _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: a real backing data API turned up in the browser · 1 archived_
 - <https://pub-ottawa.escribemeetings.com/>
@@ -212,9 +216,9 @@ Older documents. Anything before 2012 not here is held by the City Archives. Vid
 
 ### Council meeting video and audio
 
-`API` · *City of Ottawa*
+`HTML` `API` · *City of Ottawa*
 
-Live streams plus archived webcasts migrating from the old portal. Auto-captions make this searchable as text, a realistic route to a speech-level record of debate.
+Live streams plus archived webcasts migrating from the old portal. Auto-captions make this searchable as text, a realistic route to a speech-level record of debate. Verified: the channel is a web page; text access is via the YouTube Data API or yt-dlp --write-auto-sub, not a City endpoint.
 
 > **Verified** — access: unconfirmed — page is HTML; claimed `api` needs a key / login / manual check
 > licence: *Open Government Licence – City of Ottawa*
@@ -352,11 +356,11 @@ Tabled and adopted budgets, 2022 onward. Line-item detail generally in PDF; some
 
 ### Financial Information Return (FIR)
 
-`Bulk` · *Ontario Ministry of Municipal Affairs and Housing*
+`API` `Bulk` · *Ontario Ministry of Municipal Affairs and Housing*
 
-Province-mandated annual financial return under Municipal Act s.294(1), filed by 31 May. Data back to 1977 in a consistent schema across every Ontario municipality. The only clean way to benchmark Ottawa against peers.
+Province-mandated annual financial return under Municipal Act s.294(1), filed by 31 May. Data back to 1977 in a consistent schema across every Ontario municipality. The only clean way to benchmark Ottawa against peers. Verified: mirrored to data.ontario.ca (CKAN API v2.9.7) alongside the EFIS portal.
 
-> **Verified** — access: understated — also found `api`
+> **Verified** — access: confirmed
 > licence: *Open Government Licence – Ontario*
 > _stage 0–1 2026-09-09: machine-readable surface confirmed (CKAN API v2.9.7, 2963 datasets) · 1 archived_
 - <https://efis.fma.csc.gov.on.ca/fir/>
@@ -392,11 +396,11 @@ Provincial corporation assessing all Ontario properties. Per-property values are
 
 ### Development Applications Search
 
-`HTML` · *City of Ottawa*
+`API` `HTML` · *City of Ottawa*
 
-Every planning application with reports, plans, status and comment windows. Stable per-application URLs of the form /en/applications/D07-12-19-0075/details, so the file-number scheme is enumerable. 28-day standard comment period.
+Every planning application with reports, plans, status and comment windows. Stable per-application URLs of the form /en/applications/D07-12-19-0075/details, so the file-number scheme is enumerable. 28-day standard comment period. Verified: a JSON REST API backs the search - devapps-restapi.ottawa.ca/devapps/{feature,apptype,ward}/all - with a client-side authKey shipped to every browser.
 
-> **Verified** — access: understated — also found `api` — e.g. `https://devapps-restapi.ottawa.ca/devapps/feature/all?authKey=<redacted>`
+> **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
 > _stage 0–1 2026-09-09: reachable but JavaScript-rendered · stage 2 2026-09-09: a real backing data API turned up in the browser · 1 archived_
 - <https://devapps.ottawa.ca/>
@@ -490,12 +494,12 @@ Its own open-data surface separate from the main portal: live traffic map, camer
 
 `Bulk` `API` · *City of Ottawa / Ontario MTO*
 
-All reportable collisions including property-damage-only, in CSV and shapefile. Sourced from MTO via Ottawa Police, OPP and RCMP. Every record validated at least once, roughly half twice.
+All reportable collisions including property-damage-only, in CSV and shapefile. Sourced from MTO via Ottawa Police, OPP and RCMP. Every record validated at least once, roughly half twice. Verified: now published as per-year datasets on Open Ottawa, each with a GeoServices REST API plus CSV and shapefile.
 
-> **Verified** — access: unconfirmed — page is HTML; claimed `api`, `bulk` needs a key / login / manual check
+> **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · broken — https://open.ottawa.ca/datasets/ottawa::traffic-collision-data/about → 404 · 1 archived_
-- <https://open.ottawa.ca/datasets/ottawa::traffic-collision-data/about>
+> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (695 datasets)) · 1 archived_
+- <https://open.ottawa.ca/search?q=traffic%20collision>
 - <https://ottawa.ca/en/parking-roads-and-travel/road-safety/road-safety-action-plan/fatal-and-major-injury-collision-data>
 
 ### Automated speed enforcement
@@ -517,7 +521,7 @@ Centrelines, sidewalks, multi-use pathways, cycling routes, winter maintenance c
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (691 datasets)) · 1 archived_
+> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (695 datasets)) · 1 archived_
 - <https://open.ottawa.ca/datasets/pathway-links/api>
 
 
@@ -536,13 +540,13 @@ Separate ArcGIS Hub launched November 2023, reported as 11 datasets, 7 dashboard
 
 ### Crime Map (year to date)
 
-`Bulk` · *Ottawa Police Service / City of Ottawa*
+`API` `Bulk` · *Ottawa Police Service / City of Ottawa*
 
-Mirrored onto the city portal. Criminal offences open data also published directly by Ottawa Police.
+Mirrored onto the city portal. Criminal offences open data also published directly by Ottawa Police. Verified: Open Ottawa ArcGIS Hub dataset (GeoServices API + CSV/GeoJSON/shapefile/KML).
 
-> **Verified** — access: understated — also found `api`
+> **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (691 datasets)) · 1 archived_
+> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (695 datasets)) · 1 archived_
 - <https://open.ottawa.ca/datasets/crime-map-year-to-date/about>
 
 ### Police Services Board
@@ -558,13 +562,13 @@ Board agendas, minutes and reports run through the same eScribe instance as Coun
 
 ### Fire, paramedic and emergency services
 
-`Bulk` · *City of Ottawa*
+`API` `Bulk` · *City of Ottawa*
 
-Station locations, response-time performance and call volumes publish to the open data portal. Service-level detail also appears in annual departmental reports to committee.
+Station locations, response-time performance and call volumes publish to the open data portal. Service-level detail also appears in annual departmental reports to committee. Verified: on Open Ottawa's ArcGIS Hub (GeoServices API + bulk formats).
 
-> **Verified** — access: understated — also found `api`
+> **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (691 datasets)) · 1 archived_
+> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (695 datasets)) · 1 archived_
 - <https://open.ottawa.ca/>
 
 
@@ -686,33 +690,31 @@ Tree inventory, forest cover, park and facility locations, sports fields, as spa
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (691 datasets)) · 1 archived_
+> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (695 datasets)) · 1 archived_
 - <https://open.ottawa.ca/>
 
 
 ## 11. 311, consultation, library, recreation
 
-### Open311 and 311 service requests **[verify]**
+### Open311 and 311 service requests
 
 `API` `Bulk` · *City of Ottawa (ServiceOttawa)*
 
-GeoReport v2 compliant, GET and POST, with test and production tiers. Raw history publishes as two rolling CSVs on Azure Blob Storage, 311opendata_currentyear.csv (updated daily) and 311opendata_lastyear.csv, carrying ward, responsible department and request description. Reported volume roughly 460,000 requests January 2025 to April 2026.
+Verified 2026-09-09: the GeoReport v2 API (city-of-ottawa-prod.apigee.net) is gone. Data now publishes as two rolling CSVs on Azure Blob Storage - 311opendatastorage.blob.core.windows.net/311data/311opendata_currentyear.csv (updated daily) and 311opendata_lastyear.csv - carrying ward, responsible department and request description; yearly archives back to 2012 on the portal.
 
-> **Verify:** apigee.net hosts are frequently migrated. Confirm the endpoint is live before depending on it.
-
-> **Verified** — access: unconfirmed — page is HTML; claimed `api`, `bulk` needs a key / login / manual check
+> **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: every catalogued link dead or erroring · broken — https://city-of-ottawa-prod.apigee.net/open311/v2/ → no DNS; https://open.ottawa.ca/documents/ottawa::open311-api/about → 404_
-- <https://open.ottawa.ca/documents/ottawa::open311-api/about>
-- <https://city-of-ottawa-prod.apigee.net/open311/v2/>
+> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (695 datasets))_
+- <https://open.ottawa.ca/documents/ottawa::current-year-service-requests>
+- <https://open.ottawa.ca/documents/ottawa::previous-year-service-requests>
 
 ### Engage Ottawa
 
-`HTML` · *City of Ottawa*
+`API` `HTML` · *City of Ottawa*
 
-Consultation platform: open and closed projects, survey instruments, and published what-we-heard reports. The record of what the public actually said before a decision.
+Consultation platform: open and closed projects, survey instruments, and published what-we-heard reports. The record of what the public actually said before a decision. Verified: runs on EngagementHQ; engage.ottawa.ca/api/v2/* serves projects, navigation and site metadata.
 
-> **Verified** — access: understated — also found `api` — e.g. `https://engage.ottawa.ca/api/v2/home_page_revisions?filters%5Bsort%5D%5Bid%5D=desc&filters%5Bpublished%5D=true&page=1&per_page=1`
+> **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
 > _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: a real backing data API turned up in the browser · 1 archived_
 - <https://engage.ottawa.ca/projects>
@@ -731,13 +733,13 @@ Branch data, circulation statistics and curated local-statistics guides. Partner
 
 ### Recreation facilities and programmes
 
-`API` · *City of Ottawa*
+`API` `Bulk` · *City of Ottawa*
 
-Facility locations, rinks, pools, programme registration data. Seasonal layers such as outdoor rink conditions update frequently.
+Facility locations, rinks, pools, programme registration data. Seasonal layers such as outdoor rink conditions update frequently. Verified: on Open Ottawa's ArcGIS Hub (GeoServices API + bulk formats).
 
-> **Verified** — access: understated — also found `bulk`
+> **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (691 datasets)) · 1 archived_
+> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (695 datasets)) · 1 archived_
 - <https://open.ottawa.ca/>
 
 
@@ -825,15 +827,13 @@ How each councillor voted across the 2022 to 2026 term, filterable by councillor
 > _stage 0–1 2026-09-09: reachable but JavaScript-rendered · stage 2 2026-09-09: renders fully — a headless scrape works_
 - <https://www.horizonottawa.ca/vote_tracker>
 
-### How They Voted **[verify]**
+### How They Voted
 
-`HTML` · *Independent*
+`API` `HTML` · *Independent*
 
-Dedicated Ottawa council voting-record site.
+Dedicated Ottawa council voting-record site. Verified 2026-09-09: ships its compiled record as JSON at howtheyvoted.ca/data/ottawa/index.json and /data/ottawa/dates/<YYYY-MM-DD>.json, current to within days. Independent project on ordinary site terms - usable as a secondary source, not re-publishable as open data.
 
-> **Verify:** Currency and maintenance status unclear from search results alone.
-
-> **Verified** — access: understated — also found `api` — e.g. `https://howtheyvoted.ca/data/ottawa/index.json`
+> **Verified** — access: confirmed
 > licence: *Site terms – no open-data licence stated*
 > _stage 0–1 2026-09-09: reachable but JavaScript-rendered · stage 2 2026-09-09: a real backing data API turned up in the browser · 1 archived_
 - <https://howtheyvoted.ca/>
@@ -854,13 +854,13 @@ Runs the most complete 2026 candidate tracker and per-ward election guides. Jour
 
 `HTML` · *Volunteer community*
 
-Volunteer community with an active meetup and public GitHub organization. The obvious place to find collaborators or avoid duplicating existing work.
+Volunteer community with an active meetup and public GitHub organization. The obvious place to find collaborators or avoid duplicating existing work. (ottawacivictech.ca was unreachable at last verification; the GitHub org is the live home.)
 
-> **Verified** — access: confirmed
+> **Verified** — access: understated — also found `bulk`
 > licence: *Varies by project*
 > _stage 0–1 2026-09-09: reachable, server-rendered HTML · broken — https://www.ottawacivictech.ca/ → no DNS · 2 archived_
-- <https://www.ottawacivictech.ca/>
 - <https://github.com/YOWCT>
+- <https://www.ottawacivictech.ca/>
 
 ### ACORN Canada housing voting records
 
@@ -884,7 +884,7 @@ Owns the Greenbelt, Gatineau Park, much of the waterfront and many major parkway
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – Canada*
-> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (691 datasets)) · broken — https://search.open.canada.ca/opendata/?owner_org=ncc-ccn → no DNS · 1 archived_
+> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS Hub DCAT feed present (695 datasets)) · 1 archived_
 - <https://open.ottawa.ca/datasets/ncc-open-data-map/about>
 - <https://search.open.canada.ca/opendata/?owner_org=ncc-ccn>
 
@@ -942,11 +942,11 @@ Over 20 kilometres of records in climate-controlled vaults at 100 Tallwood Drive
 
 ### Historical aerial imagery and mapping
 
-`HTML` · *City of Ottawa / university libraries*
+`HTML` `API` · *City of Ottawa / university libraries*
 
-geoOttawa carries historical air-photo layers going back decades. Carleton and uOttawa GIS libraries hold digitized historical map series for the region.
+geoOttawa carries historical air-photo layers going back decades. Carleton and uOttawa GIS libraries hold digitized historical map series for the region. Verified: served through the geoOttawa viewer; the air-photo layers are ArcGIS services under maps.ottawa.ca/arcgis.
 
-> **Verified** — access: understated — also found `api` — e.g. `https://maps.ottawa.ca/arcgis/rest/services/Basemap_Ottawa/MapServer?f=json`
+> **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
 > _stage 0–1 2026-09-09: reachable but JavaScript-rendered · stage 2 2026-09-09: a real backing data API turned up in the browser · 1 archived_
 - <https://maps.ottawa.ca/geoottawa/>
