@@ -69,8 +69,8 @@ information about Ottawa's governance and community, arranged as a tree and tagg
 unknown — including the branches not yet in this catalogue.
 
 Contributing: [`CLAUDE.md`](CLAUDE.md) for the layout and workflow, [`tools/VERIFYING.md`](tools/VERIFYING.md)
-for how sources get verified. The scripts live in [`tools/`](tools/), the verification records in
-[`verification/`](verification/).
+for how sources get verified, [`ROADMAP.md`](ROADMAP.md) for the plan to turn the catalogue into
+public-facing work. Scripts in [`tools/`](tools/), verification records in [`verification/`](verification/).
 """
 
 STATUS_UNVERIFIED = """

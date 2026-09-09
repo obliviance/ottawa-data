@@ -1,10 +1,14 @@
-# Verification tooling dependencies.
+# Tooling dependencies.
 #
-#   verify.py          stdlib only
-#   verify_stage3.py   stdlib only
-#   snapshot.py        stdlib only
-#   verify_stage2.py   needs playwright (the browser binary is remote over CDP,
-#                      so `playwright install` is NOT required - just the package)
-#   build_readme.py    stdlib only
+# Verification (tools/verify*.py, snapshot.py, build_readme.py): stdlib only,
+#   except verify_stage2.py which needs `playwright` (the browser is remote over
+#   CDP, so `playwright install` is NOT required — just the package).
+#
+# Exploration (tools/warehouse.py, tools/profile.py, tools/ingest/*): duckdb +
+#   pandas + pyarrow, plus openpyxl for the .xlsx resources some portals serve.
 
 playwright>=1.40
+duckdb>=1.1
+pandas>=2.0
+pyarrow>=14
+openpyxl>=3.1
