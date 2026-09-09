@@ -1,14 +1,40 @@
 {
-  "generated_at": "2026-09-09T14:49:55+00:00",
+  "generated_at": "2026-09-09T21:36:22+00:00",
   "tool": "verify_stage2.py 0.1 (headless Chromium over CDP)",
   "browser": "Chrome/151.0.7922.109",
-  "screenshots_dir": "/tmp/claude-1000/-workspace/f3bc9a0c-d3e8-4d55-956a-9a587587d110/scratchpad/stage2-shots",
+  "screenshots_dir": "/tmp/claude-1000/-workspace/f3bc9a0c-d3e8-4d55-956a-9a587587d110/scratchpad/xhr-shots",
   "note": "Rendered the JavaScript-only sources. discovered_apis lists the XHR/fetch calls that look like a real data endpoint - promote to sources.json and re-run verify.py to fingerprint them.",
   "sources": {
+    "arcgis-rest-root": {
+      "name": "City ArcGIS REST services root",
+      "claimed_access": [
+        "api",
+        "bulk"
+      ],
+      "url_results": [
+        {
+          "url": "https://maps.ottawa.ca/arcgis/rest/services/",
+          "final_url": "https://maps.ottawa.ca/arcgis/rest/services/",
+          "title": "Folder: /",
+          "rendered_text_chars": 2677,
+          "rendered_text_sample": "ArcGIS REST Services Directory\tLogin | Get Token\nHome > services\tHelp | API Reference\nJSON | SOAP\nFolder: /\nCurrent Version: 10.81\n\nView Footprints In:   ArcGIS Online Map Viewer\n\nFolders:\nUtilities\nServices:\nActiveTransportation (MapServer)\nAddress_Information (MapServer)\naddressLocator (GeocodeServer)\nAdministrativeAreas (MapServer)\nBasemap_Imagery_1928 (MapServer)\nBasemap_Imagery_1958 (MapServer)\nBasemap_Imagery_1965 (MapServer)\nBasemap_Imagery_1976 (MapServer)\nBasemap_Imagery_1991 (MapServer)\nBasemap_Imagery_1999 (MapServer)\nBasemap_Imagery_2002 (MapServer)\nBasemap_Imagery_2005 (MapServer)\nBasemap_Imagery_2007 (MapServer)\nBasemap_Imagery_2008 (MapServer)\nBasemap_Imagery_2009 (MapServer)\nBasemap_Imagery_2010 (MapServer)\nBasemap_Imagery_2011 (MapServer)\nBasemap_Imagery_2014 (MapServer)\nBasemap_Imagery_2015 (MapServer)\nBasemap_Imagery_2017_123 (MapServer)\nBasemap_Imagery_2017 (MapServer)\nBasemap_Imagery_2019_Fall (MapServer)\nBasemap_Imagery_2021 (MapServer)\nBasemap_Imagery_2022 (MapServer)\nBasemap_Ottawa_Grey_123 (MapServer)\nBasemap_Ottawa_Grey (MapServer)\nBasemap_Ottawa (MapServer)\nBIA (MapServer)\nCity_Facilities (MapServer)\nClimate_Resiliency (MapServer)\nCommunity_Gardens (MapServer)\nCommunitySocialServices (MapServer)\ncompositeLocator (GeocodeServer)\nConstructionForecastData (MapServer)\nCyclingMap (MapServer)\nDevelopment_Applications (MapServer)\nDevelopmentCharges (MapServer)\nEconomic_Development (MapServer)\nEnvironmental (MapServer)\nForestry (MapServer)\nGeoscience (MapSe",
+          "link_count": 94,
+          "table_count": 3,
+          "xhr_total": 0,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "arcgis-rest-root-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
     "geoottawa": {
       "name": "geoOttawa",
       "claimed_access": [
-        "html"
+        "html",
+        "api"
       ],
       "url_results": [
         {
@@ -223,9 +249,506 @@
       ],
       "rollup": "machine-readable"
     },
+    "open-data-policy": {
+      "name": "Open Data policy and programme",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/open-data",
+          "final_url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/open-data/about-open-data",
+          "title": "About Open Data - Open Data | City of Ottawa",
+          "rendered_text_chars": 899,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nCity Hall\nOpen, transparent and accountable government\nOpen Data - About Open Data\nSkip to main content\nIn this section\nAbout Open Data\nOpen Data licence version 2.0\nOpen Data License change: FAQ\nOpen Data - Glossary\nOpen Data\nAbout Open Data\n\nThe City of Ottawa provides free access to many of its data sets through a dedicated data portal.   The data is licensed under the Open Government License, making it easy to use and reuse.  The City continues to add data to the catalogue and accepts requests from the public to post specific data.   \n\nGet the Data\n\nRequest Data\n\nContact us\n\nOnline\nBy phone\nIn-person\nProblem with the website\nTerms of use\n\nAccessibility\nDisclaimer\nPrivacy\nProtocols\nStay connected\n\nBluesky\nFacebook\nInstagram\nX Platform\nYouTube\neSubscriptions\nLinkedIn\n© 2001 - 2026 City of Ottawa",
+          "link_count": 57,
+          "table_count": 0,
+          "xhr_total": 9,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "open-data-policy-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "candidate-list": {
+      "name": "Certified candidate list",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://elections.ottawa.ca/CandidateList/CandidateList",
+          "final_url": "https://elections.ottawa.ca/CandidateList/CandidateList",
+          "title": "Who is running in my ward? | City of Ottawa",
+          "rendered_text_chars": 847,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nWho is running in my ward?\nThis search tool lists the candidates running for the Office of Mayor, City Councillor and School Board Trustee in the 2026 Municipal Elections.\n\nEnter your street number and name below to find the list of candidates.\n\nStreet number (required)\nStreet name (required) \nStreet name More information\nFind\nIf you have any questions or need assistance, please contact the Elections Office during regular business hours by telephone at 613-580-2660 or by email at elections@ottawa.ca\n(link sends e-mail)\n.\nContact us\n\nOnline\nBy phone\nIn-person\nProblem with the website\nTerms of use\n\nAccessibility\nDisclaimer\nPrivacy\nProtocols\nStay connected\n\nBluesky\nFacebook\nInstagram\nX Platform\nYouTube\neSubscriptions\nLinkedIn\n© 2001 - 2026 City of Ottawa",
+          "link_count": 43,
+          "table_count": 0,
+          "xhr_total": 5,
+          "discovered_apis": [],
+          "other_json_xhr": [
+            {
+              "method": "GET",
+              "url": "https://elections.ottawa.ca/ws/api/SchoolBoards/WithCriteria/Y/Y/Y?locale=en-CA",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            }
+          ],
+          "screenshot": "candidate-list-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "who-is-running": {
+      "name": "Who is running in my ward?",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/city-hall/elections/voters/who-running-my-ward",
+          "final_url": "https://ottawa.ca/en/city-hall/elections/voters/who-running-my-ward",
+          "title": "Who is running in my ward? - Voters | City of Ottawa",
+          "rendered_text_chars": 1743,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nCity Hall\nElections\nVoters - Who is running in my ward?\nSkip to main content\nIn this section\nInformation for voters\nWho is running in my ward?\nVoting for Mayor and City Councillor\nVoting for School Board Trustee\nWho can vote?\nWho cannot vote?\nDifferent ways to mark your ballot\nVoter identification\nVoting opportunities\nElection results\nAccessible municipal elections\nVoters’ List\nElection contributions and rebates\nVoters\nWho is running in my ward?\n\nThe candidate nomination period ended on August 21, 2026, at 2 pm. The names of all certified candidates will appear on the ballot for the 2026 Municipal Elections.  \n\nElectors can enter their address into the Who is running in my ward? tool to view the list of certified candidates for Mayor, City Councillor, and School Board Trustees that they are eligible to vote for in the 2026 Municipal Elections.  \n\nElectors can also use the tool to verify their ward name and number. Information about ward boundaries in the 2026 Municipal Elections and maps of each ward can be found on the Ward maps and school board zones page.\n\nTo view the complete list of all certified and acclaimed candidates running for Mayor, City Councillor, or School Board Trustee in the 2026 Municipal Elections, please consult the pages below: \n\nCertified candidates for Mayor\nCertified and acclaimed candidates for City Councillor\nCertified and acclaimed candidates for School Board ",
+          "link_count": 95,
+          "table_count": 0,
+          "xhr_total": 8,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "who-is-running-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "campaign-finance": {
+      "name": "Campaign financial statements and contributions",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/city-hall/elections/candidates/candidate-campaign-finances-and-contributions",
+          "final_url": "https://ottawa.ca/en/city-hall/elections/candidates/candidate-campaign-finances-and-contributions/campaign-period",
+          "title": "Campaign period - Candidate campaign finances and contributions | City of Ottawa",
+          "rendered_text_chars": 1314,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nCity Hall\nElections\nCandidates\nCandidate campaign finances and contributions - Campaign period\nSkip to main content\nIn this section\nCampaign period\nContributions to a candidate’s campaign\nSpending limits\nFinancial statements\nContribution Rebate Program\nCandidate campaign finances and contributions\nCampaign period\n\nThe campaign period for a candidate for Mayor, City Councillor and School Board Trustee in the 2026 Municipal Elections begins on the day they file their nomination forms with the City Clerk and ends on December 31, 2026.\n\nCandidates cannot accept any contributions or incur any expenses after the end of the campaign period.\n\nIf at the end of the campaign period a candidate’s campaign expenses are greater than their campaign income, their campaign will be in deficit. Candidates with a deficit may extend their campaign to fundraise.\n\nIf a candidate’s campaign has a surplus, the candidate must pay the surplus to the City Clerk when filing their financial statement. \n\nContact us\n\nOnline\nBy phone\nIn-person\nProblem with the website\nTerms of use\n\nAccessibility\nDisclaimer\nPrivacy\nProtocols\nStay connected\n\nBluesky\nFacebook\nInstagram\nX Platform\nYouTube\neSubscriptions\nLinkedIn\n© 2001 - 2026 City of Ottawa",
+          "link_count": 59,
+          "table_count": 0,
+          "xhr_total": 9,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "campaign-finance-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        },
+        {
+          "url": "https://ottawa.ca/en/city-hall/elections/previous-elections-and-appointment-processes/financial-statements-2022-municipal-elections/candidate-and-third-party-advertiser-compliance-reports",
+          "final_url": "https://ottawa.ca/en/city-hall/elections/previous-elections-and-appointment-processes/financial-statements-2022-municipal-elections/candidate-and-third-party-advertiser-compliance-reports",
+          "title": "Candidate and third party advertiser compliance reports - Financial statements for the 2022 Municipal Elections | City of Ottawa",
+          "rendered_text_chars": 5461,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nCity Hall\nElections\nPrevious elections and appointment processes\nFinancial statements for the 2022 Municipal Elections - Candidate and third party advertiser compliance reports\nSkip to main content\nIn this section\nFiling requirements\nCandidate and third party advertiser compliance reports\nFinancial statement format and alternative formats\nCandidates for Mayor\nCandidates for City Councillor – Ward 1 Orléans East-Cumberland\nCandidates for City Councillor – Ward 2 Orléans West-Innes\nCandidates for City Councillor – Ward 3 Barrhaven West\nCandidates for City Councillor – Ward 4 Kanata North\nCandidates for City Councillor – Ward 5 West Carleton-March\nCandidates for City Councillor – Ward 6 Stittsville\nCandidates for City Councillor – Ward 7 Bay\nCandidates for City Councillor – Ward 8 College\nCandidates for City Councillor – Ward 9 Knoxdale-Merivale\nCandidates for City Councillor – Ward 10 Gloucester-Southgate\nCandidates for City Councillor – Ward 11 Beacon Hill-Cyrville\nCandidates for City Councillor – Ward 12 Rideau-Vanier\nCandidates for City Councillor – Ward 13 Rideau-Rockcliffe\nCandidates for City Councillor – Ward 14 Somerset\nCandidates for City Councillor – Ward 15 Kitchissippi\nCandidates for City Councillor – Ward 16 River\nCandidates for City Councillor – Ward 17 Capital\nCandidates for City Councillor – Ward 18 Alta Vista\nCandidates for City Councillor – Ward 19 Orléans South-Navan\nCan",
+          "link_count": 177,
+          "table_count": 0,
+          "xhr_total": 7,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "campaign-finance-1.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "election-key-dates": {
+      "name": "Election key dates and candidate information",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/city-hall/elections/learn-more-about-municipal-elections/key-dates-2026-municipal-elections",
+          "final_url": "https://ottawa.ca/en/city-hall/elections/learn-more-about-municipal-elections/key-dates-2026-municipal-elections",
+          "title": "Key dates for the 2026 Municipal Elections - Learn more about municipal elections | City of Ottawa",
+          "rendered_text_chars": 9571,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nCity Hall\nElections\nLearn more about municipal elections - Key dates for the 2026 Municipal Elections\nSkip to main content\nIn this section\nKey dates for the 2026 Municipal Elections\n Election signs and campaign advertisements  \nMunicipal by-elections and appointment processes\nLegislation impacting municipal elections\nPrescribed forms for the 2026-2030 Term of Council\nElection Compliance Audit Committee\nContact the Elections Office\nLearn more about municipal elections\nKey dates for the 2026 Municipal Elections\n\nMay 1, 2026 – Nomination and registration period begins \n\nFirst day for candidates to file a nomination paper for the office of Mayor, Councillor, or School Board Trustee. A candidate’s campaign period begins once their nomination forms have been filed, meaning they may begin accepting contributions and spending money on their campaign.\nFirst day for an individual, corporation, or trade union to file a notice of registration as a third party advertiser. The campaign period for a third party advertiser begins once their registration forms have been filed, meaning they may begin accepting contributions and spending money on their campaign.  \n\nAugust 21, 2026 – Nomination Day \n\nCandidates have until 2 pm to file their nomination papers.\nA candidate who has filed their nomination papers and wishes to change office has until 2 pm to file a nomination for a different office.\nA candidate",
+          "link_count": 70,
+          "table_count": 0,
+          "xhr_total": 9,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "election-key-dates-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        },
+        {
+          "url": "https://ottawa.ca/en/city-hall/elections/candidates/information-candidates",
+          "final_url": "https://ottawa.ca/en/city-hall/elections/candidates/information-candidates",
+          "title": "Information for candidates - Candidates | City of Ottawa",
+          "rendered_text_chars": 1576,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nCity Hall\nElections\nCandidates - Information for candidates\nSkip to main content\nIn this section\nInformation for candidates\nResources for candidates\nEligibility requirements for candidates for Mayor or City Councillor\nEligibility requirements for candidates for School Board Trustees\nCertified and acclaimed candidates\nVoters’ List for candidates\nCandidate campaign finances and contributions\nCandidate campaign advertisements and election signs\nCandidates\nInformation for candidates\n\nThe nomination period is now closed.  \n\nThe 2026 Municipal Elections will take place on October 26, 2026. Eligible individuals will have the opportunity vote for their choice of:\n\nMayor - one elected at large\nCity Councillor – one elected per ward\nSchool Board Trustee - one elected per zone on the following school boards:\nOttawa-Carleton District School Board\nOttawa Catholic School Board\nConseil des écoles publiques de l'Est de l'Ontario\nConseil des écoles catholiques du Centre-Est  \n\nThe candidate nomination period ended on August 21 at 2pm. The list of certified and acclaimed candidates can be viewed on the Certified and acclaimed candidates page. Candidate nomination forms are public documents and are available for inspection at the Elections Office. \n\nContact us\n\nOnline\nBy phone\nIn-person\nProblem with the website\nTerms of use\n\nAccessibility\nDisclaimer\nPrivacy\nProtocols\nStay connected\n\nBluesky\nFacebook\nInsta",
+          "link_count": 71,
+          "table_count": 0,
+          "xhr_total": 9,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "election-key-dates-1.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "council-video": {
+      "name": "Council meeting video and audio",
+      "claimed_access": [
+        "html",
+        "api"
+      ],
+      "url_results": [
+        {
+          "url": "https://www.youtube.com/channel/UCUR3i_hvk3-3i8vtrPg6v1Q",
+          "final_url": "https://www.youtube.com/channel/UCUR3i_hvk3-3i8vtrPg6v1Q",
+          "title": "Ottawa City Council - YouTube",
+          "rendered_text_chars": 1671,
+          "rendered_text_sample": "CA\nSkip navigation\nSign in\nHome\nShorts\nSubscriptions\nYou\nOttawa City Council\n@ottcitycouncil\n•\n6.12k subscribers\n•\n1.4k videos\nThis Channel is home to live and archived audio and video from Ottawa City Council and Committee meetings, and is an official site of the Office of the City Clerk for the City of Ottawa. \n...more\n YouTube\nSubscribe\nHome\nVideos\nLive\nPodcasts\nPlaylists\nPast live streams\n1:36:28\nOttawa City Council & Media Availability – September 9, 2026\n486 views\n•\nStreamed 6 hours ago\n33:31\nAgriculture and Rural Affairs Committee – September 3, 2026\n182 views\n•\nStreamed 6 days ago\n2:57:47\nPlanning and Housing  Committee – September 2, 2026\n637 views\n•\nStreamed 7 days ago\n2:25:58\nFinance and Corporate Services Committee – September 1, 2026\n467 views\n•\nStreamed 8 days ago\n21:00\nOttawa Police Service Board Human Resources Committee-August 28th 2026\n53 views\n•\nStreamed 12 days ago\n2:06:41\nPublic Works and Infrastructure Committee – August 27, 2026\n510 views\n•\nStreamed 13 days ago\nPlaylists\n2 videos\nOttawa Police Service Board Complaints Committee\nView full playlist\n1 video\nJoint Planning and Housing and Community Services Committee\nView full playlist\n4 videos\nAuditor General Hiring Panel\nView full playlist\n11 videos\nPublic Works and Infrastructure Committee\nView full playlist\n11 videos\nTransit Committee\nView full playlist\n3 videos\nDebenture Committee\nView full playlist\nFeatured Channels\nCity of Ottawa\n12.3k subscribers\nSubscribe\nOttawa Committee of Adjustment\n826 subscrib",
+          "link_count": 49,
+          "table_count": 0,
+          "xhr_total": 105,
+          "discovered_apis": [],
+          "other_json_xhr": [
+            {
+              "method": "POST",
+              "url": "https://www.youtube.com/youtubei/v1/guide?prettyPrint=false",
+              "status": 200,
+              "content_type": "application/json; charset=UTF-8"
+            },
+            {
+              "method": "POST",
+              "url": "https://www.youtube.com/api/jnn/v1/GenerateIT",
+              "status": 200,
+              "content_type": "application/json+protobuf; charset=UTF-8"
+            },
+            {
+              "method": "POST",
+              "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+              "status": 200,
+              "content_type": "application/json; charset=UTF-8"
+            }
+          ],
+          "screenshot": "council-video-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "bylaws-az": {
+      "name": "By-laws A to Z",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z",
+          "final_url": "https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z",
+          "title": "By-law A-Z | City of Ottawa",
+          "rendered_text_chars": 5697,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nLiving in Ottawa\nBy-laws, licences and permits\nBy-laws\nBy-law A-Z\nBy-law A-Z\nAlphabetical list\n\nThe following is a listing of the by-laws most frequently requested by the public which are available on ottawa.ca. These by-laws are available in French and English. Persons seeking by-laws not on ottawa.ca are asked to contact the City Clerk's office via 311.\n\nAccess (By-law No. 2026-139)\nAddressing (By-law No. 2014–78)\nAdministrative Penalty System Appointment By-law (By-law No. 2025-155)\nAmended Heritage Community Improvement Plan (By-law No. 2024-176)\nAmended Integrated Orléans Community Improvement Plan (By-law No. 2024-173)\nAmended Montreal Road Community Improvement Plan (By-law No. 2024-174)\nAnimal Care and Control (By-law No. 2003-077)\nAppendix B - Amendment Schedule to the Zoning By-law and Interim Control By-laws (By-law No. 2022-232)\nATV, ORV and Snowmobile (By-law No. 2019-421)\nAuditor General (By-law No. 2021-5)\nBilingualism (By-law No. 2001-170)\nBoard Up (By-law No. 2010-211)\nBoards of Management for Business Improvement Areas (By-law No. 2021-255)\nBorrowing upon 30 year sinking fund debentures (By-law No. 2017-355)\nBorrowing upon additional sinking fund debentures $200,000,000 (By-law No. 2019-272)\nBorrowing upon additional sinking fund debentures $220,000,000 (By-law No. 2025-357)\nBorrowing upon additional sinking fund debentures $225,000,000 (By-law No. 2021-359)\nBorrowing ",
+          "link_count": 144,
+          "table_count": 0,
+          "xhr_total": 9,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "bylaws-az-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "documents-repo": {
+      "name": "Document repository",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://documents.ottawa.ca/",
+          "final_url": "https://documents.ottawa.ca/",
+          "title": "Documents | City of Ottawa |",
+          "rendered_text_chars": 5133,
+          "rendered_text_sample": "Skip to main search.\n\n Français\nContact Us\nDocuments\nRefine your Search\n\nWelcome to the City of Ottawa's document repository. Use the search field above to find content from Ottawa.ca and Documents.Ottawa.ca\n\n C-3: Carling via Churchill\n Summary of Corridor Evaluation Results\n Sensitivity Analysis\n Evaluation of Corridors carried forward and Carling At-Grade\n Why Carling Fails as a Primary LRT Corridor\n Proposed Evaluation Methodology for the Shortlist Corridor Alignments\n Parkway (O-1)\n Richmond via Rochester (R-5)\n Shortlist Evaluation Results\n Lincoln Fields - Baseline: Overview\n Lincoln Fields - Baseline: West Transitway Connection, Queensway Station\n Lincoln Fields - Baseline: Iris Station\n Preliminary recommended corridor alignment: Richmond underground\n Skead\n Next Steps\n About this study\n affordable_pedestrian_plan.pdf\n SWM Servicing Alternatives 1-3\n Shirley's Brook & Watt's Creek ‐ Phase 2 Stormwater Management Study\n Sandy Hill\n Bayshore Station to Prince of Wales Drive - Planning and Environmental Assessment Study\n Bayshore alternatives\n Bayshore - Evaluation\n Queensway-Carleton Hospital alternatives\n Queensway-Carleton Hospital - Evaluation\n Centrepointe Town Centre/Algonquin College alternatives\n Centrepointe/Algonquin College - Evaluation\n Alternative corridor design overview\n Curb-side lanes design alternative\n Median lanes design alternative\n One-side lanes design alternative\n What we expect from you tonight\n Station and stop locations\n Bicycle/Pedestrian inf",
+          "link_count": 319,
+          "table_count": 0,
+          "xhr_total": 0,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "documents-repo-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "council-structure": {
+      "name": "Council and committee structure",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/city-hall/council-committees-and-boards",
+          "final_url": "https://ottawa.ca/en/city-hall/council-committees-and-boards",
+          "title": "Council, committees and boards | City of Ottawa",
+          "rendered_text_chars": 1446,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nCity Hall\nCouncil, committees and boards\nCouncil, committees and boards\nAgendas, minutes and videos\nlive stream Council and committee meetings, meeting dates and agenda material, archived meetings…\n\nStanding committees\nAgriculture and Rural Affairs Committee, Finance and Corporate Services Committee, Planning and Housing Committee, Transit Committee...\nAdvisory committees\nRecruitment, Accessibility Advisory Committee, Arts, Culture and Recreation Advisory Committee…\n\nAdjudicative bodies\nCommittee of Adjustment, Election Compliance Audit Committee, Court of Revision...\nBoards\nBusiness Improvement Areas, Ottawa Board of Health, Ottawa Community Housing Corporation, Ottawa Police Service Board, Ottawa Public Library Board...\nGet involved in local government\nhave your say, recruitment, rules for participation…\n\nCouncil sponsors groups and liaisons\nWomen, Gender Equity and 2SLGBTQ+ Affairs, Anti-Racism and Ethnocultural Relations Initiatives, Veteran and Military Issues, Council Liaisons ...\nHow City government works\nMayor and City Councillors, how Council and committees work…\nCouncillor orientation sessions\nContact us\n\nOnline\nBy phone\nIn-person\nProblem with the website\nTerms of use\n\nAccessibility\nDisclaimer\nPrivacy\nProtocols\nStay connected\n\nBluesky\nFacebook\nInstagram\nX Platform\nYouTube\neSubscriptions\nLinkedIn\n© 2001 - 2026 City of Ottawa",
+          "link_count": 48,
+          "table_count": 0,
+          "xhr_total": 6,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "council-structure-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "auditor-general": {
+      "name": "Office of the Auditor General",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://www.oagottawa.ca/",
+          "final_url": "https://www.oagottawa.ca/",
+          "title": "Home | Office of the Auditor General - City of Ottawa",
+          "rendered_text_chars": 2252,
+          "rendered_text_sample": "This website uses cookies to enhance usability and provide you with a more personal experience. By using this website, you agree to our use of cookies as explained in our Privacy Policy.\n\nAgree\n\nSkip to main content\nSkip to footer\nAuditor General of Ottawa\nAbout the OAG\nExpand sub pages About the OAG\nReports\nExpand sub pages Reports\nFraud & Waste Hotline\nExpand sub pages Fraud & Waste Hotline\nOther\nExpand sub pages Other\nReport Fraud or Waste\nBack to City of Ottawa site\nContact Us\nEN \nHome\nPrevious\nWelcome to the Office of the Auditor General\nConnect with us!\n\nBlueSky\n\nLearn more\nabout the OAG!\n\nAbout Us\n\nNext\n\nAuditor General\n\nFraud & Waste Hotline\n\nNews\n\nAudit Reports\n\nAnnual Workplan\n\nAudit of Bus Service Planning and Scheduling\n\nLearn more\n\nFollow Up Report - Review of Job Evaluation Processes\n\nLearn more\n\nOttawa Police Service - Audit of Project Management\n\nLearn more\n\nAudit of Cash-in-Lieu of Parkland Funds\n\nLearn more\n\nOC Transpo Recruitment and Staffing Investigation\n\nLearn more\n\n2025 Annual Report\n\nLearn more\n\n2025 Report on the Fraud and Waste Hotline\n\nLearn more\n\nSemi-Annual Report on Follow-Procedures\n\nLearn more\n\n2026-2027 Audit Work Plan\n\nLearn More\n\nLatest News Updates\nAuditor General Tables Audit of Bus Service Planning and Scheduling, Cybersecurity – Critical Infrastructure and Two Follow-Up Reports\nJun 19, 2026\n\nAuditor General Tables Ottawa Police Service – Audit of Project Management\nMay 12, 2026\n\nAuditor General Tables an Audit of Cash-in-Lieu of Parkland",
+          "link_count": 65,
+          "table_count": 3,
+          "xhr_total": 2,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "auditor-general-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "integrity-commissioner": {
+      "name": "Integrity Commissioner",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/integrity-commissioner",
+          "final_url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/integrity-commissioner/integrity-commissioner-law-no-2021-7",
+          "title": "Integrity Commissioner (By-law No. 2021-7) - Integrity Commissioner | City of Ottawa",
+          "rendered_text_chars": 3168,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nCity Hall\nOpen, transparent and accountable government\nIntegrity Commissioner - Integrity Commissioner (By-law No. 2021-7)\nSkip to main content\nIn this section\nIntegrity Commissioner (By-law No. 2021-7)\nAbout the Integrity Commissioner\nRole of the Integrity Commissioner\nCodes of conduct and related resources\nReports and bulletins\nGifts Registry\nFile a complaint\nIntegrity Commissioner\nIntegrity Commissioner (By-law No. 2021-7)\n\nUnder the Municipal Act, 2001 (the Act), municipalities have authority to appoint various statutory officers to carry out certain functions as described in the legislation. At the City of Ottawa, the Integrity Commissioner (established further to Council’s approval in July 2012) is one of three statutory officers that report directly to City Council, along with the City Manager and Auditor General. The Statutory Officer Recruitment, Appointment and Contract Administration Policy and Procedures are used for recruiting, appointing and administering the contracts for these positions.\n\nPursuant to Subsection 223.3(1) of the Act, the Integrity Commissioner “reports to council and is responsible for performing in an independent manner the functions assigned by the municipality with respect to any or all of the following:\n\nThe application of the code of conduct for members of council and the code of conduct for members of local boards.\nThe application of any procedures, ",
+          "link_count": 71,
+          "table_count": 0,
+          "xhr_total": 6,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "integrity-commissioner-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "lobbyist-registry": {
+      "name": "Lobbyist Registry",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://lobbyist.ottawa.ca/search/searchlobbyist.aspx?lang=en",
+          "final_url": "https://lobbyist.ottawa.ca/search/searchlobbyist.aspx?lang=en",
+          "title": "",
+          "rendered_text_chars": 1441,
+          "rendered_text_sample": "Home| Site Map| Contact Us| Feedback\n \nCity of Ottawa Lobbyist Registry\n\nSearch Criteria\nKeyword\n\nLobbyist\n\nPerson(s) Lobbied\n\nSubject Matter\n\nAffordable Housing\nAgriculture/Rural Affairs\nArts/Culture\nAttractions/Tourism\nBudget\nBy-law/Regulation\nChildcare\nEconomic Development\nEnvironment\nFinancial Services\nGarbage/Recycling\nGrants/Funding\nHealth & Safety\nInformation Technology\nInfrastructure\n- Construction\nLicences/Permits\nParking\nParks/Recreation\nPlanning and Development\n- Planning Policy\n- Environmental Assessment\n- Heritage\n- Official Plan\n- Zoning By-law\n- Plan of Subdivision\n- Plan of Condominium\n- Site Plan\n- Minor Variance\n- Consent to Sever\n- Part Lot\n- Combined Application\nProcurement\nPublic Sector Union\nReal Estate/Property\nSigns\nSocial Services\n- Long-term Care\nTax Policy\nTransit/OC Transpo\nTransportation\nWater/Sewer\nAffected Ward(s)\n\nCW - City Wide\n1 - Orléans East-Cumberland\n2 - Orléans West-Innes\n3 - Barrhaven West\n4 - Kanata North\n5 - West Carleton-March\n6 - Stittsville\n7 - Bay\n8 - College\n9 - Knoxdale-Merivale\n10 - Gloucester-Southgate\n11 - Beacon Hill-Cyrville\n12 - Rideau-Vanier\n13 - Rideau-Rockcliffe\n14 - Somerset\n15 - Kitchissippi\n16 - River\n17 - Capital\n18 - Alta Vista\n19 - Orléans South-Navan\n20 - Osgoode\n21 - Rideau-Jock\n22 - Riverside South-Findlay Creek\n23 - Kanata South\n24 - Barrhaven East\n\nDate Range\n\nFrom:      To: \n     \n\n© 2001-2026 City of Ottawa\n\nDisclaimer| Privacy| Links| Accessibility",
+          "link_count": 10,
+          "table_count": 1,
+          "xhr_total": 0,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "lobbyist-registry-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        },
+        {
+          "url": "https://lobbyist.ottawa.ca/",
+          "final_url": "https://lobbyist.ottawa.ca/",
+          "title": "",
+          "rendered_text_chars": 176,
+          "rendered_text_sample": "Lobbyist Registry\nLobbyist Registry Log In\nSearch the Registry\nRegistre des lobbyistes\nOuverture de session du registre des lobbyistes\nRecherche dans le registre des lobbyistes",
+          "link_count": 4,
+          "table_count": 0,
+          "xhr_total": 0,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "lobbyist-registry-1.png",
+          "new_outcome": "needs_browser",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "office-expenses": {
+      "name": "Members' office expenses and remuneration",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/public-disclosure/disclosure-office-expenses",
+          "final_url": "https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/public-disclosure/disclosure-office-expenses?page=3035385",
+          "title": "Disclosure of office expenses | City of Ottawa",
+          "rendered_text_chars": 767,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nCity Hall\nOpen, transparent and accountable government\nPublic disclosure\nDisclosure of office expenses - Office expenses of Members of Council\nSkip to main content\nIn this section\nOffice expenses of Members of Council\nSenior Leadership Team\nExtended Senior Leadership Team\nDisclosure of office expenses\nOffice expenses of Members of Council\nAbout the disclosure of Members' office expenses\n2022-2026 Term of Council\n2018-2022 Term of Council\nContact us\n\nOnline\nBy phone\nIn-person\nProblem with the website\nTerms of use\n\nAccessibility\nDisclaimer\nPrivacy\nProtocols\nStay connected\n\nBluesky\nFacebook\nInstagram\nX Platform\nYouTube\neSubscriptions\nLinkedIn\n© 2001 - 2026 City of Ottawa",
+          "link_count": 54,
+          "table_count": 0,
+          "xhr_total": 6,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "office-expenses-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "sunshine-list": {
+      "name": "Public Sector Salary Disclosure",
+      "claimed_access": [
+        "bulk"
+      ],
+      "url_results": [
+        {
+          "url": "https://www.ontario.ca/page/public-sector-salary-disclosure",
+          "final_url": "https://www.ontario.ca/page/public-sector-salary-disclosure",
+          "title": "Public sector salary disclosure | ontario.ca",
+          "rendered_text_chars": 7265,
+          "rendered_text_sample": "Skip to main content\nGovernment of Ontario home page\nSearch\nFrançais\nTopics\nSign in\nHome\n Government\nPublic sector salary disclosure\n\nThe names, positions, salaries and total taxable benefits of public sector employees paid $100,000 or more in a calendar year.\n\nSearch the 2025 disclosure\n\nOn this page\nSkip this page navigation\nOverview\nPublic sector salary disclosure for 1996 to 2025\n2025 Reporting\nOverview\n\nThe Public Sector Salary Disclosure Act, 1996 makes Ontario’s public sector more open and accountable to taxpayers. The act requires organizations that receive public funding from the Province of Ontario to make public, by March 31 each year, the names, positions, salaries and total taxable benefits of employees paid $100,000 or more in the previous calendar year.\n\nThe act applies to organizations such as:\n\nthe Government of Ontario\nCrown agencies\nmunicipalities\nhospitals\nboards of public health\nschool boards\nuniversities and colleges\nOntario Power Generation\nother public sector employers who receive a significant level of funding from the provincial government\n\nAll employers subject to the act are required to submit their disclosure records to their funding ministries by the fifth business day of March each year using the guides and forms provided.\n\nLearn more about public sector salary disclosure.\n\nPublic sector salary disclosure for 1996 to 2025\n\nPublic sector employees who were paid $100,000 or more and organizations with no salaries to disclose in each calendar year.",
+          "link_count": 154,
+          "table_count": 0,
+          "xhr_total": 3,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "sunshine-list-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "financial-reports": {
+      "name": "Budget and financial reports",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning/financial-reports-and-statements",
+          "final_url": "https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning/financial-reports-and-statements/operating-and-capital-budget-status-reports",
+          "title": "Operating and Capital Budget Status Reports - Financial reports and statements | City of Ottawa",
+          "rendered_text_chars": 3387,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nCity Hall\nBudget, finance and corporate planning\nFinancial reports and statements - Operating and Capital Budget Status Reports\nSkip to main content\nIn this section\nOperating and Capital Budget Status Reports\nAnnual Year end disposition reports\nAnnual Financial statements\nAnnual reports\nLong range Financial Plans\nCity of Ottawa Credit Ratings\nFiscal Framework 2007\nFinancial reports and statements\nOperating and Capital Budget Status Reports\nOperating and Capital Budget Status Reports (Q1 and Q2)\n\nQuarterly operating and capital status reports are prepared as part of the reporting framework approved by Council. Operating reports present actual year-to-date revenues and expenditures against the amounts previously budgeted for in the corresponding period. Year-end forecasts are also presented in the second quarter report. Capital reports provide a listing of the capital projects / programs, the authorized expenditure budgets, actual expenditures and commitments incurred to date and the remaining amount to be spent. The purpose of the reports is to present either the march 31 year to date (Q1) or the June 30 year-to-date operating and capital results (Q2) for City Wide Tax Supported Programs and Rate Supported Programs along with providing a year-end forecast. Results for boards and commissions are not included with this report, specifically the results for Ottawa Police Services, Ottawa Pub",
+          "link_count": 94,
+          "table_count": 0,
+          "xhr_total": 8,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "financial-reports-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "budget-documents": {
+      "name": "Budget documents by year",
+      "claimed_access": [
+        "html",
+        "bulk"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning",
+          "final_url": "https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning",
+          "title": "Budget, finance and corporate planning | City of Ottawa",
+          "rendered_text_chars": 1606,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nCity Hall\nBudget, finance and corporate planning\nBudget, finance and corporate planning\nCity of Ottawa Contribution Program\n\nSupport City of Ottawa programs and services through a financial contribution.\n(opens in new tab)\n\nClose\n×\nUnderstanding your City Budget\nThe budget process explained\nBudget 2026\nPrevious Budgets\nBudget 2025, 2024, 2023, 2022\n\nFinancial reports and statements\nfinancial reports and statements, long range financial plans, fiscal framework, credit rating\n\nAnnual reports\nAnnual reports from 2024, 2023, 2022, 2021, 2020\n\nFunding\neconomic development funding, community and social support funding, cultural funding…\nCorporate planning\nCity Strategic Plan, comprehensive asset management, Corporate planning framework …\n\nTax policy\nProperty tax classes, tax ratios, how your taxes are calculated and distributed\nContact us\n\nOnline\nBy phone\nIn-person\nProblem with the website\nTerms of use\n\nAccessibility\nDisclaimer\nPrivacy\nProtocols\nStay connected\n\nBluesky\nFacebook\nInstagram\nX Platform\nYouTube\neSubscriptions\nLinkedIn\n© 2001 - 2026 City of Ottawa\nWeb experience survey\n×\nWould you like to participate in a 3-5 minute web experience survey to help us improve ottawa.ca? We ask that you fill in the survey after you have finished your visit to this site. Even if you only spend a brief time on the site, we would like to hear from you. If YES, a new window will open in the background so y",
+          "link_count": 48,
+          "table_count": 0,
+          "xhr_total": 6,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "budget-documents-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "procurement": {
+      "name": "Procurement and tenders",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/business/procurement/procurement",
+          "final_url": "https://ottawa.ca/en/business/procurement/procurement",
+          "title": "Procurement - Procurement | City of Ottawa",
+          "rendered_text_chars": 1251,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nBusiness\nProcurement - Procurement\nSkip to main content\nIn this section\nProcurement\nSAP Ariba\nStanding Offers by Client Unit\nEthical purchasing\nBusiness Technology Plan\nVendor Performance Management (VPM)\nCity contractors and the Accessibility for Ontarians with Disabilities Act (AODA)\nBidding opportunities\nSupply Ontario Resources\nContracts awarded\nTerms and Conditions\nProcurement By-law\nContact Supply Services\nUnofficial Bidding Results\nCanadian Free Trade Agreement (CFTA) Notice of Participation – Buying Groups\nPrevious Terms and Conditions\nProcurement\nProcurement\n\nThe City's Supply Services administers purchasing activities averaging more than $1 billion annually, in accordance with the City of Ottawa Purchasing By-law and established policies and procedures. \n\nLatest Purchasing News and Information:\n\nDoing Business with Ottawa\nCity contractors and the Accessibility for Ontarians with Disabilities Act (AODA)\nContact us\n\nOnline\nBy phone\nIn-person\nProblem with the website\nTerms of use\n\nAccessibility\nDisclaimer\nPrivacy\nProtocols\nStay connected\n\nBluesky\nFacebook\nInstagram\nX Platform\nYouTube\neSubscriptions\nLinkedIn\n© 2001 - 2026 City of Ottawa",
+          "link_count": 103,
+          "table_count": 0,
+          "xhr_total": 9,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "procurement-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        },
+        {
+          "url": "https://ottawa.ca/en/business/procurement/procurement-law",
+          "final_url": "https://ottawa.ca/en/business/procurement/procurement-law",
+          "title": "Procurement By-law - Procurement | City of Ottawa",
+          "rendered_text_chars": 1710,
+          "rendered_text_sample": "Home\nBusiness\nProcurement - Procurement By-law\nSkip to main content\nIn this section\nProcurement\nSAP Ariba\nStanding Offers by Client Unit\nEthical purchasing\nBusiness Technology Plan\nVendor Performance Management (VPM)\nCity contractors and the Accessibility for Ontarians with Disabilities Act (AODA)\nBidding opportunities\nSupply Ontario Resources\nContracts awarded\nTerms and Conditions\nProcurement By-law\nContact Supply Services\nUnofficial Bidding Results\nCanadian Free Trade Agreement (CFTA) Notice of Participation – Buying Groups\nPrevious Terms and Conditions\nProcurement\nProcurement By-law\n\nThe City's Supply Services administers purchasing activities in accordance with the City of Ottawa Procurement By-law and established policies and procedures to ensure:\n\nThe competitive process is cost-effective and used whenever possible\nFair, open and equitable treatment to all suppliers\nBest value for taxpayer dollars\nConformity with the Canadian Free Trade Agreement (CFTA), and the Trade and Cooperation Agreement between Ontario and Quebec (OQTCA)\nContact us\nOnline\nEn ligne\nBy phone\nPar téléphone\nIn-person\nEn personne\nProblem with the website\nUn problème concernant le site Web\nAbout us\nAccessibilité\nAvertissement\nConfidentialité\nAccessibility\nDisclaimer\nPrivacy\nProtocoles\nProtocols\nFollow us\nBluesky\nBluesky\nFacebook\nFacebook\nInstagram\nInstagram\nX Platform\nPlateforme X\nYouTube\nYouTube\nCyberabonnements\neSubscriptions\nLinkedIn\nLinkedIn\nReport or Request\nParking issues\nProblèmes de stationneme",
+          "link_count": 110,
+          "table_count": 0,
+          "xhr_total": 6,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "procurement-1.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
     "devapps": {
       "name": "Development Applications Search",
       "claimed_access": [
+        "api",
         "html"
       ],
       "url_results": [
@@ -273,155 +796,743 @@
       ],
       "rollup": "machine-readable"
     },
-    "ateh": {
-      "name": "Alliance to End Homelessness Ottawa",
+    "zoning-2026-50": {
+      "name": "Zoning By-law 2026-50",
       "claimed_access": [
-        "html"
+        "html",
+        "api"
       ],
       "url_results": [
         {
-          "url": "https://www.endhomelessnessottawa.ca/",
-          "final_url": "https://www.endhomelessnessottawa.ca/",
-          "title": "Alliance to End Homelessness Ottawa",
-          "rendered_text_chars": 5511,
-          "rendered_text_sample": "Who We Are\nOur Work\nUpdates\nResources\nFacebook\nTwitter\nInstagram\nDonate\nWe Can End\nHomelessness\nThe Alliance to End Homelessness Ottawa is a member-driven coalition of people and organizations working together to end homelessness through systems planning and coordination, public education and advocacy, and community-wide mobilization.\nSunday, September 27, 2026: Race to End Homelessness - Because We Can't Go Fast Enough\n\nLet’s run, walk, and roll our way to ending homelessness!\n\nSunday, September 27, 2026, 9:00 - 11:00 am\nPine View Golf Course, 1471 Blair Road\n\nRegister now!\n\nShelter Diversion Pilot\n\nToday we’re launching a report on a 6-month shelter diversion pilot project at Shepherds of Good Hope.\n\nThe results are striking. Staff were able to successfully divert 22% to positive alternatives to emergency shelter.\n\nRead the report\n\n \n\nOur City #StartsWithHome:\nScaling Up Non-Profit Housing in Ottawa Report.\nIt's time to take action. We have the solutions!\n\nRead the Report\n\nLAND ACKNOWLEDGEMENT\nOttawa is located on unceded Algonquin, Anishnabek territory.Put simply, these lands were stolen from the traditional keepers for the purposes of settlers. Dispossession of land is just one form of ongoing colonization that has led to First Nations, Inuit, and Métis people disproportionately experiencing homelessness.\nEmbracing Indigenous leadership and collaboration is crucial to ensuring the prevention, reduction, and ultimate end of homelessness.\n\nRead more\n\nARE YOU NEEDING HELP NO",
-          "link_count": 72,
+          "url": "https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z/zoning-law-law-no-2026-50",
+          "final_url": "https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z/zoning-law-law-no-2026-50",
+          "title": "Zoning By-law (By-law No. 2026-50) | City of Ottawa",
+          "rendered_text_chars": 3034,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nLiving in Ottawa\nBy-laws, licences and permits\nBy-laws\nBy-law A-Z\nZoning By-law (By-law No. 2026-50)\nZoning By-law (By-law No. 2026-50)\nDisclaimer\n\nBy-laws contained in this section have been prepared for research and reference purposes only. Original by-laws are available for consultation at the City of Ottawa Archives and the Ottawa Public Library Main branch. For legal purposes, certified copies of by-laws may be obtained from the City of Ottawa Archives.\n\nCity Archives\nJames Bartleman Centre\n100 Tallwood Dr. (corner of Woodroffe Ave.)\nOttawa, Ontario\nTelephone: 613-580-2857\nEmail: archives@ottawa.ca\n\nOttawa Public Library\n120 Metcalfe St., Ottawa Room\nOttawa, Ontario\nTelephone: 613-580-2940\n\nZoning By-law 2026-50 was enacted by City Council on March 11, 2026.\n\nBuilding permit applications and applications under the Planning Act that are deemed complete on March 11, 2026 or after, must comply with the provisions in Zoning By-law 2008‑250 and the new Zoning By-law 2026‑50, with the most restrictive provisions from both by-laws applying.\n\nBuilding permit applications that are deemed complete before March 11, 2026 are subject to the provisions of Zoning By-law 2008-250.\n\nOn July 2, 2026 the OLT made an oral decision ordering that the parts of Zoning By-law 2026-50, not included in the 25 appeals, may come into force. This decision is retroactive to March 11, 2026, the date of enactment ",
+          "link_count": 197,
           "table_count": 0,
-          "xhr_total": 21,
+          "xhr_total": 8,
           "discovered_apis": [],
           "other_json_xhr": [],
-          "screenshot": "ateh-0.png",
+          "screenshot": "zoning-2026-50-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        },
+        {
+          "url": "https://maps.ottawa.ca/arcgis/rest/services/Zoning/MapServer",
+          "final_url": "https://maps.ottawa.ca/arcgis/rest/services/Zoning/MapServer",
+          "title": "Zoning (MapServer)",
+          "rendered_text_chars": 2637,
+          "rendered_text_sample": "ArcGIS REST Services Directory\tLogin | Get Token\nHome > services > Zoning (MapServer)\tHelp | API Reference\nJSON | SOAP\nZoning (MapServer)\nView In:   ArcGIS JavaScript   ArcGIS Online Map Viewer   ArcGIS Earth   ArcMap   ArcGIS Pro\n\nView Footprint In:   ArcGIS Online Map Viewer\n\nService Description: A dynamic map service showing the official zoning for the City of Ottawa. The data is maintained by the Planning Group (Mapping and Graphics). This data must be viewed together with all other zoning data (Heritage Overlay, Floodplain and Water)\n\nMap Name: Layers\n\nLegend\n\nAll Layers and Tables\n\nLayers:\nFlood Plain Overlay (Section 58) / Zone sous-jacente de plaine inondable (article 58) (0)\nHeritage Overlay (Sec. 60) / Secteur désigné à valeur patrimoniale (art. 60) (1)\nVillage Residential – Enterprise Overlay / Zone sous-jacente résidentielle de village - Entreprise (2)\nZoning By-law 2008-250 Consolidation / Refonte du Réglement de zonage 2008-250 (3)\nMature Neighbourhoods Overlay - Outline / Zone sous-jacente du caractère des anciens quartiers - Contour (4)\nBy-Law 2017-295: Flood Plain Tax Deferral / Règlement 2017-295 : Report d’impôt – Plaine inondable (9)\nWater / Eau (5)\nMature Neighbourhoods Overlay / Zone sous-jacente du caractère des anciens quartiers (6)\nDescription:\n\nCopyright Text:\n\nSpatial Reference: 102100  (3857)\n\nSingle Fused Map Cache: false\n\nInitial Extent:\nXMin: -8490589.123988783\nYMin: 5596392.729069182\nXMax: -8373466.499037593\nYMax: 5719686.070830817\nSpatial Refe",
+          "link_count": 32,
+          "table_count": 3,
+          "xhr_total": 0,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "zoning-2026-50-1.png",
           "new_outcome": "reachable_html",
           "error": null
         }
       ],
       "rollup": "reachable_html"
     },
-    "horizon-vote-tracker": {
-      "name": "Horizon Ottawa Vote Tracker",
+    "official-plan": {
+      "name": "Official Plan",
       "claimed_access": [
         "html"
       ],
       "url_results": [
         {
-          "url": "https://www.horizonottawa.ca/vote_tracker",
-          "final_url": "https://www.horizonottawa.ca/vote_tracker",
-          "title": "Vote Tracker - Horizon Ottawa",
-          "rendered_text_chars": 1977,
-          "rendered_text_sample": "About Us\nOur Work\nGet Involved\nTake Action\nResources\nNews & Opinion\nFacebook\nTwitter\nInstagram\nYouTube\nDonate\nView the data:\n\nAgreement % with Mayor\n\nDecisions by topic / committee\n\nCouncillor Voting Records\n\nAlignment with other Councillors\n\nCouncillors often speak about issues that are supposedly priorities for them, but when it comes time to actually vote, they let their constituents down. Unless this is reported in the media, most residents either never know how their councillor voted, or quickly forget as the news cycle moves on.\n\nWhile the city does publish meeting agenda and minutes (most of the time), the website makes users sift through the minutes of each meeting just to find a vote.\n\nWith our Vote Tracker database, you can now see how your councillor voted on decisions throughout the 2022-2026 term of council. You can also see votes sorted by councillor, topic, or committee, and learn just how often each councillor sides with Mayor Sutcliffe's agenda.\n\nMethodology:\n\nWe went through the minutes of each meeting of this term of council, including City Council meetings and these committees:\n\nPlanning and Housing\nEnvironment and Climate Change\nFinance and Corporate Services\nAgriculture and Rural Affairs\nPublic Works and Infrastructure\nTransit Commission\n\nMany decisions are carried due to their uncontroversial nature, so we have only included decisions with a recorded vote. Statistics like the percentage that each councillor votes with the Mayor should be interpreted as ",
-          "link_count": 56,
+          "url": "https://ottawa.ca/en/planning-development-and-construction",
+          "final_url": "https://ottawa.ca/en/planning-development-and-construction",
+          "title": "Planning, development and construction | City of Ottawa",
+          "rendered_text_chars": 2301,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nPlanning, development and construction\nPlanning, development and construction\n\nNew! Apply online for building permits and applications with the new Building, Planning and Land Development system\n\nWhat's happening\nOttawa’s Digital Twin: Building a Smarter, More Connected City\nNew Centretown Heritage Façade Improvement Program - apply today\nBuilding and renovating\npermits, forms, applications, fees, compliance reports, pool enclosures…\nMaps and zoning\nmaps of Ottawa, Zoning by-law…\n\nOfficial Plan and master plans\nOfficial plan, Environmental Strategy, Greenspace Master Plan, Human services plan, Cycling Plan…\n\nConstruction in the right-of-way\nRoad cut, Over-dimensional vehicles, Driveways, Temporary road closures, Utilities approvals\n\nWhat's happening in your neighbourhood\nconstruction and infrastructure projects, new park development, ward overview, development application search\n\nConstruction and infrastructure projects\nplanned construction projects, background, construction and infrastructure projects, road renewal…\n\nDeveloping a property\ndevelopment application review process, beyond application approval, engineering services, geoscience information platform program…\n\nHousing and development reports\nHousing information, Official Plan Monitoring, Annual Development Report, Economic Development Update\nHeritage conservation\ncurrent projects, individual designation, heritage conservation ",
+          "link_count": 55,
           "table_count": 0,
-          "xhr_total": 19,
+          "xhr_total": 9,
           "discovered_apis": [],
           "other_json_xhr": [],
-          "screenshot": "horizon-vote-tracker-0.png",
+          "screenshot": "official-plan-0.png",
           "new_outcome": "reachable_html",
           "error": null
         }
       ],
       "rollup": "reachable_html"
     },
-    "howtheyvoted": {
-      "name": "How They Voted",
+    "committee-of-adjustment": {
+      "name": "Committee of Adjustment decisions",
       "claimed_access": [
         "html"
       ],
       "url_results": [
         {
-          "url": "https://howtheyvoted.ca/",
-          "final_url": "https://howtheyvoted.ca/#/ottawa",
-          "title": "Ottawa City Council Voting Records",
-          "rendered_text_chars": 9491,
-          "rendered_text_sample": "Ottawa City Council\nVoting Records\nMotions by Date\nCouncillors\nCommittees\nTopics\nAbout\nRSS\nDate\n2026-09-03\n2026-09-02\n2026-09-01\n2026-08-27\n2026-08-26\n2026-08-20\n2026-08-19\n2026-07-27\n2026-07-15\n2026-07-14\n2026-07-08\n2026-06-30\n2026-06-25\n2026-06-24\n2026-06-23\n2026-06-22\n2026-06-19\n2026-06-17\n2026-06-16\n2026-06-15\n2026-06-11\n2026-06-10\n2026-06-09\n2026-06-04\n2026-06-03\n2026-06-02\n2026-05-28\n2026-05-27\n2026-05-25\n2026-05-22\n2026-05-20\n2026-05-19\n2026-05-14\n2026-05-13\n2026-05-07\n2026-05-06\n2026-05-05\n2026-04-30\n2026-04-28\n2026-04-27\n2026-04-23\n2026-04-22\n2026-04-21\n2026-04-16\n2026-04-15\n2026-04-14\n2026-04-10\n2026-04-09\n2026-04-08\n2026-04-07\n2026-04-02\n2026-04-01\n2026-03-31\n2026-03-30\n2026-03-27\n2026-03-24\n2026-03-23\n2026-03-17\n2026-03-13\n2026-03-12\n2026-03-11\n2026-03-10\n2026-03-05\n2026-03-04\n2026-03-03\n2026-02-27\n2026-02-26\n2026-02-25\n2026-02-24\n2026-02-23\n2026-02-20\n2026-02-19\n2026-02-18\n2026-02-17\n2026-02-12\n2026-02-11\n2026-02-10\n2026-02-09\n2026-02-05\n2026-02-04\n2026-02-03\n2026-01-29\n2026-01-28\n2026-01-26\n2026-01-22\n2026-01-20\n2026-01-14\n2025-12-17\n2025-12-16\n2025-12-10\n2025-12-09\n2025-12-08\n2025-12-05\n2025-12-04\n2025-12-03\n2025-12-02\n2025-12-01\n2025-11-28\n2025-11-27\n2025-11-26\n2025-11-25\n2025-11-24\n2025-11-21\n2025-11-20\n2025-11-19\n2025-11-18\n2025-11-13\n2025-11-12\n2025-11-07\n2025-11-06\n2025-11-05\n2025-11-04\n2025-11-03\n2025-10-28\n2025-10-27\n2025-10-23\n2025-10-22\n2025-10-21\n2025-10-16\n2025-10-15\n2025-10-14\n2025-10-08\n2025-10-07\n2025-10-06\n2025-10-02\n2025-10-01\n2025-09-29\n2025-09",
-          "link_count": 17,
+          "url": "https://www.canlii.org/",
+          "final_url": "https://www.canlii.org/",
+          "title": "canlii.org",
+          "rendered_text_chars": 0,
+          "rendered_text_sample": "",
+          "link_count": 0,
           "table_count": 0,
-          "xhr_total": 3,
+          "xhr_total": 0,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "committee-of-adjustment-0.png",
+          "new_outcome": "needs_browser",
+          "error": null
+        },
+        {
+          "url": "https://ottawa.ca/en/planning-development-and-construction/committee-adjustment/find-decision",
+          "final_url": "https://ottawa.ca/en/city-hall/council-committees-and-boards/adjudicative-bodies/ottawa-committee-adjustment/find-decision/find-decision-canlii",
+          "title": "Find a decision on CanLII - Find a decision | City of Ottawa",
+          "rendered_text_chars": 2091,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nCity Hall\nCouncil, committees and boards\nAdjudicative bodies\nOttawa Committee of Adjustment\nFind a decision - Find a decision on CanLII\nSkip to main content\nIn this section\nFind a decision on CanLII\nSearch for a decision by panel agenda\nCourt dismisses judicial review of Committee of Adjustment decisions\nFind a decision\nFind a decision on CanLII\n\nTo make it easier to find a decision, the Committee of Adjustment has partnered with the Canadian Legal Information Institute (CanLII) to publish decisions on their powerful digital platform, in both English and French, at no cost to the tribunal and the public.\n\nCanLII is a non-profit organization founded by the Federation of Law Societies of Canada. Its mandate is to provide efficient and open online access to judicial and quasi-judicial decisions. It publishes Canadian court judgments and decisions from many federal and provincial administrative tribunals, including the Ontario Land Tribunal that hears appeals of Committee of Adjustment decisions.\n\nOttawa’s Committee of Adjustment is the first committee of adjustment in Ontario and Canada to publish decisions on CanLII.\n\nDecisions will now be more easily searchable by keyword (for example, by street name, Ward, or type of application), with CanLII offering several filters and tools to assist in limiting search results.\n\nApplicants, hearing participants and Members of Council will continue to",
+          "link_count": 54,
+          "table_count": 0,
+          "xhr_total": 6,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "committee-of-adjustment-1.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "olt": {
+      "name": "Ontario Land Tribunal",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://olt.gov.on.ca/decisions/",
+          "final_url": "https://olt.gov.on.ca/decisions/",
+          "title": "Decisions | Ontario Land Tribunal",
+          "rendered_text_chars": 2229,
+          "rendered_text_sample": "Français\nAppeals Process\nMediation\nCase Status & Decisions\nE-File\nForms & Submissions\nAbout the OLT\nNewsroom\nDecisions\n\nDecisions issued by the Ontario Land Tribunal (OLT) and its predecessor tribunals (Local Planning Appeal Tribunal, Environmental Review Tribunal, Board of Negotiation, Conservation Review Board, Mining and Lands Tribunal) can be accessed through the search bar above.\n\nYou can also find decisions for a specific case through our “Case Status” page.\n\nDecisions are also available through the Canadian Legal Information Institute (CanLII) website.\n\nFor decisions older than ten years, please contact us at (416) 212-6349 or toll free at 1 (866) 448-2248.\n\nSearching for Decisions:\n\nYou can search for decisions using keywords such as:\n\nCase number\nName of individual or organization (e.g. John Smith, ABC Corporation)\nMunicipality name or type (e.g. Ottawa, township)\nStreet name (e.g. Bay Street)\nTopic (e.g.  “archaeology”, “vegetation”, “deck”)\nLegislation, citation or docket (e.g. “ Ontario Heritage Act”, “ Environmental Protection Act”, “ Municipal Act”)\n\nDecision Alerts Through “RSS Feeds”:\n\nCanLII gives you the option to subscribe to an “RSS feed” and be alerted when a tribunal posts a new decision.\n\nLearn how to subscribe to “RSS feeds” [link to Microsoft’s website].\n\n \n\nRequests for Review of Tribunal decisions may be filed by parties under Rule 25 of the OLT Rules of Practice and Procedure and pursuant to s.23 of the Ontario Land Tribunal Act. Please refer to th",
+          "link_count": 47,
+          "table_count": 0,
+          "xhr_total": 11,
           "discovered_apis": [
             {
-              "method": "GET",
-              "url": "https://howtheyvoted.ca/data/ottawa/index.json",
+              "method": "POST",
+              "url": "https://api.userway.org/api/v1/tunings/AYs9LA3iZ6",
               "status": 200,
-              "content_type": "application/json"
-            },
-            {
-              "method": "GET",
-              "url": "https://howtheyvoted.ca/data/ottawa/dates/2026-09-03.json",
-              "status": 200,
-              "content_type": "application/json"
+              "content_type": "application/json; charset=utf-8"
             }
           ],
-          "other_json_xhr": [],
-          "screenshot": "howtheyvoted-0.png",
+          "other_json_xhr": [
+            {
+              "method": "GET",
+              "url": "https://api.userway.org/api/a11y-data/v0/page/https%3A%2F%2Folt.gov.on.ca%2Fdecisions%2F/DESKTOP/WIDGET_OFF/status",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            }
+          ],
+          "screenshot": "olt-0.png",
           "new_outcome": "machine-readable",
           "error": null
         }
       ],
       "rollup": "machine-readable"
     },
-    "ottawa-lookout": {
-      "name": "Ottawa Lookout",
+    "building-permits": {
+      "name": "Building permits and land management",
+      "claimed_access": [
+        "bulk"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/planning-development-and-construction/building-and-renovating",
+          "final_url": "https://ottawa.ca/en/planning-development-and-construction/building-and-renovating",
+          "title": "Building and renovating | City of Ottawa",
+          "rendered_text_chars": 1969,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nPlanning, development and construction\nBuilding and renovating\nBuilding and renovating\n\nNew! Apply online for building permits and applications.\n\nWhat's happening\nBuilding Code Services FAQ – rebuilding or repairing flooding damage\nComprehensive Building Code Fee Schedule - January 1, 2026\n(opens in new tab)\nSubmitting building permit applications and the issuance of building permits\nDo I need a building permit?\ndecks, finishing a basement, sheds, fireplaces, septic systems, driveways, fees…\n\nPool enclosures\nfees, requirements, temporary enclosures, hot tubs, ponds…\n\nPlanning your project\ngetting started, requirements, sample drawings, call before you dig…\n\nPermanent signs on private property\npermit info, prohibited signs, how to apply for a permanent sign permit, murals…\n\nBuilding permit approval process\napplying for a building permit, application form, fees, review process, timelines, inspections…\n\nMunicipal addressing\nstreet naming, civic numbering, private roads, change of address checklist…\n\nForms, applications and fees\n(opens in new tab)\ncomprehensive building code fee schedule, forms and applications…\n\nCompliance reports\nfees, how to apply, pool enclosure compliance report, request for release of agreement…\n\nAgency Letter of Approval\nAgency Letter of Approval, Municipal Information Form\nFrequently asked questions\nbuilding and renovating, inspections, adding an apartment, pool enc",
+          "link_count": 55,
+          "table_count": 0,
+          "xhr_total": 9,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "building-permits-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "octranspo-gtfs": {
+      "name": "OC Transpo GTFS and GTFS-Realtime",
+      "claimed_access": [
+        "api",
+        "bulk"
+      ],
+      "url_results": [
+        {
+          "url": "https://www.octranspo.com/en/plan-your-trip/travel-tools/developers/",
+          "final_url": "https://www.octranspo.com/en/plan-your-trip/travel-tools/developers/",
+          "title": "Developers | OC Transpo",
+          "rendered_text_chars": 1621,
+          "rendered_text_sample": "Skip to content\nMain Navigation Bar\nQuick Links\nParaPay Presto\nwebsite\n O-Train Extension Travel Planner \nSearch Navigation\nSearch:\nSearch\n FR\nOC Transpo\nMain Navigation\nPlan your trip Our services Fares Alerts Para Transpo\nQuick Links (mobile)\nHomePlan your tripTravel toolsDevelopers\nDevelopers\nOC Transpo Open Data Feed Changes \n\nOC Transpo has adopted the GTFS-RT standard for it’s open data feed.  The old stop based API 2.0 has been retired as of April 30, 2025.  Please find links and information on our GTFS-RT feed and RSS alerts feeds below.\n\nOC Transpo has adopted the North American industry standard General Transit Feed Specification (GTFS) Realtime\nOpens external website in a new window/tab.\n for its next arrivals open data feed. Resources are available below for developers to create applications for desktop, Web or mobile devices:\n\nGTFS-RT and static file documentation and developer portal\nGTFS Schedules Release Notes\nBest practices\nTerms of use\nService Alerts RSS Feeds\n\nSubscribe to OC Transpo’s RSS feeds using the following urls:\n\noctranspo.com/feeds/updates-en/ (English)\noctranspo.com/feeds/updates-fr/ (French)\nFrequently Asked Questions\n1. What is the General Transit Feed Specification?\n2. Do you offer technical support?\n3. Are there any restrictions on what I can do with the data?\n4. How real-time is \"real-time\"? Is the data updated continuously or is there some sort of delay?\nWe're Hiring!\nClose\nFooter Navigation\nAbout us\nNews\nAccessibility\nSite Map\nWe're Hiring",
+          "link_count": 210,
+          "table_count": 0,
+          "xhr_total": 10,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "octranspo-gtfs-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        },
+        {
+          "url": "https://nextrip-public-api.developer.azure-api.net/",
+          "final_url": "https://nextrip-public-api.developer.azure-api.net/",
+          "title": "Home - OC Transpo - developer portal",
+          "rendered_text_chars": 3060,
+          "rendered_text_sample": "Developer portal for the General Transit Feed Specification\nReal-time (GTFS-RT) Feed\nSign In\nSign up\nContact\nPlease contact our support team at octranspo-dev@ottawa.ca on any questions related to the developer portal.\nGTFS Real-time\nGTFS Real-Time or GTFS-RT provides a standardized format for transmitting real-time updates about public transit systems. This includes information about vehicle locations, arrival times, departure times, and service alerts.\nOC Transpo as part of the GTFS-RT feed provides vehicle locations and trip updates that include arrival and departure times. Service alerts is not available at this time.\nFor more information please refer to the official GTFS-RT documentation\nGTFS Schedule\nGTFS-RT is designed to work alongside the static GTFS (General Transit Feed Specification) format. GTFS defines a static schedule and structure for public transit data, while GTFS-RT adds real-time updates to this data.\n\nDownload the OC Transpo GTFS static files here.\n\nOC Transpo strongly recommends the download of GTFS Schedule file on a daily basis to ensure the GTFS-RT feed is compatible.\nThe preferred time to download the compressed zip file would be between mid-night and 2 am EST, just before the start of service day.\nAPI Subscriptions\nClick on Product for subscription details. Available to authorised users only.\nBase URL\nhttps://nextrip-public-api.azure-api.net/octranspo/\nAPI Version\nThe APIs will use versioning within the URL path. The current version is v1.\nCommon Pa",
+          "link_count": 13,
+          "table_count": 1,
+          "xhr_total": 7,
+          "discovered_apis": [],
+          "other_json_xhr": [
+            {
+              "method": "GET",
+              "url": "https://nextrip-public-api.developer.azure-api.net/search-index.json",
+              "status": 200,
+              "content_type": "application/json"
+            },
+            {
+              "method": "GET",
+              "url": "https://nextrip-public-api.developer.azure-api.net/token",
+              "status": 401,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://nextrip-public-api.developer.azure-api.net/config-apim.json",
+              "status": 200,
+              "content_type": "application/json"
+            }
+          ],
+          "screenshot": "octranspo-gtfs-1.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "traffic-ottawa": {
+      "name": "Traffic Ottawa open data",
+      "claimed_access": [
+        "api"
+      ],
+      "url_results": [
+        {
+          "url": "https://traffic.ottawa.ca/en/opendata",
+          "final_url": "https://traffic.ottawa.ca/en/opendata",
+          "title": "About the data | City of Ottawa",
+          "rendered_text_chars": 11971,
+          "rendered_text_sample": "Skip to main content\nSign-in\nFR\nHome Parking, roads, and travel Traffic Services Traffic map, data lists and resources About the data\nAbout the data\nOverview\n\nThe following data sets are available.\n\nTraffic Camera Images API\nTraffic Events\nTraffic Cameras\nParking Lots\nPark and Rides\nRed Light Cameras\nTraffic WebCam API\n\nProvides images for the City of Ottawa's traffic web cams. These images are available at sixty second intervals and are approximately 30-50KB in size. To access the images users will be required to have an access key. The application form for access keys can be found on this page: Certificate Request Form\n(link is external)\n After completing the registration form and receiving a confirmation email with a certificate number you will be able to access the camera images. To access a camera image you can access the URL http://traffic.ottawa.ca/opendata/camera with the following parameters: Camera number\n\nCertificate: The certificate string as supplied in the confirmation email.\n\nId: User Id (optional).\n\nNote: City of Ottawa cameras have camera numbers less than 2000, and MTO cameras have camera numbers greater than 2000.\n\nNote: The Id is a string value assigned by your user to each user or instance of your application accessing the images. The Id must be alphanumeric characters [a-z, A-Z, 0-9]. A given user id for a given certificate may only access the cameras at intervals of at least 60 seconds.\n\ne.g. To access City Camera 16 (Bank and Hunt Club) -- http://traff",
+          "link_count": 35,
+          "table_count": 5,
+          "xhr_total": 3,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "traffic-ottawa-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        },
+        {
+          "url": "https://traffic.ottawa.ca/map/service/ase_camera",
+          "final_url": "https://traffic.ottawa.ca/map/service/ase_camera",
+          "title": "",
+          "rendered_text_chars": 9872,
+          "rendered_text_sample": "{\"ase_cameras\":[{\"latitude\":45.28146886,\"name\":\"Longfields between Berrigan and Hobblebush\",\"name_french\":\"Longfields entre Berrigan et Hobblebush\",\"id\":1,\"longitude\":-75.74392084},{\"latitude\":45.46935075,\"name\":\"Innes between Portobello and Trim\",\"name_french\":\"Innes entre Portobello et Trim\",\"id\":2,\"longitude\":-75.45873444},{\"latitude\":45.40021726,\"name\":\"Smyth between Lynda and Saunderson\",\"name_french\":\"Smyth entre Lynda et Saunderson\",\"id\":3,\"longitude\":-75.63620026},{\"latitude\":45.43924462,\"name\":\"Ogilvie between Elmlea and Elmridge\",\"name_french\":\"Ogilvie entre Elmlea et Elmridge\",\"id\":4,\"longitude\":-75.59942769},{\"latitude\":45.34462751,\"name\":\"Meadowlands between Woodroffe and Withrow\",\"name_french\":\"Meadowlands entre Woodroffe et Withrow\",\"id\":5,\"longitude\":-75.74999215},{\"latitude\":45.47888292,\"name\":\"Watters between Charlemagne and Shawinigan\",\"name_french\":\"Watters entre Charlemagne et Shawinigan\",\"id\":6,\"longitude\":-75.47825523},{\"latitude\":45.35109943,\"name\":\"Bayshore between Woodridge (north) and Woodridge (south)\",\"name_french\":\"Bayshore entre Woodridge (nord) et Woodridge (sud)\",\"id\":7,\"longitude\":-75.80631488},{\"latitude\":45.30821623,\"name\":\"Katimavik between Castlefrank and Curran\",\"name_french\":\"Katimavik entre Castlefrank et Curran\",\"id\":8,\"longitude\":-75.89970065},{\"latitude\":45.43322705,\"name\":\"Bearbrook between Centrepark  and Innes \",\"name_french\":\"Bearbrook entre Centrepark et Innes\",\"id\":9,\"longitude\":-75.5654689554},{\"latitude\":45.3762722479,\"name\"",
+          "link_count": 0,
+          "table_count": 0,
+          "xhr_total": 0,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "traffic-ottawa-1.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "automated-speed-enforcement": {
+      "name": "Automated speed enforcement",
+      "claimed_access": [
+        "bulk"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/parking-roads-and-travel/road-safety/enforcement/automated-speed-enforcement",
+          "final_url": "https://ottawa.ca/en/parking-roads-and-travel/road-safety/enforcement/automated-speed-enforcement/update-ase-program-ottawa",
+          "title": "Update on the ASE Program in Ottawa - Automated Speed Enforcement | City of Ottawa",
+          "rendered_text_chars": 2706,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nParking, roads, and travel\nRoad safety\nEnforcement\nAutomated Speed Enforcement - Update on the ASE Program in Ottawa\nSkip to main content\nIn this section\nUpdate on the ASE Program in Ottawa\nASE Cameras: A Data-Driven Program\nASE Overview\nSite Selection\nASE Locations\nFines and penalties\nActive ASE System Certificates of Accuracy\nInactive ASE System Certificates of Accuracy\nAutomated Speed Enforcement\nUpdate on the ASE Program in Ottawa\n\nOn October 20th, the Province of Ontario introduced Bill 56, Building a More Competitive Economy Act, 2025, which includes amendments to the Highway Traffic Act. These amendments revoke the legal authority for municipalities to operate automated speed enforcement programs in community safety zones and in school zones, while placing oversight for school zone signage under the authority of the Ministry of Transportation.\n\nWhat this means for Ottawa\n\nCome November 14, the following will take effect:\n\nRepeal of Part XIV.1 of the Highway Traffic Act, removing the legislative authority from municipalities to issue automated speeding tickets under the automated speed enforcement program.  \nThis applies to all automated speed enforcement camera locations, including those in school zones.\nAny tickets issued before the change will still need to be paid and continue to be processed as usual.\nRed-light cameras are not affected by this change and will continue to be u",
+          "link_count": 73,
+          "table_count": 0,
+          "xhr_total": 5,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "automated-speed-enforcement-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "police-services-board": {
+      "name": "Police Services Board",
       "claimed_access": [
         "html"
       ],
       "url_results": [
         {
-          "url": "https://www.ottawalookout.com/p/meet-the-candidates",
-          "final_url": "https://www.ottawalookout.com/p/meet-the-candidates",
-          "title": "Meet the candidates",
-          "rendered_text_chars": 16502,
-          "rendered_text_sample": "About\nNeighbourhoods\nNewsletters\nPromote Your Event\nLatest News\nBecome a member\nLog in\nMeet the candidates \n\nOne day after the nomination period opened, candidates are already coming forward to run for Mayor, city councillor and school trustee\n\nCharlie Senack\n\nMay 4, 2026\n\nSponsored by\n\nGood morning!\n\nOttawa is heading into a municipal election year — and for journalists, it’s a bit like Christmas morning.\n\nOn Friday, reporters lined up outside the local election office to watch the first wave of candidates officially file their nomination papers. There were no major surprises — at least not yet — as many of the names were already expected. But with nominations open until mid-to-late August, there’s still plenty of time for the race to take shape.\n\nMunicipal elections don’t always generate the same buzz as their provincial or federal counterparts. Turnout is lower, campaigns are quieter, and the results can sometimes feel predictable. But the decisions made at city hall often have the most immediate impact on daily life — from transit and housing to parks, roads and local services.\n\nThat’s why voting matters. It’s easy to tune out or assume your vote won’t make a difference, but municipal races are often decided by slim margins. If you care about how your city is run, casting a ballot is the bare minimum. And if you don’t vote, it becomes a lot harder to justify complaining about the outcome later.\n\nThis year, there will be at least a couple of new faces around the council ta",
-          "link_count": 100,
-          "table_count": 0,
-          "xhr_total": 16,
-          "discovered_apis": [],
-          "other_json_xhr": [
-            {
-              "method": "GET",
-              "url": "https://www.ottawalookout.com/post_insights?post_id=b8fa663d-a171-43b7-908e-dd2eb1f9a8d6",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
-            {
-              "method": "GET",
-              "url": "https://www.ottawalookout.com/merge_tags/b8fa663d-a171-43b7-908e-dd2eb1f9a8d6?draft=false",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
+          "url": "https://pub-ottawa.escribemeetings.com/",
+          "final_url": "https://pub-ottawa.escribemeetings.com/",
+          "title": "eSCRIBE Published Meetings",
+          "rendered_text_chars": 1287,
+          "rendered_text_sample": "Skip to content\nSearch\nCalendar View\nSeptember 2026\nCalendar\nList\nUpcoming\nPast\nCalendar containing meetings\nSunday\n\t\nMonday\n\t\nTuesday\n\t\nWednesday\n\t\nThursday\n\t\nFriday\n\t\nSaturday\n\n\t\n\t\n1\n9:00 AM\nCommittee of Adjustment - Panel 3\n9:30 AM\nFinance and Corporate Services Committee\n1:00 PM\nCommittee of Adjustment - Panel 2\n4:00 PM\nCommunity Safety and Well-Being Advisory Committee\n\t\n2\n9:30 AM\nPlanning and Housing Committee\n1:00 PM\nCommittee of Adjustment - Panel 1\n\t\n3\n10:00 AM\nAgriculture and Rural Affairs Committee\n\t\n4\n\t\n5\n\n6\n\t\n7\n\t\n8\n9:30 AM\nBuilt Heritage Committee\n5:00 PM\nOttawa Public Library Board\n\t\n9\n10:00 AM\nCity Council\n\t\n10\n9:30 AM\nTransit Committee\n\t\n11\n\t\n12\n\n13\n\t\n14\n\t\n15\n9:30 AM\nEnvironment and Climate Change Committee\n9:30 AM\nBuilt Heritage Committee\n1:00 PM\nCommittee of Adjustment - Panel 2\n6:00 PM\nAccessibility Advisory Committee\n\t\n16\n9:30 AM\nPlanning and Housing Committee\n\t\n17\n9:30 AM\nEmergency Preparedness and Protective Services Committee\n\t\n18\n9:30 AM\nOttawa Investment Board\n\t\n19\n\n20\n\t\n21\n5:00 PM\nBoard of Health\n\t\n22\n9:30 AM\nCommunity Services Committee\n\t\n23\n10:00 AM\nCity Council\n\t\n24\n9:30 AM\nPublic Works and Infrastructure Committee\n\t\n25\n\t\n26\n\n27\n\t\n28\n10:00 AM\nOttawa Police Service Board\n4:00 PM\nOttawa Police Service Board\n\t\n29\n9:30 AM\nAudit Committee\n\t\n30",
+          "link_count": 5,
+          "table_count": 12,
+          "xhr_total": 7,
+          "discovered_apis": [
             {
               "method": "POST",
-              "url": "https://www.ottawalookout.com/post_meta_information",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
-            {
-              "method": "POST",
-              "url": "https://www.ottawalookout.com/page_view",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
-            {
-              "method": "GET",
-              "url": "https://syndication.twitter.com/settings?session_id=3db056b6418e990884cc912ed2deb803bbd4f7fd",
+              "url": "https://pub-ottawa.escribemeetings.com/MeetingsCalendarView.aspx/GetCalendarMeetings",
               "status": 200,
               "content_type": "application/json; charset=utf-8"
             }
           ],
-          "screenshot": "ottawa-lookout-0.png",
+          "other_json_xhr": [],
+          "screenshot": "police-services-board-0.png",
+          "new_outcome": "machine-readable",
+          "error": null
+        }
+      ],
+      "rollup": "machine-readable"
+    },
+    "ottawa-public-health": {
+      "name": "Ottawa Public Health reports and dashboards",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://www.ottawapublichealth.ca/en/reports-research-and-statistics/reports-research-and-statistics.aspx",
+          "final_url": "https://www.ottawapublichealth.ca/en/reports-research-and-statistics/reports-research-and-statistics.aspx#gsc.tab=0",
+          "title": "Reports, Research and Statistics - Ottawa Public Health",
+          "rendered_text_chars": 4134,
+          "rendered_text_sample": "Skip to Content\n\nSEARCH\n \nFR\nCOVID-19, Flu and Respiratory Syncytial Virus (RSV)\nPublic Health Services\nPublic Health Topics\nProfessionals and Partners\nReports, Research and Statistics\nMultilingual Resources\nChronic Conditions and Healthy Living\nDental and Vision Health\nEnvironment and Health\nImmunizations\nInfectious Diseases\nInfection Prevention and Control\nInjuries and Injury Prevention\nMental Health and Well-Being\nMorbidity, Mortality, and Quality of Life\nOutbreak Reports in Ottawa Healthcare Institutions\nPopulation Demographics and Health Equity\nReproductive, Family, and Child Health\nResearch at OPH\nSubstance Use Health and Overdoses\nPublic Consultations and Surveys\nReports, Research and Statistics\n    \nHome/Reports, Research and Statistics\n\nOttawa Public Health publishes reports on a wide variety of public health topics. This section includes reports and statistics about health, infection prevention and control investigations, surveys, and public consultations.\n\nIn Ontario, health units are required to provide population health information to the public, community partners, and health-care providers.\n\nSearch for reports, research or statistics on OttawaPublicHealth.ca\n\t\n\n \n\nChronic Conditions and Healthy Living\nMorbidity and Deaths Related to Chronic Conditions\nNutrition\nPhysical Activity, Screen Time, and Sleep\nDental and Visual Health\nEnvironment and Health\n\nImmunizations\n\nCOVID-19 Vaccination Dashboard\nRoutine Childhood Immunizations\nInfluenza Vaccinations\nImmunizatio",
+          "link_count": 265,
+          "table_count": 4,
+          "xhr_total": 9,
+          "discovered_apis": [],
+          "other_json_xhr": [
+            {
+              "method": "GET",
+              "url": "https://syndication.twitter.com/settings?session_id=cd09a97bf62a820015cc9bdb36ccaca2be24e2ef",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://www.ottawapublichealth.ca/chat-available.aspx",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            }
+          ],
+          "screenshot": "ottawa-public-health-0.png",
           "new_outcome": "reachable_html",
           "error": null
-        },
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "housing-homelessness": {
+      "name": "Housing and homelessness: plans, facts and data",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
         {
-          "url": "https://www.ottawalookout.com/",
-          "final_url": "https://www.ottawalookout.com/",
-          "title": "Home | Ottawa Lookout",
-          "rendered_text_chars": 10557,
-          "rendered_text_sample": "About\nNeighbourhoods\nNewsletters\nPromote Your Event\nLatest News\nBecome a member\nLog in\nOttawa’s source for hyper-local, neighbourhood news\n\nGet our free 3x a week newsletter to help you understand what’s happening in Ottawa and neighbourhoods across the city\n\nSubscribe\n\nSee why our newsletter is read by 49,000+ Ottawa locals\n\nSep 3, 2026\n\n•\n\n7 min read\n\nHow Ottawa’s top mayoral candidates plan to address Ottawa’s housing crisis\n\nWith Ottawa’s municipal election officially underway, candidates for city council are launching their campaigns and revealing their platforms, promising change, advocacy and partnership for the nation’s capital.\n\nSarah MacFarlane-Youngdale\n\nBecome a Lookout Member\n\nWe are building reader-funded, hyper-local neighbourhood news in Ottawa. Join us today.\n\nBECOME A MEMBER\n\nMerivale\n\n+3\n\nSep 3, 2026\n\n•\n\n6 min read\n\nFor one family, 150 years of Merivale history live inside one church\n\nThis year, Merivale United Church celebrated the 150th anniversary of its current building, welcoming about 80 people for a special service and nearly 100 for lunch on June 14. \n\nCharlie Senack\n\nVietnamese\n\n+3\n\nSep 2, 2026\n\n•\n\n3 min read\n\nHong’s Kitchen offers honest Vietnamese home cooking\n\nThe husband-wife duo have opened up Hong's over in Little Italy\n\nRalf Joneikies\n\nVietnamese\n\n+2\n\nSep 2, 2026\n\n•\n\n3 min read\n\nMama Mai delivers the finest pho broth in Ottawa\n\nThe 20-our broth will leave you asking for more\n\nRalf Joneikies\n\nCommunity\n\n+2\n\nSep 1, 2026\n\n•\n\n6 min read\n\nOttawa ",
-          "link_count": 167,
+          "url": "https://ottawa.ca/en/family-and-social-services/housing-and-homelessness/plans-facts-and-data",
+          "final_url": "https://ottawa.ca/en/family-and-social-services/housing-and-homelessness/plans-facts-and-data/background",
+          "title": "Background - Plans, facts and data | City of Ottawa",
+          "rendered_text_chars": 1165,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nFamily and social services\nHousing and homelessness\nPlans, facts and data - Background\nSkip to main content\nIn this section\nBackground\nOttawa’s 10-Year Housing and Homelessness Plan\nShelter system use and trends dashboard\nHousing supports dashboard\nPoint-in-Time Count\nHousing Needs Assessment\nCommunity Homelessness Reports\nPlans, facts and data\nBackground\n\nThis page contains reports and interactive dashboards that have been developed by the City of Ottawa’s Community and Social Services Department. It provides data insights on topics such as housing challenges and homelessness across Ottawa.\n\nThe dashboards detail strategies to provide housing and homelessness supports to residents of Ottawa. These strategies address the needs identified through reports such as the Housing Needs Assessment and Homelessness Point-in-Time Count.\n\nContact us\n\nOnline\nBy phone\nIn-person\nProblem with the website\nTerms of use\n\nAccessibility\nDisclaimer\nPrivacy\nProtocols\nStay connected\n\nBluesky\nFacebook\nInstagram\nX Platform\nYouTube\neSubscriptions\nLinkedIn\n© 2001 - 2026 City of Ottawa",
+          "link_count": 66,
           "table_count": 0,
           "xhr_total": 9,
           "discovered_apis": [],
           "other_json_xhr": [],
-          "screenshot": "ottawa-lookout-1.png",
+          "screenshot": "housing-homelessness-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "social-housing-registry": {
+      "name": "Social Housing Registry of Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://housingregistry.ca/",
+          "final_url": "https://housingregistry.ca/",
+          "title": "Housing Registry of Ottawa, supportive housing, rgi housing",
+          "rendered_text_chars": 2737,
+          "rendered_text_sample": "Skip to Content\n\n \n\n \n\nEnglishFrançais\nApply Now\nFAQs\nSearch for\nSearch website\nHome\nThe Process\nThe People\nThe Housing\nThe Forms\nThe Challenge\nContact\nSocial Housing Registry of Ottawa\nWe are a caring team dedicated to helping people submit and update their applications for subsidized housing.\nApply Now\n\nEverything you need to submit an application for subsidized housing. Apply Now\n\nOur Role\n\nOur role within the constellation of community housing organizations is to maintain a centralized list of people awaiting subsidized housing. Explore the constellation\n\nHousing Providers\n\n50 housing providers in the Ottawa area have rent-geared -to-income housing, Affordable Housing (formerly Below Market Rent (BMR)), and supportive housing you can apply for. View options\n\nHow it Works\n\nOnce we help you apply, we have no way of knowing when units become available or when housing providers are able to make you an offer. Here’s how it works\n\nAlready Applied?\n\nWe need to hear from applicants at least once a year.  What to Expect\n\nQuestions & Answers\n\nWhat is subsidized housing? How long does it take? Who decides? Get Answers\n\nSocial Housing Registry of Ottawa (The Registry) is a caring team dedicated to helping people submit and update their applications for subsidized housing in Ottawa. Applicants are referred to The Registry by social service and government agencies or find us on their own.\n\nGuided by the vision that everyone should have a safe and affordable home, our role within the co",
+          "link_count": 30,
+          "table_count": 0,
+          "xhr_total": 0,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "social-housing-registry-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "drinking-water": {
+      "name": "Drinking water quality reports",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/living-ottawa/drinking-water-stormwater-and-wastewater/drinking-water",
+          "final_url": "https://ottawa.ca/en/living-ottawa/drinking-water-stormwater-and-wastewater/drinking-water/drinking-water-quality-management-system",
+          "title": "Drinking Water Quality Management System - Drinking water | City of Ottawa",
+          "rendered_text_chars": 1851,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nLiving in Ottawa\nDrinking water, stormwater and wastewater\nDrinking water - Drinking Water Quality Management System\nSkip to main content\nIn this section\nDrinking Water Quality Management System\nWater purification, quality and distribution\nWater service interruption/No water\nDrinking water advisories and planned work\nDrinking water quality annual reports and test results\nDrinking water - Frequently asked questions\nDrinking water programs\nWater conservation\nDrinking water resources for teachers and educators\nFind-A-Fountain\nDrinking water\nDrinking Water Quality Management System\n\nEvery day, the City of Ottawa’s central water supply provides safe drinking water to approximately 900,000 residential, commercial, and industrial customers. Using the Ottawa River as its source, drinking water is treated at two purifications plants and subsequently distributed through more than 3,000 kilometres of water main before arriving at your tap. In rural areas, the City operates six groundwater well systems.\n\nMore than 100,000 water quality tests are performed on drinking water samples annually, covering 350 parameters. The results demonstrate that City of Ottawa customers receive high-quality drinking water that meets all federal guidelines and provincial standards.\n\nA copy of the Drinking Water Quality Management System Operation Plan is available upon request by contacting DWQMS@ottawa.ca.\n\nThe City ",
+          "link_count": 79,
+          "table_count": 0,
+          "xhr_total": 6,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "drinking-water-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "solid-waste": {
+      "name": "Solid waste data and reports",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://ottawa.ca/en/garbage-and-recycling/solid-waste-data-and-reports",
+          "final_url": "https://ottawa.ca/en/solid-waste-data-and-reports",
+          "title": "Access denied | City of Ottawa",
+          "rendered_text_chars": 397,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nAccess denied\nAccess denied\nYou are not authorized to access this page.\nContact us\n\nOnline\nBy phone\nIn-person\nProblem with the website\nTerms of use\n\nAccessibility\nDisclaimer\nPrivacy\nProtocols\nStay connected\n\nBluesky\nFacebook\nInstagram\nX Platform\nYouTube\neSubscriptions\nLinkedIn\n© 2001 - 2026 City of Ottawa",
+          "link_count": 38,
+          "table_count": 0,
+          "xhr_total": 9,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "solid-waste-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "conservation-authorities": {
+      "name": "Conservation authorities (RVCA, MVCA, SNC)",
+      "claimed_access": [
+        "html",
+        "bulk"
+      ],
+      "url_results": [
+        {
+          "url": "https://www.rvca.ca/",
+          "final_url": "https://www.rvca.ca/",
+          "title": "Rideau Valley Conservation Authority",
+          "rendered_text_chars": 2482,
+          "rendered_text_sample": "Press Alt+1 for screen-reader mode, Alt+0 to cancel\nAccessibility Screen-Reader Guide, Feedback, and Issue Reporting | New window\nENFR\nAbout\nNews\nGovernance\nContact\nS\n S\nKeyboard Navigation\nConservation AreasOutdoor EducationPermits & PlanningStewardship & GrantsWatershed Management\nRIDEAU RIVER\nFLOOD INDEX:\nWATER SAFETY STATEMENT\nLOWER OTTAWA RIVER\nFLOOD INDEX:\nNORMAL\nWelcome to\nRideau Valley\nConservation Authority\nBook a Program\nApply for a Permit\nGet Involved\nRVCA\nGeoPortal\nConserving resources today for a better tomorrow\n\nRVCA protects the health of the Rideau Valley watershed and the people who live here through on-the-ground environmental monitoring, restoration, stewardship, land management, education, development review, and flood forecasting and warning.\nLearn more →\n\nGreening Your Property\n\nImprove your property without breaking the bank – or your back! Explore our many stewardship resources to learn how you can make a difference at home right now. MORE\n\nSeptic Permits and Inspections\n\nLearn how to apply for your new or replacement septic system, septic renovation or septic inspection. MORE\n\nWater Quality\n\nFind historic water quality data for your favourite Rideau Valley lake, river or stream, and explore trends at the catchment and subwatershed level. MORE\n\nTry Forest School!\n\nConfidence; Leadership; Curiosity; Wonder: just a few of the traits your kids will bring home from Forest School at Foley Mountain and Baxter conservation areas! MORE\n\nNews & Stories\nVIEW ALL",
+          "link_count": 232,
+          "table_count": 0,
+          "xhr_total": 4,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "conservation-authorities-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        },
+        {
+          "url": "https://mvc.on.ca/",
+          "final_url": "https://mvc.on.ca/",
+          "title": "MVCA",
+          "rendered_text_chars": 3758,
+          "rendered_text_sample": "Contact\nCareers\nDonate\nYour partner in risk management, resource conservation and stewardship\nFlood Status\nMississippi River\nNormal\nCarp River\nNormal\nLower Ottawa\nNormal\nLow Water Status\nMississippi River\nNormal\nCarp River\nNormal\nLower Ottawa\nNormal\nDevelopment & Permits\nEngineering\nOutdoor Recreation\nStewardship & Citizen Science\nMVC Foundation\nGovernance\nSearch\nDevelopment & Permits\nEngineering\nOutdoor Recreation\nStewardship & Citizen Science\nMVC Foundation\nGovernance\nslide 2 of 3\nEducation Programs\n\nInformation & Registration\n\nClick Here\n \nInteractive Watershed Map\n\nCheck water levels and current conditions\n\nOpen Map\n \nRegulation Map\n\nIs your property in a regulated area?\n\nOpen Map\n \nEducation Programs\n\nInformation & Registration\n\nClick Here\n \nInteractive Watershed Map\n\nCheck water levels and current conditions\n\nOpen Map\nNews & Announcements\nBoard of Directors Meeting\n\nReview the agenda package prior to the meeting.\n\nMore Details\nKintail Country Christmas 2026\n\nKintail Country Christmas is back for an afternoon of festive family fun at the Mill of Kintail Conservation Area! Enjoy…\n\nMore Details\nFinance and Administration Advisory Committee Meeting\n\nReview the agenda package prior to the meeting.\n\nMore Details\nSee More News & Announcements\nUpcoming Events\nSEP\n14\nBoard of Directors Meeting\n\nSeptember 14 @ 1:00 pm - 3:00 pm\n\nDEC\n12\nKintail Country Christmas 2026\n\nDecember 12 @ 12:00 pm - 6:00 pm\n\nSee All Upcoming Events\nBoard of Directors Meeting\n9 September 2026\n\nReview the ",
+          "link_count": 197,
+          "table_count": 0,
+          "xhr_total": 1,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "conservation-authorities-1.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "hydro-ottawa": {
+      "name": "Hydro Ottawa",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://hydroottawa.com/",
+          "final_url": "https://hydroottawa.com/en",
+          "title": "Hydro Ottawa",
+          "rendered_text_chars": 3635,
+          "rendered_text_sample": "Skip to main content\nSkip to search\nSkip to footer\nOutage map\nLogin\nResidential\nBusiness\nContractors\nOutage centre\nContact us\nCommunity\nAbout us\nBlog\nFAQs\nFrançais\nHomepage v2-new\nEmpowering our community's energy future\nLearn more\n\nDiscover clean energy savings - Explore the various programs and incentives available to help you save on the innovative technologies powering a greener future.\n\nLearn more\n\nSupporting you through the energy transition - Investing in Ottawa's electricity grid is crucial to ensuring a reliable, resilient, and future-ready power supply for our community. \n\nLearn more\n\nYour guide to a sustainable energy future\n\nSmall changes can make a real difference. Get tips for making every part of your home more energy efficient.\n\nLearn more\n\nDiscover clean energy savings - Explore the various programs and incentives available to help you save on the innovative technologies powering a greener future.\n\nLearn more\n\nSupporting you through the energy transition - Investing in Ottawa's electricity grid is crucial to ensuring a reliable, resilient, and future-ready power supply for our community. \n\nLearn more\n\nYour guide to a sustainable energy future\n\nSmall changes can make a real difference. Get tips for making every part of your home more energy efficient.\n\nLearn more\n\nDiscover clean energy savings - Explore the various programs and incentives available to help you save on the innovative technologies powering a greener future.\n\nLearn more\n1\n2\n3\nView and pay your bi",
+          "link_count": 114,
+          "table_count": 0,
+          "xhr_total": 8,
+          "discovered_apis": [],
+          "other_json_xhr": [
+            {
+              "method": "POST",
+              "url": "https://c.az.contentsquare.net/pageview?ex=&dt=187&pvt=n&la=en-US&uc=0&url=https%3A%2F%2Fhydroottawa.com%2Fen&dr=&dw=1265&dh=2964&ww=1280&wh=900&sw=1280&sh=900&uu=47575d26-181d-abc5-a039-2eb3b28872e2&sn=1&hd=1788990061&v=15.249.0%2Bfix-48a2afbc&pid=751280&pn=1&ct=0",
+              "status": 204,
+              "content_type": ""
+            }
+          ],
+          "screenshot": "hydro-ottawa-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "engage-ottawa": {
+      "name": "Engage Ottawa",
+      "claimed_access": [
+        "api",
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://engage.ottawa.ca/projects",
+          "final_url": "https://engage.ottawa.ca/projects",
+          "title": "All Projects | Engage Ottawa",
+          "rendered_text_chars": 24247,
+          "rendered_text_sample": "Skip To \nMenu \nFR\nAll Projects\nSign in\nRegister\n\nYou are here:\n\nHome\nAll Projects\nAll\nPublished\nArchived\nFilter by name \nPUBLISHED\nBillings Estate National Historic Site: Help Shape the Future of the Site!\nPUBLISHED\nDécoeur Drive Traffic Calming\nPUBLISHED\nLedbury Park Renewal and New District Park\nPUBLISHED\n1495 Heron Road – Build Canada Homes\nPUBLISHED\nRiver Road Upgrades – Earl Armstrong Road to Solarium Avenue\nPUBLISHED\nBradley Craig Park Cricket Pitch\nPUBLISHED\nMobility dashboard\nPUBLISHED\nFernbank District Park: New Park Development\nPUBLISHED\nRevitalizing Public Space in the ByWard Market\nPUBLISHED\nEagleson Road &amp; Flewellyn Road Functional Design Study\nPUBLISHED\nMontrichard Park\nPUBLISHED\nShare your memories of Cumberland Heritage Village Museum\nPUBLISHED\nBarrhaven Civic Centre and Ottawa Public Library Branch\nPUBLISHED\nGreater Mosquito Creek Subwatershed Study\nPUBLISHED\nBayshore Park Splash Pad\nPUBLISHED\nByWard Square\nPUBLISHED\nWilson Cowan Municipal Drain\nPUBLISHED\nAlvin Heights Park Renewal\nPUBLISHED\nPlante Drive - Traffic Calming Project\nPUBLISHED\nMobility Hub\nPUBLISHED\nRockdale Road – Traffic Calming and Urbanization\nPUBLISHED\nZena Street, Sunnycrest Drive and Barlyn Avenue Sidewalks\nPUBLISHED\nVernon Pump Track\nPUBLISHED\nBathgate Park Remediation and Reforestation\nPUBLISHED\nOld Carp Road Traffic Calming Study\nPUBLISHED\nViewmount Drive Traffic Calming Study\nPUBLISHED\nCentrum Boulevard Public Realm Plan\nPUBLISHED\nCommunity Partnership Major Capital Program\nPUBLISH",
+          "link_count": 550,
+          "table_count": 0,
+          "xhr_total": 141,
+          "discovered_apis": [
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/home_page_revisions?filters%5Bsort%5D%5Bid%5D=desc&filters%5Bpublished%5D=true&page=1&per_page=1",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/theme/",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/navigation_links?filters%5Bsearch%5D=header&filters%5Bsort%5D%5Bsequence%5D=asc&per_page=9999",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/site/",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/users/current",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/layouts/selected/",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/settings/",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/features",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/recommendations",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/api/v2/user_subscriptions",
+              "status": 404,
+              "content_type": "application/json"
+            }
+          ],
+          "other_json_xhr": [
+            {
+              "method": "GET",
+              "url": "https://engage.ottawa.ca/token",
+              "status": 200,
+              "content_type": "application/json; charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://views.unsplash.com/v?app_id=130915photo_id=-undefined",
+              "status": 200,
+              "content_type": "application/json"
+            }
+          ],
+          "screenshot": "engage-ottawa-0.png",
+          "new_outcome": "machine-readable",
+          "error": null
+        },
+        {
+          "url": "https://ottawa.ca/en/city-hall/public-engagement/public-engagement-project-search",
+          "final_url": "https://ottawa.ca/en/city-hall/public-engagement/public-engagement-project-search",
+          "title": "Public engagement project search | City of Ottawa",
+          "rendered_text_chars": 3853,
+          "rendered_text_sample": "Skip to main content\nThe official website of the\nCity of Ottawa\nFR\nMENU\n3-1-1\nSign-in\nHome\nCity Hall\nPublic engagement\nPublic engagement project search\nPublic engagement project search\nKeyword search\nProject category\nProject type\nProject wards\nShowing 1 - 25 of 202\nProjects search results\nProject title\tProject category\tProject type\tProject status\nBaseline Road and Rockway Crescent new traffic control signal and Baseline Road cycling and transit improvements\tCycling, Pathways and Sidewalks, Roads, Sewer, Water and Wastewater, Transit\tConstruction\tPlanned\nIntegrated renewal: Anoka Street, Edge Hill Place, Erie Avenue & Ridgemont Avenue\tRoads, Sewer, Water and Wastewater\tConstruction\tPlanned\nRenewal of Airport Parkway overpass at Hunt Club Road and Hunt Club Road transit & active transportation improvements from Airport Parkway to Transitway\tCycling, Pathways and Sidewalks, Roads, Sewer, Water and Wastewater\tConstruction\tPlanned\nSolandt Road watermain upgrade\tRoads, Sewer, Water and Wastewater\tConstruction\tPlanned\nChurchill, Carling and Kirkwood integrated rehabilitation\tRoads, Sewer, Water and Wastewater\tConstruction\tPlanned\nChimo Drive sidewalk and streetlighting\tCycling, Pathways and Sidewalks, Roads, Sewer, Water and Wastewater\tConstruction\tUnderway\nBeachburg Rail Corridor Multiuse Trail\tCycling, Pathways and Sidewalks\tPlanning\tPlanning underway\nCarp Road & Hazeldean Road intersection modifications\tCycling, Pathways and Sidewalks\tConstruction\tPlanned\nPretoria Avenue road and",
+          "link_count": 114,
+          "table_count": 1,
+          "xhr_total": 9,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "engage-ottawa-1.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "machine-readable"
+    },
+    "opl": {
+      "name": "Ottawa Public Library",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://collections.biblioottawalibrary.ca/",
+          "final_url": "https://collections.biblioottawalibrary.ca/en/we-recommend",
+          "title": "We Recommend | Ottawa Public Library",
+          "rendered_text_chars": 41786,
+          "rendered_text_sample": "Skip to main content\nGet a Card\nDonate\nContact Us\nReserve\nPrint\nPay\nLogin\nFR\nAbout\nBrowse\nHours and Locations\nServices\nPrograms and Events\nKids\nAlerts 5\nSearch\nWe Recommend\nImage\n\nAll of OPL’s staff recommendations in one page. You can browse the different lists based on topics, format or genres, or you can read some of the more detailed blog posts about specific items.\n\nYou can view additional recently added staff lists here. If you can’t find what you are looking for, you can always #AskALibrarian online or in a branch!\n\nRecent Staff Lists\nFiction canadiennes en français: nouveautés 2025-2026\nBy: Orleans_OPLBPO\nTeen Staycation / Vacances à la Biblio​ 2026\nBy: Collections_OPLBPO\nProfils d'auteurs: Les frères Musso\nBy: RuthEDickinson_OPLBPO\nNorth Gloucester Staff Picks - August 2026\nBy: NorthGloucester_OPLBPO\nQuiet Magic: Stories Between Reality and Wonder\nBy: BlackburnHamlet_OPLBPO\nRetellings & Remixes/Réinterprétations et Détournements\nBy: RuthEDickinson_Kids_Enfants_OPLBPO\nPagination\nPage 1 \nNext page\nNext ›\nSpotlight on...\nNo More Kitchen Boredom!\nCatalogue Item\nLunch From Home\nStein, Joshua David\n2022\nWhen Ray, Preeti, Mina, and Niki bring their favorite lunches to school, their classmates scrunch their noses and act disgusted, but the four children learn to stand up for their lunches and cultural backgrounds. Based on the real-life childhood experiences of chefs Ray Garcia, Preeti Mistry, Mina…\n Place a hold\n Add to my shelf\nCatalogue Item\nThe Healthy Lunchtime Cookbook",
+          "link_count": 495,
+          "table_count": 0,
+          "xhr_total": 7,
+          "discovered_apis": [
+            {
+              "method": "GET",
+              "url": "https://about.biblioottawalibrary.ca/en/api/v1/alerts",
+              "status": 200,
+              "content_type": "application/json"
+            }
+          ],
+          "other_json_xhr": [],
+          "screenshot": "opl-0.png",
+          "new_outcome": "machine-readable",
+          "error": null
+        }
+      ],
+      "rollup": "machine-readable"
+    },
+    "statcan-census": {
+      "name": "Statistics Canada Census Profile",
+      "claimed_access": [
+        "bulk"
+      ],
+      "url_results": [
+        {
+          "url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E",
+          "final_url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E",
+          "title": "Census Profile, 2021 Census of Population",
+          "rendered_text_chars": 2632,
+          "rendered_text_sample": "Skip to main content\nSkip to \"About this site\"\nSwitch to basic HTML version\nLanguage selection\nFrançais\n/ Gouvernement du Canada\nSearch\nSearch Statistics Canada\nSearch\nTopics menu\nSubjects\n\t\nData\n\t\nAnalysis\n\t\nReference\n\t\nGeography\n\t\nCensus\n\t\nSurveys and statistical programs\n\t\nAbout StatCan\n\t\nCanada.ca\nHome Census of Population Data products, 2021 Census\nCensus Profile, 2021 Census of Population\n\nRelease date: February 9, 2022 Updated on: November 15, 2023\n\nHow to use Download data About this product\n\nThis profile presents information from the 2021 Census of Population for various levels of geography, including provinces and territories, census metropolitan areas, communities and census tracts. Using the search or browse options below, users can search for an area of interest by typing its place name, postal codeOM or geographic code or by browsing a list.\n\nSearch\nPlace name, postal codeOM or geographic code\nSearch\n Help\nBrowse\n\nBrowse a list. View data for Canada or browse geographies by province or territory:\n\nNewfoundland and Labrador\nPrince Edward Island\nNova Scotia\nNew Brunswick\nQuebec\nOntario\nManitoba\nSaskatchewan\nAlberta\nBritish Columbia\nYukon\nNorthwest Territories\nNunavut\n\nBrowse a map. Geographies can also be located using GeoSearch, an interactive mapping application.\n\nPopular places\nCalgary, Alta.\nCharlottetown, P.E.I.\nEdmonton, Alta.\nFredericton, N.B.\nHalifax, N.S.\nIqaluit, Nvt.\nMississauga, Ont.\nMontréal, Que.\nOttawa, Ont.\nQuébec, Que.\nRegina, Sask.\nSaint John, N.",
+          "link_count": 184,
+          "table_count": 0,
+          "xhr_total": 5,
+          "discovered_apis": [],
+          "other_json_xhr": [
+            {
+              "method": "GET",
+              "url": "https://dpm.demdex.net/id?d_visid_ver=5.5.0&d_fieldgroup=MC&d_rtbd=json&d_ver=2&d_orgid=A90F2A0D55423F537F000101%40AdobeOrg&d_nsid=0&ts=1788990090078",
+              "status": 200,
+              "content_type": "application/json;charset=utf-8"
+            },
+            {
+              "method": "GET",
+              "url": "https://www.statcan.gc.ca/en/json/im.json",
+              "status": 200,
+              "content_type": "application/json"
+            }
+          ],
+          "screenshot": "statcan-census-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        }
+      ],
+      "rollup": "reachable_html"
+    },
+    "school-boards": {
+      "name": "School boards (OCDSB, OCSB, CEPEO, CECCE)",
+      "claimed_access": [
+        "html"
+      ],
+      "url_results": [
+        {
+          "url": "https://ocdsb.ca/",
+          "final_url": "https://www.ocdsb.ca/",
+          "title": "Home | Ottawa-Carleton District School Board",
+          "rendered_text_chars": 4727,
+          "rendered_text_sample": "Skip to main content\nSelect Language\nAbkhaz\nAcehnese\nAcholi\nAfar\nAfrikaans\nAlbanian\nAlur\nAmharic\nArabic\nArmenian\nAssamese\nAvar\nAwadhi\nAymara\nAzerbaijani\nBalinese\nBaluchi\nBambara\nBaoulé\nBashkir\nBasque\nBatak Karo\nBatak Simalungun\nBatak Toba\nBelarusian\nBemba\nBengali\nBetawi\nBhojpuri\nBikol\nBosnian\nBreton\nBulgarian\nBuryat\nCantonese\nCatalan\nCebuano\nChamorro\nChechen\nChichewa\nChinese (Simplified)\nChinese (Traditional)\nChuukese\nChuvash\nCorsican\nCrimean Tatar (Cyrillic)\nCrimean Tatar (Latin)\nCroatian\nCzech\nDanish\nDari\nDhivehi\nDinka\nDogri\nDombe\nDutch\nDyula\nDzongkha\nEsperanto\nEstonian\nEwe\nFaroese\nFijian\nFilipino\nFinnish\nFon\nFrench\nFrench (Canada)\nFrisian\nFriulian\nFulani\nGa\nGalician\nGeorgian\nGerman\nGreek\nGuarani\nGujarati\nHaitian Creole\nHakha Chin\nHausa\nHawaiian\nHebrew\nHiligaynon\nHindi\nHmong\nHungarian\nHunsrik\nIban\nIcelandic\nIgbo\nIlocano\nIndonesian\nInuktut (Latin)\nInuktut (Syllabics)\nIrish\nItalian\nJamaican Patois\nJapanese\nJavanese\nJingpo\nKalaallisut\nKannada\nKanuri\nKapampangan\nKazakh\nKhasi\nKhmer\nKiga\nKikongo\nKinyarwanda\nKituba\nKokborok\nKomi\nKonkani\nKorean\nKrio\nKurdish (Kurmanji)\nKurdish (Sorani)\nKyrgyz\nLao\nLatgalian\nLatin\nLatvian\nLigurian\nLimburgish\nLingala\nLithuanian\nLombard\nLuganda\nLuo\nLuxembourgish\nMacedonian\nMadurese\nMaithili\nMakassar\nMalagasy\nMalay\nMalay (Jawi)\nMalayalam\nMaltese\nMam\nManx\nMaori\nMarathi\nMarshallese\nMarwadi\nMauritian Creole\nMeadow Mari\nMeiteilon (Manipuri)\nMinang\nMizo\nMongolian\nMyanmar (Burmese)\nNahuatl (Eastern Huasteca)\nNdau\nNdebele (South)\nNepalbhasa (Newari)\nNepali\nNKo\n",
+          "link_count": 876,
+          "table_count": 0,
+          "xhr_total": 4,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "school-boards-0.png",
+          "new_outcome": "reachable_html",
+          "error": null
+        },
+        {
+          "url": "https://ocsb.ca/",
+          "final_url": "https://www.ocsb.ca/",
+          "title": "OCSB Homepage - The Ottawa Catholic School Board",
+          "rendered_text_chars": 3009,
+          "rendered_text_sample": "Press Alt+1 for screen-reader mode, Alt+0 to cancel\nAccessibility Screen-Reader Guide, Feedback, and Issue Reporting | New window\nManage Cookie Consent\n\nOur website uses cookies to help us understand your preferences and new ways to improve your experience. By continuing to browse, you agree to our use of cookies. Feel free to change your Cookie Consent settings at any time.\n\nACCEPT\nDENY\nVIEW PREFERENCES\nCookie Policy\nSkip to content\n\nFONT SIZING:\n\n \n\nA\n\n \n\nA\n\n \n\nA\n\nSelect Language\nArabic\nBosnian\nBulgarian\nChinese (Simplified)\nChinese (Traditional)\nCroatian\nCzech\nDutch\nEnglish\nEstonian\nFilipino\nFinnish\nFrench\nGeorgian\nGerman\nGreek\nHaitian Creole\nHausa\nHindi\nHungarian\nIgbo\nIndonesian\nItalian\nKorean\nKurdish (Kurmanji)\nLao\nNorwegian\nPersian\nPortuguese\nRomanian\nRussian\nSerbian\nSlovenian\nSomali\nSpanish\nSwahili\nThai\nTurkish\nUkrainian\nUzbek\nVietnamese\nYiddish\nYoruba\nWHY OCSB?\n OUR SCHOOLS\n PARENTS HUB\n OUR BOARD\n CONTACT\n\nThe button that opens the search modal\n\nThe Ottawa Catholic School Board\nWe Welcome All Students, Families and Staff Back to School!\nLEARN MORE\nStories That Make a Difference\n\nFrom classrooms to communities, read how our students and staff are making a difference every day.\n\nDISCOVER YOUR SCHOOL STORY\nHigh School\n|\n\nSep 9, 2026\n\nNew Student Trustees Bring Student Voice to the OCSB Board Table\nREAD MORE\nGovernment News\n|\n\nSep 9, 2026\n\nA Letter from the Minister of Education\nREAD MORE\nDeep Learning\n|\n\nSep 8, 2026\n\nLearning, Thinking and Belonging at the OCSB\nREAD MOR",
+          "link_count": 180,
+          "table_count": 0,
+          "xhr_total": 11,
+          "discovered_apis": [],
+          "other_json_xhr": [],
+          "screenshot": "school-boards-1.png",
           "new_outcome": "reachable_html",
           "error": null
         }
@@ -431,7 +1542,8 @@
     "historical-imagery": {
       "name": "Historical aerial imagery and mapping",
       "claimed_access": [
-        "html"
+        "html",
+        "api"
       ],
       "url_results": [
         {
@@ -439,7 +1551,7 @@
           "final_url": "https://maps.ottawa.ca/geoottawa/",
           "title": "geoOttawa",
           "rendered_text_chars": 3492,
-          "rendered_text_sample": "Skip To Header Tools\nSkip To Navigation Tools\nSkip To Search\nSkip To Additional Tools\n6km\nMove mouse to get coordinates\nSearch\nFR\nWelcome to the new geoOttawa!\nAbout this application\ngeoOttawa is an interactive map tool that allows you to view map layers, get information and answers about the locations in the City of Ottawa. Search by address, intersections, streets, facilities, or park names to find a location. Many different map layers of information are available, such as parks, schools, City facilities, property parcels, roads, zoning, and air photos dating back to 1928. geoOttawa is your starting point for mapping available from the City of Ottawa!\nWeb Accessibility\nThis application is designed with accessible features, in accordance with the City of Ottawa Web Accessibility practices, and the Accessibility for Ontarians with Disabilities Act (AODA) and Web Content Accessibility Guidelines (WCAG) 2.0 standards. However, the interactive map functionality has accessibility limitations; such as for individuals with low vision or blindness and or mobility limitations (motor disabilities) which would restrict the user from utilizing the mouse; and contains some features that may not be practical for all users. Accessible format or communication support request also provides an opportunity for residents and visitors to request an accessible format or communication support.\nPlease review the following Terms and Conditions\nDisclaimer applicable to this application.\nThis applicat",
+          "rendered_text_sample": "Skip To Header Tools\nSkip To Navigation Tools\nSkip To Search\nSkip To Additional Tools\n6km\nMove mouse to get coordinates\nSearch\nWelcome to the new geoOttawa!\nAbout this application\ngeoOttawa is an interactive map tool that allows you to view map layers, get information and answers about the locations in the City of Ottawa. Search by address, intersections, streets, facilities, or park names to find a location. Many different map layers of information are available, such as parks, schools, City facilities, property parcels, roads, zoning, and air photos dating back to 1928. geoOttawa is your starting point for mapping available from the City of Ottawa!\nWeb Accessibility\nThis application is designed with accessible features, in accordance with the City of Ottawa Web Accessibility practices, and the Accessibility for Ontarians with Disabilities Act (AODA) and Web Content Accessibility Guidelines (WCAG) 2.0 standards. However, the interactive map functionality has accessibility limitations; such as for individuals with low vision or blindness and or mobility limitations (motor disabilities) which would restrict the user from utilizing the mouse; and contains some features that may not be practical for all users. Accessible format or communication support request also provides an opportunity for residents and visitors to request an accessible format or communication support.\nPlease review the following Terms and Conditions\nDisclaimer applicable to this application.\nThis application",
           "link_count": 17,
           "table_count": 1,
           "xhr_total": 177,
@@ -645,252 +1757,6 @@
         }
       ],
       "rollup": "machine-readable"
-    },
-    "lobbyist-registry": {
-      "name": "Lobbyist Registry",
-      "claimed_access": [
-        "html"
-      ],
-      "url_results": [
-        {
-          "url": "https://lobbyist.ottawa.ca/search/searchlobbyist.aspx?lang=en",
-          "final_url": "https://lobbyist.ottawa.ca/search/searchlobbyist.aspx?lang=en",
-          "title": "",
-          "rendered_text_chars": 1441,
-          "rendered_text_sample": "Home| Site Map| Contact Us| Feedback\n \nCity of Ottawa Lobbyist Registry\n\nSearch Criteria\nKeyword\n\nLobbyist\n\nPerson(s) Lobbied\n\nSubject Matter\n\nAffordable Housing\nAgriculture/Rural Affairs\nArts/Culture\nAttractions/Tourism\nBudget\nBy-law/Regulation\nChildcare\nEconomic Development\nEnvironment\nFinancial Services\nGarbage/Recycling\nGrants/Funding\nHealth & Safety\nInformation Technology\nInfrastructure\n- Construction\nLicences/Permits\nParking\nParks/Recreation\nPlanning and Development\n- Planning Policy\n- Environmental Assessment\n- Heritage\n- Official Plan\n- Zoning By-law\n- Plan of Subdivision\n- Plan of Condominium\n- Site Plan\n- Minor Variance\n- Consent to Sever\n- Part Lot\n- Combined Application\nProcurement\nPublic Sector Union\nReal Estate/Property\nSigns\nSocial Services\n- Long-term Care\nTax Policy\nTransit/OC Transpo\nTransportation\nWater/Sewer\nAffected Ward(s)\n\nCW - City Wide\n1 - Orléans East-Cumberland\n2 - Orléans West-Innes\n3 - Barrhaven West\n4 - Kanata North\n5 - West Carleton-March\n6 - Stittsville\n7 - Bay\n8 - College\n9 - Knoxdale-Merivale\n10 - Gloucester-Southgate\n11 - Beacon Hill-Cyrville\n12 - Rideau-Vanier\n13 - Rideau-Rockcliffe\n14 - Somerset\n15 - Kitchissippi\n16 - River\n17 - Capital\n18 - Alta Vista\n19 - Orléans South-Navan\n20 - Osgoode\n21 - Rideau-Jock\n22 - Riverside South-Findlay Creek\n23 - Kanata South\n24 - Barrhaven East\n\nDate Range\n\nFrom:      To: \n     \n\n© 2001-2026 City of Ottawa\n\nDisclaimer| Privacy| Links| Accessibility",
-          "link_count": 10,
-          "table_count": 1,
-          "xhr_total": 0,
-          "discovered_apis": [],
-          "other_json_xhr": [],
-          "screenshot": "lobbyist-registry-0.png",
-          "new_outcome": "reachable_html",
-          "error": null
-        },
-        {
-          "url": "https://lobbyist.ottawa.ca/",
-          "final_url": "https://lobbyist.ottawa.ca/",
-          "title": "",
-          "rendered_text_chars": 176,
-          "rendered_text_sample": "Lobbyist Registry\nLobbyist Registry Log In\nSearch the Registry\nRegistre des lobbyistes\nOuverture de session du registre des lobbyistes\nRecherche dans le registre des lobbyistes",
-          "link_count": 4,
-          "table_count": 0,
-          "xhr_total": 0,
-          "discovered_apis": [],
-          "other_json_xhr": [],
-          "screenshot": "lobbyist-registry-1.png",
-          "new_outcome": "needs_browser",
-          "error": null
-        }
-      ],
-      "rollup": "reachable_html"
-    },
-    "engage-ottawa": {
-      "name": "Engage Ottawa",
-      "claimed_access": [
-        "html"
-      ],
-      "url_results": [
-        {
-          "url": "https://engage.ottawa.ca/projects",
-          "final_url": "https://engage.ottawa.ca/projects",
-          "title": "All Projects | Engage Ottawa",
-          "rendered_text_chars": 24247,
-          "rendered_text_sample": "Skip To \nMenu \nFR\nAll Projects\nSign in\nRegister\n\nYou are here:\n\nHome\nAll Projects\nAll\nPublished\nArchived\nFilter by name \nPUBLISHED\nBillings Estate National Historic Site: Help Shape the Future of the Site!\nPUBLISHED\nDécoeur Drive Traffic Calming\nPUBLISHED\nLedbury Park Renewal and New District Park\nPUBLISHED\n1495 Heron Road – Build Canada Homes\nPUBLISHED\nRiver Road Upgrades – Earl Armstrong Road to Solarium Avenue\nPUBLISHED\nBradley Craig Park Cricket Pitch\nPUBLISHED\nMobility dashboard\nPUBLISHED\nFernbank District Park: New Park Development\nPUBLISHED\nRevitalizing Public Space in the ByWard Market\nPUBLISHED\nEagleson Road &amp; Flewellyn Road Functional Design Study\nPUBLISHED\nMontrichard Park\nPUBLISHED\nShare your memories of Cumberland Heritage Village Museum\nPUBLISHED\nBarrhaven Civic Centre and Ottawa Public Library Branch\nPUBLISHED\nGreater Mosquito Creek Subwatershed Study\nPUBLISHED\nBayshore Park Splash Pad\nPUBLISHED\nByWard Square\nPUBLISHED\nWilson Cowan Municipal Drain\nPUBLISHED\nAlvin Heights Park Renewal\nPUBLISHED\nPlante Drive - Traffic Calming Project\nPUBLISHED\nMobility Hub\nPUBLISHED\nRockdale Road – Traffic Calming and Urbanization\nPUBLISHED\nZena Street, Sunnycrest Drive and Barlyn Avenue Sidewalks\nPUBLISHED\nVernon Pump Track\nPUBLISHED\nBathgate Park Remediation and Reforestation\nPUBLISHED\nOld Carp Road Traffic Calming Study\nPUBLISHED\nViewmount Drive Traffic Calming Study\nPUBLISHED\nCentrum Boulevard Public Realm Plan\nPUBLISHED\nCommunity Partnership Major Capital Program\nPUBLISH",
-          "link_count": 550,
-          "table_count": 0,
-          "xhr_total": 141,
-          "discovered_apis": [
-            {
-              "method": "GET",
-              "url": "https://engage.ottawa.ca/api/v2/home_page_revisions?filters%5Bsort%5D%5Bid%5D=desc&filters%5Bpublished%5D=true&page=1&per_page=1",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
-            {
-              "method": "GET",
-              "url": "https://engage.ottawa.ca/api/v2/theme/",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
-            {
-              "method": "GET",
-              "url": "https://engage.ottawa.ca/api/v2/navigation_links?filters%5Bsearch%5D=header&filters%5Bsort%5D%5Bsequence%5D=asc&per_page=9999",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
-            {
-              "method": "GET",
-              "url": "https://engage.ottawa.ca/api/v2/site/",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
-            {
-              "method": "GET",
-              "url": "https://engage.ottawa.ca/api/v2/users/current",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
-            {
-              "method": "GET",
-              "url": "https://engage.ottawa.ca/api/v2/layouts/selected/",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
-            {
-              "method": "GET",
-              "url": "https://engage.ottawa.ca/api/v2/settings/",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
-            {
-              "method": "GET",
-              "url": "https://engage.ottawa.ca/api/v2/features",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
-            {
-              "method": "GET",
-              "url": "https://engage.ottawa.ca/api/v2/recommendations",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
-            {
-              "method": "GET",
-              "url": "https://engage.ottawa.ca/api/v2/user_subscriptions",
-              "status": 404,
-              "content_type": "application/json"
-            }
-          ],
-          "other_json_xhr": [
-            {
-              "method": "GET",
-              "url": "https://engage.ottawa.ca/token",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            },
-            {
-              "method": "GET",
-              "url": "https://views.unsplash.com/v?app_id=130915photo_id=-undefined",
-              "status": 200,
-              "content_type": "application/json"
-            }
-          ],
-          "screenshot": "engage-ottawa-0.png",
-          "new_outcome": "machine-readable",
-          "error": null
-        },
-        {
-          "url": "https://ottawa.ca/en/city-hall/public-engagement/public-engagement-project-search",
-          "final_url": "https://ottawa.ca/en/city-hall/public-engagement/public-engagement-project-search",
-          "title": "",
-          "rendered_text_chars": 0,
-          "rendered_text_sample": "",
-          "link_count": 0,
-          "table_count": 0,
-          "xhr_total": 4,
-          "discovered_apis": [],
-          "other_json_xhr": [],
-          "screenshot": "engage-ottawa-1.png",
-          "new_outcome": "needs_browser",
-          "error": null
-        }
-      ],
-      "rollup": "machine-readable"
-    },
-    "escribe": {
-      "name": "eScribe: agendas, minutes, staff reports",
-      "claimed_access": [
-        "html"
-      ],
-      "url_results": [
-        {
-          "url": "https://pub-ottawa.escribemeetings.com/",
-          "final_url": "https://pub-ottawa.escribemeetings.com/",
-          "title": "eSCRIBE Published Meetings",
-          "rendered_text_chars": 1287,
-          "rendered_text_sample": "Skip to content\nSearch\nCalendar View\nSeptember 2026\nCalendar\nList\nUpcoming\nPast\nCalendar containing meetings\nSunday\n\t\nMonday\n\t\nTuesday\n\t\nWednesday\n\t\nThursday\n\t\nFriday\n\t\nSaturday\n\n\t\n\t\n1\n9:00 AM\nCommittee of Adjustment - Panel 3\n9:30 AM\nFinance and Corporate Services Committee\n1:00 PM\nCommittee of Adjustment - Panel 2\n4:00 PM\nCommunity Safety and Well-Being Advisory Committee\n\t\n2\n9:30 AM\nPlanning and Housing Committee\n1:00 PM\nCommittee of Adjustment - Panel 1\n\t\n3\n10:00 AM\nAgriculture and Rural Affairs Committee\n\t\n4\n\t\n5\n\n6\n\t\n7\n\t\n8\n9:30 AM\nBuilt Heritage Committee\n5:00 PM\nOttawa Public Library Board\n\t\n9\n10:00 AM\nCity Council\n\t\n10\n9:30 AM\nTransit Committee\n\t\n11\n\t\n12\n\n13\n\t\n14\n\t\n15\n9:30 AM\nEnvironment and Climate Change Committee\n9:30 AM\nBuilt Heritage Committee\n1:00 PM\nCommittee of Adjustment - Panel 2\n6:00 PM\nAccessibility Advisory Committee\n\t\n16\n9:30 AM\nPlanning and Housing Committee\n\t\n17\n9:30 AM\nEmergency Preparedness and Protective Services Committee\n\t\n18\n9:30 AM\nOttawa Investment Board\n\t\n19\n\n20\n\t\n21\n5:00 PM\nBoard of Health\n\t\n22\n9:30 AM\nCommunity Services Committee\n\t\n23\n10:00 AM\nCity Council\n\t\n24\n9:30 AM\nPublic Works and Infrastructure Committee\n\t\n25\n\t\n26\n\n27\n\t\n28\n10:00 AM\nOttawa Police Service Board\n4:00 PM\nOttawa Police Service Board\n\t\n29\n9:30 AM\nAudit Committee\n\t\n30",
-          "link_count": 5,
-          "table_count": 12,
-          "xhr_total": 7,
-          "discovered_apis": [
-            {
-              "method": "POST",
-              "url": "https://pub-ottawa.escribemeetings.com/MeetingsCalendarView.aspx/GetCalendarMeetings",
-              "status": 200,
-              "content_type": "application/json; charset=utf-8"
-            }
-          ],
-          "other_json_xhr": [],
-          "screenshot": "escribe-0.png",
-          "new_outcome": "machine-readable",
-          "error": null
-        }
-      ],
-      "rollup": "machine-readable"
-    },
-    "committee-of-adjustment": {
-      "name": "Committee of Adjustment decisions",
-      "claimed_access": [
-        "html"
-      ],
-      "url_results": [
-        {
-          "url": "https://www.canlii.org/",
-          "final_url": "https://www.canlii.org/",
-          "title": "canlii.org",
-          "rendered_text_chars": 0,
-          "rendered_text_sample": "",
-          "link_count": 0,
-          "table_count": 0,
-          "xhr_total": 0,
-          "discovered_apis": [],
-          "other_json_xhr": [],
-          "screenshot": "committee-of-adjustment-0.png",
-          "new_outcome": "needs_browser",
-          "error": null
-        },
-        {
-          "url": "https://ottawa.ca/en/planning-development-and-construction/committee-adjustment/find-decision",
-          "final_url": "https://ottawa.ca/en/planning-development-and-construction/committee-adjustment/find-decision",
-          "title": "",
-          "rendered_text_chars": 0,
-          "rendered_text_sample": "",
-          "link_count": 0,
-          "table_count": 0,
-          "xhr_total": 4,
-          "discovered_apis": [],
-          "other_json_xhr": [],
-          "screenshot": "committee-of-adjustment-1.png",
-          "new_outcome": "needs_browser",
-          "error": null
-        }
-      ],
-      "rollup": "needs_browser"
-    },
-    "social-housing-registry": {
-      "name": "Social Housing Registry of Ottawa",
-      "claimed_access": [
-        "html"
-      ],
-      "url_results": [
-        {
-          "url": "https://housingregistry.ca/",
-          "final_url": "https://housingregistry.ca/",
-          "title": "Housing Registry of Ottawa, supportive housing, rgi housing",
-          "rendered_text_chars": 2737,
-          "rendered_text_sample": "Skip to Content\n\n \n\n \n\nEnglishFrançais\nApply Now\nFAQs\nSearch for\nSearch website\nHome\nThe Process\nThe People\nThe Housing\nThe Forms\nThe Challenge\nContact\nSocial Housing Registry of Ottawa\nWe are a caring team dedicated to helping people submit and update their applications for subsidized housing.\nApply Now\n\nEverything you need to submit an application for subsidized housing. Apply Now\n\nOur Role\n\nOur role within the constellation of community housing organizations is to maintain a centralized list of people awaiting subsidized housing. Explore the constellation\n\nHousing Providers\n\n50 housing providers in the Ottawa area have rent-geared -to-income housing, Affordable Housing (formerly Below Market Rent (BMR)), and supportive housing you can apply for. View options\n\nHow it Works\n\nOnce we help you apply, we have no way of knowing when units become available or when housing providers are able to make you an offer. Here’s how it works\n\nAlready Applied?\n\nWe need to hear from applicants at least once a year.  What to Expect\n\nQuestions & Answers\n\nWhat is subsidized housing? How long does it take? Who decides? Get Answers\n\nSocial Housing Registry of Ottawa (The Registry) is a caring team dedicated to helping people submit and update their applications for subsidized housing in Ottawa. Applicants are referred to The Registry by social service and government agencies or find us on their own.\n\nGuided by the vision that everyone should have a safe and affordable home, our role within the co",
-          "link_count": 30,
-          "table_count": 0,
-          "xhr_total": 0,
-          "discovered_apis": [],
-          "other_json_xhr": [],
-          "screenshot": "social-housing-registry-0.png",
-          "new_outcome": "reachable_html",
-          "error": null
-        }
-      ],
-      "rollup": "reachable_html"
     }
   }
 }

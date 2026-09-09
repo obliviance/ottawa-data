@@ -1,0 +1,362 @@
+[
+ {
+  "properties": {
+   "devAppId": "__01OAMK",
+   "applicationNumber": "D07-16-15-0015",
+   "applicationStatus": {
+    "en": "File Pending",
+    "fr": "Dossier en cours"
+   },
+   "devAppAddress": {
+    "addressReferenceId": "__01OAP1",
+    "addressNumber": 1626,
+    "addressQualifier": "",
+    "legalUnit": "",
+    "roadName": "OLD PRESCOTT",
+    "cardinalDirection": "",
+    "roadType": "Road",
+    "municipality": "Osgoode",
+    "addressType": "MAIN",
+    "addressLatitude": 45.247909,
+    "addressLongitude": -75.57001,
+    "addressNumberRoadName": "1626 OLD PRESCOTT",
+    "parcelPinNumber": 43192970
+   },
+   "applicationType": {
+    "en": "Plan of Subdivision",
+    "fr": "Plan de lotissement"
+   }
+  },
+  "id": null,
+  "geometry": {
+   "coordinates": [
+    -75.57001,
+    45.247909
+   ]
+  }
+ },
+ {
+  "properties": {
+   "devAppId": "__01Q03N",
+   "applicationNumber": "D07-12-16-0002",
+   "applicationStatus": {
+    "en": "File Pending",
+    "fr": "Dossier en cours"
+   },
+   "devAppAddress": {
+    "addressReferenceId": "__01Q09K",
+    "addressNumber": 774,
+    "addressQualifier": "",
+    "legalUnit": "",
+    "roadName": "BRONSON",
+    "cardinalDirection": "",
+    "roadType": "Avenue",
+    "municipality": "Old Ottawa",
+    "addressType": "MAIN",
+    "addressLatitude": 45.400366,
+    "addressLongitude": -75.69976,
+    "addressNumberRoadName": "774 BRONSON",
+    "parcelPinNumber": 41030125
+   },
+   "applicationType": {
+    "en": "Site Plan Control",
+    "fr": "Réglementation du plan d'implantation"
+   }
+  },
+  "id": null,
+  "geometry": {
+   "coordinates": [
+    -75.69976,
+    45.400366
+   ]
+  }
+ },
+ {
+  "properties": {
+   "devAppId": "__01Q03N",
+   "applicationNumber": "D07-12-16-0002",
+   "applicationStatus": {
+    "en": "File Pending",
+    "fr": "Dossier en cours"
+   },
+   "devAppAddress": {
+    "addressReferenceId": "__01Q08B",
+    "addressNumber": 557,
+    "addressQualifier": "",
+    "legalUnit": "",
+    "roadName": "CAMBRIDGE",
+    "cardinalDirection": "SOUTH",
+    "roadType": "Street",
+    "municipality": "Old Ottawa",
+    "addressType": "MAIN",
+    "addressLatitude": 45.400152,
+    "addressLongitude": -75.700261,
+    "addressNumberRoadName": "557 CAMBRIDGE",
+    "parcelPinNumber": 41030215
+   },
+   "applicationType": {
+    "en": "Site Plan Control",
+    "fr": "Réglementation du plan d'implantation"
+   }
+  },
+  "id": null,
+  "geometry": {
+   "coordinates": [
+    -75.700261,
+    45.400152
+   ]
+  }
+ },
+ {
+  "properties": {
+   "devAppId": "__06TITQ",
+   "applicationNumber": "D07-12-16-0052",
+   "applicationStatus": {
+    "en": "File Pending",
+    "fr": "Dossier en cours"
+   },
+   "devAppAddress": {
+    "addressReferenceId": "__A1MJP2",
+    "addressNumber": 590,
+    "addressQualifier": "",
+    "legalUnit": "",
+    "roadName": "RIDEAU",
+    "cardinalDirection": "",
+    "roadType": "Street",
+    "municipality": "Old Ottawa",
+    "addressType": "SUBORD",
+    "addressLatitude": 45.432672,
+    "addressLongitude": -75.675689,
+    "addressNumberRoadName": "590 RIDEAU",
+    "parcelPinNumber": 42070667
+   },
+   "applicationType": {
+    "en": "Site Plan Control",
+    "fr": "Réglementation du plan d'implantation"
+   }
+  },
+  "id": null,
+  "geometry": {
+   "coordinates": [
+    -75.675689,
+    45.432672
+   ]
+  }
+ },
+ {
+  "properties": {
+   "devAppId": "__06TITQ",
+   "applicationNumber": "D07-12-16-0052",
+   "applicationStatus": {
+    "en": "File Pending",
+    "fr": "Dossier en cours"
+   },
+   "devAppAddress": {
+    "addressReferenceId": "__06TIYR",
+    "addressNumber": 594,
+    "addressQualifier": "",
+    "legalUnit": "",
+    "roadName": "RIDEAU",
+    "cardinalDirection": "",
+    "roadType": "Street",
+    "municipality": "Old Ottawa",
+    "addressType": "MAIN",
+    "addressLatitude": 45.432672,
+    "addressLongitude": -75.675689,
+    "addressNumberRoadName": "594 RIDEAU",
+    "parcelPinNumber": 42070667
+   },
+   "applicationType": {
+    "en": "Site Plan Control",
+    "fr": "Réglementation du plan d'implantation"
+   }
+  },
+  "id": null,
+  "geometry": {
+   "coordinates": [
+    -75.675689,
+    45.432672
+   ]
+  }
+ },
+ {
+  "properties": {
+   "devAppId": "__0FJHE4",
+   "applicationNumber": "D01-01-16-0022",
+   "applicationStatus": {
+    "en": "Active",
+    "fr": "Actif"
+   },
+   "devAppAddress": {
+    "addressReferenceId": "__0FJINM",
+    "addressNumber": 300,
+    "addressQualifier": "",
+    "legalUnit": "",
+    "roadName": "GOULBOURN FORCED",
+    "cardinalDirection": "",
+    "roadType": "Road",
+    "municipality": "Kanata",
+    "addressType": "MAIN",
+    "addressLatitude": 45.331481,
+    "addressLongitude": -75.926119,
+    "addressNumberRoadName": "300 GOULBOURN FORCED",
+    "parcelPinNumber": 45111683
+   },
+   "applicationType": {
+    "en": "Official Plan Amendment",
+    "fr": "Modification au Plan officiel"
+   }
+  },
+  "id": null,
+  "geometry": {
+   "coordinates": [
+    -75.926119,
+    45.331481
+   ]
+  }
+ },
+ {
+  "properties": {
+   "devAppId": "__0FUCIK",
+   "applicationNumber": "D02-02-16-0114",
+   "applicationStatus": {
+    "en": "File Pending",
+    "fr": "Dossier en cours"
+   },
+   "devAppAddress": {
+    "addressReferenceId": "__0FUCNH",
+    "addressNumber": 457,
+    "addressQualifier": "",
+    "legalUnit": "",
+    "roadName": "TERRY FOX",
+    "cardinalDirection": "",
+    "roadType": "Drive",
+    "municipality": "Kanata",
+    "addressType": "MAIN",
+    "addressLatitude": 45.326257,
+    "addressLongitude": -75.946851,
+    "addressNumberRoadName": "457 TERRY FOX",
+    "parcelPinNumber": 45241941
+   },
+   "applicationType": {
+    "en": "Zoning By-law Amendment",
+    "fr": "Modification au Règlement de zonage"
+   }
+  },
+  "id": null,
+  "geometry": {
+   "coordinates": [
+    -75.946851,
+    45.326257
+   ]
+  }
+ },
+ {
+  "properties": {
+   "devAppId": "__0FUCWU",
+   "applicationNumber": "D07-16-16-0024",
+   "applicationStatus": {
+    "en": "File Pending",
+    "fr": "Dossier en cours"
+   },
+   "devAppAddress": {
+    "addressReferenceId": "__0FUC7L",
+    "addressNumber": 457,
+    "addressQualifier": "",
+    "legalUnit": "",
+    "roadName": "TERRY FOX",
+    "cardinalDirection": "",
+    "roadType": "Drive",
+    "municipality": "Kanata",
+    "addressType": "MAIN",
+    "addressLatitude": 45.326257,
+    "addressLongitude": -75.946851,
+    "addressNumberRoadName": "457 TERRY FOX",
+    "parcelPinNumber": 45241941
+   },
+   "applicationType": {
+    "en": "Plan of Subdivision",
+    "fr": "Plan de lotissement"
+   }
+  },
+  "id": null,
+  "geometry": {
+   "coordinates": [
+    -75.946851,
+    45.326257
+   ]
+  }
+ },
+ {
+  "properties": {
+   "devAppId": "__0R1RYS",
+   "applicationNumber": "D07-12-15-0117",
+   "applicationStatus": {
+    "en": "File Pending",
+    "fr": "Dossier en cours"
+   },
+   "devAppAddress": {
+    "addressReferenceId": "__0R1RYA",
+    "addressNumber": 137,
+    "addressQualifier": "",
+    "legalUnit": "",
+    "roadName": "BAY",
+    "cardinalDirection": "",
+    "roadType": "Street",
+    "municipality": "Old Ottawa",
+    "addressType": "MAIN",
+    "addressLatitude": 45.418298,
+    "addressLongitude": -75.706396,
+    "addressNumberRoadName": "137 BAY",
+    "parcelPinNumber": 41140003
+   },
+   "applicationType": {
+    "en": "Site Plan Control",
+    "fr": "Réglementation du plan d'implantation"
+   }
+  },
+  "id": null,
+  "geometry": {
+   "coordinates": [
+    -75.706396,
+    45.418298
+   ]
+  }
+ },
+ {
+  "properties": {
+   "devAppId": "__0R1RYS",
+   "applicationNumber": "D07-12-15-0117",
+   "applicationStatus": {
+    "en": "File Pending",
+    "fr": "Dossier en cours"
+   },
+   "devAppAddress": {
+    "addressReferenceId": "__0R1RYY",
+    "addressNumber": 350,
+    "addressQualifier": "",
+    "legalUnit": "",
+    "roadName": "SPARKS",
+    "cardinalDirection": "",
+    "roadType": "Street",
+    "municipality": "Old Ottawa",
+    "addressType": "MAIN",
+    "addressLatitude": 45.418762,
+    "addressLongitude": -75.705922,
+    "addressNumberRoadName": "350 SPARKS",
+    "parcelPinNumber": 41140002
+   },
+   "applicationType": {
+    "en": "Site Plan Control",
+    "fr": "Réglementation du plan d'implantation"
+   }
+  },
+  "id": null,
+  "geometry": {
+   "coordinates": [
+    -75.705922,
+    45.418762
+   ]
+  }
+ }
+]

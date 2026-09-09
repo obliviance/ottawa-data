@@ -28,10 +28,10 @@ machine-readable surface. 100 URLs / 72 sources:
 0 with a dead link.
 
 **Stage 2** ([`tools/verify_stage2.py`](tools/verify_stage2.py), 2026-09-09) — rendered the
-12 JavaScript / interactive sources in a real headless Chromium and captured their XHR.
-**6** turned out to have a real backing API (council votes as JSON from `howtheyvoted.ca`,
+41 JavaScript / interactive sources in a real headless Chromium and captured their XHR.
+**7** turned out to have a real backing API (council votes as JSON from `howtheyvoted.ca`,
 a REST API behind `devapps`, an EngagementHQ API behind Engage Ottawa, an AJAX meeting index
-behind eScribe); **5** render fully and can be scraped headlessly; **1** still would not
+behind eScribe); **34** render fully and can be scraped headlessly; **0** still would not
 yield (ottawa.ca and CanLII intermittently serve a bot challenge to headless browsers).
 
 **Stage 3** ([`tools/verify_stage3.py`](tools/verify_stage3.py), 2026-09-09) — confirmed the
@@ -102,7 +102,7 @@ Raw ArcGIS MapServer directory behind geoOttawa. Observed services include Zonin
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS REST catalogue: 80 services, 1 folder, v10.81) · 1 archived_
+> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS REST catalogue: 80 services, 1 folder, v10.81) · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://maps.ottawa.ca/arcgis/rest/services/>
 
 ### geoOttawa
@@ -124,7 +124,7 @@ Licence terms, publication commitments, and the request channel for datasets not
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/open-data>
 
 
@@ -138,7 +138,7 @@ Authoritative roster of registered candidates: mayor, 24 wards, four school boar
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://elections.ottawa.ca/CandidateList/CandidateList>
 
 ### Who is running in my ward?
@@ -149,7 +149,7 @@ Same roster behind an address lookup. Useful as a ward-boundary geocoding check.
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/city-hall/elections/voters/who-running-my-ward>
 
 ### Campaign financial statements and contributions
@@ -160,7 +160,7 @@ Filed under Municipal Elections Act s.88.25, published free under s.88(9.1). Dis
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 2 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 2 archived_
 - <https://ottawa.ca/en/city-hall/elections/candidates/candidate-campaign-finances-and-contributions>
 - <https://ottawa.ca/en/city-hall/elections/previous-elections-and-appointment-processes/financial-statements-2022-municipal-elections/candidate-and-third-party-advertiser-compliance-reports>
 
@@ -172,7 +172,7 @@ Statutory calendar, nomination rules, third-party advertiser registration. 2026:
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 2 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 2 archived_
 - <https://ottawa.ca/en/city-hall/elections/learn-more-about-municipal-elections/key-dates-2026-municipal-elections>
 - <https://ottawa.ca/en/city-hall/elections/candidates/information-candidates>
 
@@ -200,7 +200,7 @@ Every Council, standing committee and board meeting from 18 June 2012 onward. St
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: a real backing data API turned up in the browser · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
 - <https://pub-ottawa.escribemeetings.com/>
 
 ### Legacy agenda system (pre-2012)
@@ -222,7 +222,7 @@ Live streams plus archived webcasts migrating from the old portal. Auto-captions
 
 > **Verified** — access: unconfirmed — page is HTML; claimed `api` needs a key / login / manual check
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://www.youtube.com/channel/UCUR3i_hvk3-3i8vtrPg6v1Q>
 
 ### By-laws A to Z
@@ -233,7 +233,7 @@ Consolidated by-laws in HTML. Includes Procurement (2000-50), Lobbyist Registry,
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z>
 
 ### Document repository
@@ -244,7 +244,7 @@ Where most linked PDFs live: annual reports, manuals, primers, guides.
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://documents.ottawa.ca/>
 
 ### Council and committee structure
@@ -255,7 +255,7 @@ Membership, mandates and terms of reference for standing committees, sub-committ
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/city-hall/council-committees-and-boards>
 
 
@@ -269,7 +269,7 @@ Performance, financial and compliance audits across all departments and agencies
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://www.oagottawa.ca/>
 
 ### Integrity Commissioner
@@ -280,7 +280,7 @@ Codes of conduct, Municipal Conflict of Interest Act ss.5/5.1/5.2, closed-meetin
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/integrity-commissioner>
 
 ### Lobbyist Registry
@@ -315,7 +315,7 @@ Monthly per-member office expense disclosure plus the annual Statement of Remune
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/public-disclosure/disclosure-office-expenses>
 
 ### Public Sector Salary Disclosure
@@ -326,7 +326,7 @@ Provincial, but covers all city employees earning $100,000 or more. Published as
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – Ontario*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://www.ontario.ca/page/public-sector-salary-disclosure>
 
 
@@ -340,7 +340,7 @@ Audited annual financial statements, annual reports (2020 to 2024 online), and q
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning/financial-reports-and-statements>
 
 ### Budget documents by year
@@ -351,7 +351,7 @@ Tabled and adopted budgets, 2022 onward. Line-item detail generally in PDF; some
 
 > **Verified** — access: unconfirmed — page is HTML; claimed `bulk` needs a key / login / manual check
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning>
 
 ### Financial Information Return (FIR)
@@ -376,7 +376,7 @@ Supply Services administers over $1B annually under By-law 2000-50. Bid opportun
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 2 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 2 archived_
 - <https://ottawa.ca/en/business/procurement/procurement>
 - <https://ottawa.ca/en/business/procurement/procurement-law>
 
@@ -413,7 +413,7 @@ Approved 28 January 2026, enacted 11 March 2026, replacing 2008-250 after roughl
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS service 'Layers': 8 layers, formats JSON, geoJSON) · 2 archived_
+> _stage 0–1 2026-09-09: machine-readable surface confirmed (ArcGIS service 'Layers': 8 layers, formats JSON, geoJSON) · stage 2 2026-09-09: renders fully — a headless scrape works · 2 archived_
 - <https://ottawa.ca/en/living-ottawa/laws-licences-and-permits/laws/laws-z/zoning-law-law-no-2026-50>
 - <https://maps.ottawa.ca/arcgis/rest/services/Zoning/MapServer>
 
@@ -425,7 +425,7 @@ The 2021 Official Plan and its schedules: growth management, transects, urban bo
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/planning-development-and-construction>
 
 ### Committee of Adjustment decisions
@@ -436,7 +436,7 @@ Ottawa was the first committee of adjustment in Canada to publish decisions on C
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: still would not yield content in a browser · 1 link bot-blocked (fine in a browser) · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 link bot-blocked (fine in a browser) · 1 archived_
 - <https://www.canlii.org/>
 - <https://ottawa.ca/en/planning-development-and-construction/committee-adjustment/find-decision>
 
@@ -448,7 +448,7 @@ Appeals of city planning and Committee of Adjustment decisions. Searchable by mu
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – Ontario*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: a real backing data API turned up in the browser · 1 archived_
 - <https://olt.gov.on.ca/decisions/>
 
 ### Building permits and land management
@@ -459,7 +459,7 @@ Permit applications run through the My ServiceOttawa Land Management System. Iss
 
 > **Verified** — access: unconfirmed — page is HTML; claimed `bulk` needs a key / login / manual check
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/planning-development-and-construction/building-and-renovating>
 
 
@@ -473,7 +473,7 @@ Static GTFS plus GTFS-RT Vehicle Positions and Trip Updates. Free API key via th
 
 > **Verified** — access: unconfirmed — page is HTML; claimed `api`, `bulk` needs a key / login / manual check
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 2 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 2 archived_
 - <https://www.octranspo.com/en/plan-your-trip/travel-tools/developers/>
 - <https://nextrip-public-api.developer.azure-api.net/>
 - <https://www.transit.land/feeds/f-f24-octranspo>
@@ -486,7 +486,7 @@ Its own open-data surface separate from the main portal: live traffic map, camer
 
 > **Verified** — access: unconfirmed — page is HTML; claimed `api` needs a key / login / manual check
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: machine-readable surface confirmed · 2 archived_
+> _stage 0–1 2026-09-09: machine-readable surface confirmed · stage 2 2026-09-09: renders fully — a headless scrape works · 2 archived_
 - <https://traffic.ottawa.ca/en/opendata>
 - <https://traffic.ottawa.ca/map/service/ase_camera>
 
@@ -510,7 +510,7 @@ Month-by-month charge and speed data for every camera location, plus siting meth
 
 > **Verified** — access: unconfirmed — page is HTML; claimed `bulk` needs a key / login / manual check
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/parking-roads-and-travel/road-safety/enforcement/automated-speed-enforcement>
 
 ### Road network, pathways, cycling infrastructure
@@ -557,7 +557,7 @@ Board agendas, minutes and reports run through the same eScribe instance as Coun
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: a real backing data API turned up in the browser · 1 archived_
 - <https://pub-ottawa.escribemeetings.com/>
 
 ### Fire, paramedic and emergency services
@@ -582,7 +582,7 @@ Seasonal respiratory and enteric outbreak surveillance, Diseases of Public Healt
 
 > **Verified** — access: understated — also found `bulk`
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://www.ottawapublichealth.ca/en/reports-research-and-statistics/reports-research-and-statistics.aspx>
 
 ### Housing and homelessness: plans, facts and data
@@ -593,7 +593,7 @@ City dashboards on housing need and homelessness, plus the 10-Year Housing and H
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/family-and-social-services/housing-and-homelessness/plans-facts-and-data>
 
 ### Social Housing Registry of Ottawa
@@ -615,7 +615,7 @@ Independent annual progress reports and the Ottawa Housing Needs Assessment. Oft
 
 > **Verified** — access: confirmed
 > licence: *Site terms – no open-data licence stated*
-> _stage 0–1 2026-09-09: reachable but JavaScript-rendered · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
+> _stage 0–1 2026-09-09: reachable but JavaScript-rendered · 1 archived_
 - <https://www.endhomelessnessottawa.ca/>
 
 
@@ -629,7 +629,7 @@ Annual report per municipal system under the Safe Drinking Water Act, with full 
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/living-ottawa/drinking-water-stormwater-and-wastewater/drinking-water>
 
 ### Solid waste data and reports
@@ -640,7 +640,7 @@ Diversion rates by stream and tonnages by programme. Residential diversion repor
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://ottawa.ca/en/garbage-and-recycling/solid-waste-data-and-reports>
 
 ### Ottawa Riverkeeper open data
@@ -664,7 +664,7 @@ Three authorities cover Ottawa's watersheds. Each publishes floodplain mapping, 
 
 > **Verified** — access: unconfirmed — page is HTML; claimed `bulk` needs a key / login / manual check
 > licence: *Site terms – no open-data licence stated*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 3 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 3 archived_
 - <https://www.rvca.ca/>
 - <https://mvc.on.ca/>
 - <https://www.nation.on.ca/>
@@ -679,7 +679,7 @@ Municipally-owned distributor. Outage map is live; rate filings and performance 
 
 > **Verified** — access: confirmed
 > licence: *Site terms – no open-data licence stated*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works_
 - <https://hydroottawa.com/>
 
 ### Trees, parks and green space
@@ -728,7 +728,7 @@ Branch data, circulation statistics and curated local-statistics guides. Partner
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: a real backing data API turned up in the browser · 1 archived_
 - <https://collections.biblioottawalibrary.ca/>
 
 ### Recreation facilities and programmes
@@ -787,7 +787,7 @@ Full profiles at census subdivision, metropolitan area, census tract and dissemi
 
 > **Verified** — access: unconfirmed — page is HTML; claimed `bulk` needs a key / login / manual check
 > licence: *Statistics Canada Open Licence*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · 1 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
 - <https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E>
 
 ### Ottawa Insights
@@ -824,7 +824,7 @@ How each councillor voted across the 2022 to 2026 term, filterable by councillor
 
 > **Verified** — access: confirmed
 > licence: *Site terms – no open-data licence stated*
-> _stage 0–1 2026-09-09: reachable but JavaScript-rendered · stage 2 2026-09-09: renders fully — a headless scrape works_
+> _stage 0–1 2026-09-09: reachable but JavaScript-rendered_
 - <https://www.horizonottawa.ca/vote_tracker>
 
 ### How They Voted
@@ -835,7 +835,7 @@ Dedicated Ottawa council voting-record site. Verified 2026-09-09: ships its comp
 
 > **Verified** — access: confirmed
 > licence: *Site terms – no open-data licence stated*
-> _stage 0–1 2026-09-09: reachable but JavaScript-rendered · stage 2 2026-09-09: a real backing data API turned up in the browser · 1 archived_
+> _stage 0–1 2026-09-09: reachable but JavaScript-rendered · 1 archived_
 - <https://howtheyvoted.ca/>
 
 ### Ottawa Lookout
@@ -846,7 +846,7 @@ Runs the most complete 2026 candidate tracker and per-ward election guides. Jour
 
 > **Verified** — access: confirmed
 > licence: *All rights reserved (journalism)*
-> _stage 0–1 2026-09-09: reachable but JavaScript-rendered · stage 2 2026-09-09: renders fully — a headless scrape works · 2 archived_
+> _stage 0–1 2026-09-09: reachable but JavaScript-rendered · 2 archived_
 - <https://www.ottawalookout.com/p/meet-the-candidates>
 - <https://www.ottawalookout.com/>
 
@@ -920,7 +920,7 @@ Four boards elect trustees on the municipal ballot but govern independently, wit
 
 > **Verified** — access: confirmed
 > licence: *Site terms – no open-data licence stated*
-> _stage 0–1 2026-09-09: reachable, server-rendered HTML · broken — https://ecolecatholique.ca/ → no DNS · 4 archived_
+> _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · broken — https://ecolecatholique.ca/ → no DNS · 4 archived_
 - <https://ocdsb.ca/>
 - <https://ocsb.ca/>
 - <https://cepeo.on.ca/>

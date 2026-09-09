@@ -1,6 +1,6 @@
 # Warehouse index
 
-335 datasets · 3,348,820 rows total · regenerate with `python3 tools/profile.py --all`
+336 datasets · 3,348,830 rows total · regenerate with `python3 tools/profile.py --all`
 
 ## arcgis-hub (320)
 
@@ -336,10 +336,11 @@
 | Public sector salary disclosure 2013 | 97,916 |  | sunshine-list | [ontario_public_sector_salary_disclosure_2013](ontario_public_sector_salary_disclosure_2013.md) |
 | Public sector salary disclosure 2015 | 115,920 |  | sunshine-list | [ontario_public_sector_salary_disclosure_2015](ontario_public_sector_salary_disclosure_2015.md) |
 
-## json-api (5)
+## json-api (6)
 
 | dataset | rows | spatial | source | tearsheet |
 | --- | ---: | :---: | --- | --- |
+| Development Applications — API sample | 10 |  | devapps | [devapps__sample](devapps__sample.md) |
 | howtheyvoted — attendance | 6,132 |  | howtheyvoted | [htv_attendance](htv_attendance.md) |
 | howtheyvoted — councillors | 25 |  | howtheyvoted | [htv_councillors](htv_councillors.md) |
 | howtheyvoted — meetings | 612 |  | howtheyvoted | [htv_meetings](htv_meetings.md) |

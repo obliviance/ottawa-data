@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T21:32:19+00:00",
+  "updated_at": "2026-09-09T21:50:09+00:00",
   "datasets": {
     "open_2025_contracts_awarded_greater_than_25_000_jul_dec": {
       "source_id": null,
@@ -3685,6 +3685,17 @@
       "fetched_at": "2026-09-09T21:29:45+00:00",
       "parquet": "spine_meetings.parquet",
       "notes": "eScribe calendar; in_howtheyvoted flags meetings with a parsed agenda"
+    },
+    "devapps__sample": {
+      "source_id": "devapps",
+      "shape": "json-api",
+      "title": "Development Applications — API sample",
+      "origin_url": "https://devapps-restapi.ottawa.ca/devapps/feature/all",
+      "rows": 10,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:50:09+00:00",
+      "parquet": "devapps__sample.parquet",
+      "notes": "first 10 of 813 dev-app features; authKey is client-embedded"
     }
   }
 }

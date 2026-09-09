@@ -33,12 +33,15 @@ tearsheet land in `releases/`.
 - [x] folder structure, `.gitignore`, `requirements.txt`, `CLAUDE.md`
 - [x] `ingest/rolling_csv.py` — plain-CSV-at-a-URL (311 current + last year)
 - [x] `ingest/howtheyvoted.py` — the council voting record → 4 flat tables
-- [ ] `ingest/pdf_tables.py` — pdfplumber → tables + text index (escribe, budgets, AG)
-- [ ] `ingest/html_scrape.py` scaffold + per-page parsers (office-expenses, lobbyist, campaign-finance, procurement)
-- [ ] `ingest/devapps.py` / `ingest/engage.py` — need browser-assisted key/endpoint extraction
+- [x] `ingest/arcgis_hub.py` FeatureServer + zip fallback — yields the PH inspection ZIPs;
+      the pure-API path is mostly empty police shells (Hub "API-only" entries are apps)
+- [x] `tools/sample.py` — landing-page + small-data capture for bespoke sources → `samples/`
+- [ ] `ingest/pdf_tables.py` — generic pdfplumber tables + text index (escribe, budgets, AG)
+- [ ] per-source HTML parsers — office-expenses, lobbyist registry, campaign finance,
+      candidate list, drinking water, school boards (each ~1–4h; see `samples/<id>/README.md`)
+- [ ] eScribe document harvest (enumerate meeting → DocumentId, then parse) — its own project
 - [ ] one `apps/` layout+palette template; one `releases/` `datapackage.json` template
 - [ ] a task runner (`justfile` / `Makefile`) tying ingest → profile → build
-- [ ] ArcGIS: fetch datasets that only expose a GeoServices API (no CSV/GeoJSON download) via FeatureServer query — ~400 "skipped" on open.ottawa.ca, many are real
 
 ### Spine
 - [ ] `spine/geography.py` — wards + ONS + DA + address lookup
@@ -88,6 +91,22 @@ _(move rows here from `questions/backlog.csv` when `status = picked`; link the s
   - Not done: PDF corpus (escribe / budgets / AG), HTML-scrape sources (office-expenses,
     lobbyist registry, campaign finance, procurement), devapps / engage APIs, the spine.
 
-  **Next:** build `spine/geography.py` + `spine/timeline.py`; then start Phase B on the
-  backlog questions that only need what's landed (q0004 ASE equity, q0005 311-by-ward,
-  q0018 vote cohesion).
+- **2026-09-09 (unblock + sample)** —
+  - `arcgis_hub.py` FeatureServer/zip fallback → **public-health inspection data**
+    (food safety: 12,932 businesses / 96,157 inspections / 89,419 violations; +personal
+    services, child care, drinking water). ~335 → ~355 datasets.
+  - **spine built:** `spine_wards` (24 current), `spine_neighbourhoods` (116 ONS),
+    `spine_motions` (7,621), `spine_meetings` (2,071 from the eScribe calendar, 2019→).
+  - **XHR-mining pass** over 41 government non-portal sources: **only `devapps` and
+    `engage-ottawa` have a real backing data API** (both already known). Everything else
+    is server-rendered ottawa.ca with no hidden endpoint → confirmed each needs a bespoke
+    parser. No shortcut.
+  - **`samples/`** — 38 sources: landing-page HTML + a small data sample where reachable
+    (`devapps` API → 813 dev-apps, 10 sampled; 2 Auditor General reports as PDF+text;
+    `traffic-ottawa/ase_camera`). Each has a `README.md` stating what a full parser needs.
+  - Can't sample: `mpac`, `city-archives`, `community-data-program`, `legacy-agendas`,
+    `mfippa-disclosure` (all request-only).
+
+  **Next:** Phase B on backlog questions that only need what's landed — q0004 (ASE siting
+  equity), q0005 (311 by ward), q0016 (collision hot-spots), q0018 (vote cohesion). Then
+  the per-source HTML parsers, prioritised by `questions/backlog.csv` value.
