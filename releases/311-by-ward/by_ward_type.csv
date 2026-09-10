@@ -1,0 +1,266 @@
+ward,type,requests
+1  Orléans East-Cumberland,Garbage and Recycling,9416
+1  Orléans East-Cumberland,Roads and Transportation,3870
+1  Orléans East-Cumberland,Bylaw Services,3328
+1  Orléans East-Cumberland,Parking Control Enforcement,2205
+1  Orléans East-Cumberland,Water and the Environment,2073
+1  Orléans East-Cumberland,Recreation and Culture,642
+1  Orléans East-Cumberland,Citizen Services,300
+1  Orléans East-Cumberland,Licenses and Permits,82
+1  Orléans East-Cumberland,City Facilities,67
+1  Orléans East-Cumberland,Social Community Service,55
+1  Orléans East-Cumberland,Health and Safety,39
+10  Gloucester-Southgate,Garbage and Recycling,6901
+10  Gloucester-Southgate,Bylaw Services,4548
+10  Gloucester-Southgate,Roads and Transportation,4531
+10  Gloucester-Southgate,Parking Control Enforcement,3204
+10  Gloucester-Southgate,Water and the Environment,1879
+10  Gloucester-Southgate,Recreation and Culture,873
+10  Gloucester-Southgate,Citizen Services,107
+10  Gloucester-Southgate,Licenses and Permits,76
+10  Gloucester-Southgate,Social Community Service,76
+10  Gloucester-Southgate,City Facilities,69
+10  Gloucester-Southgate,Health and Safety,65
+11  Beacon Hill-Cyrville,Garbage and Recycling,5036
+11  Beacon Hill-Cyrville,Roads and Transportation,3006
+11  Beacon Hill-Cyrville,Bylaw Services,2896
+11  Beacon Hill-Cyrville,Parking Control Enforcement,2572
+11  Beacon Hill-Cyrville,Water and the Environment,1337
+11  Beacon Hill-Cyrville,Recreation and Culture,455
+11  Beacon Hill-Cyrville,Citizen Services,115
+11  Beacon Hill-Cyrville,Social Community Service,71
+11  Beacon Hill-Cyrville,City Facilities,63
+11  Beacon Hill-Cyrville,Licenses and Permits,48
+11  Beacon Hill-Cyrville,Health and Safety,44
+12  Rideau-Vanier,Bylaw Services,11000
+12  Rideau-Vanier,Garbage and Recycling,7893
+12  Rideau-Vanier,Parking Control Enforcement,6028
+12  Rideau-Vanier,Roads and Transportation,5904
+12  Rideau-Vanier,Water and the Environment,1869
+12  Rideau-Vanier,Recreation and Culture,636
+12  Rideau-Vanier,Social Community Service,560
+12  Rideau-Vanier,City Facilities,323
+12  Rideau-Vanier,Health and Safety,292
+12  Rideau-Vanier,Citizen Services,154
+12  Rideau-Vanier,Licenses and Permits,105
+13  Rideau-Rockcliffe,Garbage and Recycling,6631
+13  Rideau-Rockcliffe,Bylaw Services,4970
+13  Rideau-Rockcliffe,Parking Control Enforcement,4918
+13  Rideau-Rockcliffe,Roads and Transportation,3430
+13  Rideau-Rockcliffe,Water and the Environment,1960
+13  Rideau-Rockcliffe,Recreation and Culture,429
+13  Rideau-Rockcliffe,Citizen Services,147
+13  Rideau-Rockcliffe,Health and Safety,112
+13  Rideau-Rockcliffe,Social Community Service,77
+13  Rideau-Rockcliffe,Licenses and Permits,71
+13  Rideau-Rockcliffe,City Facilities,55
+14  Somerset,Bylaw Services,8330
+14  Somerset,Parking Control Enforcement,7797
+14  Somerset,Garbage and Recycling,7341
+14  Somerset,Roads and Transportation,6057
+14  Somerset,Water and the Environment,1743
+14  Somerset,Social Community Service,605
+14  Somerset,Health and Safety,375
+14  Somerset,Recreation and Culture,358
+14  Somerset,Citizen Services,337
+14  Somerset,City Facilities,119
+14  Somerset,Licenses and Permits,116
+15  Kitchissippi,Garbage and Recycling,8501
+15  Kitchissippi,Parking Control Enforcement,6115
+15  Kitchissippi,Roads and Transportation,5589
+15  Kitchissippi,Bylaw Services,4905
+15  Kitchissippi,Water and the Environment,2453
+15  Kitchissippi,Recreation and Culture,506
+15  Kitchissippi,Social Community Service,485
+15  Kitchissippi,Citizen Services,301
+15  Kitchissippi,Health and Safety,257
+15  Kitchissippi,Licenses and Permits,98
+15  Kitchissippi,City Facilities,80
+16  River,Garbage and Recycling,7293
+16  River,Roads and Transportation,5053
+16  River,Bylaw Services,4888
+16  River,Parking Control Enforcement,4376
+16  River,Water and the Environment,2557
+16  River,Recreation and Culture,665
+16  River,Social Community Service,198
+16  River,Citizen Services,196
+16  River,City Facilities,98
+16  River,Licenses and Permits,87
+16  River,Health and Safety,84
+17  Capital,Garbage and Recycling,7207
+17  Capital,Parking Control Enforcement,5921
+17  Capital,Roads and Transportation,5229
+17  Capital,Bylaw Services,4678
+17  Capital,Water and the Environment,2600
+17  Capital,Recreation and Culture,564
+17  Capital,Social Community Service,311
+17  Capital,Citizen Services,217
+17  Capital,Health and Safety,162
+17  Capital,Licenses and Permits,84
+17  Capital,City Facilities,63
+18  Alta Vista,Garbage and Recycling,6743
+18  Alta Vista,Roads and Transportation,4638
+18  Alta Vista,Bylaw Services,4269
+18  Alta Vista,Parking Control Enforcement,3431
+18  Alta Vista,Water and the Environment,3079
+18  Alta Vista,Recreation and Culture,624
+18  Alta Vista,Health and Safety,211
+18  Alta Vista,Citizen Services,192
+18  Alta Vista,Social Community Service,144
+18  Alta Vista,City Facilities,128
+18  Alta Vista,Licenses and Permits,90
+19  Orléans South-Navan,Garbage and Recycling,11061
+19  Orléans South-Navan,Roads and Transportation,4175
+19  Orléans South-Navan,Parking Control Enforcement,4133
+19  Orléans South-Navan,Bylaw Services,3807
+19  Orléans South-Navan,Water and the Environment,1933
+19  Orléans South-Navan,Recreation and Culture,567
+19  Orléans South-Navan,Citizen Services,355
+19  Orléans South-Navan,Licenses and Permits,66
+19  Orléans South-Navan,City Facilities,62
+19  Orléans South-Navan,Social Community Service,47
+19  Orléans South-Navan,Health and Safety,34
+2  Orléans West-Innes,Garbage and Recycling,8245
+2  Orléans West-Innes,Roads and Transportation,4531
+2  Orléans West-Innes,Bylaw Services,3116
+2  Orléans West-Innes,Parking Control Enforcement,2316
+2  Orléans West-Innes,Water and the Environment,2159
+2  Orléans West-Innes,Recreation and Culture,646
+2  Orléans West-Innes,Citizen Services,225
+2  Orléans West-Innes,City Facilities,60
+2  Orléans West-Innes,Licenses and Permits,60
+2  Orléans West-Innes,Health and Safety,53
+2  Orléans West-Innes,Social Community Service,37
+20  Osgoode,Garbage and Recycling,5622
+20  Osgoode,Roads and Transportation,4649
+20  Osgoode,Bylaw Services,2169
+20  Osgoode,Water and the Environment,800
+20  Osgoode,Recreation and Culture,344
+20  Osgoode,Parking Control Enforcement,257
+20  Osgoode,Citizen Services,138
+20  Osgoode,City Facilities,54
+20  Osgoode,Licenses and Permits,54
+20  Osgoode,Health and Safety,29
+20  Osgoode,Social Community Service,20
+21  Rideau-Jock,Garbage and Recycling,7124
+21  Rideau-Jock,Roads and Transportation,4493
+21  Rideau-Jock,Bylaw Services,2620
+21  Rideau-Jock,Parking Control Enforcement,1096
+21  Rideau-Jock,Water and the Environment,1024
+21  Rideau-Jock,Recreation and Culture,406
+21  Rideau-Jock,Citizen Services,220
+21  Rideau-Jock,Licenses and Permits,58
+21  Rideau-Jock,Health and Safety,46
+21  Rideau-Jock,City Facilities,29
+21  Rideau-Jock,Social Community Service,22
+22  Riverside South-Findlay Creek,Garbage and Recycling,8826
+22  Riverside South-Findlay Creek,Parking Control Enforcement,3275
+22  Riverside South-Findlay Creek,Bylaw Services,3265
+22  Riverside South-Findlay Creek,Roads and Transportation,2719
+22  Riverside South-Findlay Creek,Water and the Environment,1747
+22  Riverside South-Findlay Creek,Recreation and Culture,625
+22  Riverside South-Findlay Creek,Citizen Services,539
+22  Riverside South-Findlay Creek,Licenses and Permits,43
+22  Riverside South-Findlay Creek,Social Community Service,30
+22  Riverside South-Findlay Creek,City Facilities,24
+22  Riverside South-Findlay Creek,Health and Safety,21
+23  Kanata South,Garbage and Recycling,8541
+23  Kanata South,Roads and Transportation,4420
+23  Kanata South,Bylaw Services,3202
+23  Kanata South,Parking Control Enforcement,3017
+23  Kanata South,Water and the Environment,2168
+23  Kanata South,Recreation and Culture,977
+23  Kanata South,Citizen Services,179
+23  Kanata South,Social Community Service,117
+23  Kanata South,Licenses and Permits,59
+23  Kanata South,Health and Safety,52
+23  Kanata South,City Facilities,51
+24  Barrhaven East,Garbage and Recycling,8566
+24  Barrhaven East,Roads and Transportation,3573
+24  Barrhaven East,Parking Control Enforcement,3478
+24  Barrhaven East,Bylaw Services,3365
+24  Barrhaven East,Water and the Environment,1908
+24  Barrhaven East,Recreation and Culture,576
+24  Barrhaven East,City Facilities,132
+24  Barrhaven East,Citizen Services,118
+24  Barrhaven East,Health and Safety,52
+24  Barrhaven East,Social Community Service,42
+24  Barrhaven East,Licenses and Permits,34
+3  Barrhaven West,Garbage and Recycling,13164
+3  Barrhaven West,Parking Control Enforcement,6470
+3  Barrhaven West,Bylaw Services,5372
+3  Barrhaven West,Roads and Transportation,3916
+3  Barrhaven West,Water and the Environment,2137
+3  Barrhaven West,Recreation and Culture,688
+3  Barrhaven West,Citizen Services,307
+3  Barrhaven West,Licenses and Permits,87
+3  Barrhaven West,Health and Safety,50
+3  Barrhaven West,Social Community Service,47
+3  Barrhaven West,City Facilities,32
+4  Kanata North,Garbage and Recycling,7918
+4  Kanata North,Roads and Transportation,3645
+4  Kanata North,Bylaw Services,2697
+4  Kanata North,Water and the Environment,2559
+4  Kanata North,Parking Control Enforcement,2407
+4  Kanata North,Recreation and Culture,908
+4  Kanata North,Citizen Services,412
+4  Kanata North,Social Community Service,73
+4  Kanata North,Health and Safety,45
+4  Kanata North,City Facilities,36
+4  Kanata North,Licenses and Permits,31
+5  West Carleton-March,Garbage and Recycling,4297
+5  West Carleton-March,Roads and Transportation,4025
+5  West Carleton-March,Bylaw Services,1516
+5  West Carleton-March,Water and the Environment,648
+5  West Carleton-March,Parking Control Enforcement,236
+5  West Carleton-March,Recreation and Culture,145
+5  West Carleton-March,Citizen Services,94
+5  West Carleton-March,Licenses and Permits,83
+5  West Carleton-March,City Facilities,42
+5  West Carleton-March,Health and Safety,22
+5  West Carleton-March,Social Community Service,12
+6  Stittsville,Garbage and Recycling,10482
+6  Stittsville,Bylaw Services,4012
+6  Stittsville,Parking Control Enforcement,3982
+6  Stittsville,Roads and Transportation,3978
+6  Stittsville,Water and the Environment,2128
+6  Stittsville,Recreation and Culture,886
+6  Stittsville,Citizen Services,315
+6  Stittsville,Social Community Service,119
+6  Stittsville,Licenses and Permits,71
+6  Stittsville,City Facilities,48
+6  Stittsville,Health and Safety,43
+7  Bay,Garbage and Recycling,7601
+7  Bay,Roads and Transportation,5254
+7  Bay,Water and the Environment,4650
+7  Bay,Bylaw Services,4255
+7  Bay,Parking Control Enforcement,4099
+7  Bay,Recreation and Culture,532
+7  Bay,Citizen Services,201
+7  Bay,Social Community Service,171
+7  Bay,City Facilities,157
+7  Bay,Licenses and Permits,84
+7  Bay,Health and Safety,80
+8  College,Garbage and Recycling,10688
+8  College,Water and the Environment,6128
+8  College,Roads and Transportation,5585
+8  College,Bylaw Services,5380
+8  College,Parking Control Enforcement,5268
+8  College,Recreation and Culture,531
+8  College,Social Community Service,311
+8  College,Citizen Services,241
+8  College,City Facilities,172
+8  College,Health and Safety,142
+8  College,Licenses and Permits,120
+8  College,\N,1
+9  Knoxdale-Merivale,Garbage and Recycling,6852
+9  Knoxdale-Merivale,Roads and Transportation,4167
+9  Knoxdale-Merivale,Bylaw Services,3669
+9  Knoxdale-Merivale,Parking Control Enforcement,3064
+9  Knoxdale-Merivale,Water and the Environment,2759
+9  Knoxdale-Merivale,Recreation and Culture,434
+9  Knoxdale-Merivale,Citizen Services,218
+9  Knoxdale-Merivale,Social Community Service,172
+9  Knoxdale-Merivale,Licenses and Permits,81
+9  Knoxdale-Merivale,City Facilities,78
+9  Knoxdale-Merivale,Health and Safety,58

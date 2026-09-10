@@ -1,0 +1,226 @@
+<title>Ottawa's Recorded Votes</title>
+<meta name="description" content="Ontario doesn't make cities publish recorded votes. On the 334 Ottawa council motions since 2022 that got one, here's how often each member broke from the majority.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,560;1,6..72,400&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --paper:#f1f2f0; --ink:#1b1d1c; --muted:#5f6360; --rule:#d7d9d4;
+    --accent:#6b3f3f; --bar:#6b3f3f; --bar-soft:#c9b4b4;
+    --measure:41rem;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#161816; --ink:#e8e9e5; --muted:#9a9e98; --rule:#2c2f2b;
+      --accent:#cf9393; --bar:#cf9393; --bar-soft:#4a3b3b;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#161816; --ink:#e8e9e5; --muted:#9a9e98; --rule:#2c2f2b;
+    --accent:#cf9393; --bar:#cf9393; --bar-soft:#4a3b3b;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font:400 1.0625rem/1.65 "Public Sans", system-ui, -apple-system, sans-serif;
+    font-synthesis:none;
+  }
+  .wrap{max-width:47rem; margin:0 auto; padding:clamp(2rem,6vw,4.5rem) 1.4rem 5rem}
+
+  .masthead{
+    display:flex; justify-content:space-between; align-items:baseline; gap:1rem;
+    font:500 .72rem/1.4 "IBM Plex Mono", monospace; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--muted);
+    border-bottom:1.5px solid var(--ink); padding-bottom:.6rem;
+  }
+  .masthead .src{text-align:right}
+
+  h1{
+    font:400 clamp(2.1rem,6.4vw,3.4rem)/1.08 "Newsreader", Georgia, serif;
+    letter-spacing:-.012em; text-wrap:balance; margin:2.4rem 0 0; max-width:14ch;
+  }
+  .standfirst{
+    font:400 clamp(1.15rem,2.6vw,1.4rem)/1.5 "Newsreader", Georgia, serif;
+    color:var(--ink); max-width:var(--measure); margin:1.1rem 0 0;
+  }
+  .standfirst em{font-style:italic; color:var(--accent)}
+
+  .lede{max-width:var(--measure); margin:2rem 0 0}
+  .lede p{margin:0 0 1rem}
+  .lede a{color:var(--accent); text-underline-offset:3px}
+
+  .figure{
+    margin:3rem 0 0; padding-top:1.4rem; border-top:1px solid var(--rule);
+  }
+  .figure .cap{
+    font:500 .72rem/1.5 "IBM Plex Mono", monospace; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--muted); margin:0 0 1.2rem;
+  }
+  .chart{width:100%; overflow-x:auto}
+  .row{
+    display:grid; grid-template-columns:8.5rem 1fr 3.1rem; align-items:center;
+    gap:.7rem; padding:.19rem 0;
+    font:500 .8rem/1 "IBM Plex Mono", monospace;
+  }
+  .row .name{color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+  .row .track{position:relative; height:.72rem}
+  .row .fill{
+    position:absolute; inset:0 auto 0 0; background:var(--bar); border-radius:1px;
+  }
+  .row .val{
+    text-align:right; color:var(--muted); font-variant-numeric:tabular-nums;
+  }
+  .row.lead .name, .row.lead .val{color:var(--accent)}
+  .row.lead .fill{background:var(--accent)}
+  .axis{
+    display:grid; grid-template-columns:8.5rem 1fr 3.1rem; gap:.7rem;
+    margin-top:.5rem; padding-top:.4rem; border-top:1px solid var(--rule);
+    font:500 .68rem/1 "IBM Plex Mono", monospace; color:var(--muted);
+    letter-spacing:.04em;
+  }
+  .axis .ticks{display:flex; justify-content:space-between}
+
+  .poles{
+    margin:3rem 0 0; padding:1.5rem 1.4rem; border:1px solid var(--rule);
+    background:color-mix(in srgb, var(--ink) 3%, transparent);
+  }
+  .poles h2{
+    font:400 1.25rem/1.2 "Newsreader", Georgia, serif; margin:0 0 .6rem;
+  }
+  .poles .pair{
+    display:flex; align-items:baseline; gap:.6rem; flex-wrap:wrap;
+    font:500 .82rem/1.5 "IBM Plex Mono", monospace; margin:.35rem 0;
+  }
+  .poles .pct{color:var(--accent); font-size:1rem}
+  .poles p{margin:.8rem 0 0; font-size:.95rem; color:var(--muted)}
+
+  .method{
+    margin:3rem 0 0; padding-top:1.4rem; border-top:1px solid var(--rule);
+    font-size:.9rem; color:var(--muted); max-width:var(--measure);
+  }
+  .method h2{
+    font:500 .72rem/1.5 "IBM Plex Mono", monospace; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--muted); margin:0 0 .7rem;
+  }
+  .method p{margin:0 0 .8rem}
+  .method a{color:var(--accent)}
+  .method code{font:500 .85em "IBM Plex Mono", monospace; color:var(--ink)}
+
+  @media (prefers-reduced-motion:no-preference){
+    .row .fill{animation:grow .6s cubic-bezier(.2,.7,.3,1) both}
+    @keyframes grow{from{transform:scaleX(0);transform-origin:left}to{transform:scaleX(1)}}
+  }
+  @media (max-width:34rem){
+    .row,.axis{grid-template-columns:6.6rem 1fr 2.6rem; gap:.5rem}
+  }
+</style>
+
+<div class="wrap">
+  <div class="masthead">
+    <span>Ottawa City Council &nbsp;·&nbsp; term of 2022&ndash;2026</span>
+    <span class="src">obliviance/ottawa-data<br>releases/council-vote-cohesion</span>
+  </div>
+
+  <h1>Ottawa's recorded votes</h1>
+  <p class="standfirst">
+    Ontario doesn't require municipalities to publish how councillors vote. Of the
+    <strong>7,621</strong> motions Ottawa council has handled since the 2022 election,
+    only <em>334</em> got a recorded division &mdash; the rest carried on consent, with
+    no record of who wanted what.
+  </p>
+
+  <div class="lede">
+    <p>
+      On those 334, this is how often each member landed on the losing side &mdash; their
+      <strong>dissent rate</strong>. It's a rough map of where each councillor sits
+      relative to the majority that forms around the mayor.
+    </p>
+    <p>
+      The compiled record comes from <a href="https://howtheyvoted.ca/">howtheyvoted.ca</a>,
+      which reads it out of the meeting minutes by hand, because the city publishes it
+      nowhere as data.
+    </p>
+  </div>
+
+  <div class="figure">
+    <p class="cap">Dissent rate &mdash; share of recorded votes against the majority</p>
+    <div class="chart" id="chart"></div>
+    <div class="axis">
+      <span></span>
+      <span class="ticks"><span>0</span><span>20%</span><span>40%</span><span>60%</span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="poles">
+    <h2>The two ends of the room</h2>
+    <div class="pair">
+      <span>G.&nbsp;Darouze &nbsp;&harr;&nbsp; S.&nbsp;Menard</span>
+      <span class="pct">23%</span>
+      <span>agreement over 124 shared votes</span>
+    </div>
+    <div class="pair">
+      <span>D.&nbsp;Brown &nbsp;&harr;&nbsp; I.&nbsp;Skalski</span>
+      <span class="pct">95%</span>
+      <span>agreement over 77 shared votes</span>
+    </div>
+    <p>
+      Darouze (rural Osgoode) and Menard (downtown Capital) vote the same way barely once
+      in four recorded divisions. Even so, across all 324 councillor pairs, 30% agree more
+      than four times in five &mdash; when Ottawa council splits, it isn't sharply factional.
+    </p>
+  </div>
+
+  <div class="method">
+    <h2>How this was made</h2>
+    <p>
+      Each recorded motion has a <strong>for</strong> count and an <strong>against</strong>
+      count; the larger side is &ldquo;the majority&rdquo; and a councillor
+      &ldquo;dissents&rdquo; when they're on the other one. Members with fewer than 20
+      recorded votes are dropped; pairs with fewer than 15 shared votes are left out of the
+      agreement figures. Ties count as carrying.
+    </p>
+    <p>
+      Only about <strong>4%</strong> of motions reach a recorded vote, so this describes the
+      contested slice of council business, not all of it. Consent-agenda items &mdash; most
+      of the work &mdash; leave no trace here.
+    </p>
+    <p>
+      Data and code:
+      <a href="https://github.com/obliviance/ottawa-data/tree/main/releases/council-vote-cohesion"><code>releases/council-vote-cohesion</code></a>
+      &nbsp;&middot;&nbsp; source: <a href="https://howtheyvoted.ca/data/ottawa/">howtheyvoted.ca</a>
+      (site terms, not open data) &nbsp;&middot;&nbsp; span 2022-11-09 to 2026-09-02.
+    </p>
+  </div>
+</div>
+
+<script>
+  const DATA = [
+    {who:"S. Menard",n:247,d:131,rate:0.53},{who:"J. Bradley",n:223,d:101,rate:0.453},
+    {who:"S. Devine",n:232,d:103,rate:0.444},{who:"A. Troster",n:271,d:111,rate:0.41},
+    {who:"T. Kavanagh",n:263,d:104,rate:0.395},{who:"R. King",n:252,d:99,rate:0.393},
+    {who:"J. Leiper",n:288,d:112,rate:0.389},{who:"L. Johnson",n:240,d:86,rate:0.358},
+    {who:"R. Brockington",n:272,d:85,rate:0.312},{who:"S. Plante",n:216,d:66,rate:0.306},
+    {who:"G. Darouze",n:139,d:34,rate:0.245},{who:"M. Luloff",n:264,d:58,rate:0.22},
+    {who:"D. Hill",n:218,d:46,rate:0.211},{who:"W. Lo",n:274,d:56,rate:0.204},
+    {who:"C. Kelly",n:246,d:48,rate:0.195},{who:"D. Brown",n:248,d:48,rate:0.194},
+    {who:"M. Carr",n:224,d:43,rate:0.192},{who:"A. Hubley",n:199,d:30,rate:0.151},
+    {who:"I. Skalski",n:87,d:13,rate:0.149},{who:"S. Desroches",n:215,d:29,rate:0.135},
+    {who:"T. Tierney",n:284,d:38,rate:0.134},{who:"G. Gower",n:296,d:38,rate:0.128},
+    {who:"C. Kitts",n:281,d:35,rate:0.125},{who:"C. Curry",n:269,d:33,rate:0.123},
+    {who:"L. Dudas",n:270,d:33,rate:0.122},{who:"M. Sutcliffe",n:229,d:23,rate:0.1}
+  ];
+  const MAX = 0.60;  // scale max; ticks at 0/20/40/60 line up because 20/60 = 1/3
+  const chart = document.getElementById("chart");
+  DATA.forEach((r, i) => {
+    const row = document.createElement("div");
+    row.className = "row" + (i === 0 ? " lead" : "");
+    const pct = Math.round(r.rate * 100);
+    row.innerHTML =
+      `<span class="name" title="${r.who} — dissented on ${r.d} of ${r.n} recorded votes">${r.who}</span>` +
+      `<span class="track"><span class="fill" style="width:${(r.rate / MAX * 100).toFixed(1)}%;animation-delay:${i * 22}ms"></span></span>` +
+      `<span class="val">${pct}%</span>`;
+    chart.appendChild(row);
+  });
+</script>

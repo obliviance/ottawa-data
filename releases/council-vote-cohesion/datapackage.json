@@ -1,0 +1,65 @@
+{
+  "name": "council-vote-cohesion",
+  "title": "Ottawa City Council \u2014 recorded-vote cohesion (2022\u2192)",
+  "description": "Per-councillor dissent rates and pairwise agreement on 334 recorded divisions, 2022-11-09 to 2026-09-02. Derived from howtheyvoted.ca.",
+  "licenses": [
+    {
+      "name": "site-terms",
+      "title": "Source (howtheyvoted.ca) carries ordinary site terms, not an open licence"
+    }
+  ],
+  "sources": [
+    {
+      "title": "howtheyvoted.ca",
+      "path": "https://howtheyvoted.ca/data/ottawa/"
+    }
+  ],
+  "resources": [
+    {
+      "path": "councillor_stats.csv",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "who"
+          },
+          {
+            "name": "recorded_votes"
+          },
+          {
+            "name": "dissents"
+          },
+          {
+            "name": "first"
+          },
+          {
+            "name": "last"
+          },
+          {
+            "name": "dissent_rate"
+          }
+        ]
+      }
+    },
+    {
+      "path": "agreement_pairs.csv",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "councillor_a"
+          },
+          {
+            "name": "councillor_b"
+          },
+          {
+            "name": "shared_votes"
+          },
+          {
+            "name": "agreement_rate"
+          }
+        ]
+      }
+    }
+  ]
+}
