@@ -3,7 +3,7 @@ q0001,Do development applications with prior lobbying get approved faster or mor
 q0002,Vendor concentration in city procurement over time — which firms win the most work and how has that shifted?,procurement,entity+date,5,2,4,new,2026-09-09
 q0003,Councillor office-expense patterns vs voting alignment with the Mayor,office-expenses howtheyvoted,entity,4,3,4,new,2026-09-09
 q0004,Automated speed enforcement camera siting vs ward income vs prior collision history — is placement equitable?,open_ase_camera_locations collisions spine_geography,spatial,4,4,3,new,2026-09-09
-q0005,311 service-request volume and response time by ward — service-equity gradient,open311 spine_geography,ward+date,4,4,3,new,2026-09-09
+q0005,311 service-request volume and response time by ward — service-equity gradient,open311 spine_geography,ward+date,4,4,3,shipped,2026-09-09
 q0006,Wards with high 311 volume but low share of council motions / staff attention,open311 timeline spine_geography,ward,4,2,5,new,2026-09-09
 q0007,Consultation input on Engage Ottawa vs the decision Council actually made,engage-ottawa timeline,date,4,2,5,new,2026-09-09
 q0008,Auditor General recommendations — how many are actually implemented and how long does it take?,auditor-general timeline,date,4,2,4,new,2026-09-09
@@ -16,7 +16,7 @@ q0014,Campaign contributions network — shared donors across candidates; donors
 q0015,Paramedic offload delay at hospitals over time vs call volume,fire-paramedic,date,3,3,3,new,2026-09-09
 q0016,Collision hot-spots that have never had a traffic-calming measure or ASE camera,collisions open_ase_camera_locations spine_geography,spatial,4,3,4,new,2026-09-09
 q0017,School-board trustee decisions and budgets — the ballot's forgotten half; is anyone covering them?,school-boards,none,3,2,4,new,2026-09-09
-q0018,Recorded-vote cohesion — which councillors vote together; has the bloc structure changed over the term?,howtheyvoted,none,3,4,3,new,2026-09-09
+q0018,Recorded-vote cohesion — which councillors vote together; has the bloc structure changed over the term?,howtheyvoted,none,3,4,3,shipped,2026-09-09
 q0019,Lag between a staff report's recommendation and Council's decision — where does the process slow down?,escribe timeline,date,3,2,4,new,2026-09-09
 q0020,Negative space across the spatial catalogue — streets/blocks that appear in NO city dataset,spine_geography,spatial,3,3,5,new,2026-09-09
 q0021,Concentration in `Vendor` — which actors dominate? (join entity spine),open_2025_contracts_awarded_greater_than_25_000_jul_dec,,,,,new,2026-09-09

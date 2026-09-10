@@ -1,0 +1,27 @@
+{
+  "name": "311-by-ward",
+  "title": "Ottawa 311 service requests by ward",
+  "description": "574,252 requests, 2025-01-01 to 2026-09-10, aggregated by ward and request type.",
+  "licenses": [
+    {
+      "name": "OGL-Ottawa",
+      "title": "Open Government Licence \u2013 City of Ottawa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ottawa 311 open data (rolling CSVs)",
+      "path": "https://open.ottawa.ca/documents/ottawa::current-year-service-requests"
+    }
+  ],
+  "resources": [
+    {
+      "path": "by_ward.csv",
+      "format": "csv"
+    },
+    {
+      "path": "by_ward_type.csv",
+      "format": "csv"
+    }
+  ]
+}

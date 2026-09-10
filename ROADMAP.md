@@ -62,11 +62,12 @@ tearsheet land in `releases/`.
 
 ### Phase B — picked questions
 
-_(move rows here from `questions/backlog.csv` when `status = picked`; link the shipped artifact)_
-
 | id | question | artifact | status |
 | --- | --- | --- | --- |
-| — | — | — | — |
+| q0018 | recorded-vote cohesion / bloc structure | `apps/council-recorded-votes` + `releases/council-vote-cohesion` · [page](https://claude.ai/code/artifact/b3fad106-63b0-46c7-bbd7-8b72c69fd16c) | **shipped** |
+| q0005 | 311 requests by ward | `releases/311-by-ward` | **shipped** (dataset; viz TODO) |
+| q0004 | ASE camera siting equity | — | next (needs census-by-ward income) |
+| q0016 | collision hot-spots vs traffic calming | — | next |
 
 ## Cadence
 
@@ -107,6 +108,20 @@ _(move rows here from `questions/backlog.csv` when `status = picked`; link the s
   - Can't sample: `mpac`, `city-archives`, `community-data-program`, `legacy-agendas`,
     `mfippa-disclosure` (all request-only).
 
-  **Next:** Phase B on backlog questions that only need what's landed — q0004 (ASE siting
-  equity), q0005 (311 by ward), q0016 (collision hot-spots), q0018 (vote cohesion). Then
-  the per-source HTML parsers, prioritised by `questions/backlog.csv` value.
+- **2026-09-10 (first Phase B findings)** —
+  - **q0018 shipped:** `explorations/vote_cohesion.py` → `releases/council-vote-cohesion/`
+    (per-councillor dissent rates + pairwise agreement over 334 recorded divisions) +
+    `apps/council-recorded-votes/` (published page). Finding: only ~4% of motions get a
+    recorded vote; on those, S. Menard dissents 53% of the time, M. Sutcliffe 10%;
+    Darouze↔Menard agree 23%, but council-wide 30% of pairs agree >80% — not sharply
+    factional.
+  - **q0005 shipped (dataset):** `explorations/requests_311_by_ward.py` →
+    `releases/311-by-ward/`. 574k requests; urban wards close in 2–3 days, rural (West
+    Carleton-March, Osgoode) in 11–13. Viz still TODO.
+  - `apps/council-recorded-votes/index.html` is now the **template** for finding pages
+    (Newsreader / Public Sans / IBM Plex Mono, paper+ink+burgundy, 3-state theme).
+  - Note: warehouse is gitignored — re-ingest before re-running an exploration
+    (`howtheyvoted.py`, `rolling_csv.py --all`, `spine/*.py`, the relevant `arcgis_hub` filters).
+
+  **Next:** q0004 (ASE equity — fetch 2021 census-by-ward income via FeatureServer),
+  q0016 (collisions), a 311 map; then the per-source HTML parsers by backlog value.
