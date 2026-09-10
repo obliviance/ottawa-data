@@ -107,12 +107,19 @@ def register(dataset_id: str, frame, *, source_id: str | None = None, shape: str
 
     spatial = any(c.lower() in ("geometry", "the_geom", "wkt", "geom") for c in df.columns) or \
         {"latitude", "longitude"}.issubset({c.lower() for c in df.columns})
-    df.columns = [str(c) for c in df.columns]
+    # de-duplicate column names (some GeoJSON / CSV feeds repeat them)
+    seen: dict[str, int] = {}
+    cols = []
+    for c in (str(x) for x in df.columns):
+        seen[c] = seen.get(c, 0) + 1
+        cols.append(c if seen[c] == 1 else f"{c}_{seen[c]}")
+    df.columns = cols
     try:
         df.to_parquet(parquet, index=False)
-    except Exception:  # mixed-type object columns - stringify them and retry
-        obj = df.select_dtypes(include=["object"]).columns
-        df[obj] = df[obj].astype("string")
+    except Exception:  # mixed-type object columns - stringify every object column and retry
+        for col in list(df.columns):
+            if df[col].dtype == object:
+                df[col] = df[col].astype("string")
         df.to_parquet(parquet, index=False)
 
     cols = [{"name": str(c), "type": str(t)} for c, t in df.dtypes.items()]

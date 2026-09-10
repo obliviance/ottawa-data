@@ -12,3 +12,8 @@ warehouse/*.parquet
 # Scratch analysis
 explorations/*.ipynb
 !explorations/*.example.ipynb
+
+# samples/: keep the READMEs + small data samples (json/csv/txt); raw pages + PDFs
+# are large and re-fetchable via `python3 tools/sample.py <id>`
+samples/**/page.html
+samples/**/*.pdf

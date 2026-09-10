@@ -51,8 +51,14 @@ def col_summary(name: str, s) -> tuple[str, int, int, str]:
     """(type label, non-null %, distinct, one-line summary)."""
     import pandas as pd
     n = len(s)
+    if s.map(lambda x: isinstance(x, (list, dict, set))).any():
+        s = s.map(lambda x: json.dumps(x, default=str) if isinstance(x, (list, dict, set)) else x)
     nonnull = int(s.notna().sum())
-    distinct = int(s.nunique(dropna=True))
+    try:
+        distinct = int(s.nunique(dropna=True))
+    except TypeError:
+        s = s.astype(str)
+        distinct = int(s.nunique(dropna=True))
     pct = f"{100 * nonnull // n if n else 0}%"
 
     num = pd.to_numeric(s, errors="coerce")

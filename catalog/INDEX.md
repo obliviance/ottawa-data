@@ -1,8 +1,8 @@
 # Warehouse index
 
-299 datasets · 2,998,991 rows total · regenerate with `python3 tools/profile.py --all`
+336 datasets · 3,348,830 rows total · regenerate with `python3 tools/profile.py --all`
 
-## arcgis-hub (288)
+## arcgis-hub (320)
 
 | dataset | rows | spatial | source | tearsheet |
 | --- | ---: | :---: | --- | --- |
@@ -190,6 +190,38 @@
 | Play Area - Structures | 1,719 | ● | open-ottawa | [open_play_area_structures](open_play_area_structures.md) |
 | Population & Household Estimates by Ward – Mid 2021 | 23 | ● | open-ottawa | [open_population_household_estimates_by_ward_mid_2021](open_population_household_estimates_by_ward_mid_2021.md) |
 | Public Drinking Water Fountains | 112 |  | open-ottawa | [open_public_drinking_water_fountains](open_public_drinking_water_fountains.md) |
+| Public Health Inspection Data - Child Care — canned_comments | 1,024 |  | ottawa-public-health | [open_public_health_inspection_data_child_care__canned_comments](open_public_health_inspection_data_child_care__canned_comments.md) |
+| Public Health Inspection Data - Child Care — feed_info.csv | 1 |  | ottawa-public-health | [open_public_health_inspection_data_child_care__feed_info](open_public_health_inspection_data_child_care__feed_info.md) |
+| Public Health Inspection Data - Child Care — inspections.csv | 3,840 |  | ottawa-public-health | [open_public_health_inspection_data_child_care__inspections](open_public_health_inspection_data_child_care__inspections.md) |
+| Public Health Inspection Data - Child Care — legend.csv | 2 |  | ottawa-public-health | [open_public_health_inspection_data_child_care__legend](open_public_health_inspection_data_child_care__legend.md) |
+| Public Health Inspection Data - Child Care — violations.csv | 814 |  | ottawa-public-health | [open_public_health_inspection_data_child_care__violations](open_public_health_inspection_data_child_care__violations.md) |
+| Public Health Inspection Data - Drinking Water — canned_comm | 386 |  | ottawa-public-health | [open_public_health_inspection_data_drinking_water__canned_comments](open_public_health_inspection_data_drinking_water__canned_comments.md) |
+| Public Health Inspection Data - Drinking Water — feed_info.c | 1 |  | ottawa-public-health | [open_public_health_inspection_data_drinking_water__feed_info](open_public_health_inspection_data_drinking_water__feed_info.md) |
+| Public Health Inspection Data - Drinking Water — inspections | 1,061 |  | ottawa-public-health | [open_public_health_inspection_data_drinking_water__inspections](open_public_health_inspection_data_drinking_water__inspections.md) |
+| Public Health Inspection Data - Drinking Water — legend.csv | 2 |  | ottawa-public-health | [open_public_health_inspection_data_drinking_water__legend](open_public_health_inspection_data_drinking_water__legend.md) |
+| Public Health Inspection Data - Drinking Water — violations. | 530 |  | ottawa-public-health | [open_public_health_inspection_data_drinking_water__violations](open_public_health_inspection_data_drinking_water__violations.md) |
+| Public Health Inspection Data - Food Safety — businesses.csv | 12,932 | ● | ottawa-public-health | [open_public_health_inspection_data_food_safety__businesses](open_public_health_inspection_data_food_safety__businesses.md) |
+| Public Health Inspection Data - Food Safety — canned_comment | 79,556 |  | ottawa-public-health | [open_public_health_inspection_data_food_safety__canned_comments](open_public_health_inspection_data_food_safety__canned_comments.md) |
+| Public Health Inspection Data - Food Safety — feed_info.csv | 1 |  | ottawa-public-health | [open_public_health_inspection_data_food_safety__feed_info](open_public_health_inspection_data_food_safety__feed_info.md) |
+| Public Health Inspection Data - Food Safety — inspections.cs | 96,157 |  | ottawa-public-health | [open_public_health_inspection_data_food_safety__inspections](open_public_health_inspection_data_food_safety__inspections.md) |
+| Public Health Inspection Data - Food Safety — legend.csv | 3 |  | ottawa-public-health | [open_public_health_inspection_data_food_safety__legend](open_public_health_inspection_data_food_safety__legend.md) |
+| Public Health Inspection Data - Food Safety — violations.csv | 89,419 |  | ottawa-public-health | [open_public_health_inspection_data_food_safety__violations](open_public_health_inspection_data_food_safety__violations.md) |
+| Public Health Inspection Data - Personal Services — canned_c | 4,784 |  | ottawa-public-health | [open_public_health_inspection_data_personal_services__canned_comments](open_public_health_inspection_data_personal_services__canned_comments.md) |
+| Public Health Inspection Data - Personal Services — feed_inf | 1 |  | ottawa-public-health | [open_public_health_inspection_data_personal_services__feed_info](open_public_health_inspection_data_personal_services__feed_info.md) |
+| Public Health Inspection Data - Personal Services — inspecti | 7,685 |  | ottawa-public-health | [open_public_health_inspection_data_personal_services__inspections](open_public_health_inspection_data_personal_services__inspections.md) |
+| Public Health Inspection Data - Personal Services — legend.c | 2 |  | ottawa-public-health | [open_public_health_inspection_data_personal_services__legend](open_public_health_inspection_data_personal_services__legend.md) |
+| Public Health Inspection Data - Personal Services — violatio | 6,520 |  | ottawa-public-health | [open_public_health_inspection_data_personal_services__violations](open_public_health_inspection_data_personal_services__violations.md) |
+| Public Health Inspection Data - Recreational Camps — busines | 15 | ● | ottawa-public-health | [open_public_health_inspection_data_recreational_camps__businesses](open_public_health_inspection_data_recreational_camps__businesses.md) |
+| Public Health Inspection Data - Recreational Camps — canned_ | 1 |  | ottawa-public-health | [open_public_health_inspection_data_recreational_camps__canned_comments](open_public_health_inspection_data_recreational_camps__canned_comments.md) |
+| Public Health Inspection Data - Recreational Camps — feed_in | 1 |  | ottawa-public-health | [open_public_health_inspection_data_recreational_camps__feed_info](open_public_health_inspection_data_recreational_camps__feed_info.md) |
+| Public Health Inspection Data - Recreational Camps — inspect | 12 |  | ottawa-public-health | [open_public_health_inspection_data_recreational_camps__inspections](open_public_health_inspection_data_recreational_camps__inspections.md) |
+| Public Health Inspection Data - Recreational Camps — legend. | 2 |  | ottawa-public-health | [open_public_health_inspection_data_recreational_camps__legend](open_public_health_inspection_data_recreational_camps__legend.md) |
+| Public Health Inspection Data - Recreational Camps — violati | 2 |  | ottawa-public-health | [open_public_health_inspection_data_recreational_camps__violations](open_public_health_inspection_data_recreational_camps__violations.md) |
+| Public Health Inspection Data - Recreational Water — canned_ | 10,604 |  | ottawa-public-health | [open_public_health_inspection_data_recreational_water__canned_comments](open_public_health_inspection_data_recreational_water__canned_comments.md) |
+| Public Health Inspection Data - Recreational Water — feed_in | 1 |  | ottawa-public-health | [open_public_health_inspection_data_recreational_water__feed_info](open_public_health_inspection_data_recreational_water__feed_info.md) |
+| Public Health Inspection Data - Recreational Water — inspect | 14,766 |  | ottawa-public-health | [open_public_health_inspection_data_recreational_water__inspections](open_public_health_inspection_data_recreational_water__inspections.md) |
+| Public Health Inspection Data - Recreational Water — legend. | 2 |  | ottawa-public-health | [open_public_health_inspection_data_recreational_water__legend](open_public_health_inspection_data_recreational_water__legend.md) |
+| Public Health Inspection Data - Recreational Water — violati | 9,870 |  | ottawa-public-health | [open_public_health_inspection_data_recreational_water__violations](open_public_health_inspection_data_recreational_water__violations.md) |
 | Public Washrooms | 177 |  | open-ottawa | [open_public_washrooms](open_public_washrooms.md) |
 | Public Wi-Fi Locations | 53 | ● | open-ottawa | [open_public_wi_fi_locations](open_public_wi_fi_locations.md) |
 | Publicly Accessible Computers | 87 |  | open-ottawa | [open_publicly_accessible_computers](open_publicly_accessible_computers.md) |
@@ -257,7 +289,7 @@
 | Transportation Intersection Volumes 2018 | 553 |  | open-ottawa | [open_transportation_intersection_volumes_2018](open_transportation_intersection_volumes_2018.md) |
 | Transportation Intersection Volumes 2019 | 910 |  | open-ottawa | [open_transportation_intersection_volumes_2019](open_transportation_intersection_volumes_2019.md) |
 | Transportation Intersection Volumes 2021 | 180 |  | open-ottawa | [open_transportation_intersection_volumes_2021](open_transportation_intersection_volumes_2021.md) |
-| Transportation Intersection Volumes 2024 | 703 |  | open-ottawa | [open_transportation_intersection_volumes_2024](open_transportation_intersection_volumes_2024.md) |
+| Transportation Intersection Volumes 2024 | 703 |  |  | [open_transportation_intersection_volumes_2024](open_transportation_intersection_volumes_2024.md) |
 | Transportation Midblock Volume 2023 | 418 |  | open-ottawa | [open_transportation_midblock_volume_2023](open_transportation_midblock_volume_2023.md) |
 | Transportation Midblock Volume 2025 | 742 | ● | open-ottawa | [open_transportation_midblock_volume_2025](open_transportation_midblock_volume_2025.md) |
 | Transportation Midblock Volumes 2024 | 895 |  | open-ottawa | [open_transportation_midblock_volumes_2024](open_transportation_midblock_volumes_2024.md) |
@@ -304,10 +336,11 @@
 | Public sector salary disclosure 2013 | 97,916 |  | sunshine-list | [ontario_public_sector_salary_disclosure_2013](ontario_public_sector_salary_disclosure_2013.md) |
 | Public sector salary disclosure 2015 | 115,920 |  | sunshine-list | [ontario_public_sector_salary_disclosure_2015](ontario_public_sector_salary_disclosure_2015.md) |
 
-## json-api (5)
+## json-api (6)
 
 | dataset | rows | spatial | source | tearsheet |
 | --- | ---: | :---: | --- | --- |
+| Development Applications — API sample | 10 |  | devapps | [devapps__sample](devapps__sample.md) |
 | howtheyvoted — attendance | 6,132 |  | howtheyvoted | [htv_attendance](htv_attendance.md) |
 | howtheyvoted — councillors | 25 |  | howtheyvoted | [htv_councillors](htv_councillors.md) |
 | howtheyvoted — meetings | 612 |  | howtheyvoted | [htv_meetings](htv_meetings.md) |
@@ -320,3 +353,12 @@
 | --- | ---: | :---: | --- | --- |
 | 311 service requests — current year (rolling) | 266,424 |  | open311 | [311-current](311-current.md) |
 | 311 service requests — previous year | 372,026 |  | open311 | [311-lastyear](311-lastyear.md) |
+
+## spine (4)
+
+| dataset | rows | spatial | source | tearsheet |
+| --- | ---: | :---: | --- | --- |
+| spine — meetings (eScribe calendar) | 2,071 |  |  | [spine_meetings](spine_meetings.md) |
+| spine — council/committee motions (2022→) | 7,621 |  |  | [spine_motions](spine_motions.md) |
+| spine — ONS neighbourhoods | 116 | ● |  | [spine_neighbourhoods](spine_neighbourhoods.md) |
+| spine — Ottawa wards (24, current) | 24 |  |  | [spine_wards](spine_wards.md) |

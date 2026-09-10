@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T20:55:12+00:00",
+  "updated_at": "2026-09-09T21:50:09+00:00",
   "datasets": {
     "open_2025_contracts_awarded_greater_than_25_000_jul_dec": {
       "source_id": null,
@@ -299,13 +299,13 @@
       "notes": "geojson · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
     },
     "open_transportation_intersection_volumes_2024": {
-      "source_id": "open-ottawa",
+      "source_id": null,
       "shape": "arcgis-hub",
       "title": "Transportation Intersection Volumes 2024",
       "origin_url": "https://open.ottawa.ca/datasets/ottawa::transportation-intersection-volumes-2024",
       "rows": 703,
       "spatial": false,
-      "fetched_at": "2026-09-09T20:32:12+00:00",
+      "fetched_at": "2026-09-09T21:22:51+00:00",
       "parquet": "open_transportation_intersection_volumes_2024.parquet",
       "notes": "csv · licence: https://ottawa.ca/en/city-hall/open-transparent-and-accountable-government/open-"
     },
@@ -3289,6 +3289,413 @@
       "fetched_at": "2026-09-09T20:55:12+00:00",
       "parquet": "311-lastyear.parquet",
       "notes": "rolling file — re-ingest to refresh"
+    },
+    "spine_wards": {
+      "source_id": null,
+      "shape": "spine",
+      "title": "spine — Ottawa wards (24, current)",
+      "origin_url": "https://open.ottawa.ca/datasets/ottawa::2022-elections-voting-subdivision-map",
+      "rows": 24,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:26:38+00:00",
+      "parquet": "spine_wards.parquet",
+      "notes": "dissolved from the 2022 election voting-subdivision map; geometry as WKT"
+    },
+    "spine_neighbourhoods": {
+      "source_id": null,
+      "shape": "spine",
+      "title": "spine — ONS neighbourhoods",
+      "origin_url": "https://www.neighbourhoodstudy.ca/",
+      "rows": 116,
+      "spatial": true,
+      "fetched_at": "2026-09-09T21:26:38+00:00",
+      "parquet": "spine_neighbourhoods.parquet",
+      "notes": "Ottawa Neighbourhood Study boundaries (gen 3)"
+    },
+    "open_public_health_inspection_data_recreational_camps__businesses": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Recreational Camps — businesses.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-recreational-camps",
+      "rows": 15,
+      "spatial": true,
+      "fetched_at": "2026-09-09T21:27:34+00:00",
+      "parquet": "open_public_health_inspection_data_recreational_camps__businesses.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_recreational_camps__inspections": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Recreational Camps — inspections.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-recreational-camps",
+      "rows": 12,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:34+00:00",
+      "parquet": "open_public_health_inspection_data_recreational_camps__inspections.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_recreational_camps__violations": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Recreational Camps — violations.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-recreational-camps",
+      "rows": 2,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:35+00:00",
+      "parquet": "open_public_health_inspection_data_recreational_camps__violations.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_recreational_camps__feed_info": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Recreational Camps — feed_info.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-recreational-camps",
+      "rows": 1,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:35+00:00",
+      "parquet": "open_public_health_inspection_data_recreational_camps__feed_info.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_recreational_camps__legend": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Recreational Camps — legend.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-recreational-camps",
+      "rows": 2,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:35+00:00",
+      "parquet": "open_public_health_inspection_data_recreational_camps__legend.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_recreational_camps__canned_comments": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Recreational Camps — canned_comments.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-recreational-camps",
+      "rows": 1,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:35+00:00",
+      "parquet": "open_public_health_inspection_data_recreational_camps__canned_comments.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_recreational_water__inspections": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Recreational Water — inspections.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-recreational-water",
+      "rows": 14766,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:37+00:00",
+      "parquet": "open_public_health_inspection_data_recreational_water__inspections.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_recreational_water__violations": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Recreational Water — violations.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-recreational-water",
+      "rows": 9870,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:38+00:00",
+      "parquet": "open_public_health_inspection_data_recreational_water__violations.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_recreational_water__feed_info": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Recreational Water — feed_info.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-recreational-water",
+      "rows": 1,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:38+00:00",
+      "parquet": "open_public_health_inspection_data_recreational_water__feed_info.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_recreational_water__legend": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Recreational Water — legend.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-recreational-water",
+      "rows": 2,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:38+00:00",
+      "parquet": "open_public_health_inspection_data_recreational_water__legend.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_recreational_water__canned_comments": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Recreational Water — canned_comments.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-recreational-water",
+      "rows": 10604,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:38+00:00",
+      "parquet": "open_public_health_inspection_data_recreational_water__canned_comments.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_child_care__inspections": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Child Care — inspections.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-child-care",
+      "rows": 3840,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:40+00:00",
+      "parquet": "open_public_health_inspection_data_child_care__inspections.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_child_care__violations": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Child Care — violations.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-child-care",
+      "rows": 814,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:40+00:00",
+      "parquet": "open_public_health_inspection_data_child_care__violations.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_child_care__feed_info": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Child Care — feed_info.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-child-care",
+      "rows": 1,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:40+00:00",
+      "parquet": "open_public_health_inspection_data_child_care__feed_info.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_child_care__legend": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Child Care — legend.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-child-care",
+      "rows": 2,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:40+00:00",
+      "parquet": "open_public_health_inspection_data_child_care__legend.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_child_care__canned_comments": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Child Care — canned_comments.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-child-care",
+      "rows": 1024,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:40+00:00",
+      "parquet": "open_public_health_inspection_data_child_care__canned_comments.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_drinking_water__inspections": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Drinking Water — inspections.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-drinking-water",
+      "rows": 1061,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:42+00:00",
+      "parquet": "open_public_health_inspection_data_drinking_water__inspections.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_drinking_water__violations": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Drinking Water — violations.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-drinking-water",
+      "rows": 530,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:42+00:00",
+      "parquet": "open_public_health_inspection_data_drinking_water__violations.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_drinking_water__feed_info": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Drinking Water — feed_info.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-drinking-water",
+      "rows": 1,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:42+00:00",
+      "parquet": "open_public_health_inspection_data_drinking_water__feed_info.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_drinking_water__legend": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Drinking Water — legend.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-drinking-water",
+      "rows": 2,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:42+00:00",
+      "parquet": "open_public_health_inspection_data_drinking_water__legend.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_drinking_water__canned_comments": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Drinking Water — canned_comments.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-drinking-water",
+      "rows": 386,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:42+00:00",
+      "parquet": "open_public_health_inspection_data_drinking_water__canned_comments.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_personal_services__inspections": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Personal Services — inspections.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-personal-services",
+      "rows": 7685,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:44+00:00",
+      "parquet": "open_public_health_inspection_data_personal_services__inspections.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_personal_services__violations": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Personal Services — violations.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-personal-services",
+      "rows": 6520,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:44+00:00",
+      "parquet": "open_public_health_inspection_data_personal_services__violations.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_personal_services__feed_info": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Personal Services — feed_info.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-personal-services",
+      "rows": 1,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:44+00:00",
+      "parquet": "open_public_health_inspection_data_personal_services__feed_info.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_personal_services__legend": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Personal Services — legend.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-personal-services",
+      "rows": 2,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:44+00:00",
+      "parquet": "open_public_health_inspection_data_personal_services__legend.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_personal_services__canned_comments": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Personal Services — canned_comments.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-personal-services",
+      "rows": 4784,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:44+00:00",
+      "parquet": "open_public_health_inspection_data_personal_services__canned_comments.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_food_safety__businesses": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Food Safety — businesses.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-food-safety-1",
+      "rows": 12932,
+      "spatial": true,
+      "fetched_at": "2026-09-09T21:27:46+00:00",
+      "parquet": "open_public_health_inspection_data_food_safety__businesses.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_food_safety__inspections": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Food Safety — inspections.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-food-safety-1",
+      "rows": 96157,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:47+00:00",
+      "parquet": "open_public_health_inspection_data_food_safety__inspections.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_food_safety__violations": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Food Safety — violations.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-food-safety-1",
+      "rows": 89419,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:47+00:00",
+      "parquet": "open_public_health_inspection_data_food_safety__violations.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_food_safety__feed_info": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Food Safety — feed_info.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-food-safety-1",
+      "rows": 1,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:47+00:00",
+      "parquet": "open_public_health_inspection_data_food_safety__feed_info.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_food_safety__legend": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Food Safety — legend.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-food-safety-1",
+      "rows": 3,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:48+00:00",
+      "parquet": "open_public_health_inspection_data_food_safety__legend.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "open_public_health_inspection_data_food_safety__canned_comments": {
+      "source_id": "ottawa-public-health",
+      "shape": "arcgis-hub",
+      "title": "Public Health Inspection Data - Food Safety — canned_comments.csv",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::public-health-inspection-data-food-safety-1",
+      "rows": 79556,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:27:48+00:00",
+      "parquet": "open_public_health_inspection_data_food_safety__canned_comments.parquet",
+      "notes": "from zip · licence: https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-ve"
+    },
+    "spine_motions": {
+      "source_id": null,
+      "shape": "spine",
+      "title": "spine — council/committee motions (2022→)",
+      "origin_url": "https://howtheyvoted.ca/",
+      "rows": 7621,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:28:24+00:00",
+      "parquet": "spine_motions.parquet",
+      "notes": "from howtheyvoted; site terms, not open data"
+    },
+    "spine_meetings": {
+      "source_id": null,
+      "shape": "spine",
+      "title": "spine — meetings (eScribe calendar)",
+      "origin_url": "https://pub-ottawa.escribemeetings.com/",
+      "rows": 2071,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:29:45+00:00",
+      "parquet": "spine_meetings.parquet",
+      "notes": "eScribe calendar; in_howtheyvoted flags meetings with a parsed agenda"
+    },
+    "devapps__sample": {
+      "source_id": "devapps",
+      "shape": "json-api",
+      "title": "Development Applications — API sample",
+      "origin_url": "https://devapps-restapi.ottawa.ca/devapps/feature/all",
+      "rows": 10,
+      "spatial": false,
+      "fetched_at": "2026-09-09T21:50:09+00:00",
+      "parquet": "devapps__sample.parquet",
+      "notes": "first 10 of 813 dev-app features; authKey is client-embedded"
     }
   }
 }

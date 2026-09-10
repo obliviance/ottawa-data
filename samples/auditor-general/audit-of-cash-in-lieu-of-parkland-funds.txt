@@ -1,0 +1,138 @@
+Audit of Cash-In-Lieu of Parkland Funds April 2026
+
+ Audit of Cash-in-Lieu of Parkland Funds 
+  
+ 
+ 
+ 
+Table of Contents 
+ 
+Acknowledgement ....................................................................................................... 1 
+Introduction .................................................................................................................. 2 
+Background/Context .................................................................................................... 2 
+Audit Objective and Scope .......................................................................................... 5 
+Conclusion ................................................................................................................... 6 
+Audit Findings and Recommendations ........................................................................ 7 
+Appendix 1 – About the Audit .................................................................................... 18 
+Appendix 2 – Rating Scale for Audit Findings ............................................................ 20 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Audit of Cash-in-Lieu of Parkland Funds 
+1 
+Acknowledgement 
+The audit was conducted under the supervision Joanne Gorenstein, Deputy Auditor 
+General and my direction. My colleagues and I would like to thank those who contributed 
+to this project. 
+Respectfully, 
+Nathalie Gougeon, CPA, CA, CIA, CRMA, B. Comm 
+Auditor General 
+The Fraud and Waste Hotline is a confidential and anonymous service that allows City 
+of Ottawa employees and members of the general public to report suspected or 
+witnessed cases of fraud or waste 24 hours a day, seven days a week. 
+www.ottawa.fraudwaste-fraudeabus.ca / 1-866-959-9309 
+www.oagottawa.ca 
+
+Audit of Cash-in-Lieu of Parkland Funds 
+ 
+ 
+2 
+Introduction 
+An Audit of Development Application Review was included in the 2024-2025 Audit Work 
+Plan of the Office of the Auditor General (OAG), approved by City Council (Council) on 
+December 6, 2023. This audit report was presented to the Audit Committee in September 
+2025. Processes related to Cash-in-Lieu of Parkland Funds were specifically excluded 
+from the scope of that audit. As a result, a separate audit was initiated to focus on Cash-
+in-Lieu of Parkland Funds. 
+Background/Context 
+Legislative Background  
+Ontario’s Planning Act (the Act) is the Provincial legislation that determines the rules for 
+land use in the province and grants the authority for land use planning to the municipal 
+government. Under Sections 42, 51.1 and 53 of the Act, as part of the municipal 
+approval process for land development and redevelopment, municipalities can require 
+developers to either contribute land for parks and/or provide cash-in-lieu of parkland as 
+a condition of development, redevelopment, subdivision or land severance. The intent of 
+this conveyance of land or cash is to increase parkland capacity to address increased 
+density resulting from the development.  
+In some cases, land conveyance is most 
+practical to support growth; however, 
+requiring cash-in-lieu of parkland may be 
+more efficient than the dedication of parkland. 
+In 2022, the Province passed Bill 23, More 
+Homes Built Faster Act, 2022 (Bill 23), which 
+made amendments to the Act, including 
+introducing exemptions to parkland 
+dedication and changes to how it is calculated (i.e., the prescribed rates). Under Bill 23, 
+parkland dedication rates decreased, including establishing a maximum rate of land 
+conveyance based on the size of the developable land.  
+Parkland/Cash-in-Lieu at the City  
+The City of Ottawa’s (the City) Parkland Dedication By-law (By-law 2022-280 as 
+amended) (the By-law) imposes the amount of parkland to be conveyed to the City or 
+cash-in-lieu of parkland, or a combination of both as a condition of approval for a 
+planning application or issuance of a building permit (based on the prescribed rates and 
+requirements in the Act).  
+www.oagottawa.ca 
+
+Audit of Cash-in-Lieu of Parkland Funds 
+3 
+The City also has a Cash-in-Lieu of Funds Parkland Funds Policy (the Policy) to ensure 
+the “consistent and wise use of all funds collected for the provision of park and 
+recreational purposes”. The Policy defines the purposes for which cash-in-lieu may be 
+used and establishes the mechanisms by which the cash-in-lieu funds are accessed 
+and accounted for. Eligible projects include, but are not limited to: 
+•
+Acquisition of land for public park purposes.
+•
+Capital projects for the development of new public parks or to increase the
+capacity of existing public parks and/or recreation facilities.
+•
+Projects for repair, renewal and lifecycle replacement in relation to fixed
+recreation and park assets. More specifically, cash-in-lieu can be used to
+advance (i.e. speed up) the lifecycle repair/replace of a park or recreational
+facility asset but it cannot be used to repair/replace an asset in the year it is
+budgeted for. In addition, it can also be used towards enhancing an existing
+asset.
+•
+The non-growth component of growth-related park and recreation facility projects
+(also known as Benefit to Existing or BTE).1
+The Policy also sets out how collected cash-in-lieu funds are allocated within the City: 
+•
+Sixty per cent (60%) of the funds paid are allocated to use in the ward in which
+the development is located.
+•
+Forty per cent (40%) of the funds paid are allocated for City-wide purposes.
+•
+In special administrative areas identified in the By-law, one hundred per cent
+(100%) of the funds paid are allocated to use in the special administrative area
+where the development is located .
+2
+Municipalities across the province have taken different approaches to the allocation of 
+cash-in-lieu funds. The closest to the City’s model is Toronto where there is a 50/50 
+allocation between land acquisition and development/upgrade of parks and recreational 
+facilities. Within each 50% allocation, it is further broken down evenly between City vs. 
+districts .   
+3
+1 As part of the City’s Development Charges Background Study, a specific percentage of identified growth 
+park/recreational facility projects are identified as benefitting the existing population (i.e. not just new growth in 
+population) which are not funded from development charges but other sources of capital funding, including cash-in-
+lieu of parkland. This is defined as the non-growth component. 
+2 Special administrative area is a designated geographic zone which crosses ward boundaries, established by 
+Council, in which 100% of cash-in-lieu of parkland collected from development within that area is reserved exclusively 
+for reinvestment within the same area. 
+3 As indicated by representatives from the City of Toronto, districts represent geographical areas with boundaries 
+established by the City which include several wards. 
+www.oagottawa.ca 

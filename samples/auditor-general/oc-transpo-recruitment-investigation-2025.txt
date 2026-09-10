@@ -1,0 +1,133 @@
+www.oagottawa.ca 
+oag@ottawa.ca 
+@oagottawa.bsky.social
+OC Transpo Recruitment and Staffing Investigation March 2026
+
+OC Transpo Recruitment and Staffing Investigation 
+Office of the Auditor General 
+Table of Contents 
+ 
+Acknowledgement ........................................................................................................... 1 
+Introduction ..................................................................................................................... 2 
+Background and context .................................................................................................. 2 
+Investigation objective and scope ................................................................................... 3 
+Conclusion ...................................................................................................................... 4 
+Investigation findings and recommendations .................................................................. 5 
+1.  Appointments were used to fill permanent vacancies and temporary vacancies 
+exceeding 12 months. ..................................................................................................... 5 
+2. Individuals were screened into competitions without evidence of meeting job 
+requirements. .................................................................................................................. 6 
+Appendix 1 – About the Investigation .............................................................................. 9 
+Appendix 2 – Rating Scale for Investigation Findings ................................................... 10 
+
+OC Transpo Recruitment and Staffing Investigation 
+  
+1 
+Acknowledgement 
+The team responsible for this investigation was comprised of Sarah Parr from the Office 
+of the Auditor General, under the supervision of Joanne Gorenstein, Deputy Auditor 
+General and my direction. My colleagues and I would like to thank those individuals who 
+contributed to this project, and particularly, those who provided insights and comments 
+as part of this investigation.  
+Respectfully,  
+ 
+ 
+Nathalie Gougeon, CPA, CA, CIA, CRMA, B.Comm  
+Auditor General 
+ 
+ 
+
+OC Transpo Recruitment and Staffing Investigation 
+  
+2 
+Introduction 
+The Office of the Auditor General (OAG) has received several reports through the City of 
+Ottawa’s (the City) Fraud and Waste Hotline (FWHL) concerning specific recruitment and 
+staffing actions for Management and Professional Exempt (MPE) positions within OC 
+Transpo. The reports were shared with management for investigation. While 
+management’s investigations were in progress, the OAG received several additional 
+FWHL reports containing similar allegations. The OAG reviewed the results of 
+management’s investigations and decided to undertake additional investigative 
+procedures on the work performed by management, as well as the additional allegations 
+received. 
+Background and context 
+OC Transpo is the public transit provider for the City, operating a multi-modal service that 
+includes light rail (O-Train), conventional bus, and Para Transpo services. Operating 24 
+hours a day, 7 days a week, OC Transpo connects urban and suburban communities 
+across Ottawa and extending into downtown Gatineau. 
+The vast majority of OC Transpo positions are unionized, belonging to either the 
+Amalgamated Transit Union (ATU) or the Canadian Union of Public Employees (CUPE). 
+A small number of OC Transpo positions, generally management roles, are classified as 
+MPE, as noted in Table 1 below. 
+Table 1: Percentage of OC Transpo MPE Positions 
+ 
+Year 
+Number of OC 
+Transpo Positions 
+Number of OC 
+Transpo MPE 
+Positions 
+MPE Positions as a 
+Percentage of OC 
+Transpo Positions 
+2021 
+3,457 
+183 
+5.29% 
+2022 
+3,505 
+214 
+6.11% 
+2023 
+3,627 
+232 
+6.40% 
+2024 
+3,570 
+224 
+6.27% 
+2025 
+3,676 
+234 
+6.37% 
+ 
+ 
+
+OC Transpo Recruitment and Staffing Investigation 
+  
+3 
+Recruitment and Staffing 
+Recruitment and staffing refer to the processes involved in acquiring talent to fill either 
+permanent or temporary vacancies. Vacancies may be filled through appointment or 
+competition. Appointments involve the direct selection of an individual to fill a role, while 
+a competition involves posting the role, receiving applications, and evaluating and 
+interviewing potential candidates before selection occurs. 
+There are several governance documents that support recruitment and staffing activities 
+at the City.  
+• The Recruitment and Staffing Policy establishes guiding principles for 
+recruitment and staffing practices. The Policy states: “The City is committed 
+to recruiting and maintaining a highly competent, qualified and diverse 
+workforce through fair, transparent and equitable staffing practices. Internal 
+appointments shall be based on merit or in accordance with the collective 
+agreement pertaining to the position being staffed. External appointments 
+shall be based on merit.”1  
+• The Education and Experience Equivalency Guidelines for Recruitment and 
+Staffing Purposes (“Equivalency Guidelines”) allow for some flexibility in 
+hiring decisions as it relates to the education and experience requirements 
+identified in job descriptions.  
+• For MPE positions, which were the focus of this investigation, the MPE 
+Terms and Conditions of Employment indicate the circumstances in which 
+positions should be posted for competition. 
+Investigation objective and scope 
+The objective of this investigation was to review the FWHL allegations related to specific 
+recruitment and staffing actions for MPE positions within OC Transpo, including: 
+• bypassing formal hiring processes (i.e., competitions) and appointing 
+personally selected individuals; and 
+• appointing individuals lacking the necessary qualifications. 
+The scope of our investigation was limited to assessing whether the allegations had merit, 
+and if so, determining the appropriate course of action for each of the issues. To the 
+extent that during the investigation, other control issues were identified and validated, 
+they have been presented in this report. The investigation focused on specific recruitment 
+and staffing actions undertaken by OC Transpo primarily from 2021 to 2025, involving 
+ 
+1 City of Ottawa Recruitment and Staffing Policy (September 2024). 

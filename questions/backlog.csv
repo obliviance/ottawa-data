@@ -185,3 +185,18 @@ q0183,`Service Request ID | Numéro de demande` by `Ward | Quartier` — equity 
 q0184,Trend / seasonality of 311-current over `Opened Date | Date d'ouverture`; structural breaks?,311-current,,,,,new,2026-09-09
 q0185,`Service Request ID | Numéro de demande` by `Ward | Quartier` — equity gradient? (join ONS income),311-lastyear,,,,,new,2026-09-09
 q0186,Trend / seasonality of 311-lastyear over `Opened Date | Date d'ouverture`; structural breaks?,311-lastyear,,,,,new,2026-09-09
+q0187,`WARD_NUM` by `WARD` — equity gradient? (join ONS income),vs_tmp,,,,,new,2026-09-09
+q0188,Spatial clustering of vs_tmp; overlay wards + the decision timeline,vs_tmp,,,,,new,2026-09-09
+q0189,Trend / seasonality of open_public_health_inspection_data_recreational_water__inspections over `date`; structural breaks?,open_public_health_inspection_data_recreational_water__inspections,,,,,new,2026-09-09
+q0190,Trend / seasonality of open_public_health_inspection_data_recreational_water__violations over `date`; structural breaks?,open_public_health_inspection_data_recreational_water__violations,,,,,new,2026-09-09
+q0191,Trend / seasonality of open_public_health_inspection_data_child_care__inspections over `date`; structural breaks?,open_public_health_inspection_data_child_care__inspections,,,,,new,2026-09-09
+q0192,Trend / seasonality of open_public_health_inspection_data_child_care__violations over `date`; structural breaks?,open_public_health_inspection_data_child_care__violations,,,,,new,2026-09-09
+q0193,Trend / seasonality of open_public_health_inspection_data_drinking_water__inspections over `date`; structural breaks?,open_public_health_inspection_data_drinking_water__inspections,,,,,new,2026-09-09
+q0194,Trend / seasonality of open_public_health_inspection_data_drinking_water__violations over `date`; structural breaks?,open_public_health_inspection_data_drinking_water__violations,,,,,new,2026-09-09
+q0195,Trend / seasonality of open_public_health_inspection_data_personal_services__inspections over `date`; structural breaks?,open_public_health_inspection_data_personal_services__inspections,,,,,new,2026-09-09
+q0196,Trend / seasonality of open_public_health_inspection_data_personal_services__violations over `date`; structural breaks?,open_public_health_inspection_data_personal_services__violations,,,,,new,2026-09-09
+q0197,Spatial clustering of open_public_health_inspection_data_food_safety__businesses; overlay wards + the decision timeline,open_public_health_inspection_data_food_safety__businesses,,,,,new,2026-09-09
+q0198,Trend / seasonality of open_public_health_inspection_data_food_safety__inspections over `date`; structural breaks?,open_public_health_inspection_data_food_safety__inspections,,,,,new,2026-09-09
+q0199,Trend / seasonality of open_public_health_inspection_data_food_safety__violations over `date`; structural breaks?,open_public_health_inspection_data_food_safety__violations,,,,,new,2026-09-09
+q0200,Trend / seasonality of spine_motions over `date`; structural breaks?,spine_motions,,,,,new,2026-09-09
+q0201,Trend / seasonality of spine_meetings over `date`; structural breaks?,spine_meetings,,,,,new,2026-09-09
