@@ -1,0 +1,13 @@
+clause,awards,amount,vendors,median_award,top_department,share_of_noncompetitive
+D,536,633049332.22,268,108158.59,Infrastructure & Water Services,0.7
+J,47,148992175.46,28,136176.0,Transit Services,0.16
+A,161,66408199.67,75,90026.09,Transit Services,0.07
+B,55,17759969.28,29,94576.0,Finance and Corporate Services,0.02
+C,94,12159273.56,81,58768.5,Finance and Corporate Services,0.01
+F,30,9440565.06,22,64630.5,Infrastructure & Water Services,0.01
+H,122,7126491.84,90,44266.94,Infrastructure & Water Services,0.01
+E,11,6545232.14,5,258735.0,Public Works,0.01
+(unlettered),1,6000000.0,1,6000000.0,Transit Services,0.01
+K,16,1839986.16,12,65000.0,Emergency & Protective Services,0.0
+I,4,895766.41,1,194918.6,Infrastructure & Water Services,0.0
+G,4,532833.69,4,108358.47,Transit Services,0.0

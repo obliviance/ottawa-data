@@ -1,0 +1,313 @@
+<title>Eighteen Vendors, Half the Money</title>
+<meta name="description" content="Ottawa awarded $5.97B in contracts between 2023 and 2025. Of 1,620 vendors, 18 took half of it — and a single by-law clause accounts for 70% of everything sole-sourced.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,560;1,6..72,400&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --paper:#f1f2f0; --ink:#1b1d1c; --muted:#5f6360; --rule:#d7d9d4;
+    --accent:#6b3f3f; --bar:#6b3f3f; --bar-soft:#c9b4b4; --grid:#e3e5e1;
+    --measure:41rem;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#161816; --ink:#e8e9e5; --muted:#9a9e98; --rule:#2c2f2b;
+      --accent:#cf9393; --bar:#cf9393; --bar-soft:#4a3b3b; --grid:#242723;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#161816; --ink:#e8e9e5; --muted:#9a9e98; --rule:#2c2f2b;
+    --accent:#cf9393; --bar:#cf9393; --bar-soft:#4a3b3b; --grid:#242723;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font:400 1.0625rem/1.65 "Public Sans", system-ui, -apple-system, sans-serif;
+    font-synthesis:none;
+  }
+  .wrap{max-width:47rem; margin:0 auto; padding:clamp(2rem,6vw,4.5rem) 1.4rem 5rem}
+
+  .masthead{
+    display:flex; justify-content:space-between; align-items:baseline; gap:1rem;
+    font:500 .72rem/1.4 "IBM Plex Mono", monospace; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--muted);
+    border-bottom:1.5px solid var(--ink); padding-bottom:.6rem;
+  }
+  .masthead .src{text-align:right}
+
+  h1{
+    font:400 clamp(2.1rem,6.4vw,3.4rem)/1.08 "Newsreader", Georgia, serif;
+    letter-spacing:-.012em; text-wrap:balance; margin:2.4rem 0 0; max-width:15ch;
+  }
+  .standfirst{
+    font:400 clamp(1.15rem,2.6vw,1.4rem)/1.5 "Newsreader", Georgia, serif;
+    color:var(--ink); max-width:var(--measure); margin:1.1rem 0 0;
+  }
+  .standfirst em{font-style:italic; color:var(--accent)}
+
+  .lede{max-width:var(--measure); margin:2rem 0 0}
+  .lede p{margin:0 0 1rem}
+  .lede a{color:var(--accent); text-underline-offset:3px}
+
+  .figure{margin:3rem 0 0; padding-top:1.4rem; border-top:1px solid var(--rule)}
+  .figure .cap{
+    font:500 .72rem/1.5 "IBM Plex Mono", monospace; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--muted); margin:0 0 1.2rem;
+  }
+  .chart{width:100%; overflow-x:auto}
+  svg{display:block; width:100%; height:auto}
+  .note{
+    font:400 .88rem/1.5 "Public Sans", sans-serif; color:var(--muted);
+    max-width:var(--measure); margin:1rem 0 0;
+  }
+
+  .panel{
+    margin:3rem 0 0; padding:1.5rem 1.4rem; border:1px solid var(--rule);
+    background:color-mix(in srgb, var(--ink) 3%, transparent);
+  }
+  .panel h2{font:400 1.25rem/1.2 "Newsreader", Georgia, serif; margin:0 0 .7rem}
+  .panel p{margin:.8rem 0 0; font-size:.95rem; color:var(--muted)}
+  .panel p strong{color:var(--ink); font-weight:600}
+
+  .big{
+    display:flex; align-items:baseline; gap:.65rem; flex-wrap:wrap;
+    font:500 .82rem/1.5 "IBM Plex Mono", monospace; margin:.3rem 0;
+  }
+  .big .pct{color:var(--accent); font-size:1.5rem; letter-spacing:-.01em}
+
+  table{
+    width:100%; border-collapse:collapse; margin:1rem 0 0;
+    font:500 .78rem/1.5 "IBM Plex Mono", monospace;
+  }
+  th,td{text-align:left; padding:.3rem .5rem .3rem 0; border-bottom:1px solid var(--rule)}
+  th{
+    font-size:.66rem; letter-spacing:.07em; text-transform:uppercase;
+    color:var(--muted); font-weight:500;
+  }
+  td.n{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap}
+  tbody tr:last-child td{border-bottom:0}
+  td.who{color:var(--ink)}
+
+  .method{
+    margin:3rem 0 0; padding-top:1.4rem; border-top:1px solid var(--rule);
+    font-size:.9rem; color:var(--muted); max-width:var(--measure);
+  }
+  .method h2{
+    font:500 .72rem/1.5 "IBM Plex Mono", monospace; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--muted); margin:0 0 .7rem;
+  }
+  .method p{margin:0 0 .8rem}
+  .method a{color:var(--accent)}
+  .method code{font:500 .85em "IBM Plex Mono", monospace; color:var(--ink)}
+</style>
+
+<div class="wrap">
+  <div class="masthead">
+    <span>City of Ottawa contract awards &nbsp;·&nbsp; 2023&ndash;2025</span>
+    <span class="src">obliviance/ottawa-data<br>releases/procurement-awards</span>
+  </div>
+
+  <h1>Eighteen vendors, half the money</h1>
+  <p class="standfirst">
+    Ottawa committed <strong>$5.97 billion</strong> to contracts between 2023 and
+    2025, spread across <strong>1,620</strong> vendors. <em>Eighteen</em> of them
+    took half of it.
+  </p>
+
+  <div class="lede">
+    <p>
+      The city publishes contract awards twice a year, as a fresh dataset each
+      time, with the column names spelled differently in every release. Nine
+      such releases exist. Stitched together they make a series nobody has
+      published: 5,648 award actions, every vendor, every department, and the
+      by-law clause cited whenever a contract skipped competition entirely.
+    </p>
+    <p>
+      Concentration is not itself a scandal — someone has to run the city's
+      waste collection, and there are not many firms that can. But the shape of
+      the curve is worth seeing, and what sits underneath it is more
+      interesting than the curve.
+    </p>
+  </div>
+
+  <div class="figure">
+    <p class="cap">Cumulative share of $5.97B, by vendor rank</p>
+    <div class="chart"><svg id="chart" viewBox="0 0 720 380" role="img"
+      aria-label="Concentration curve: cumulative share of contract value against vendor rank on a logarithmic scale. 18 vendors reach 50 percent; 50 vendors reach 67 percent."></svg></div>
+    <p class="note">
+      Ranked largest first. The horizontal scale is logarithmic — each step
+      right is ten times as many vendors. Half the money is gone before the
+      curve leaves the first tick.
+    </p>
+  </div>
+
+  <div class="panel">
+    <h2>One clause does most of the sole-sourcing</h2>
+    <div class="big">
+      <span class="pct">70%</span>
+      <span>of all non-competitive value cites a single clause</span>
+    </div>
+    <p>
+      <strong>1,081 awards</strong> — 19% of them, worth <strong>$911M</strong>
+      — went out without competition, each citing a clause of Procurement By-law
+      s.22(1). Eleven different clauses appear. One of them,
+      <strong>clause (D)</strong>, accounts for <strong>$633M</strong> across
+      536 awards: seventy cents of every non-competitive dollar.
+    </p>
+    <table>
+      <thead><tr><th>Clause cited</th><th class="n">Awards</th><th class="n">Value</th><th class="n">Share</th></tr></thead>
+      <tbody>
+        <tr><td class="who">s.22(1)(D)</td><td class="n">536</td><td class="n">$633M</td><td class="n">70%</td></tr>
+        <tr><td class="who">s.22(1)(J)</td><td class="n">47</td><td class="n">$149M</td><td class="n">16%</td></tr>
+        <tr><td class="who">s.22(1)(A)</td><td class="n">161</td><td class="n">$66M</td><td class="n">7%</td></tr>
+        <tr><td class="who">s.22(1)(B)</td><td class="n">55</td><td class="n">$18M</td><td class="n">2%</td></tr>
+        <tr><td class="who">the other seven</td><td class="n">281</td><td class="n">$45M</td><td class="n">5%</td></tr>
+      </tbody>
+    </table>
+    <p>
+      The clauses are reproduced exactly as the city cites them. What each one
+      permits is defined in the by-law, which does not render for automated
+      retrieval — so they are counted here, not described.
+    </p>
+  </div>
+
+  <div class="panel">
+    <h2>Thirteen firms that never compete</h2>
+    <p>
+      Of the 163 vendors paid more than $5M, thirteen received essentially all
+      of it without competition — <strong>$632M</strong> between them. The seven
+      largest are below. For some the reasoning is self-evident: nobody else
+      sells Microsoft licences.
+    </p>
+    <table>
+      <thead><tr><th>Vendor</th><th class="n">Contracts</th><th class="n">Value</th><th class="n">Sole-sourced</th></tr></thead>
+      <tbody>
+        <tr><td class="who">Envari Energy Solutions</td><td class="n">7</td><td class="n">$240M</td><td class="n">100%</td></tr>
+        <tr><td class="who">Bell Mobility</td><td class="n">16</td><td class="n">$116M</td><td class="n">97%</td></tr>
+        <tr><td class="who">Microsoft</td><td class="n">2</td><td class="n">$115M</td><td class="n">100%</td></tr>
+        <tr><td class="who">SAP Canada</td><td class="n">2</td><td class="n">$46M</td><td class="n">100%</td></tr>
+        <tr><td class="who">BBB Architects Toronto</td><td class="n">2</td><td class="n">$27M</td><td class="n">100%</td></tr>
+        <tr><td class="who">Para Logistics</td><td class="n">2</td><td class="n">$23M</td><td class="n">100%</td></tr>
+        <tr><td class="who">Rogers Communications</td><td class="n">1</td><td class="n">$17M</td><td class="n">100%</td></tr>
+      </tbody>
+    </table>
+    <p>
+      The largest is not a software licence. <strong>Envari Energy Solutions</strong>
+      is the single biggest recipient of sole-sourced money in the city —
+      $240M over nine awards, every one under clause (D), for professional
+      engineering services. That is more than Microsoft and SAP combined, under
+      the same clause used to renew their licences.
+    </p>
+  </div>
+
+  <div class="panel">
+    <h2>A quarter of the money is added after the award</h2>
+    <div class="big">
+      <span class="pct">$1.48B</span>
+      <span>in amendments and extensions</span>
+    </div>
+    <p>
+      664 contracts — 14% of them — were amended or extended at least once.
+      Those top-ups total <strong>$1.48B</strong>, or a quarter of everything
+      committed: money attached to work already under way rather than put to
+      the market. One Bell Mobility contract appears eleven times across three
+      reporting periods, growing each time.
+    </p>
+  </div>
+
+  <div class="method">
+    <h2>How this was made</h2>
+    <p>
+      Nine half-year releases from Open Ottawa, normalised into one table. Each
+      release is the same schema with different column spellings — <code>Amount</code>
+      in one, <code>F_Amount_</code> in another — so the loader maps whatever
+      arrived onto a stable set of fields rather than a hard-coded list, and the
+      next drop needs no edit.
+    </p>
+    <p>
+      A row is an award <em>action</em>, not a contract: an initial award, an
+      amendment or an extension. A contract amended twice appears three times.
+      Vendor totals count actions; the contract file deduplicates. Vendor names
+      are used as published with no entity resolution, so a firm spelled two
+      ways is counted twice — which understates concentration rather than
+      overstating it.
+    </p>
+    <p>
+      Coverage is uneven at the edges: 2022 is Transit Commission only, and the
+      all-departments series begins in 2023. Two reporting streams run in
+      parallel and are near-disjoint; 14 duplicate rows across the whole set
+      were dropped.
+    </p>
+    <p>
+      Data and code:
+      <a href="https://github.com/obliviance/ottawa-data/tree/main/releases/procurement-awards"><code>releases/procurement-awards</code></a>
+      &nbsp;&middot;&nbsp; source:
+      <a href="https://open.ottawa.ca/search?q=contracts%20awarded">Open Ottawa</a>
+      (OGL &ndash; City of Ottawa) &nbsp;&middot;&nbsp; span 2022 H2 to 2025 H2.
+    </p>
+  </div>
+</div>
+
+<script>
+  const PTS = [[1,0.0824],[2,0.1458],[3,0.2035],[4,0.2436],[5,0.2819],[6,0.3155],[7,0.3473],[8,0.3667],[9,0.3861],[10,0.4054],[11,0.4245],[12,0.4398],[13,0.4543],[14,0.4672],[15,0.4798],[17,0.4997],[18,0.5085],[20,0.5245],[22,0.5392],[23,0.5461],[25,0.5595],[28,0.5782],[30,0.5893],[33,0.6043],[36,0.6178],[39,0.6303],[42,0.6419],[46,0.6558],[50,0.6683],[54,0.6796],[59,0.6924],[64,0.7040],[70,0.7164],[76,0.7277],[82,0.7381],[89,0.7489],[97,0.7601],[105,0.7702],[114,0.7802],[124,0.7903],[135,0.8003],[146,0.8094],[159,0.8192],[173,0.8288],[188,0.8382],[204,0.8473],[221,0.8560],[240,0.8649],[261,0.8738],[283,0.8823],[307,0.8907],[334,0.8993],[362,0.9073],[393,0.9152],[427,0.9231],[464,0.9310],[504,0.9387],[547,0.9461],[594,0.9534],[645,0.9604],[700,0.9671],[761,0.9736],[826,0.9796],[897,0.9850],[974,0.9897],[1058,0.9934],[1149,0.9962],[1248,0.9981],[1355,0.9992],[1472,0.9998],[1620,1.0]];
+  const W = 720, H = 380, ML = 52, MR = 16, MT = 14, MB = 44;
+  const PW = W - ML - MR, PH = H - MT - MB;
+  const N = 1620, LMAX = Math.log10(N);
+  const X = r => ML + (Math.log10(r) / LMAX) * PW;
+  const Y = s => MT + (1 - s) * PH;
+
+  const el = (t, a, kids) => {
+    const n = document.createElementNS("http://www.w3.org/2000/svg", t);
+    for (const k in a) n.setAttribute(k, a[k]);
+    if (kids) n.textContent = kids;
+    return n;
+  };
+  const svg = document.getElementById("chart");
+  const add = n => svg.appendChild(n);
+
+  // horizontal gridlines + y axis
+  [0, 0.25, 0.5, 0.75, 1].forEach(s => {
+    add(el("line", {x1: ML, x2: W - MR, y1: Y(s), y2: Y(s),
+      stroke: "var(--grid)", "stroke-width": 1}));
+    add(el("text", {x: ML - 9, y: Y(s) + 4, "text-anchor": "end",
+      fill: "var(--muted)", "font-family": "IBM Plex Mono, monospace",
+      "font-size": 11}, (s * 100) + "%"));
+  });
+  // x ticks at powers of ten
+  [1, 10, 100, 1000].forEach(r => {
+    add(el("line", {x1: X(r), x2: X(r), y1: MT, y2: MT + PH,
+      stroke: "var(--grid)", "stroke-width": 1}));
+    add(el("text", {x: X(r), y: MT + PH + 20, "text-anchor": "middle",
+      fill: "var(--muted)", "font-family": "IBM Plex Mono, monospace",
+      "font-size": 11}, r.toLocaleString()));
+  });
+  add(el("text", {x: ML + PW / 2, y: H - 6, "text-anchor": "middle",
+    fill: "var(--muted)", "font-family": "IBM Plex Mono, monospace",
+    "font-size": 10.5, "letter-spacing": ".08em"}, "VENDORS, RANKED BY VALUE"));
+
+  // area + curve
+  const d = PTS.map((p, i) => (i ? "L" : "M") + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1)).join(" ");
+  add(el("path", {d: d + ` L ${X(N).toFixed(1)} ${Y(0)} L ${X(1).toFixed(1)} ${Y(0)} Z`,
+    fill: "var(--bar-soft)", opacity: .38, stroke: "none"}));
+  add(el("path", {d, fill: "none", stroke: "var(--bar)", "stroke-width": 2.2,
+    "stroke-linejoin": "round", "stroke-linecap": "round"}));
+
+  // the 18-vendor marker
+  const MX = X(18), MY = Y(0.5085);
+  add(el("line", {x1: ML, x2: MX, y1: MY, y2: MY, stroke: "var(--accent)",
+    "stroke-width": 1.2, "stroke-dasharray": "3 3"}));
+  add(el("line", {x1: MX, x2: MX, y1: MY, y2: MT + PH, stroke: "var(--accent)",
+    "stroke-width": 1.2, "stroke-dasharray": "3 3"}));
+  add(el("circle", {cx: MX, cy: MY, r: 4.5, fill: "var(--accent)"}));
+  add(el("text", {x: MX + 11, y: MY - 9, fill: "var(--accent)",
+    "font-family": "IBM Plex Mono, monospace", "font-size": 12.5,
+    "font-weight": 500}, "18 vendors → half of $5.97B"));
+
+  // the 50-vendor marker, quieter
+  const SX = X(50), SY = Y(0.6683);
+  add(el("circle", {cx: SX, cy: SY, r: 3.2, fill: "var(--muted)"}));
+  add(el("text", {x: SX + 10, y: SY - 10, fill: "var(--muted)",
+    "font-family": "IBM Plex Mono, monospace", "font-size": 11.5},
+    "50 → 67%"));
+</script>

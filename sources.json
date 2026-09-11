@@ -274,11 +274,10 @@
       "name": "Procurement and tenders",
       "category": "finance",
       "operator": "City of Ottawa (Supply Services)",
-      "urls": ["https://ottawa.ca/en/business/procurement/procurement", "https://ottawa.ca/en/business/procurement/procurement-law"],
-      "access": ["html"],
-      "description": "Supply Services administers over $1B annually under By-law 2000-50. Bid opportunities post to a third-party e-tendering platform.",
-      "verify": true,
-      "verify_note": "Search results pointed at both Biddingo and third-party aggregators. Confirm the current platform before building against it."
+      "urls": ["https://open.ottawa.ca/search?q=contracts%20awarded", "https://ottawa.ca/en/business/procurement/procurement", "https://ottawa.ca/en/business/procurement/procurement-law"],
+      "access": ["bulk", "html"],
+      "description": "Supply Services administers over $1B annually under By-law 2000-50. Bid opportunities post to a third-party e-tendering platform. Verified 2026-09-11: contract AWARDS are published on Open Ottawa as half-yearly CSV/GeoJSON releases (all-departments and Transit Commission streams) — 5,648 awards, $5.97B, 2022 H2 onward. Each release is the same table with different ArcGIS column spellings; tools/ingest/procurement.py normalises them. Live bid opportunities remain html-only.",
+      "verify_note": "Awards resolved to Open Ottawa bulk downloads. Still open: which e-tendering platform carries live bids, and the text of Procurement By-law s.22(1) (ottawa.ca does not render for automated retrieval, so the non-competitive clause letters are counted but not named)."
     },
     {
       "id": "mpac",

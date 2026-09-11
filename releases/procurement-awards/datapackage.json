@@ -1,0 +1,39 @@
+{
+  "name": "procurement-awards",
+  "title": "Ottawa contract awards \u2014 concentration and sole-sourcing",
+  "description": "5,648 contract award actions worth $5.97B, 2022 H2 to 2025 H2, normalised from nine half-year releases and aggregated by vendor, contract, department, non-competitive clause and period.",
+  "licenses": [
+    {
+      "name": "OGL-Ottawa",
+      "title": "Open Government Licence \u2013 City of Ottawa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Open Ottawa \u2014 contracts awarded (half-year releases)",
+      "path": "https://open.ottawa.ca/search?q=contracts%20awarded"
+    }
+  ],
+  "resources": [
+    {
+      "path": "by_vendor.csv",
+      "format": "csv"
+    },
+    {
+      "path": "by_contract.csv",
+      "format": "csv"
+    },
+    {
+      "path": "by_clause.csv",
+      "format": "csv"
+    },
+    {
+      "path": "by_department.csv",
+      "format": "csv"
+    },
+    {
+      "path": "by_period.csv",
+      "format": "csv"
+    }
+  ]
+}
