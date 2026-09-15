@@ -475,7 +475,7 @@ with an open verify-flag, `—` = not yet catalogued.
 
 | Project | What it does | Status |
 | --- | --- | --- |
-| OttWatch | Scrapes ottawa.ca + eScribe for new documents; mirrors lobbyist registry; tracks open-data publications; own dev-app index | 🟡 web app — `[ottwatch]` |
+| OttWatch | Scrapes ottawa.ca + eScribe for new documents; mirrors lobbyist registry; tracks open-data publications; own dev-app index | 🔴 **502 as of 2026-09-15** (root and /announcement/index; `v1.ottwatch.ca` does not resolve) — `[ottwatch] ⚑` |
 | Horizon Ottawa Vote Tracker | Hand-keyed councillor votes 2022–26 | 🟡 — `[horizon-vote-tracker]` |
 | How They Voted (howtheyvoted.ca) | Dedicated Ottawa voting-record site | 🟢 ships the compiled record as JSON at `/data/ottawa/*.json`, verified current — `[howtheyvoted]` (site terms, not open data) |
 | ACORN housing-vote scorecard | Issue-specific vote compilation | 🟡 — `[acorn-voting-records]` |

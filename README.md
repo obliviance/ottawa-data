@@ -805,11 +805,13 @@ Community indicator project pulling city, health and social data into themed nar
 
 ## 13. Independent trackers and civic-technology projects
 
-### OttWatch
+### OttWatch **[verify]**
 
 `HTML` · *Independent*
 
 The longest-running Ottawa civic monitor. Automatically scans ottawa.ca and eScribe for new agendas and documents, mirrors the lobbyist registry into a friendlier database, tracks new open-data publications, and maintains its own development application index. Closest thing to prior art for most projects in this space.
+
+> **Verify:** Returned HTTP 502 on 2026-09-15 for both / and /announcement/index (three requests, ~3.3s each — reaching a failing server, not a DNS problem); v1.ottwatch.ca does not resolve. Re-check before relying on it; if the outage is permanent this is the loss of the main neutral third-party aggregator for Ottawa city hall.
 
 > **Verified** — access: confirmed
 > licence: *Site terms – no open-data licence stated*
