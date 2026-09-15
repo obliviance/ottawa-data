@@ -132,24 +132,26 @@ Licence terms, publication commitments, and the request channel for datasets not
 
 ### Certified candidate list
 
-`HTML` · *City of Ottawa (City Clerk)*
+`API` `HTML` · *City of Ottawa (City Clerk)*
 
-Authoritative roster of registered candidates: mayor, 24 wards, four school boards. Source of truth for who is on the ballot.
+Authoritative roster of registered candidates: mayor, 24 wards, four school boards. Source of truth for who is on the ballot. Verified 2026-09-15: elections.ottawa.ca exposes an unauthenticated JSON web service at /ws/api/ (discoverable as `dataWebServiceURI` in the page source) — Candidates/{Mayors,Councillors,Trustees}, Wards, SchoolBoards, plus Addresses/Streets lookups. The recon sweep tagged this html-only because it was sampled before nominations opened and the page was an empty shell. Ingested by tools/ingest/elections.py: 181 candidates, 268 links.
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
 > _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
+- <https://elections.ottawa.ca/ws/api/Candidates/Councillors/>
 - <https://elections.ottawa.ca/CandidateList/CandidateList>
 
 ### Who is running in my ward?
 
-`HTML` · *City of Ottawa*
+`API` `HTML` · *City of Ottawa*
 
-Same roster behind an address lookup. Useful as a ward-boundary geocoding check.
+Same roster behind an address lookup. Useful as a ward-boundary geocoding check. Verified 2026-09-15: the address lookup is served by the same elections.ottawa.ca /ws/api/ service — Streets/Mask/<term> then Addresses/<id> then Candidates/*/ForAddress/<id>. Same backend as `candidate-list`.
 
 > **Verified** — access: confirmed
 > licence: *Open Government Licence – City of Ottawa*
 > _stage 0–1 2026-09-09: reachable, server-rendered HTML · stage 2 2026-09-09: renders fully — a headless scrape works · 1 archived_
+- <https://elections.ottawa.ca/ws/api/Candidates/Councillors/ForAddress/>
 - <https://ottawa.ca/en/city-hall/elections/voters/who-running-my-ward>
 
 ### Campaign financial statements and contributions
@@ -805,11 +807,13 @@ Community indicator project pulling city, health and social data into themed nar
 
 ## 13. Independent trackers and civic-technology projects
 
-### OttWatch
+### OttWatch **[verify]**
 
 `HTML` · *Independent*
 
 The longest-running Ottawa civic monitor. Automatically scans ottawa.ca and eScribe for new agendas and documents, mirrors the lobbyist registry into a friendlier database, tracks new open-data publications, and maintains its own development application index. Closest thing to prior art for most projects in this space.
+
+> **Verify:** Returned HTTP 502 on 2026-09-15 for both / and /announcement/index (three requests, ~3.3s each — reaching a failing server, not a DNS problem); v1.ottwatch.ca does not resolve. Re-check before relying on it; if the outage is permanent this is the loss of the main neutral third-party aggregator for Ottawa city hall.
 
 > **Verified** — access: confirmed
 > licence: *Site terms – no open-data licence stated*
@@ -917,7 +921,7 @@ Provincial datasets that determine much of what the city can do: FIR, health, ed
 
 Four boards elect trustees on the municipal ballot but govern independently, with their own budgets, minutes and enrolment data. Frequently omitted from municipal data projects despite appearing on the same ballot.
 
-> **Verify:** Individual board URLs were not confirmed in search results.
+> **Verify:** Partially resolved 2026-09-15: the four boards and their 80 trustee candidates are confirmed via the elections.ottawa.ca API (English/French × Public/Catholic), and a zone-to-ward crosswalk is now derived in election_trustee_zones. The individual board websites, and their own budget/minutes/enrolment data, are still unconfirmed.
 
 > **Verified** — access: confirmed
 > licence: *Site terms – no open-data licence stated*

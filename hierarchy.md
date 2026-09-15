@@ -50,7 +50,8 @@ with an open verify-flag, `—` = not yet catalogued.
 
 | Source | Status | Catalogue |
 | --- | --- | --- |
-| Certified candidate list — mayor, 24 wards, 4 school boards | 🟡 HTML roster | `[candidate-list]` |
+| Certified candidate list — mayor, 24 wards, 4 school boards | 🟢 **open JSON API** at `elections.ottawa.ca/ws/api/` — Candidates/{Mayors,Councillors,Trustees}, Wards, SchoolBoards, address lookup; 181 candidates ingested | `[candidate-list]` `[who-is-running]` |
+| Trustee zone → ward crosswalk | 🟢 derived — the city publishes zone coverage only as a string on each trustee record; exploded into `election_trustee_zones` (4 boards × 24 wards) | `[candidate-list]` |
 | "Who is running in my ward?" address lookup | 🟡 HTML | `[who-is-running]` |
 | Nomination filings / statutory calendar / third-party advertiser registry | 🟡 HTML | `[election-key-dates]` |
 | **Campaign financial statements & contributor lists ($100+ itemised)** | 🔴 per-candidate PDF/HTML; no consolidated contributor dataset; 2026 filings land ~March 2027 | `[campaign-finance]` |
@@ -475,7 +476,7 @@ with an open verify-flag, `—` = not yet catalogued.
 
 | Project | What it does | Status |
 | --- | --- | --- |
-| OttWatch | Scrapes ottawa.ca + eScribe for new documents; mirrors lobbyist registry; tracks open-data publications; own dev-app index | 🟡 web app — `[ottwatch]` |
+| OttWatch | Scrapes ottawa.ca + eScribe for new documents; mirrors lobbyist registry; tracks open-data publications; own dev-app index | 🔴 **502 as of 2026-09-15** (root and /announcement/index; `v1.ottwatch.ca` does not resolve) — `[ottwatch] ⚑` |
 | Horizon Ottawa Vote Tracker | Hand-keyed councillor votes 2022–26 | 🟡 — `[horizon-vote-tracker]` |
 | How They Voted (howtheyvoted.ca) | Dedicated Ottawa voting-record site | 🟢 ships the compiled record as JSON at `/data/ottawa/*.json`, verified current — `[howtheyvoted]` (site terms, not open data) |
 | ACORN housing-vote scorecard | Issue-specific vote compilation | 🟡 — `[acorn-voting-records]` |

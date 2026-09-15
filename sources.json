@@ -74,9 +74,9 @@
       "name": "Certified candidate list",
       "category": "elections",
       "operator": "City of Ottawa (City Clerk)",
-      "urls": ["https://elections.ottawa.ca/CandidateList/CandidateList"],
-      "access": ["html"],
-      "description": "Authoritative roster of registered candidates: mayor, 24 wards, four school boards. Source of truth for who is on the ballot.",
+      "urls": ["https://elections.ottawa.ca/ws/api/Candidates/Councillors/", "https://elections.ottawa.ca/CandidateList/CandidateList"],
+      "access": ["api", "html"],
+      "description": "Authoritative roster of registered candidates: mayor, 24 wards, four school boards. Source of truth for who is on the ballot. Verified 2026-09-15: elections.ottawa.ca exposes an unauthenticated JSON web service at /ws/api/ (discoverable as `dataWebServiceURI` in the page source) — Candidates/{Mayors,Councillors,Trustees}, Wards, SchoolBoards, plus Addresses/Streets lookups. The recon sweep tagged this html-only because it was sampled before nominations opened and the page was an empty shell. Ingested by tools/ingest/elections.py: 181 candidates, 268 links.",
       "verify": false
     },
     {
@@ -84,9 +84,9 @@
       "name": "Who is running in my ward?",
       "category": "elections",
       "operator": "City of Ottawa",
-      "urls": ["https://ottawa.ca/en/city-hall/elections/voters/who-running-my-ward"],
-      "access": ["html"],
-      "description": "Same roster behind an address lookup. Useful as a ward-boundary geocoding check.",
+      "urls": ["https://elections.ottawa.ca/ws/api/Candidates/Councillors/ForAddress/", "https://ottawa.ca/en/city-hall/elections/voters/who-running-my-ward"],
+      "access": ["api", "html"],
+      "description": "Same roster behind an address lookup. Useful as a ward-boundary geocoding check. Verified 2026-09-15: the address lookup is served by the same elections.ottawa.ca /ws/api/ service — Streets/Mask/<term> then Addresses/<id> then Candidates/*/ForAddress/<id>. Same backend as `candidate-list`.",
       "verify": false
     },
     {
@@ -639,7 +639,8 @@
       "urls": ["https://ottwatch.ca/", "https://ottwatch.ca/devapp/index"],
       "access": ["html"],
       "description": "The longest-running Ottawa civic monitor. Automatically scans ottawa.ca and eScribe for new agendas and documents, mirrors the lobbyist registry into a friendlier database, tracks new open-data publications, and maintains its own development application index. Closest thing to prior art for most projects in this space.",
-      "verify": false
+      "verify": true,
+      "verify_note": "Returned HTTP 502 on 2026-09-15 for both / and /announcement/index (three requests, ~3.3s each — reaching a failing server, not a DNS problem); v1.ottwatch.ca does not resolve. Re-check before relying on it; if the outage is permanent this is the loss of the main neutral third-party aggregator for Ottawa city hall."
     },
     {
       "id": "horizon-vote-tracker",
@@ -730,7 +731,7 @@
       "access": ["html"],
       "description": "Four boards elect trustees on the municipal ballot but govern independently, with their own budgets, minutes and enrolment data. Frequently omitted from municipal data projects despite appearing on the same ballot.",
       "verify": true,
-      "verify_note": "Individual board URLs were not confirmed in search results."
+      "verify_note": "Partially resolved 2026-09-15: the four boards and their 80 trustee candidates are confirmed via the elections.ottawa.ca API (English/French × Public/Catholic), and a zone-to-ward crosswalk is now derived in election_trustee_zones. The individual board websites, and their own budget/minutes/enrolment data, are still unconfirmed."
     },
     {
       "id": "city-archives",

@@ -38,6 +38,8 @@ tearsheet land in `releases/`.
 - [x] `tools/sample.py` — landing-page + small-data capture for bespoke sources → `samples/`
 - [x] `ingest/procurement.py` — folds the half-yearly contract-award releases into one
       `procurement_awards` table; discovers new drops by pattern, not a hard-coded list
+- [x] `ingest/elections.py` — the 2026 candidate roster from the elections.ottawa.ca
+      JSON web service; 181 candidates, plus a derived trustee zone→ward crosswalk
 - [ ] `ingest/pdf_tables.py` — generic pdfplumber tables + text index (escribe, budgets, AG)
 - [ ] per-source HTML parsers — office-expenses, lobbyist registry, campaign finance,
       candidate list, drinking water, school boards (each ~1–4h; see `samples/<id>/README.md`)
@@ -146,7 +148,41 @@ tearsheet land in `releases/`.
     characters to headless Chromium. Clause letters are therefore counted, not named —
     naming them needs a human to read the by-law.
 
-  **Next:** q0004 (ASE equity — fetch 2021 census-by-ward income via FeatureServer),
-  q0016 (collisions), a 311 map; then the per-source HTML parsers by backlog value.
-  Before picking, re-score the `f2` backlog rows — q0002 shows the feasibility
-  scores were guessed before the sweep landed and may be wrong elsewhere too.
+- **2026-09-15 (election)** — voting day is **2026-10-26**, ~6 weeks out.
+  - **`tools/ingest/elections.py`**: `elections.ottawa.ca` runs an unauthenticated JSON
+    service at `/ws/api/`. The recon sweep tagged `candidate-list` html-only with "no
+    backing data API" because it was sampled **before nominations opened** — the page was
+    an empty shell and no XHR fired. Registered `election_candidates` (181),
+    `election_candidate_links` (268), `election_wards` (25 incl. 99 = City Wide),
+    `election_school_boards` (5), `election_trustee_zones` (96 = 4 boards × 24 wards,
+    exploded from a string the city publishes nowhere as a table).
+    87 councillor candidates; Stittsville 9, Orléans East-Cumberland 7; **River and
+    Rideau-Jock have one candidate each** (acclaimed — matches Wikipedia independently).
+    41% opted into the contribution rebate programme.
+  - **Re-probed all 33 html-only sources in 90 seconds.** Seven are not html-only:
+    `candidate-list` (JSON API), and `nei` / `ottawa-insights` / `acorn-voting-records` /
+    `social-housing-registry` / `olt` (WordPress `/wp-json/` REST), `police-services-board`
+    (oData). **Re-probe before writing any parser** — it is ~100× cheaper, and the sweep's
+    classification is stale in two systematic ways: sources sampled at a dead moment, and
+    XHR-mining that looks for data APIs but not content APIs.
+  - **`ottwatch` is down** — 502 on / and /announcement/index, `v1.` does not resolve.
+    Flagged in `sources.json` and `hierarchy.md`. If permanent, Ottawa loses its main
+    neutral third-party aggregator.
+  - **Landscape check:** Horizon Ottawa's Vote Tracker is the only comparable
+    accountability tool — manual, no data export, explicitly advocacy. Wikipedia and CBC
+    carry candidates but no records. **Nobody joins the incumbent record to the candidate
+    list**, nobody publishes attendance, nobody has service delivery by ward.
+    Note this means q0018 substantially duplicates Horizon's finding; our differentiation
+    is method (automated, reproducible, downloadable), not novelty.
+
+  **Next (election-scoped, in order):** ward scorecard (incumbent + dissent + attendance +
+  311 + taxes + candidates — ~80% already shipped or in the warehouse) · ingest
+  `election-results-history` (tagged api,bulk, never ingested → 2022 margins → which races
+  are competitive) · NEI × 311 response time as a standalone service-equity finding ·
+  voting-place accessibility (`Acc_Entr` column, 639 rows already loaded).
+  **Hold until after 2026-10-26:** campaign-finance and lobbying→approvals (q0001, q0014) —
+  2026 filings are not due until ~March 2027 so October work would use 2022 data anyway.
+
+  **Then:** q0004 (ASE equity), q0016 (collisions), a 311 map; the per-source HTML parsers
+  by backlog value. Before picking, re-score the `f2` backlog rows — q0002 shows the
+  feasibility scores were guessed before the sweep landed and may be wrong elsewhere too.
