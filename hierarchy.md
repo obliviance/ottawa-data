@@ -82,7 +82,8 @@ with an open verify-flag, `—` = not yet catalogued.
 | Financial Information Return (province-wide schema, back to 1977) | 🟢 bulk; the one clean cross-municipality benchmark | `[fir]` |
 | **Vendor / supplier payment disclosure** (who got paid, how much) | 🔴 not published | — |
 | **Contract award register** (winner, value, amendments, sole-source) | 🔴 / ⚪ not published as data | — |
-| Bid opportunities / tenders | 🟡 posted to a third-party e-tendering platform + Ottawa Construction Association bulletin; platform identity needs confirming | `[procurement] ⚑` |
+| Bid opportunities / tenders | 🟡 posted to a third-party e-tendering platform + Ottawa Construction Association bulletin; platform identity still needs confirming | `[procurement] ⚑` |
+| Contract awards (>$25k and delegated authority) | 🟢 half-yearly CSV on Open Ottawa, all-departments + Transit Commission streams — 5,648 awards / $5.97B since 2022 H2; normalised by `tools/ingest/procurement.py` | `[procurement]` |
 | Development charges — rates, background studies, reserve balances | 🟡 PDF | — |
 | Reserve funds, debt, long-range financial plan | 🟡 PDF | — |
 | Asset management plan (O. Reg. 588/17) | 🟡 PDF; some condition data spatial | — |
@@ -572,7 +573,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | 🟢 Open | ~20% | Almost entirely **spatial** (anything with coordinates has a GeoJSON endpoint) plus a handful of well-run bulk series: FIR, GTFS, the police ArcGIS Hub, collisions, ASE, the sunshine list, StatCan, ONS. |
 | 🟡 Partial | ~50% | The bulk of municipal governance: agendas, budgets, audits, disclosure logs, planning files, health dashboards — all real, all public, all trapped in PDF, HTML or dashboards with no underlying data. |
 | 🔴 Closed | ~20% | Two sub-types: **access-restricted** (land registry, MPAC per-property, FOI-only records, collective agreements, commercial data) and **never produced** (recorded votes as data, vendor payments, contract awards, candidate platforms). |
-| ⚪ Unknown | ~10% | Whole branches nobody has checked: BIAs, rural drainage, property-standards orders, delegated-authority decisions, gift registry, most agency operational data — plus four catalogue rows verification could not settle (`procurement`, `hydro-ottawa`, `conservation-authorities`, `school-boards`). |
+| ⚪ Unknown | ~10% | Whole branches nobody has checked: BIAs, rural drainage, property-standards orders, delegated-authority decisions, gift registry, most agency operational data — plus three catalogue rows verification could not settle (`hydro-ottawa`, `conservation-authorities`, `school-boards`) — `procurement` is now partly resolved: awards are open, live bids are not. |
 
 ### The patterns that actually matter
 
@@ -623,7 +624,7 @@ with an open verify-flag, `—` = not yet catalogued.
 
 **Verification priorities.** Done for the catalogued sources (stages 0–3, 2026-09-09): 55 access
 tags confirmed, 2 understated, 15 unconfirmed. Still open:
-`procurement` platform identity · `conservation-authorities` URLs & data · `hydro-ottawa`
+`procurement` live-bid platform identity (awards now resolved) · Procurement By-law s.22(1) clause text · `conservation-authorities` URLs & data · `hydro-ottawa`
 open-data programme (likely none) · `school-boards` data portals ·
 whether budget line-items are mirrored to Open Ottawa in any usable form · whether OCH publishes
 portfolio data below the annual-report level · `ecolecatholique.ca` / `ottawacivictech.ca` (both

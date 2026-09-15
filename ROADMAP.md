@@ -36,6 +36,8 @@ tearsheet land in `releases/`.
 - [x] `ingest/arcgis_hub.py` FeatureServer + zip fallback — yields the PH inspection ZIPs;
       the pure-API path is mostly empty police shells (Hub "API-only" entries are apps)
 - [x] `tools/sample.py` — landing-page + small-data capture for bespoke sources → `samples/`
+- [x] `ingest/procurement.py` — folds the half-yearly contract-award releases into one
+      `procurement_awards` table; discovers new drops by pattern, not a hard-coded list
 - [ ] `ingest/pdf_tables.py` — generic pdfplumber tables + text index (escribe, budgets, AG)
 - [ ] per-source HTML parsers — office-expenses, lobbyist registry, campaign finance,
       candidate list, drinking water, school boards (each ~1–4h; see `samples/<id>/README.md`)
@@ -44,8 +46,8 @@ tearsheet land in `releases/`.
 - [ ] a task runner (`justfile` / `Makefile`) tying ingest → profile → build
 
 ### Spine
-- [ ] `spine/geography.py` — wards + ONS + DA + address lookup
-- [ ] `spine/timeline.py` — Council/committee items + recorded votes
+- [x] `spine/geography.py` — `spine_wards` (24) + `spine_neighbourhoods` (116 ONS); DA + address lookup still to do
+- [x] `spine/timeline.py` — `spine_meetings` (2,071) + `spine_motions` (7,621)
 - [ ] `spine/entities.py` — fuzzy-matched actor list across accountability datasets
 
 ### Phase A — ingest by shape
@@ -66,6 +68,7 @@ tearsheet land in `releases/`.
 | --- | --- | --- | --- |
 | q0018 | recorded-vote cohesion / bloc structure | `apps/council-recorded-votes` + `releases/council-vote-cohesion` · [page](https://claude.ai/code/artifact/b3fad106-63b0-46c7-bbd7-8b72c69fd16c) | **shipped** |
 | q0005 | 311 requests by ward | `releases/311-by-ward` | **shipped** (dataset; viz TODO) |
+| q0002 | procurement concentration + sole-sourcing | `apps/procurement-concentration` + `releases/procurement-awards` · [page](https://claude.ai/code/artifact/52143ea2-84f9-429a-86e7-12ef898bec33) | **shipped** |
 | q0004 | ASE camera siting equity | — | next (needs census-by-ward income) |
 | q0016 | collision hot-spots vs traffic calming | — | next |
 
@@ -123,5 +126,27 @@ tearsheet land in `releases/`.
   - Note: warehouse is gitignored — re-ingest before re-running an exploration
     (`howtheyvoted.py`, `rolling_csv.py --all`, `spine/*.py`, the relevant `arcgis_hub` filters).
 
+- **2026-09-11 (procurement)** —
+  - **q0002 shipped:** `tools/ingest/procurement.py` + `explorations/procurement_concentration.py`
+    → `releases/procurement-awards/` + `apps/procurement-concentration/`
+    ([page](https://claude.ai/code/artifact/52143ea2-84f9-429a-86e7-12ef898bec33)).
+  - The nine half-year contract-award releases are **one table with nine different
+    column spellings** (`Amount` / `F_Amount_`, `Item` / `Item_` / `Item__`). The
+    normaliser maps by pattern so the next drop needs no edit. **5,648 award actions,
+    4,714 contracts, 1,620 vendors, $5.97B, 2022 H2 → 2025 H2.**
+  - Findings: **18 vendors take half** of the $5.97B (top 50 = 67%); **19% of awards
+    are non-competitive** ($911M) and **clause s.22(1)(D) alone is 70% of that** ($633M);
+    **$1.48B — a quarter of all value — is added after award** by amendment or extension.
+    Envari Energy Solutions is the largest sole-source recipient at $240M, 100%
+    non-competitive, under the same clause used for Microsoft licence renewals.
+  - Re-scored q0002 feasibility 2 → 4. It was marked low because it looked like it
+    needed a scraper; the data was already in the warehouse from the recon sweep.
+    **Worth re-checking the other `f2` rows for the same mistake.**
+  - Couldn't retrieve the by-law text: ottawa.ca returns 212 bytes to curl and 0
+    characters to headless Chromium. Clause letters are therefore counted, not named —
+    naming them needs a human to read the by-law.
+
   **Next:** q0004 (ASE equity — fetch 2021 census-by-ward income via FeatureServer),
   q0016 (collisions), a 311 map; then the per-source HTML parsers by backlog value.
+  Before picking, re-score the `f2` backlog rows — q0002 shows the feasibility
+  scores were guessed before the sweep landed and may be wrong elsewhere too.

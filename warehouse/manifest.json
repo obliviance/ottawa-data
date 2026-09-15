@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T21:50:09+00:00",
+  "updated_at": "2026-09-11T11:46:12+00:00",
   "datasets": {
     "open_2025_contracts_awarded_greater_than_25_000_jul_dec": {
       "source_id": null,
@@ -3696,6 +3696,17 @@
       "fetched_at": "2026-09-09T21:50:09+00:00",
       "parquet": "devapps__sample.parquet",
       "notes": "first 10 of 813 dev-app features; authKey is client-embedded"
+    },
+    "procurement_awards": {
+      "source_id": "procurement",
+      "shape": "derived",
+      "title": "Ottawa contract awards, normalised across half-year releases",
+      "origin_url": "https://open.ottawa.ca/search?q=contracts%20awarded",
+      "rows": 5649,
+      "spatial": false,
+      "fetched_at": "2026-09-11T11:46:11+00:00",
+      "parquet": "procurement_awards.parquet",
+      "notes": "union of the half-year contract-award releases with column names normalised; amount parsed to numeric; s.22(1) clause extracted. One row = one award action (initial, amendment or extension), so a contract amended twice appears three times."
     }
   }
 }

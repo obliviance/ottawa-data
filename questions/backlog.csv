@@ -1,6 +1,6 @@
 id,question,datasets,join_type,value,feasibility,novelty,status,added
 q0001,Do development applications with prior lobbying get approved faster or more often than those without?,lobbyist-registry devapps timeline,entity+date,5,2,5,new,2026-09-09
-q0002,Vendor concentration in city procurement over time — which firms win the most work and how has that shifted?,procurement,entity+date,5,2,4,new,2026-09-09
+q0002,Vendor concentration in city procurement over time — which firms win the most work and how has that shifted?,procurement,entity+date,5,4,4,shipped,2026-09-09
 q0003,Councillor office-expense patterns vs voting alignment with the Mayor,office-expenses howtheyvoted,entity,4,3,4,new,2026-09-09
 q0004,Automated speed enforcement camera siting vs ward income vs prior collision history — is placement equitable?,open_ase_camera_locations collisions spine_geography,spatial,4,4,3,new,2026-09-09
 q0005,311 service-request volume and response time by ward — service-equity gradient,open311 spine_geography,ward+date,4,4,3,shipped,2026-09-09
