@@ -56,6 +56,13 @@ OFFICES = {
 # a bare URL, e.g. '<a href="https://..." target ="_blank">https://...</a>'.
 HREF = re.compile(r'href\s*=\s*"([^"]+)"', re.I)
 
+# Candidates who typed "facebook.com/myname" into a field the city's form then
+# prefixes end up with a doubled domain and a dead link:
+#   https://www.facebook.com/facebook.com/votechelseawalton
+# Eight of the 268 filed links are broken this way. Repairing them matters
+# because these render as clickable links under a named candidate.
+DOUBLED = re.compile(r"(https?://(?:www\.)?([a-z0-9-]+\.[a-z]+))/(?:www\.)?\2/", re.I)
+
 
 def clean(value) -> str:
     """Empty-ish API values arrive as None, '' or whitespace. Normalise to ''."""
@@ -68,10 +75,8 @@ def link_url(entry: dict) -> str:
     """The URL out of a SocialMediaInfo entry, whether or not it is wrapped."""
     name = clean(entry.get("Name"))
     match = HREF.search(name)
-    if match:
-        return match.group(1).strip()
-    # A few entries are a bare URL with no anchor around them.
-    return name if name.startswith("http") else ""
+    url = match.group(1).strip() if match else (name if name.startswith("http") else "")
+    return DOUBLED.sub(r"\1/", url) if url else ""
 
 
 def fetch() -> dict:

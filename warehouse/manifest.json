@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T17:31:04+00:00",
+  "updated_at": "2026-09-16T12:10:55+00:00",
   "datasets": {
     "open_2025_contracts_awarded_greater_than_25_000_jul_dec": {
       "source_id": null,
@@ -3715,7 +3715,7 @@
       "origin_url": "https://elections.ottawa.ca/CandidateList/CandidateList",
       "rows": 181,
       "spatial": false,
-      "fetched_at": "2026-09-15T17:31:03+00:00",
+      "fetched_at": "2026-09-16T12:07:26+00:00",
       "parquet": "election_candidates.parquet",
       "notes": "from the elections.ottawa.ca /ws/api/ JSON service. Nominations closed 2026-08-21, so the roster is final. ward_number applies to councillors; trustees use zone_number + school_board; mayors are city-wide."
     },
@@ -3726,7 +3726,7 @@
       "origin_url": "https://elections.ottawa.ca/CandidateList/CandidateList",
       "rows": 268,
       "spatial": false,
-      "fetched_at": "2026-09-15T17:31:03+00:00",
+      "fetched_at": "2026-09-16T12:07:26+00:00",
       "parquet": "election_candidate_links.parquet",
       "notes": "URLs extracted from the HTML anchors the API returns in SocialMediaInfo."
     },
@@ -3737,7 +3737,7 @@
       "origin_url": "https://elections.ottawa.ca/CandidateList/CandidateList",
       "rows": 25,
       "spatial": false,
-      "fetched_at": "2026-09-15T17:31:03+00:00",
+      "fetched_at": "2026-09-16T12:07:26+00:00",
       "parquet": "election_wards.parquet",
       "notes": "ward 99 is the city-wide pseudo-ward used for the mayoral race."
     },
@@ -3748,7 +3748,7 @@
       "origin_url": "https://elections.ottawa.ca/CandidateList/CandidateList",
       "rows": 5,
       "spatial": false,
-      "fetched_at": "2026-09-15T17:31:03+00:00",
+      "fetched_at": "2026-09-16T12:07:26+00:00",
       "parquet": "election_school_boards.parquet",
       "notes": ""
     },
@@ -3759,9 +3759,31 @@
       "origin_url": "https://elections.ottawa.ca/CandidateList/CandidateList",
       "rows": 96,
       "spatial": false,
-      "fetched_at": "2026-09-15T17:31:03+00:00",
+      "fetched_at": "2026-09-16T12:07:27+00:00",
       "parquet": "election_trustee_zones.parquet",
       "notes": "exploded from the ZoneWards string on each trustee record; the city publishes no zone-to-ward table of its own."
+    },
+    "spine_councillors": {
+      "source_id": null,
+      "shape": "spine",
+      "title": "spine — councillors of the 2022–2026 term, with 2026 ballot status",
+      "origin_url": "https://open.ottawa.ca/datasets/ottawa::elected-officials-2022-2026",
+      "rows": 26,
+      "spatial": false,
+      "fetched_at": "2026-09-16T12:10:55+00:00",
+      "parquet": "spine_councillors.parquet",
+      "notes": "surname is the join key, verified unique and resolvable against both the vote and attendance data at build time; `term` is populated only where a seat changed hands mid-term; `seat_on_ballot` is False for an incumbent not seeking their own seat again. Join to source data through spine_councillor_aliases, not by name."
+    },
+    "spine_councillor_aliases": {
+      "source_id": null,
+      "shape": "spine",
+      "title": "spine — every name variant each councillor appears under, by source",
+      "origin_url": "",
+      "rows": 129,
+      "spatial": false,
+      "fetched_at": "2026-09-16T12:10:55+00:00",
+      "parquet": "spine_councillor_aliases.parquet",
+      "notes": "resolved on surname plus first initial where the alias carries one. Written out so the crosswalk is auditable: an alias that should have matched and did not is visible as an absence here rather than as a silently low vote count."
     }
   }
 }
