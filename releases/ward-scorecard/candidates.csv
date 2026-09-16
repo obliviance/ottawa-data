@@ -1,0 +1,182 @@
+candidate_id,office,name,ward_number,ward_name,zone_number,zone_wards,school_board,school_board_full,nomination_date,rebate_program,phone,email
+fbc6eddc-51a6-47a9-abf9-908d6e656979,councillor,Barbara Daniela Gandolfo,1.0,01 - Orléans East-Cumberland,,,,,2026-05-01,True,,BarbaraForCouncil@gmail.com
+3c6cbef4-471d-4029-9d84-81344865929f,councillor,Bob Bell,1.0,01 - Orléans East-Cumberland,,,,,2026-05-05,True,613-612-4968,bob4orleans@gmail.com
+fccf225d-6bf0-4521-93ac-34bb63055f8e,councillor,Matt Luloff,1.0,01 - Orléans East-Cumberland,,,,,2026-05-05,True,,matt@mattluloff.com
+d16a2b1d-5c8e-41e1-8b36-1b5325337687,councillor,Mazhar Choudhry,1.0,01 - Orléans East-Cumberland,,,,,2026-05-19,True,,mazhar@choudhry.org
+335a65fa-e896-4ec5-89d8-57dafe880e85,councillor,Sherif Rizk,1.0,01 - Orléans East-Cumberland,,,,,2026-05-04,True,613-689-3522,info@sherifrizk.ca
+8f690f3e-df73-40d9-bad9-d38fe2be3c08,councillor,Tammie Trellert,1.0,01 - Orléans East-Cumberland,,,,,2026-05-05,True,,hello@tammietrellert.ca
+a3704fb1-1ee4-4cf7-8c69-c22995e0a45d,councillor,Yvette Ashiri,1.0,01 - Orléans East-Cumberland,,,,,2026-05-21,True,343-254-4781,electyvette@yvetteashiri.ca
+71e862b6-c5e2-43d6-aa5e-5bc3562c9534,councillor,David Purchase,2.0,02 - Orléans West-Innes,,,,,2026-08-20,False,613-867-9581,david@davidpurchase.ca
+8efbc615-1300-4641-8c7b-38db9d0c0f0b,councillor,Jenna Jessop,2.0,02 - Orléans West-Innes,,,,,2026-07-31,True,,contact@jennajessop.ca
+4567fb91-b42d-4ca7-afe0-b4cd41b61af7,councillor,Laura Dudas,2.0,02 - Orléans West-Innes,,,,,2026-05-01,True,,info@voteforlaura.ca
+0d52547d-880e-4909-9dc7-42e5dded5c10,councillor,David Hill,3.0,03 - Barrhaven West,,,,,2026-05-12,True,,david@barrhavendavid.ca
+890e44de-bc39-41f5-879a-bdf1b4029e68,councillor,Donna Blackburn,3.0,03 - Barrhaven West,,,,,2026-07-06,True,613-884-6084,info@donnablackburn.ca
+a9a40466-fd9d-4e12-a1f8-df51cf5a1f20,councillor,Jeff Balys,3.0,03 - Barrhaven West,,,,,2026-08-20,True,613-222-4031,jeff@balys.org
+c5cb0e7e-2fe6-4a3d-be65-f28e7e62d187,councillor,Cathy Curry,4.0,04 - Kanata North,,,,,2026-05-04,True,,cathyforkanata@gmail.com
+a8789e44-f4f1-476f-810c-14dc7fa0ba0b,councillor,James Murchison,4.0,04 - Kanata North,,,,,2026-08-17,False,,murchison2026@gmail.com
+e81b52da-4941-4d0b-846b-2481b46bfbef,councillor,Rob Millan,4.0,04 - Kanata North,,,,,2026-08-21,True,,rob@robmillan.ca
+960e9fee-dd5f-447a-a9b3-d076e6828a4d,councillor,Christine Harrison,5.0,05 - West Carleton-March,,,,,2026-05-01,True,613-203-8805,hello@christineharrison.ca
+1d4e5b89-503e-41d9-827d-91ee47ace12f,councillor,Clarke Kelly,5.0,05 - West Carleton-March,,,,,2026-05-06,True,613-978-1031,info@voteclarkekelly.ca
+760af411-e3b1-46bb-9334-e22af856a33c,councillor,Dylan Nose,5.0,05 - West Carleton-March,,,,,2026-08-21,True,,
+26c4fa9c-370d-41da-aae9-72f6a52db01e,councillor,Chelsea Walton,6.0,06 - Stittsville,,,,,2026-05-01,True,,info@votechelsea.com
+fa7ac2aa-e70d-4227-92f0-887af99646a6,councillor,Devin Michael Fitzgerald O'Brien,6.0,06 - Stittsville,,,,,2026-08-19,True,613-612-0353,devobrien48@gmail.com
+20abbb40-e2dd-4a8f-8dba-8031935ab1e9,councillor,Kevin Hua,6.0,06 - Stittsville,,,,,2026-05-08,True,613-859-5380,kevin@kevinhua.ca
+5d780455-bd23-47aa-9a54-4c66ae7c3e36,councillor,Mani Sharma,6.0,06 - Stittsville,,,,,2026-05-01,True,613-663-9292,nagmani@nagmanisharma.ca
+ee2221a2-0e17-4e97-8c60-bca596384e89,councillor,Marie-Ange Yindaki Ahinful,6.0,06 - Stittsville,,,,,2026-06-05,True,613-400-1590,info@marieangeahinful.com
+ef461511-9a41-4778-bfc6-8047a6d6a1d7,councillor,Paul Meek,6.0,06 - Stittsville,,,,,2026-07-22,True,343-297-6057,hello@paulmeek.ca
+aed30d54-4e13-4054-a9e0-d69916c43ecb,councillor,Sheetal Narwal,6.0,06 - Stittsville,,,,,2026-05-01,True,343-543-6363,info@sheetalnarwal.ca
+42735374-6e0d-495f-8d6f-dd8b8fbc3e36,councillor,Tanya Hein,6.0,06 - Stittsville,,,,,2026-05-04,True,343-202-8261,Tanya@VoteTanya.ca
+57dd16ce-c845-4588-9727-e7a74e626bfa,councillor,Theresa Qadri,6.0,06 - Stittsville,,,,,2026-05-05,True,613-620-0539,VoteTheresaQ@gmail.com
+3e0e66b3-cc6e-4f83-aff4-0e094411cf66,councillor,Butch Moore,7.0,07 - Bay,,,,,2026-08-10,True,,votebutchmoore@gmail.com
+764fdc90-ff10-4461-adb1-00556ae6bd29,councillor,Spencer Radford,7.0,07 - Bay,,,,,2026-06-12,True,,vote@spencerradford.ca
+b720ae2a-e3dd-4489-9bde-4c8619f0e050,councillor,Theresa Kavanagh,7.0,07 - Bay,,,,,2026-05-13,True,,theresa@reelecttheresakavanagh.ca
+ed79f2ba-711e-4e42-87b5-dd26e7081e14,councillor,Laine Johnson,8.0,08 - College,,,,,2026-06-08,True,,lainejohnson4college@gmail.com
+fde81523-2559-42cc-a176-05e72910cff3,councillor,Malloum Abakar,8.0,08 - College,,,,,2026-08-21,False,343-209-6100,abakarmalloumcollege@gmail.com
+b5f173c2-b013-447c-8f6c-65b17a9dfb4b,councillor,Anna Ielo-Tal,9.0,09 - Knoxdale-Merivale,,,,,2026-06-11,True,,anna4council@gmail.com
+b7618d46-b6e2-4b26-a76f-1b9abc5fa21e,councillor,Brandon Ly,9.0,09 - Knoxdale-Merivale,,,,,2026-06-03,True,,contact@brandonly.ca
+7f52c3a3-e5d7-440e-a463-6774392e2a2b,councillor,Cole Fraser Jones,9.0,09 - Knoxdale-Merivale,,,,,2026-05-26,False,,cole@colefraserjones.ca
+0b8f4b10-dba4-4433-bc9a-b27e1293c876,councillor,Sean Devine,9.0,09 - Knoxdale-Merivale,,,,,2026-07-16,True,,seandevine2026@gmail.com
+6f750d77-03a8-400e-9a89-d8bfb2b50346,councillor,Ahmed Rashid,10.0,10 - Gloucester-Southgate,,,,,2026-08-20,True,,ahmedrashid4ward10@gmail.com
+70da5217-0ee8-4df4-b0f5-612f20334e0d,councillor,Ayub Omar,10.0,10 - Gloucester-Southgate,,,,,2026-08-21,True,343-297-9952,ayubomar@omarforward10.ca
+ea3a6eeb-47a0-4595-8026-ce7852cf76f9,councillor,Donna Dickson,10.0,10 - Gloucester-Southgate,,,,,2026-05-06,False,613-793-4290,contact@votedonnadickson.ca
+2bb58d13-3d89-4088-9591-16fae3d963ba,councillor,Jessica Bradley,10.0,10 - Gloucester-Southgate,,,,,2026-05-08,True,,Jessica@Bradley2026.ca
+882dccca-12cd-4bee-ac23-911434986e8c,councillor,John Redins,10.0,10 - Gloucester-Southgate,,,,,2026-05-04,False,613-277-4227,john@johnredins.com
+c8b7b6d7-03eb-494e-9b36-9ec886095dee,councillor,Cathryne Milburn,11.0,11 - Beacon Hill-Cyrville,,,,,2026-05-01,True,,cathryne.milburn@gmail.com
+82817e50-2067-43c1-809d-fceb6e11f6f6,councillor,Coreen Corcoran,11.0,11 - Beacon Hill-Cyrville,,,,,2026-08-19,False,,coreenBHC@proton.me
+803e9798-7f01-49ba-9fb5-49835bb5cc26,councillor,Tim Tierney,11.0,11 - Beacon Hill-Cyrville,,,,,2026-05-01,True,343-842-1234,tim@timtierney.ca
+3d4f5584-b565-469e-8b96-13092f07ad67,councillor,Brian Paquette,12.0,12 - Rideau-Vanier,,,,,2026-08-19,False,613-207-8049,the9thpaquette@gmail.com
+ccb35853-214c-4aea-be2d-3c07f60ad077,councillor,Eric Smith,12.0,12 - Rideau-Vanier,,,,,2026-08-17,False,,
+525ede60-2074-4be2-a80d-ff323b5d683e,councillor,Julie Fiala Chartrand,12.0,12 - Rideau-Vanier,,,,,2026-08-21,False,613-400-9967,juliefialachartrand@gmail.com
+febe1111-f7f8-4517-a8e3-23c89f345d94,councillor,Lyra Evans,12.0,12 - Rideau-Vanier,,,,,2026-05-04,True,613-793-9469,lyra.evans.ott@gmail.com
+4f6de379-7b8b-4c65-96fc-dda4d4548e88,councillor,Michael Karl Sewanaku,12.0,12 - Rideau-Vanier,,,,,2026-08-19,False,343-204-9716,mikesforrideau@gmail.com
+9abfd847-a960-4377-a101-90f4c8fac89f,councillor,Stéphanie Plante,12.0,12 - Rideau-Vanier,,,,,2026-07-24,True,,steph@sp2026.ca
+861ea86b-bada-40ef-a4d0-38d3f3c97504,councillor,Peter J. Karwacki,13.0,13 - Rideau-Rockcliffe,,,,,2026-05-01,False,613-304-5844,peterkarwacki.overbrook@gmail.com
+d329158d-7a7a-49c8-be8e-c28e87aba760,councillor,Rawlson King,13.0,13 - Rideau-Rockcliffe,,,,,2026-05-14,True,613-822-0396,info@rawlsonking.ca
+ea2f35bb-d918-44e3-a7f3-abfb578eaccf,councillor,Ariel Troster,14.0,14 - Somerset,,,,,2026-05-07,True,,info@troster2026.ca
+3df74887-410d-4fbf-8e09-1bf0beefe095,councillor,Dillon Anderson,14.0,14 - Somerset,,,,,2026-06-12,False,705-358-9039,dillon2003@hotmail.ca
+07faa9b3-444f-428e-9d5c-db0567cacd82,councillor,Michael Tay,14.0,14 - Somerset,,,,,2026-06-16,True,,michaeltaycommunity@gmail.com
+164db2f8-0f76-40d0-aceb-10d4ea7acbcf,councillor,Nicholas Gollé,14.0,14 - Somerset,,,,,2026-08-10,False,,nicholasgolle@nicholasgolle4somersetward.ca
+c67a9cb4-e674-4f9a-b9b2-c35f099d9c7f,councillor,Robert Dekker,14.0,14 - Somerset,,,,,2026-05-04,True,343-567-5264,info@robertdekker.ca
+d64ce23b-2fe1-4af2-9a51-4177f03bed0c,councillor,Brian Innes,15.0,15 - Kitchissippi,,,,,2026-06-04,True,613-252-2347,info@brianinnes.ca
+c2dfbb5d-c541-4c0f-bf3b-97918260565f,councillor,Joanne Chianello,15.0,15 - Kitchissippi,,,,,2026-05-01,True,,joanne@joannechianello.ca
+9e892725-2abc-40bf-8021-81c101fd545b,councillor,Subhir Uppal,15.0,15 - Kitchissippi,,,,,2026-05-01,True,613-725-5678,Vote@subhiruppal.com
+68954eb6-3299-4b5d-bb83-832255d0f6df,councillor,Xavier Commerford,15.0,15 - Kitchissippi,,,,,2026-08-17,False,438-788-6623,xaviercampaign@proton.me
+9f382335-afce-4195-a484-d372d77b1452,councillor,Riley Brockington,16.0,16 - River,,,,,2026-05-19,True,343-254-5210,riverward2026@yahoo.com
+6cb2236c-6f59-4a01-99a3-ef2a6b74434b,councillor,Farah Gulzar,17.0,17 - Capital,,,,,2026-06-02,False,705-491-2105,farahgulzarward17@gmail.com
+db270b18-2cc0-4988-a1c1-e1dfadd11fdf,councillor,Jaac Doduck,17.0,17 - Capital,,,,,2026-08-05,False,,info@votedoduck.ca
+778bcd78-0325-44fe-9305-a0b7646a5752,councillor,Shawn Menard,17.0,17 - Capital,,,,,2026-06-04,True,343-296-9312,info@menard2026.ca
+7b1766b0-5168-4bba-9d87-bc0e5fd5501f,councillor,Derek McSweeney,18.0,18 - Alta Vista,,,,,2026-07-14,True,613-850-9411,derekmcsweeney@votemcsweeney.ca
+7c552c3e-5ff2-403c-b28e-b12eecc1043b,councillor,Elsa Niyongabo,18.0,18 - Alta Vista,,,,,2026-08-14,True,,votezelsa@gmail.com
+d906a44c-c6f9-47ba-9f51-e0b9ee14893f,councillor,Marty Carr,18.0,18 - Alta Vista,,,,,2026-05-28,True,613-883-4288,altavistamarty@gmail.com
+15dbb906-d79a-4cca-950e-fc9dd3ded86d,councillor,Muhyadin Omar Barkhat,18.0,18 - Alta Vista,,,,,2026-08-12,True,613-265-7069,muhyadinbarkhat6@gmail.com
+782fc40b-dafe-4cb2-8aad-51ad11dd235e,councillor,Tressy El-Hawi,18.0,18 - Alta Vista,,,,,2026-05-04,True,613-869-7878,tressyelhawi67@gmail.com
+e88d0af2-09b8-4dbf-862d-2de95af4081d,councillor,Catherine Kitts,19.0,19 - Orléans South-Navan,,,,,2026-06-29,True,,info@catherinekitts.ca
+d97208a5-0b5f-4000-a11e-d488661f8076,councillor,Jason Wing,19.0,19 - Orléans South-Navan,,,,,2026-06-17,True,,
+285ddc20-41a2-47b5-ab85-a8446ee1c5f6,councillor,Bruce Anthony Faulkner,20.0,20 - Osgoode,,,,,2026-08-21,False,,
+4f9c3672-a204-4e70-b0e9-c833fb1e41a2,councillor,Isabelle Skalski,20.0,20 - Osgoode,,,,,2026-05-20,True,,electisabelleskalski@gmail.com
+6e539c8a-6759-402e-82b2-8404811e1e3d,councillor,David Brown,21.0,21 - Rideau-Jock,,,,,2026-05-25,True,613-325-1631,electdavidbrown1@gmail.com
+0d4c9d68-c33a-419b-9159-54960eca5cc8,councillor,Muyiwa Ojo,22.0,22 - Riverside South-Findlay Creek,,,,,2026-05-01,True,343-576-0956,info@muyiwaojo.ca
+b5ac7538-4171-4ef5-b4d4-e21ab67bfcff,councillor,Steve Desroches,22.0,22 - Riverside South-Findlay Creek,,,,,2026-05-04,True,,info@stevedesroches.vote
+d6e2decc-8a62-4a15-8ef6-21aa50ecfb24,councillor,Allan Hubley,23.0,23 - Kanata South,,,,,2026-06-10,True,,votehubley@gmail.com
+3f4d1caf-886b-4d43-a9e4-d69005a16c3b,councillor,Erin Coffin,23.0,23 - Kanata South,,,,,2026-05-01,True,613-219-0097,erinbcoffin@yahoo.com
+5237eb37-0d5b-46e4-b31b-b13a8c507473,councillor,Megan Strazds-Esenbergs,23.0,23 - Kanata South,,,,,2026-07-24,False,,meganforcouncil23@gmail.com
+1a491166-8fa9-41be-a123-2f918234ff04,councillor,Sam Bhalesar,23.0,23 - Kanata South,,,,,2026-08-10,True,613-868-8168,sambhalesar@gmail.com
+d05858c8-eeb3-4a18-baae-e39c6d2792e8,councillor,Ahmed Alsabaawi,24.0,24 - Barrhaven East,,,,,2026-08-19,False,,ahmedbarrhaveneast@gmail.com
+405e7a7d-9dd9-4350-9fbe-c9bb0a112b46,councillor,Jules Ruhinda,24.0,24 - Barrhaven East,,,,,2026-05-20,True,,julesteamward24@gmail.com
+95885672-f098-4d90-bc91-ab0efad9a280,councillor,Wilson Lo,24.0,24 - Barrhaven East,,,,,2026-05-04,True,,info@wilsonlo.ca
+f10bad60-b0b0-44dc-9afb-6c4544375e90,councillor,Yoosaf Melparamba,24.0,24 - Barrhaven East,,,,,2026-05-25,True,343-987-4363,yoosaf.ottawa@gmail.com
+bafe7f96-fdae-4329-b5e1-5ca91dea3092,councillor,Zahy A Adam,24.0,24 - Barrhaven East,,,,,2026-05-08,True,,info@adamzahy.ca
+cc3f6baf-f300-4d8e-9a98-5914ed42e84b,mayor,Alex Lawson,,,,,,,2026-05-01,False,613-981-8881,contact@votealex.ca
+85f2f53b-4faa-4eff-9ba6-4c9c96605953,mayor,Ali Shayvard,,,,,,,2026-08-21,True,613-316-1077,aliforottawa@gmail.com
+a1850db4-7ff8-4390-8e40-7e52c73b2b54,mayor,Amjad Ali Syed,,,,,,,2026-08-21,True,,
+89048e27-cefd-47a1-9017-741542084f6a,mayor,Bernard Couchman,,,,,,,2026-08-21,False,343-998-4746,bcouchman@h2oboy.ca
+4c840485-1481-4ab3-b3e9-28f96ad92658,mayor,Geoff Nicholas,,,,,,,2026-08-21,True,343-575-9545,mlksixtythree@gmail.com
+ba997695-c96b-45fd-bb9d-cb462ee1ae2a,mayor,Jacob Solomon,,,,,,,2026-08-21,False,613-701-2099,realtor@jacobsolomon.ca
+baa460d7-0754-4ffc-b865-5854b8447279,mayor,Jeff Leiper,,,,,,,2026-05-01,True,613-416-7437,info@leiper2026.ca
+95d03178-0a58-464a-a762-0cef0ea81140,mayor,Josh Rachlis,,,,,,,2026-08-21,False,,josh@joshrachlis.com
+7f4b975a-215e-451b-aec6-d4c25c3913db,mayor,Mark Sutcliffe,,,,,,,2026-05-25,True,,contact@marksutcliffe2026.ca
+e3e5cad6-6098-47fa-90ba-ec0931c2dd06,mayor,Neil Saravanamuttoo,,,,,,,2026-05-01,True,,neil@neilformayor.ca
+53abe897-6c47-410f-9ac6-de9e07476c0a,mayor,Peter Westaway,,,,,,,2026-07-15,False,613-698-6982,bikeman@bikemobile.ca
+5e2249dc-7f67-4161-a984-1a811ea76033,mayor,Queen Divine Priya Amber Bakshi,,,,,,,2026-08-20,True,613-400-4856,
+a388de46-6d82-4f9d-98f5-a5f7b2ea5bac,mayor,Suraj Harish,,,,,,,2026-08-05,False,613-413-3529,surajp.harish@gmail.com
+4bfa119b-d8b4-4483-8c11-e55baafefc92,mayor,Zed Chebib,,,,,,,2026-06-08,False,613-805-9449,ziad.fami.unif@gmail.com
+c8721a78-3234-44f1-a70c-1215d54b9ac3,trustee,Alykhan Abdulla,,,1.0,"05, 06, 21",English Public School Board,Ottawa-Carleton District School Board,2026-05-21,False,,
+7d54f8b3-daff-443b-b1af-6752f5ac9a71,trustee,Imrana Waraich,,,1.0,"05, 06, 21",English Public School Board,Ottawa-Carleton District School Board,2026-08-21,False,,
+476bc630-d6f5-4373-bdb8-32197fd5097b,trustee,John MacRae,,,1.0,"05, 06, 21",English Public School Board,Ottawa-Carleton District School Board,2026-08-05,False,,info@johnmacrae.ca
+02c904e0-449d-45c6-b696-bc0271944ca8,trustee,Jon Flemming,,,1.0,"05, 06, 21",English Public School Board,Ottawa-Carleton District School Board,2026-08-05,False,,ocdsb.students.deserve.better@gmail.com
+c86421df-2c58-4011-aab8-5023396da194,trustee,Julia Fortey,,,2.0,"04, 23",English Public School Board,Ottawa-Carleton District School Board,2026-05-29,False,,
+328b7979-29ee-468e-b58b-643031145a0f,trustee,Paul Crawford,,,2.0,"04, 23",English Public School Board,Ottawa-Carleton District School Board,2026-08-11,False,613-599-4696,pcrawford475@gmail.com
+817fa0b7-961e-4f90-a8c3-28abec93e0cb,trustee,Brenda Abramson,,,3.0,"03, 24",English Public School Board,Ottawa-Carleton District School Board,2026-07-06,False,,brenda4barrhaven@gmail.com
+f6920570-9cc9-4bf5-bcd0-b9707d9f0e5b,trustee,Daniel Pershick,,,3.0,"03, 24",English Public School Board,Ottawa-Carleton District School Board,2026-08-21,False,,daniel.barrhaven.trustee@gmail.com
+d69faaf9-7bde-4d29-9b16-098461065b1f,trustee,Kenneth (Kangwu) Xi,,,3.0,"03, 24",English Public School Board,Ottawa-Carleton District School Board,2026-07-21,False,,trustee.kenneth@gmail.com
+a0aa89af-a62a-409e-919b-a9cc27895ded,trustee,Benoit Massé,,,4.0,"07, 15",English Public School Board,Ottawa-Carleton District School Board,2026-05-26,False,,trusteebenoitzone4@outlook.com
+b7ea80cd-c173-4af4-8e55-48e78906804c,trustee,Emily Quaile,,,4.0,"07, 15",English Public School Board,Ottawa-Carleton District School Board,2026-07-29,False,,emilyquaile.zone4@gmail.com
+434c5e81-4643-482b-a732-8b67a8327124,trustee,Lara Bremner,,,5.0,"08, 09",English Public School Board,Ottawa-Carleton District School Board,2026-06-19,False,,larabremner6@gmail.com
+8db48d81-9453-4d97-83ff-9d515b8eeaca,trustee,Natasha Lynn Mott,,,5.0,"08, 09",English Public School Board,Ottawa-Carleton District School Board,2026-06-26,False,,Natashaforzone5@gmail.com
+1224ed66-bc18-4b96-935c-1b41e0a62fd0,trustee,Suzanne Lyon,,,5.0,"08, 09",English Public School Board,Ottawa-Carleton District School Board,2026-05-29,False,,electsuzanne2026@gmail.com
+48ee3218-2de8-4255-b758-d1b81271a570,trustee,Chris Durrant,,,6.0,"12, 13",English Public School Board,Ottawa-Carleton District School Board,2026-07-22,False,,chrisdurrantzone6@yahoo.com
+f892ca00-aff3-4692-8647-14fae45a01b2,trustee,Dean Rusland,,,6.0,"12, 13",English Public School Board,Ottawa-Carleton District School Board,2026-08-21,False,613-286-2749,
+e3b43e49-fc9b-419c-ac28-67e69d3f1487,trustee,Jennifer Moroziuk,,,6.0,"12, 13",English Public School Board,Ottawa-Carleton District School Board,2026-05-08,False,613-266-9169,moroziuk1975@hotmail.com
+2ff50b61-c7a2-471a-b959-df6f6c1ee55b,trustee,Scott Walker,,,6.0,"12, 13",English Public School Board,Ottawa-Carleton District School Board,2026-07-07,False,,
+ea495e98-4e85-432d-bf4d-c811c5167b7a,trustee,Jennifer Jennekens,,,7.0,"20, 22",English Public School Board,Ottawa-Carleton District School Board,2026-05-04,False,613-854-1245,reelectjenniferjennekens@gmail.com
+6613dc23-29f3-46a7-9e7d-d7e9861379db,trustee,Sasha Clayton,,,7.0,"20, 22",English Public School Board,Ottawa-Carleton District School Board,2026-06-15,False,613-400-1220,
+d94fe6f2-caf7-4f67-b0fd-41b374d770e6,trustee,Anthony Wong,,,8.0,"01, 19",English Public School Board,Ottawa-Carleton District School Board,2026-08-21,False,,tonyforeveryone@icloud.com
+1602a477-0b95-4ec4-aa80-a0db2ff74b66,trustee,Rick Bédard,,,8.0,"01, 19",English Public School Board,Ottawa-Carleton District School Board,2026-06-09,False,,
+fe1d5b1f-e341-4c7d-ba97-af5a970dfe55,trustee,Hilary Clauson,,,9.0,"17, 18",English Public School Board,Ottawa-Carleton District School Board,2026-08-11,False,613-220-5386,hilary.clauson@gmail.com
+1cf54031-6e60-4d51-85d6-2dba4bc4d898,trustee,Scott Dutrisac,,,9.0,"17, 18",English Public School Board,Ottawa-Carleton District School Board,2026-05-15,False,,scott@scottd.ca
+9b0c8736-5b4b-4f3e-af2b-aca828ab628f,trustee,Sergio DeFranco,,,9.0,"17, 18",English Public School Board,Ottawa-Carleton District School Board,2026-08-21,False,,
+17481d68-7a95-4932-ace4-6db591754d99,trustee,Diana Mills,,,10.0,14,English Public School Board,Ottawa-Carleton District School Board,2026-08-21,False,,diana.zone10@gmail.com
+eacec47d-a1cf-44f4-8f60-2d9a01a40d8c,trustee,Keelin Pringnitz,,,10.0,14,English Public School Board,Ottawa-Carleton District School Board,2026-07-07,False,613-366-0212,hello@keelinpringnitz.ca
+716b4a65-3929-40e3-abae-987165e7bf11,trustee,Shannon Boschy,,,10.0,14,English Public School Board,Ottawa-Carleton District School Board,2026-05-11,False,613-282-5370,shannon4trustee@gmail.com
+3a59aa01-5e9a-4696-8274-a7ebcc674196,trustee,Alan Riddell,,,11.0,"10, 16",English Public School Board,Ottawa-Carleton District School Board,2026-08-21,False,613-782-3243,info@electalan.ca
+b50992b1-5e17-4854-afae-242747855b50,trustee,Brendan Ray,,,11.0,"10, 16",English Public School Board,Ottawa-Carleton District School Board,2026-05-07,False,613-295-5548,peterbrendanray@gmail.com
+beedd35f-1119-4c1a-9771-efff1b0d7f73,trustee,Jason Glover,,,11.0,"10, 16",English Public School Board,Ottawa-Carleton District School Board,2026-08-21,False,613-416-7638,glover.governance@gmail.com
+f2aa0bb7-e9d3-4874-9a63-2eac60de56af,trustee,Cathy Varrette,,,12.0,"02, 11",English Public School Board,Ottawa-Carleton District School Board,2026-08-05,False,,trustee.cathy@gmail.com
+e377b228-5156-4b02-a556-3ce0b1e0c489,trustee,Rick Whitley,,,12.0,"02, 11",English Public School Board,Ottawa-Carleton District School Board,2026-05-11,False,,
+bb898d92-1ebf-447b-8370-a14f955a9382,trustee,Scott Phelan,,,1.0,"06, 20, 21",English Separate School Board,Ottawa Catholic School Board,2026-05-05,False,,
+59e52cf8-24bb-4007-9821-9a9200e021d1,trustee,Sandra Moore,,,2.0,"04, 05, 23",English Separate School Board,Ottawa Catholic School Board,2026-05-05,False,613-271-8452,sandmoore66@gmail.com
+bd0f000b-fce4-449d-8a22-12ec868f798a,trustee,Brian Coburn,,,3.0,"01, 19",English Separate School Board,Ottawa Catholic School Board,2026-06-25,False,613-355-7166,bmcoburn59@gmail.com
+db82230e-d0cb-4d39-968a-5af1261367fb,trustee,Greg Hopkins,,,4.0,"03, 22, 24",English Separate School Board,Ottawa Catholic School Board,2026-08-19,False,,barrhavengreg@gmail.com
+18436e3b-3fdb-4992-9f69-c98aa7e0f0a6,trustee,Spencer Warren,,,4.0,"03, 22, 24",English Separate School Board,Ottawa Catholic School Board,2026-05-11,False,,swarren7474@gmail.com
+913bf1ae-72e8-4669-80bb-fd8e25a74dfb,trustee,Joanne MacEwan,,,5.0,"02, 11",English Separate School Board,Ottawa Catholic School Board,2026-05-04,False,819-661-9856,joanne.macewan@gmail.com
+175dd035-e044-4e88-ad21-0fddfde38872,trustee,Eugene Milito,,,6.0,"08, 09",English Separate School Board,Ottawa Catholic School Board,2026-08-21,False,,eugenemilito@outlook.com
+0fef40cd-74aa-4679-990a-fe3a3b779bbd,trustee,Glen Armstrong,,,6.0,"08, 09",English Separate School Board,Ottawa Catholic School Board,2026-05-07,False,,glenarmstrong831@gmail.com
+2d13d151-38ce-4925-8735-d5420aab99dd,trustee,Peter Chabursky,,,6.0,"08, 09",English Separate School Board,Ottawa Catholic School Board,2026-08-17,False,613-676-0669,chaburskyp@gmail.com
+1b7c8800-3887-48e5-a51e-0c37fe657b99,trustee,Jeremy Wittet,,,7.0,"07, 15",English Separate School Board,Ottawa Catholic School Board,2026-05-01,False,613-818-7653,jeremy.wittet@gmail.com
+c4e73c7c-e581-4310-b0c6-c62191f4c481,trustee,Joshua Sargusingh,,,7.0,"07, 15",English Separate School Board,Ottawa Catholic School Board,2026-06-10,False,,joshuasa911@gmail.com
+c3ea99bb-cbd9-458d-bfde-06c560ef7628,trustee,Mark D Mullan,,,8.0,"10, 18",English Separate School Board,Ottawa Catholic School Board,2026-05-05,False,,mark@markmullan.ca
+f3fba417-aadd-45df-8fdb-bf7bf5c4e078,trustee,Danny Arrais,,,9.0,"16, 17",English Separate School Board,Ottawa Catholic School Board,2026-07-22,False,613-854-1423,dannyarrais1@gmail.com
+dd3b6038-fe6a-4872-b295-6c0175da79c4,trustee,Luka Luketic-Buyers,,,9.0,"16, 17",English Separate School Board,Ottawa Catholic School Board,2026-06-05,False,343-777-2208,luka_luketic_buyers@hotmail.com
+7305373c-2507-48cc-8917-cbdb8512ff66,trustee,Cameron Bonesso,,,10.0,"12, 13, 14",English Separate School Board,Ottawa Catholic School Board,2026-05-01,False,613-800-0812,vote@cam4trustee.ca
+bcdb9068-292f-40aa-8aec-0eb2d34599f4,trustee,Cindy Desclouds-Simpson,,,10.0,"12, 13, 14",English Separate School Board,Ottawa Catholic School Board,2026-05-04,False,613-824-0237,cinsimp24@gmail.com
+e89852ef-5dc0-4cc6-9a0d-3cf6440a9c05,trustee,Jolène Savoie-Day,,,4.0,"04, 05, 06, 07, 08, 23",French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-05-04,False,613-608-6566,jolenesavoieday@gmail.com
+6ef0748e-9a8b-430f-998d-a728e3faf241,trustee,Laurentine Mouchingam Mefire Nguwuo' Petuenju',,,4.0,"04, 05, 06, 07, 08, 23",French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-08-13,False,343-322-0908,electionsconseiller@laurentine2026.ca
+0023a530-8289-4505-9e12-95dbc441bfc3,trustee,André Djomamessi,,,5.0,"03, 09, 21, 22, 24",French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-08-07,False,613-276-8401,andredjoms@gmail.com
+3270b082-1626-409f-ada8-97e8f2fd9621,trustee,Joy Nehme,,,5.0,"03, 09, 21, 22, 24",French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-05-08,False,,drjoynehme@gmail.com
+9135cf0e-da80-4883-8b9e-b7a0f4f46fd7,trustee,David Elisma,,,6.0,"12, 14, 15, 17",French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-05-06,False,613-690-5979,info@votonselisma.ca
+dd9ddda7-aa66-4767-a08c-ba17b0707847,trustee,Jaycob Jacques,,,6.0,"12, 14, 15, 17",French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-08-20,False,,jaycobjacques03@gmail.com
+74063c06-e202-44f1-92fc-ca8a2675acec,trustee,Michel Charron,,,6.0,"12, 14, 15, 17",French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-07-10,False,613-328-1550,lechim79@hotmail.com
+f312cbe4-2ac4-4734-a879-73fff8ee3c21,trustee,Samtou Tchamdja,,,6.0,"12, 14, 15, 17",French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-08-20,False,,samcecce@gmail.com
+eee874ef-cb94-47ca-b1bf-2064688ba863,trustee,Edouard Marava,,,7.0,02,French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-05-13,False,343-262-3496,edouardmarava@gmail.com
+760bcede-9555-486e-8da0-c9b72acf8919,trustee,Robert Rainboth,,,7.0,02,French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-05-04,False,,rainboth@rogers.com
+da41542b-1520-4443-afd7-5b262cc34c8d,trustee,Dan Boudria,,,8.0,19,French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-05-05,False,,danboudria@gmail.com
+65f3a052-ecee-470e-9e80-ddb4bf00ae14,trustee,Johanne Lacombe,,,9.0,01,French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-05-06,False,613-282-9182,johannelacombe68@gmail.com
+5563845b-bd2c-4f5e-aa51-fdb2ebc88442,trustee,Isabelle Gervais,,,10.0,"10, 16, 18, 20",French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-08-04,False,,isabelle_gervais@yahoo.com
+4ade3ca8-87f3-421e-8598-cb633ae0c5ce,trustee,Valérie Chinan Assoi,,,10.0,"10, 16, 18, 20",French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-05-07,False,,valerie_assoi@yahoo.com
+20d20053-a145-438d-b19c-22f510ee4e91,trustee,André J. Thibodeau,,,11.0,"11, 13",French Catholic School Board,Conseil des écoles catholiques du Centre-Est,2026-05-06,False,,bodo1950@yahoo.ca
+76912ded-f67d-4f28-9c0d-39042fd39123,trustee,Marc Roy,,,6.0,"11, 19",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-06-10,False,,
+831226e9-9cbe-42ad-9333-b6b5ad9c6661,trustee,Marthe Foka,,,6.0,"11, 19",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-08-13,False,,contact@marthefoka.com
+4ec78b08-2414-4074-9186-af29a855ac07,trustee,Michelle Petersen,,,6.0,"11, 19",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-08-11,False,,info@michellepetersen.ca
+e77525c2-2613-4638-b659-d88c1928f166,trustee,Musset Pierre-Jérôme,,,7.0,"01, 02",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-07-07,False,613-220-8483,info@votezmusset.ca
+64e23f4d-e746-4553-a51e-f6629ee87968,trustee,Soukaina Boutiyeb,,,7.0,"01, 02",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-06-16,False,,sboutiyeb@gmail.com
+bbca8f9d-bd07-4544-ac1e-843a5fbe7af8,trustee,Abdelkader Amar Berrahou,,,8.0,"10, 16, 20, 22",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-08-19,False,613-908-1236,abdelkader.elwalhaci@gmail.com
+f05f45aa-365f-4a21-b41c-fc43a774a361,trustee,Denis Labrèche,,,8.0,"10, 16, 20, 22",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-05-05,False,,dlabreche@rogers.com
+add5b34d-29da-4713-a69d-0c137dcc7b8b,trustee,Zenab Mustapha,,,8.0,"10, 16, 20, 22",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-08-21,False,,zmustapha81@hotmail.com
+73e3aab1-000c-4f15-ad18-cfe94e12c3a3,trustee,Joël Beddows,,,9.0,"14, 15, 17, 18",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-06-10,False,,
+8a2a3139-5c19-44f0-a45f-c7812bdeebf6,trustee,Zakaria Iltireh,,,9.0,"14, 15, 17, 18",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-08-21,False,,
+17543358-f3dc-4b17-bd6d-b85e6a1970c1,trustee,Mathieu Fleury,,,10.0,"12, 13",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-08-14,False,,info@mathieufleury.ca
+82201947-2362-4acd-9410-a4fb89eaf29b,trustee,Réda Lounis,,,10.0,"12, 13",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-08-21,False,,
+2adcd8dc-7e98-4c95-8056-dfe5ccdf3a50,trustee,Abdelhakim Messaoudi,,,11.0,"04, 05, 07, 08, 09",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-07-29,False,,
+0fa8ec1b-bafd-49f8-824a-8831a403977e,trustee,Jacinthe Marcil,,,11.0,"04, 05, 07, 08, 09",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-05-06,False,,jacinthe.marcil@gmail.com
+6eab911b-5846-4159-8e22-3428ff42c792,trustee,Nevalette Zayet,,,12.0,"03, 06, 21, 23, 24",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-08-20,False,,nevalette.zayet@gmail.com
+d4410078-93bf-4b84-8dbd-d3f40e7f5f34,trustee,Samia Ouled Ali,,,12.0,"03, 06, 21, 23, 24",French Public School Board,Conseil des écoles publiques de l’Est de l’Ontario,2026-05-05,False,,samia.ouledali@gmail.com

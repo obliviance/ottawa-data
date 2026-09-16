@@ -50,7 +50,8 @@ tearsheet land in `releases/`.
 ### Spine
 - [x] `spine/geography.py` — `spine_wards` (24) + `spine_neighbourhoods` (116 ONS); DA + address lookup still to do
 - [x] `spine/timeline.py` — `spine_meetings` (2,071) + `spine_motions` (7,621)
-- [ ] `spine/entities.py` — fuzzy-matched actor list across accountability datasets
+- [x] `spine/entities.py` — `spine_councillors` (26) + `spine_councillor_aliases` (129);
+      surname + first-initial resolution, verified at build time, not fuzzy matching
 
 ### Phase A — ingest by shape
 
@@ -71,6 +72,7 @@ tearsheet land in `releases/`.
 | q0018 | recorded-vote cohesion / bloc structure | `apps/council-recorded-votes` + `releases/council-vote-cohesion` · [page](https://claude.ai/code/artifact/b3fad106-63b0-46c7-bbd7-8b72c69fd16c) | **shipped** |
 | q0005 | 311 requests by ward | `releases/311-by-ward` | **shipped** (dataset; viz TODO) |
 | q0002 | procurement concentration + sole-sourcing | `apps/procurement-concentration` + `releases/procurement-awards` · [page](https://claude.ai/code/artifact/52143ea2-84f9-429a-86e7-12ef898bec33) | **shipped** |
+| — | ward scorecard (2026 election) | `apps/ward-scorecard` + `releases/ward-scorecard` · [page](https://claude.ai/code/artifact/89a3d8d7-549b-4652-a636-a8a52710c6e2) | **shipped** |
 | q0004 | ASE camera siting equity | — | next (needs census-by-ward income) |
 | q0016 | collision hot-spots vs traffic calming | — | next |
 

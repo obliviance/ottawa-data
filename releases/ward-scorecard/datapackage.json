@@ -1,0 +1,55 @@
+{
+  "name": "ward-scorecard",
+  "title": "Ottawa 2026 municipal election \u2014 ward scorecard",
+  "description": "For each of the 24 wards: the incumbent's recorded-vote and attendance record, service and tax conditions, the 2026 candidates with their filed contact details, and the four trustee races that ward votes in. Voting day 2026-10-26.",
+  "licenses": [
+    {
+      "name": "OGL-Ottawa",
+      "title": "Open Government Licence \u2013 City of Ottawa"
+    },
+    {
+      "name": "site-terms",
+      "title": "Vote and attendance data derived from howtheyvoted.ca, which carries ordinary site terms, not an open licence"
+    }
+  ],
+  "sources": [
+    {
+      "title": "City of Ottawa elections web service",
+      "path": "https://elections.ottawa.ca/ws/api/"
+    },
+    {
+      "title": "Open Ottawa",
+      "path": "https://open.ottawa.ca/"
+    },
+    {
+      "title": "howtheyvoted.ca",
+      "path": "https://howtheyvoted.ca/data/ottawa/"
+    }
+  ],
+  "resources": [
+    {
+      "path": "by_ward.csv",
+      "format": "csv"
+    },
+    {
+      "path": "incumbent_record.csv",
+      "format": "csv"
+    },
+    {
+      "path": "candidates.csv",
+      "format": "csv"
+    },
+    {
+      "path": "candidate_links.csv",
+      "format": "csv"
+    },
+    {
+      "path": "trustee_races.csv",
+      "format": "csv"
+    },
+    {
+      "path": "scorecard.json",
+      "format": "json"
+    }
+  ]
+}

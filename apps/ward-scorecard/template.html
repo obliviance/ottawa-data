@@ -1,0 +1,334 @@
+<title>Your Ward, 2026</title>
+<meta name="description" content="For each of Ottawa's 24 wards: what the incumbent actually did, who is on the ballot on 26 October, and where to find what each candidate chose to publish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,560;1,6..72,400&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --paper:#f1f2f0; --card:#f7f8f6; --ink:#1b1d1c; --muted:#5f6360; --faint:#8b8f8b;
+    --rule:#d7d9d4; --rule-soft:#e4e6e1;
+    --accent:#6b3f3f; --bar:#6b3f3f; --bar-soft:#c9b4b4;
+    --open:#1f5f52; --open-bg:#e2eeea;
+    --measure:41rem;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#161816; --card:#1d201d; --ink:#e8e9e5; --muted:#9a9e98; --faint:#6f746e;
+      --rule:#2c2f2b; --rule-soft:#232722;
+      --accent:#cf9393; --bar:#cf9393; --bar-soft:#4a3b3b;
+      --open:#6ec1ab; --open-bg:#16302a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#161816; --card:#1d201d; --ink:#e8e9e5; --muted:#9a9e98; --faint:#6f746e;
+    --rule:#2c2f2b; --rule-soft:#232722;
+    --accent:#cf9393; --bar:#cf9393; --bar-soft:#4a3b3b;
+    --open:#6ec1ab; --open-bg:#16302a;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font:400 1.0625rem/1.62 "Public Sans", system-ui, -apple-system, sans-serif;
+    font-synthesis:none;
+  }
+  .wrap{max-width:47rem; margin:0 auto; padding:clamp(2rem,6vw,4rem) 1.35rem 5rem}
+  code,.m{font-family:"IBM Plex Mono", ui-monospace, monospace}
+
+  .masthead{
+    display:flex; justify-content:space-between; align-items:baseline; gap:1rem;
+    flex-wrap:wrap;
+    font:500 .7rem/1.4 "IBM Plex Mono", monospace; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--muted);
+    border-bottom:1.5px solid var(--ink); padding-bottom:.6rem;
+  }
+  h1{
+    font:400 clamp(2.1rem,6.4vw,3.4rem)/1.08 "Newsreader", Georgia, serif;
+    letter-spacing:-.012em; text-wrap:balance; margin:2.2rem 0 0; max-width:14ch;
+  }
+  .standfirst{
+    font:400 clamp(1.12rem,2.5vw,1.36rem)/1.5 "Newsreader", Georgia, serif;
+    max-width:var(--measure); margin:1rem 0 0;
+  }
+  .standfirst em{font-style:italic; color:var(--accent)}
+  .lede{max-width:var(--measure); margin:1.6rem 0 0; color:var(--muted); font-size:.97rem}
+  .lede p{margin:0 0 .8rem}
+  .lede strong{color:var(--ink)}
+
+  h2{
+    font:400 1.5rem/1.2 "Newsreader", Georgia, serif; margin:3rem 0 0;
+    padding-top:1.1rem; border-top:1px solid var(--rule);
+  }
+  h2 .eyebrow{
+    display:block; font:500 .66rem/1.5 "IBM Plex Mono", monospace;
+    letter-spacing:.11em; text-transform:uppercase; color:var(--faint); margin-bottom:.35rem;
+  }
+
+  .gap{
+    margin:1.6rem 0 0; padding:1.1rem 1.2rem; border-left:3px solid var(--accent);
+    background:color-mix(in srgb, var(--accent) 7%, transparent);
+    font-size:.95rem; max-width:var(--measure);
+  }
+  .gap p{margin:0} .gap p+p{margin-top:.6rem}
+  .gap b{
+    display:block; font:500 .64rem/1 "IBM Plex Mono", monospace;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:.5rem;
+  }
+
+  /* ---- ward card ---- */
+  .ward{margin:1.5rem 0 0; border:1px solid var(--rule); background:var(--card)}
+  .w-head{
+    display:flex; align-items:baseline; gap:.6rem; flex-wrap:wrap;
+    padding:.85rem 1.05rem .5rem; border-bottom:1px solid var(--rule-soft);
+  }
+  .w-num{
+    font:500 .74rem/1 "IBM Plex Mono", monospace; color:var(--faint);
+    letter-spacing:.06em; padding-top:.3rem;
+  }
+  .w-name{flex:1 1 11rem; font:400 1.35rem/1.15 "Newsreader", Georgia, serif}
+  .chip{
+    font:500 .6rem/1 "IBM Plex Mono", monospace; letter-spacing:.09em;
+    text-transform:uppercase; padding:.32rem .46rem; border-radius:2px;
+    background:var(--rule-soft); color:var(--muted); white-space:nowrap;
+  }
+  .chip.open{background:var(--open-bg); color:var(--open)}
+  .chip.acc{background:var(--bar-soft); color:var(--accent)}
+
+  .sect{padding:.85rem 1.05rem; border-bottom:1px solid var(--rule-soft)}
+  .sect:last-child{border-bottom:0}
+  .lbl{
+    font:500 .63rem/1 "IBM Plex Mono", monospace; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--faint); margin:0 0 .55rem;
+  }
+
+  .holder{margin:0 0 .9rem} .holder:last-child{margin-bottom:0}
+  .holder-name{font-weight:600; font-size:1rem}
+  .holder-term{
+    font:400 .74rem/1.4 "IBM Plex Mono", monospace; color:var(--muted); margin-top:.1rem;
+  }
+  .metrics{display:flex; gap:1.6rem; flex-wrap:wrap; margin-top:.5rem}
+  .metric .v{
+    font:500 1.12rem/1.1 "IBM Plex Mono", monospace; font-variant-numeric:tabular-nums;
+    color:var(--accent);
+  }
+  .metric .k{
+    display:block; font:400 .7rem/1.4 "IBM Plex Mono", monospace; color:var(--muted);
+    margin-top:.18rem;
+  }
+  .metric .of{color:var(--faint); font-size:.78rem}
+  .none{font-size:.92rem; color:var(--muted); font-style:italic}
+
+  .cond{
+    display:flex; gap:1.4rem; flex-wrap:wrap;
+    font:400 .8rem/1.5 "IBM Plex Mono", monospace; color:var(--muted);
+  }
+  .cond b{color:var(--ink); font-weight:500}
+
+  .cand{padding:.5rem 0; border-bottom:1px dotted var(--rule)}
+  .cand:last-child{border-bottom:0}
+  .cand-top{display:flex; align-items:baseline; gap:.5rem; flex-wrap:wrap}
+  .cand-name{font-weight:600; font-size:.97rem}
+  .cand-meta{font:400 .7rem/1.4 "IBM Plex Mono", monospace; color:var(--faint)}
+  .links{display:flex; gap:.38rem; flex-wrap:wrap; margin-top:.28rem}
+  .links a{
+    font:500 .66rem/1 "IBM Plex Mono", monospace; letter-spacing:.04em;
+    text-decoration:none; color:var(--accent); border:1px solid var(--bar-soft);
+    padding:.25rem .4rem; border-radius:2px;
+  }
+  .links a:hover,.links a:focus{background:var(--bar-soft)}
+  .links .nofiled{
+    font:400 .7rem/1 "IBM Plex Mono", monospace; color:var(--faint); font-style:italic;
+    padding:.25rem 0;
+  }
+
+  details{border-top:1px solid var(--rule-soft)}
+  summary{
+    padding:.7rem 1.05rem; cursor:pointer; list-style:none;
+    font:500 .66rem/1 "IBM Plex Mono", monospace; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--muted);
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"▸ "; color:var(--faint)}
+  details[open] summary::before{content:"▾ "}
+  summary:hover{color:var(--ink)}
+  .board{padding:.1rem 1.05rem .8rem}
+  .board h4{
+    margin:.7rem 0 .3rem; font:600 .84rem/1.3 "Public Sans", sans-serif;
+  }
+  .board .zone{font:400 .7rem/1 "IBM Plex Mono", monospace; color:var(--faint)}
+
+  .method{
+    margin:2.6rem 0 0; padding-top:1.2rem; border-top:1px solid var(--rule);
+    font-size:.9rem; color:var(--muted); max-width:var(--measure);
+  }
+  .method h2{font:500 .7rem/1.5 "IBM Plex Mono", monospace; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--muted); margin:0 0 .7rem; border:0; padding:0}
+  .method p{margin:0 0 .8rem}
+  .method a{color:var(--accent)}
+  @media (max-width:32rem){ .metrics{gap:1.1rem} .cond{gap:.9rem} }
+</style>
+
+<div class="wrap">
+  <div class="masthead">
+    <span>Ottawa municipal election &nbsp;·&nbsp; 26 October 2026</span>
+    <span>obliviance/ottawa-data</span>
+  </div>
+
+  <h1>Your ward, 2026</h1>
+  <p class="standfirst">
+    What the councillor you have actually did, and who is asking to replace them.
+    <em>A record, not a ranking</em> — nothing here is scored, and the wards are in
+    number order.
+  </p>
+
+  <div class="lede">
+    <p>
+      Ottawa elects a mayor, 24 councillors and trustees to four school boards.
+      Nominations closed on 21 August, so every name below is final. Two seats are
+      already decided — one candidate each.
+    </p>
+    <p>
+      For a sitting councillor, the strongest evidence available is not what they
+      say now but <strong>how they voted and whether they showed up</strong>. That is
+      what the first block of each card shows.
+    </p>
+  </div>
+
+  <div class="gap">
+    <b>What isn't here</b>
+    <p>
+      <strong>No platforms, policies or party affiliation.</strong> Ontario municipal
+      elections are non-partisan by law, the nomination form is not a CV, and no public
+      body collects candidate platforms — so for newcomers there is genuinely nothing
+      to compare.
+    </p>
+    <p>
+      Rather than imply a comparison the data can't support, each candidate is listed
+      with the website and social links <strong>they filed with the City Clerk</strong>.
+      Nothing here was gathered from anywhere else.
+    </p>
+  </div>
+
+  <h2 id="mayor"><span class="eyebrow">City-wide</span>Mayor</h2>
+  <div id="mayor-list"></div>
+
+  <h2><span class="eyebrow">24 wards, in number order</span>Your ward</h2>
+  <div id="wards"></div>
+
+  <div class="method">
+    <h2>How this was made</h2>
+    <p>
+      Candidates, wards and school boards come from the city's own election web
+      service. The voting record and attendance come from
+      <a href="https://howtheyvoted.ca/">howtheyvoted.ca</a>, which compiles them by
+      hand because the city publishes them nowhere as data. Service and tax figures
+      come from Open Ottawa.
+    </p>
+    <p>
+      <strong>Only about 4% of motions reach a recorded vote</strong> — the rest carry
+      on consent. Dissent rate describes that contested slice and nothing else, which
+      is why the vote count sits beside every rate: 19% of 90 votes and 43% of 235 are
+      not the same kind of number.
+    </p>
+    <p>
+      Attendance is from howtheyvoted rather than the city, because
+      <span id="cityatt"></span> — it begins nearly two years into the term.
+    </p>
+    <p>
+      Ward 20 changed hands mid-term and both records are shown. Councillors appear
+      under several different spellings across sources, so every figure is joined
+      through an explicit, published alias table rather than by matching names.
+    </p>
+    <p>
+      Data and code:
+      <a href="https://github.com/obliviance/ottawa-data/tree/main/releases/ward-scorecard"><code>releases/ward-scorecard</code></a>
+      &nbsp;·&nbsp; licences: OGL – City of Ottawa; vote and attendance data carries
+      ordinary site terms, not an open licence.
+    </p>
+  </div>
+</div>
+
+<script id="scorecard" type="application/json">__DATA__</script>
+<script>
+  const D = JSON.parse(document.getElementById("scorecard").textContent);
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g,
+    ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+  const pct = v => v == null ? "—" : Math.round(v * 100) + "%";
+  const num = v => v == null ? "—" : v.toLocaleString();
+
+  document.getElementById("cityatt").textContent = D.city_attendance_note;
+
+  function linksHTML(c){
+    if (!c.links.length) return '<div class="links"><span class="nofiled">no links filed</span></div>';
+    return '<div class="links">' + c.links.map(l =>
+      `<a href="${esc(l.u)}" target="_blank" rel="noopener noreferrer">${esc(l.t)}</a>`
+    ).join("") + "</div>";
+  }
+  function candHTML(c){
+    const bits = [`nominated ${esc(c.nom)}`];
+    if (c.rebate) bits.push("rebate programme");
+    return `<div class="cand">
+      <div class="cand-top"><span class="cand-name">${esc(c.name)}</span>
+        <span class="cand-meta">${bits.join(" · ")}</span></div>
+      ${linksHTML(c)}</div>`;
+  }
+  function holderHTML(h){
+    const term = h.term ? `<div class="holder-term">${esc(h.term)}</div>` : "";
+    const ballot = h.on_ballot ? "" :
+      ` <span class="cand-meta">— not seeking this seat</span>`;
+    if (h.votes == null) return `<div class="holder"><span class="holder-name">${esc(h.name)}</span>${ballot}${term}</div>`;
+    return `<div class="holder">
+      <span class="holder-name">${esc(h.name)}</span>${ballot}${term}
+      <div class="metrics">
+        <div class="metric"><span class="v">${pct(h.dissent_rate)}</span>
+          <span class="k">dissent <span class="of">${h.dissents} of ${h.votes} recorded votes</span></span></div>
+        <div class="metric"><span class="v">${pct(h.attendance_rate)}</span>
+          <span class="k">attendance <span class="of">${num(h.meetings)} meetings</span></span></div>
+      </div></div>`;
+  }
+  function trusteeHTML(w){
+    if (!w.trustees.length) return "";
+    const n = w.trustees.reduce((a, r) => a + r.candidates.length, 0);
+    return `<details><summary>School board trustees — ${w.trustees.length} races, ${n} candidates</summary>
+      <div class="board">${w.trustees.map(r => `
+        <h4>${esc(r.board)} <span class="zone">· zone ${r.zone} · ${esc(r.board_full)}</span></h4>
+        ${r.candidates.length ? r.candidates.map(candHTML).join("")
+          : '<div class="none">no candidates filed</div>'}`).join("")}</div></details>`;
+  }
+
+  document.getElementById("mayor-list").innerHTML =
+    `<div class="ward"><div class="sect">
+       <p class="lbl">${D.mayor.length} candidates</p>${D.mayor.map(candHTML).join("")}
+     </div></div>`;
+
+  document.getElementById("wards").innerHTML = D.wards.map(w => {
+    const chips = [];
+    if (w.acclaimed) chips.push('<span class="chip acc">acclaimed</span>');
+    else if (w.open_seat) chips.push('<span class="chip open">open seat</span>');
+    chips.push(`<span class="chip">${w.candidates.length} candidate${w.candidates.length === 1 ? "" : "s"}</span>`);
+
+    const record = w.incumbents.length
+      ? w.incumbents.map(holderHTML).join("")
+      : '<div class="none">No incumbent record for this ward.</div>';
+    const openNote = w.open_seat
+      ? `<div class="none" style="margin-top:.6rem">No incumbent is seeking this seat${
+           w.running_for === "mayor" ? " — they are running for mayor" : ""}, so this race is open.</div>`
+      : "";
+
+    const cond = [];
+    if (w.svc.requests != null) cond.push(`<span><b>${num(w.svc.requests)}</b> 311 requests</span>`);
+    if (w.svc.days != null) cond.push(`<span>median <b>${w.svc.days}</b> days to close</span>`);
+    if (w.pop != null) cond.push(`<span><b>${num(w.pop)}</b> residents</span>`);
+    if (w.tax != null) cond.push(`<span><b>$${(w.tax / 1e6).toFixed(0)}M</b> municipal taxes</span>`);
+    cond.push(`<span><b>${w.places}</b> voting places<span class="of"> · ${w.places_acc} accessible</span></span>`);
+
+    return `<section class="ward" id="ward-${w.n}">
+      <div class="w-head"><span class="w-num">WARD ${String(w.n).padStart(2, "0")}</span>
+        <span class="w-name">${esc(w.name)}</span>${chips.join("")}</div>
+      <div class="sect"><p class="lbl">The record</p>${record}${openNote}</div>
+      <div class="sect"><p class="lbl">The ward</p><div class="cond">${cond.join("")}</div></div>
+      <div class="sect"><p class="lbl">On the ballot</p>${w.candidates.map(candHTML).join("")}</div>
+      ${trusteeHTML(w)}
+    </section>`;
+  }).join("");
+</script>

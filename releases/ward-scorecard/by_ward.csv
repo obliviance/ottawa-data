@@ -1,0 +1,25 @@
+ward_number,ward_name,candidates,rebate_optin,acclaimed,requests,median_days_to_close,pct_closed,assessment,municipal_taxes,population,voting_places,voting_places_accessible,incumbent,incumbent_on_ballot,incumbent_running_for,open_seat
+1,Orléans East-Cumberland,7,7,False,22077,5.0,0.953,7482653645,86350813,48410.0,28,27,Matthew Luloff,True,councillor,False
+2,Orléans West-Innes,3,2,False,21448,5.0,0.951,6265281501,72943930,44580.0,22,22,Laura Dudas,True,councillor,False
+3,Barrhaven West,3,3,False,32270,3.0,0.956,9211016735,110009522,66540.0,21,21,David Hill,True,councillor,False
+4,Kanata North,3,2,False,20731,5.0,0.948,8891876204,118208726,39470.0,19,19,Cathy Curry,True,councillor,False
+5,West Carleton-March,3,3,False,11120,13.0,0.945,5370097469,47141433,26430.0,13,13,Clarke Kelly,True,councillor,False
+6,Stittsville,9,9,False,26064,4.0,0.949,8995263054,107761384,45580.0,16,16,Glen Gower,False,,True
+7,Bay,3,3,False,27084,3.0,0.94,7763431914,98259627,45590.0,48,48,Theresa Kavanagh,True,councillor,False
+8,College,2,1,False,34567,2.0,0.948,8242258683,103373081,52080.0,37,37,Laine Johnson,True,councillor,False
+9,Knoxdale-Merivale,4,3,False,21552,3.0,0.952,6854143884,91504776,39730.0,24,24,Sean Devine,True,councillor,False
+10,Gloucester-Southgate,5,3,False,22329,5.0,0.947,6686071615,90654391,47570.0,24,24,Jessica Bradley,True,councillor,False
+11,Beacon Hill-Cyrville,3,2,False,15643,4.0,0.955,5638233475,75454130,34030.0,21,21,Tim Tierney,True,councillor,False
+12,Rideau-Vanier,6,2,False,34764,3.0,0.94,9629536299,130744682,50090.0,41,41,Stéphanie Plante,True,councillor,False
+13,Rideau-Rockcliffe,2,1,False,22800,2.0,0.948,7326510836,91651241,41330.0,36,36,Rawlson King,True,councillor,False
+14,Somerset,5,3,False,33178,2.0,0.941,13063941436,218036219,41610.0,33,33,Ariel Troster,True,councillor,False
+15,Kitchissippi,4,3,False,29290,3.0,0.935,9488546887,115072987,46940.0,26,26,Jeff Leiper,False,mayor,True
+16,River,1,1,True,25495,4.0,0.946,7092585288,88090102,48510.0,25,25,Riley Brockington,True,councillor,False
+17,Capital,3,1,False,27036,3.0,0.947,8825225672,106319798,38790.0,31,31,Shawn Menard,True,councillor,False
+18,Alta Vista,5,5,False,23549,5.0,0.947,7749850271,104480328,44680.0,32,31,Marty Carr,True,councillor,False
+19,Orléans South-Navan,2,2,False,26240,4.0,0.958,8971869836,102383596,54210.0,18,18,Catherine Kitts,True,councillor,False
+20,Osgoode,2,1,False,14136,11.0,0.935,6490593462,57661413,30390.0,19,19,Isabelle Skalski,True,councillor,False
+21,Rideau-Jock,1,1,True,17138,6.0,0.939,7149300829,64624768,35540.0,18,18,David Brown,True,councillor,False
+22,Riverside South-Findlay Creek,2,2,False,21114,4.0,0.954,6982681640,80939088,61110.0,12,11,Steve Desroches,True,councillor,False
+23,Kanata South,4,3,False,22783,4.0,0.947,7134224344,86840480,49680.0,19,19,Allan Hubley,True,councillor,False
+24,Barrhaven East,5,4,False,21844,2.0,0.952,6452928400,76397707,,16,16,Wilson Lo,True,councillor,False
