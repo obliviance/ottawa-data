@@ -3,7 +3,7 @@ q0001,Do development applications with prior lobbying get approved faster or mor
 q0002,Vendor concentration in city procurement over time — which firms win the most work and how has that shifted?,procurement,entity+date,5,4,4,shipped,2026-09-09
 q0003,Councillor office-expense patterns vs voting alignment with the Mayor,office-expenses howtheyvoted,entity,4,3,4,new,2026-09-09
 q0004,Automated speed enforcement camera siting vs ward income vs prior collision history — is placement equitable?,open_ase_camera_locations collisions spine_geography,spatial,4,4,3,new,2026-09-09
-q0005,311 service-request volume and response time by ward — service-equity gradient,open311 spine_geography,ward+date,4,4,3,shipped,2026-09-09
+q0005,"311 service-request volume and response time by ward — service-equity gradient (SUPERSEDED: close date is administrative, see 311-service-equity)",open311 spine_geography,ward+date,4,4,3,shipped,2026-09-09
 q0006,Wards with high 311 volume but low share of council motions / staff attention,open311 timeline spine_geography,ward,4,2,5,new,2026-09-09
 q0007,Consultation input on Engage Ottawa vs the decision Council actually made,engage-ottawa timeline,date,4,2,5,new,2026-09-09
 q0008,Auditor General recommendations — how many are actually implemented and how long does it take?,auditor-general timeline,date,4,2,4,new,2026-09-09
@@ -200,3 +200,4 @@ q0198,Trend / seasonality of open_public_health_inspection_data_food_safety__ins
 q0199,Trend / seasonality of open_public_health_inspection_data_food_safety__violations over `date`; structural breaks?,open_public_health_inspection_data_food_safety__violations,,,,,new,2026-09-09
 q0200,Trend / seasonality of spine_motions over `date`; structural breaks?,spine_motions,,,,,new,2026-09-09
 q0201,Trend / seasonality of spine_meetings over `date`; structural breaks?,spine_meetings,,,,,new,2026-09-09
+q0021,"Does the city publish, or can it be asked for, a 311 service-COMPLETION timestamp? Without one, no response-time or service-equity analysis is possible.",open311,schema,5,3,4,new,2026-09-19

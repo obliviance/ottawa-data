@@ -1,0 +1,43 @@
+{
+  "name": "311-service-equity",
+  "title": "Ottawa 311 \u2014 what 'days to close' actually measures",
+  "description": "An attempt to test whether lower-equity neighbourhoods wait longer for city services, which instead established that the published close date is administrative rather than operational for most request categories, and that the ward time-to-close gradient in releases/311-by-ward is a request-mix artifact.",
+  "licenses": [
+    {
+      "name": "OGL-Ottawa",
+      "title": "Open Government Licence \u2013 City of Ottawa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ottawa 311 open data (rolling CSVs)",
+      "path": "https://open.ottawa.ca/documents/ottawa::current-year-service-requests"
+    },
+    {
+      "title": "Ottawa Neighbourhood Equity Index 2024",
+      "path": "https://open.ottawa.ca/"
+    },
+    {
+      "title": "Ottawa Dissemination Areas (census tract boundaries)",
+      "path": "https://open.ottawa.ca/"
+    }
+  ],
+  "resources": [
+    {
+      "path": "by_type.csv",
+      "format": "csv"
+    },
+    {
+      "path": "ward_mix.csv",
+      "format": "csv"
+    },
+    {
+      "path": "by_tract.csv",
+      "format": "csv"
+    },
+    {
+      "path": "equity_correlation.csv",
+      "format": "csv"
+    }
+  ]
+}

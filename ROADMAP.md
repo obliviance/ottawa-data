@@ -188,6 +188,26 @@ tearsheet land in `releases/`.
   unchanged (Menard 53%, Darouze↔Menard 23%, Brown↔Skalski 95%).
   Lesson: an aggregation keyed on a name string will under-count silently and look fine.
 
+- **2026-09-19 (negative result)** — set out to test service equity (NEI × 311) and
+  instead found the measure is broken. `explorations/service_equity.py` →
+  `releases/311-service-equity/`.
+  - **Census tracts are reconstructible**: the city publishes no CT boundaries, but
+    `open_ottawa_dissemination_areas` carries `CTUID` + geometry, so dissolving DAs
+    yields 204 tracts. 178 join to the NEI. That unblocks *any* future tract-level work.
+  - **311 geocoding is categorical, not geographic** — Roads 79%, Recreation 99.7%,
+    Garbage/Water/Parking/Bylaw ~0%. No neighbourhood is dropped, but spatial 311
+    analysis is really road-and-recreation analysis.
+  - **The close date is administrative for exactly those categories.** Garbage 2 days,
+    parking 0, bylaw 3 — but roads 197, water 202, **dead-animal removal 210**.
+  - **So q0005's ward gradient is a request-mix artifact.** Slow wards submit more
+    slow-to-administer requests (ward 5: 13 days, 41% such; ward 14: 2 days, 21%).
+    Within garbage alone, ward medians run **1–3 days** — nearly flat. q0005's README
+    now carries a correction; backlog row marked superseded.
+  - The equity question stays open (new q0021): it needs a service-completion
+    timestamp the city does not publish. That is a small schema ask worth making.
+  - Lesson: **check what a field measures before aggregating it.** Two shipped findings
+    this week were wrong for want of that — this one, and q0018's name-keyed join.
+
   **Next (election-scoped, in order):** ward scorecard (incumbent + dissent + attendance +
   311 + taxes + candidates — ~80% already shipped or in the warehouse) · ingest
   `election-results-history` (tagged api,bulk, never ingested → 2022 margins → which races

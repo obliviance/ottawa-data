@@ -1,0 +1,4 @@
+stratum,tracts,correlation_equity_vs_days,worst_off_quartile_median_days,best_off_quartile_median_days
+Rural,14,-0.065,187.0,184.0
+Suburban,52,0.1,164.5,184.0
+Urban,109,0.133,184.5,203.0
