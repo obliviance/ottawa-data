@@ -59,7 +59,7 @@
   }
   .chart{width:100%; overflow-x:auto}
   .row{
-    display:grid; grid-template-columns:8.5rem 1fr 3.1rem; align-items:center;
+    display:grid; grid-template-columns:10.2rem 1fr 3.1rem; align-items:center;
     gap:.7rem; padding:.19rem 0;
     font:500 .8rem/1 "IBM Plex Mono", monospace;
   }
@@ -74,7 +74,7 @@
   .row.lead .name, .row.lead .val{color:var(--accent)}
   .row.lead .fill{background:var(--accent)}
   .axis{
-    display:grid; grid-template-columns:8.5rem 1fr 3.1rem; gap:.7rem;
+    display:grid; grid-template-columns:10.2rem 1fr 3.1rem; gap:.7rem;
     margin-top:.5rem; padding-top:.4rem; border-top:1px solid var(--rule);
     font:500 .68rem/1 "IBM Plex Mono", monospace; color:var(--muted);
     letter-spacing:.04em;
@@ -112,7 +112,7 @@
     @keyframes grow{from{transform:scaleX(0);transform-origin:left}to{transform:scaleX(1)}}
   }
   @media (max-width:34rem){
-    .row,.axis{grid-template-columns:6.6rem 1fr 2.6rem; gap:.5rem}
+    .row,.axis{grid-template-columns:8.2rem 1fr 2.6rem; gap:.5rem}
   }
 </style>
 
@@ -167,7 +167,7 @@
     </div>
     <p>
       Darouze (rural Osgoode) and Menard (downtown Capital) vote the same way barely once
-      in four recorded divisions. Even so, across all 324 councillor pairs, 30% agree more
+      in four recorded divisions. Even so, across all 324 councillor pairs, 28% agree more
       than four times in five &mdash; when Ottawa council splits, it isn't sharply factional.
     </p>
   </div>
@@ -197,19 +197,19 @@
 
 <script>
   const DATA = [
-    {who:"S. Menard",n:247,d:131,rate:0.53},{who:"J. Bradley",n:223,d:101,rate:0.453},
-    {who:"S. Devine",n:232,d:103,rate:0.444},{who:"A. Troster",n:271,d:111,rate:0.41},
-    {who:"T. Kavanagh",n:263,d:104,rate:0.395},{who:"R. King",n:252,d:99,rate:0.393},
-    {who:"J. Leiper",n:288,d:112,rate:0.389},{who:"L. Johnson",n:240,d:86,rate:0.358},
-    {who:"R. Brockington",n:272,d:85,rate:0.312},{who:"S. Plante",n:216,d:66,rate:0.306},
-    {who:"G. Darouze",n:139,d:34,rate:0.245},{who:"M. Luloff",n:264,d:58,rate:0.22},
-    {who:"D. Hill",n:218,d:46,rate:0.211},{who:"W. Lo",n:274,d:56,rate:0.204},
-    {who:"C. Kelly",n:246,d:48,rate:0.195},{who:"D. Brown",n:248,d:48,rate:0.194},
-    {who:"M. Carr",n:224,d:43,rate:0.192},{who:"A. Hubley",n:199,d:30,rate:0.151},
-    {who:"I. Skalski",n:87,d:13,rate:0.149},{who:"S. Desroches",n:215,d:29,rate:0.135},
-    {who:"T. Tierney",n:284,d:38,rate:0.134},{who:"G. Gower",n:296,d:38,rate:0.128},
-    {who:"C. Kitts",n:281,d:35,rate:0.125},{who:"C. Curry",n:269,d:33,rate:0.123},
-    {who:"L. Dudas",n:270,d:33,rate:0.122},{who:"M. Sutcliffe",n:229,d:23,rate:0.1}
+    {who:"Shawn Menard",n:248,d:132,rate:0.532}, {who:"Jessica Bradley",n:224,d:102,rate:0.455},
+    {who:"Sean Devine",n:235,d:106,rate:0.451}, {who:"Ariel Troster",n:271,d:111,rate:0.41},
+    {who:"Theresa Kavanagh",n:266,d:107,rate:0.402}, {who:"Rawlson King",n:253,d:100,rate:0.395},
+    {who:"Jeff Leiper",n:289,d:113,rate:0.391}, {who:"Laine Johnson",n:240,d:86,rate:0.358},
+    {who:"Riley Brockington",n:273,d:86,rate:0.315}, {who:"Stéphanie Plante",n:219,d:69,rate:0.315},
+    {who:"George Darouze",n:139,d:34,rate:0.245}, {who:"Matthew Luloff",n:265,d:59,rate:0.223},
+    {who:"David Hill",n:218,d:46,rate:0.211}, {who:"Wilson Lo",n:274,d:56,rate:0.204},
+    {who:"Marty Carr",n:227,d:46,rate:0.203}, {who:"Clarke Kelly",n:247,d:49,rate:0.198},
+    {who:"David Brown",n:248,d:48,rate:0.194}, {who:"Isabelle Skalski",n:90,d:16,rate:0.178},
+    {who:"Allan Hubley",n:200,d:31,rate:0.155}, {who:"Steve Desroches",n:217,d:31,rate:0.143},
+    {who:"Tim Tierney",n:286,d:40,rate:0.14}, {who:"Catherine Kitts",n:285,d:39,rate:0.137},
+    {who:"Glen Gower",n:299,d:41,rate:0.137}, {who:"Laura Dudas",n:271,d:34,rate:0.125},
+    {who:"Cathy Curry",n:269,d:33,rate:0.123}, {who:"Mark Sutcliffe",n:229,d:23,rate:0.1}
   ];
   const MAX = 0.60;  // scale max; ticks at 0/20/40/60 line up because 20/60 = 1/3
   const chart = document.getElementById("chart");

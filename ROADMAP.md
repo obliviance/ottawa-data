@@ -177,6 +177,17 @@ tearsheet land in `releases/`.
     Note this means q0018 substantially duplicates Horizon's finding; our differentiation
     is method (automated, reproducible, downloadable), not novelty.
 
+- **2026-09-19 (corrections)** — regenerated q0018 against `spine_councillor_aliases`
+  and republished the page. The original matched councillors by a single name string;
+  `htv_votes` writes the same person as both "C. Kitts" and "Kitts", so votes were
+  silently dropped. **35 votes recovered across 18 councillors**, and the mayor was
+  being excluded entirely from the alias resolution (now fixed — they chair council and
+  their votes are recorded alongside everyone else's). Unresolved rows fell 321 → 92.
+  Rate changes are small but real: Skalski +2.9pp, Kitts +1.2pp, Carr +1.1pp. The one
+  published figure that moved: **"30% of pairs agree >80%" → 28%**. Headline findings
+  unchanged (Menard 53%, Darouze↔Menard 23%, Brown↔Skalski 95%).
+  Lesson: an aggregation keyed on a name string will under-count silently and look fine.
+
   **Next (election-scoped, in order):** ward scorecard (incumbent + dissent + attendance +
   311 + taxes + candidates — ~80% already shipped or in the warehouse) · ingest
   `election-results-history` (tagged api,bulk, never ingested → 2022 margins → which races

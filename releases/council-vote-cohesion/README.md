@@ -5,15 +5,15 @@
 
 ## Findings
 
-- **Most independent:** S. Menard dissents from the majority on
-  53% of recorded votes (131 of
-  247). **Most reliably with the majority:**
-  M. Sutcliffe at 10%.
-- **Least-aligned pair:** G. Darouze & S. Menard agree on
+- **Most independent:** Shawn Menard dissents from the majority on
+  53% of recorded votes (132 of
+  248). **Most reliably with the majority:**
+  Mark Sutcliffe at 10%.
+- **Least-aligned pair:** George Darouze & Shawn Menard agree on
   23% of the 124 motions they both voted on.
-- **Most-aligned pair:** D. Brown & I. Skalski, 95%
+- **Most-aligned pair:** David Brown & Isabelle Skalski, 95%
   over 77.
-- Council-wide, 30% of councillor pairs agree
+- Council-wide, 28% of councillor pairs agree
   more than 80% of the time — recorded divisions are the exception, and when they
   happen the council is not sharply factional.
 

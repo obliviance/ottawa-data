@@ -1,26 +1,26 @@
 ward_number,ward_name,term,display_name,recorded_votes,dissents,dissent_rate,meetings_recorded,meetings_present,attendance_rate,seat_on_ballot,running_for,official_email
-1,Orléans East-Cumberland,,Matthew Luloff,265,63,0.238,206,194,0.942,True,councillor,Matt.Luloff@ottawa.ca
-2,Orléans West-Innes,,Laura Dudas,271,38,0.14,260,238,0.915,True,councillor,Laura.Dudas@ottawa.ca
-3,Barrhaven West,,David Hill,218,48,0.22,162,150,0.926,True,councillor,David.Hill@ottawa.ca
-4,Kanata North,,Cathy Curry,269,37,0.138,303,282,0.931,True,councillor,Cathy.Curry@ottawa.ca
+1,Orléans East-Cumberland,,Matthew Luloff,265,59,0.223,206,194,0.942,True,councillor,Matt.Luloff@ottawa.ca
+2,Orléans West-Innes,,Laura Dudas,271,34,0.125,260,238,0.915,True,councillor,Laura.Dudas@ottawa.ca
+3,Barrhaven West,,David Hill,218,46,0.211,162,150,0.926,True,councillor,David.Hill@ottawa.ca
+4,Kanata North,,Cathy Curry,269,33,0.123,303,282,0.931,True,councillor,Cathy.Curry@ottawa.ca
 5,West Carleton-March,,Clarke Kelly,247,49,0.198,226,193,0.854,True,councillor,Clarke.Kelly@ottawa.ca
-6,Stittsville,,Glen Gower,299,39,0.13,255,243,0.953,False,,Glen.Gower@ottawa.ca
-7,Bay,,Theresa Kavanagh,266,105,0.395,219,211,0.963,True,councillor,BayWard@ottawa.ca
-8,College,,Laine Johnson,240,84,0.35,191,175,0.916,True,councillor,Collegeward@ottawa.ca
-9,Knoxdale-Merivale,,Sean Devine,235,102,0.434,118,117,0.992,True,councillor,knoxdalemerivale@ottawa.ca
-10,Gloucester-Southgate,,Jessica Bradley,224,98,0.438,127,127,1.0,True,councillor,Jessica.Bradley@ottawa.ca
-11,Beacon Hill-Cyrville,,Tim Tierney,286,44,0.154,255,240,0.941,True,councillor,Timothy.Tierney@ottawa.ca
-12,Rideau-Vanier,,Stéphanie Plante,219,65,0.297,125,123,0.984,True,councillor,Stephanie.Plante@ottawa.ca
-13,Rideau-Rockcliffe,,Rawlson King,253,96,0.379,183,180,0.984,True,councillor,rideaurockcliffeward@ottawa.ca
-14,Somerset,,Ariel Troster,271,107,0.395,209,199,0.952,True,councillor,Ariel.Troster@ottawa.ca
-15,Kitchissippi,,Jeff Leiper,289,111,0.384,237,231,0.975,False,mayor,Jeff.Leiper@ottawa.ca
-16,River,,Riley Brockington,273,80,0.293,238,221,0.929,True,councillor,Riley.Brockington@ottawa.ca
-17,Capital,,Shawn Menard,248,128,0.516,136,133,0.978,True,councillor,Capitalward@ottawa.ca
-18,Alta Vista,,Marty Carr,227,44,0.194,228,219,0.961,True,councillor,Marty.Carr@ottawa.ca
-19,Orléans South-Navan,,Catherine Kitts,285,43,0.151,275,254,0.924,True,councillor,Catherine.Kitts@ottawa.ca
-20,Osgoode,"June 18, 2025 to present",Isabelle Skalski,90,17,0.189,54,54,1.0,True,councillor,isabelle.skalski@ottawa.ca
-20,Osgoode,"November 15, 2022 to February 27, 2025",George Darouze,139,36,0.259,77,70,0.909,False,,George.Darouze@ottawa.ca
+6,Stittsville,,Glen Gower,299,41,0.137,255,243,0.953,False,,Glen.Gower@ottawa.ca
+7,Bay,,Theresa Kavanagh,266,107,0.402,219,211,0.963,True,councillor,BayWard@ottawa.ca
+8,College,,Laine Johnson,240,86,0.358,191,175,0.916,True,councillor,Collegeward@ottawa.ca
+9,Knoxdale-Merivale,,Sean Devine,235,106,0.451,118,117,0.992,True,councillor,knoxdalemerivale@ottawa.ca
+10,Gloucester-Southgate,,Jessica Bradley,224,102,0.455,127,127,1.0,True,councillor,Jessica.Bradley@ottawa.ca
+11,Beacon Hill-Cyrville,,Tim Tierney,286,40,0.14,255,240,0.941,True,councillor,Timothy.Tierney@ottawa.ca
+12,Rideau-Vanier,,Stéphanie Plante,219,69,0.315,125,123,0.984,True,councillor,Stephanie.Plante@ottawa.ca
+13,Rideau-Rockcliffe,,Rawlson King,253,100,0.395,183,180,0.984,True,councillor,rideaurockcliffeward@ottawa.ca
+14,Somerset,,Ariel Troster,271,111,0.41,209,199,0.952,True,councillor,Ariel.Troster@ottawa.ca
+15,Kitchissippi,,Jeff Leiper,289,113,0.391,237,231,0.975,False,mayor,Jeff.Leiper@ottawa.ca
+16,River,,Riley Brockington,273,86,0.315,238,221,0.929,True,councillor,Riley.Brockington@ottawa.ca
+17,Capital,,Shawn Menard,248,132,0.532,136,133,0.978,True,councillor,Capitalward@ottawa.ca
+18,Alta Vista,,Marty Carr,227,46,0.203,228,219,0.961,True,councillor,Marty.Carr@ottawa.ca
+19,Orléans South-Navan,,Catherine Kitts,285,39,0.137,275,254,0.924,True,councillor,Catherine.Kitts@ottawa.ca
+20,Osgoode,"June 18, 2025 to present",Isabelle Skalski,90,16,0.178,54,54,1.0,True,councillor,isabelle.skalski@ottawa.ca
+20,Osgoode,"November 15, 2022 to February 27, 2025",George Darouze,139,34,0.245,77,70,0.909,False,,George.Darouze@ottawa.ca
 21,Rideau-Jock,,David Brown,248,48,0.194,178,173,0.972,True,councillor,Ward21@ottawa.ca
-22,Riverside South-Findlay Creek,,Steve Desroches,217,37,0.171,163,143,0.877,True,councillor,Steve.Desroches@ottawa.ca
-23,Kanata South,,Allan Hubley,200,34,0.17,88,80,0.909,True,councillor,Allan.Hubley@ottawa.ca
-24,Barrhaven East,,Wilson Lo,274,60,0.219,228,215,0.943,True,councillor,Wilson.Lo@ottawa.ca
+22,Riverside South-Findlay Creek,,Steve Desroches,217,31,0.143,163,143,0.877,True,councillor,Steve.Desroches@ottawa.ca
+23,Kanata South,,Allan Hubley,200,31,0.155,88,80,0.909,True,councillor,Allan.Hubley@ottawa.ca
+24,Barrhaven East,,Wilson Lo,274,56,0.204,228,215,0.943,True,councillor,Wilson.Lo@ottawa.ca

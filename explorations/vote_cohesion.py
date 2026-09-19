@@ -11,7 +11,9 @@ Produces:
     agreement_pairs.csv    every councillor pair: shared votes, agreement rate
     datapackage.json + README.md
 
-Run: python3 explorations/vote_cohesion.py   (needs d_htv_votes in the warehouse)
+Run: python3 explorations/vote_cohesion.py
+     (needs d_htv_votes and d_spine_councillor_aliases -- build the latter with
+      python3 spine/entities.py)
 """
 from __future__ import annotations
 
@@ -32,11 +34,23 @@ def main() -> None:
 
     c = warehouse.con()
     v = c.execute("""
-        SELECT motion_id, meeting_date::DATE AS date, councillor_name AS who, vote
+        SELECT motion_id, meeting_date::DATE AS date, councillor_name AS raw, vote
         FROM d_htv_votes WHERE vote IN ('for','against')
     """).df()
+    # Resolve every name variant onto one councillor before counting. Matching on
+    # the raw string -- what this script did originally -- silently dropped votes,
+    # because htv_votes writes the same person as both "C. Kitts" and "Kitts". The
+    # alias table recovers 35 votes across 18 councillors and moves some rates by
+    # more than two points. See spine/entities.py.
+    alias = c.execute("""SELECT alias, display_name FROM d_spine_councillor_aliases
+                         WHERE source = 'htv_votes'""").df()
     c.close()
-    # drop the mayor's chair-only entries and any councillor with < 20 recorded votes
+    lookup = dict(zip(alias.alias, alias.display_name))
+    v["who"] = v.raw.map(lookup)
+    dropped = v.who.isna().sum()
+    v = v.dropna(subset=["who"]).drop(columns=["raw"])
+    # Still guard the low-count tail: a councillor seated mid-term has a much
+    # smaller base than a full-term one.
     counts = v["who"].value_counts()
     v = v[v["who"].isin(counts[counts >= 20].index)]
 
@@ -119,6 +133,9 @@ votes only. `agreement_pairs.csv` drops pairs with < 15 shared votes.
 Regenerate: `python3 explorations/vote_cohesion.py`
 """)
     print(f"releases/council-vote-cohesion/ — {len(stats)} councillors, {len(pairs)} pairs, {n_motions} motions")
+    print(f"  {dropped:,} vote rows had no resolvable councillor and were dropped "
+          f"(parsing artefacts in the upstream data, e.g. rows named '3' or "
+          f"'King on recommendations 2')")
     print("\ntop 5 by dissent rate:")
     print(stats.head(5).to_string(index=False))
     print("\n5 least-aligned pairs:")

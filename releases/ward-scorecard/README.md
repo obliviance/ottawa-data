@@ -51,8 +51,9 @@ support. Each candidate's own filed website is linked instead.
   2024/10/02 to 2026/06/10 — it begins nearly two years into the term.
 - Vote and attendance data is compiled by hand upstream and carries ordinary
   site terms, not an open licence.
-- **These vote counts differ slightly from `releases/council-vote-cohesion`
-  (q0018), and these are the correct ones.** That release matched councillors by
+- **q0018 has been regenerated against the alias table**, so
+  `releases/council-vote-cohesion` now agrees with these figures. It previously
+  did not. That release matched councillors by
   a single name string, which silently dropped votes recorded under a second
   spelling — `htv_votes` writes the same person as both "C. Kitts" and "Kitts".
   Joining through `spine_councillor_aliases` recovers **35 votes across 18

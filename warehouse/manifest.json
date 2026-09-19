@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-16T12:10:55+00:00",
+  "updated_at": "2026-09-19T16:34:37+00:00",
   "datasets": {
     "open_2025_contracts_awarded_greater_than_25_000_jul_dec": {
       "source_id": null,
@@ -3770,7 +3770,7 @@
       "origin_url": "https://open.ottawa.ca/datasets/ottawa::elected-officials-2022-2026",
       "rows": 26,
       "spatial": false,
-      "fetched_at": "2026-09-16T12:10:55+00:00",
+      "fetched_at": "2026-09-19T16:34:36+00:00",
       "parquet": "spine_councillors.parquet",
       "notes": "surname is the join key, verified unique and resolvable against both the vote and attendance data at build time; `term` is populated only where a seat changed hands mid-term; `seat_on_ballot` is False for an incumbent not seeking their own seat again. Join to source data through spine_councillor_aliases, not by name."
     },
@@ -3779,9 +3779,9 @@
       "shape": "spine",
       "title": "spine — every name variant each councillor appears under, by source",
       "origin_url": "",
-      "rows": 129,
+      "rows": 133,
       "spatial": false,
-      "fetched_at": "2026-09-16T12:10:55+00:00",
+      "fetched_at": "2026-09-19T16:34:36+00:00",
       "parquet": "spine_councillor_aliases.parquet",
       "notes": "resolved on surname plus first initial where the alias carries one. Written out so the crosswalk is auditable: an alias that should have matched and did not is visible as an absence here rather than as a silently low vote count."
     }

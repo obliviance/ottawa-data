@@ -96,8 +96,11 @@ def main() -> None:
     spine = pd.DataFrame(rows)
 
     # --- resolve every alias, not one per surname -----------------------------
+    # The mayor is included: they chair council and their votes are recorded
+    # alongside everyone else's, so a vote-cohesion analysis that drops them is
+    # missing the person the majority forms around.
     councillors_by_surname = {}
-    for _, r in spine[spine.role == "Councillor"].iterrows():
+    for _, r in spine.iterrows():
         councillors_by_surname.setdefault(r.surname_key, []).append(r)
 
     def parse_alias(raw: str):
@@ -204,7 +207,7 @@ def main() -> None:
     print(f"  {len(aliases)} name aliases resolved "
           f"({(aliases.source=='htv_votes').sum()} vote, "
           f"{(aliases.source=='htv_attendance').sum()} attendance) — "
-          f"all {len(councillors)} councillors matched in both")
+          f"all {len(councillors)} councillors and the mayor matched in both")
     turnover = councillors[councillors.term != ""]
     if len(turnover):
         print(f"  mid-term turnover: " + " · ".join(
