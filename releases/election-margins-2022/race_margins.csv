@@ -1,0 +1,26 @@
+race,ward,ward_name,candidates,winner,winner_votes,runner_up,runner_up_votes,margin_votes,margin_pct,valid_votes_cast,registered_voters,turnout_pct
+Councillor,20.0,Osgoode,5,George Darouze,4353,Doug Thompson,4115,238,2.23,10667,23354,46.16
+Councillor,5.0,West Carleton-March,7,Clarke Kelly,2549,Sasha Duguay,2307,242,2.6,9305,20113,46.94
+Councillor,12.0,Rideau-Vanier,10,Stéphanie Plante,4621,Laura Shantz,4298,323,2.6,12440,34574,37.18
+Councillor,3.0,Barrhaven West,4,David Hill,6230,Taayo Simmonds,4737,1493,10.54,14168,31446,45.81
+Councillor,23.0,Kanata South,5,Allan Hubley,5334,Erin Coffin,3611,1723,10.94,15755,36085,44.04
+Councillor,24.0,Barrhaven East,7,Wilson Lo,4403,Richard Garrick,2980,1423,11.9,11958,31307,39.11
+Mayor,,,14,Mark Sutcliffe,161677,Catherine McKenney,119235,42442,13.48,314754,722227,43.79
+Councillor,18.0,Alta Vista,4,Marty Carr,6088,Carolyn Kropp,4107,1981,15.33,12919,31008,43.09
+Councillor,10.0,Gloucester-Southgate,6,Jessica Bradley,4927,Hussein Mahmoud,2807,2120,18.18,11663,32139,37.52
+Councillor,9.0,Knoxdale-Merivale,7,Sean Devine,4812,James Dean,2564,2248,18.31,12276,27650,45.55
+Councillor,8.0,College,5,Laine Johnson,8899,Pat McGarry,5652,3247,19.21,16906,36958,46.9
+Councillor,14.0,Somerset,3,Ariel Troster,8663,Stuart MacKay,4706,3957,27.99,14137,32787,45.24
+Councillor,6.0,Stittsville,4,Glen Gower,7758,Mathew Duchesne,2692,5066,38.31,13222,29298,45.59
+Councillor,22.0,Riverside South-Findlay Creek,4,Steve Desroches,5684,Zainab Alsalihiy,1537,4147,49.5,8378,19822,42.92
+Councillor,21.0,Rideau-Jock,5,David Brown,6898,Leigh-Andrea Brunet,1654,5244,50.65,10353,21966,48.08
+Councillor,15.0,Kitchissippi,3,Jeff Leiper,11045,Oonagh Fitzgerald,3244,7801,50.84,15345,29621,52.98
+Councillor,2.0,Orléans West-Innes,3,Laura Dudas,11821,Lori Stinson,3309,8512,51.43,16550,37347,45.22
+Councillor,19.0,Orléans South-Navan,3,Catherine Kitts,9466,Yvette Ashiri,2716,6750,54.53,12378,32023,39.22
+Councillor,16.0,River,3,Riley Brockington,9595,Ethan Sabourin,2396,7199,54.83,13130,33024,41.06
+Councillor,1.0,Orléans East-Cumberland,3,Matthew Luloff,11918,Rosemee Cantave,2376,9542,59.38,16069,38618,42.53
+Councillor,4.0,Kanata North,3,Cathy Curry,8827,Viorel Copil,1538,7289,63.38,11501,27108,43.54
+Councillor,17.0,Capital,3,Shawn Menard,11358,Rebecca Bromwich,1986,9372,65.03,14412,28834,51.27
+Councillor,11.0,Beacon Hill-Cyrville,3,Tim Tierney,7617,Miranda Gray,1265,6352,68.35,9293,23452,40.79
+Councillor,7.0,Bay,3,Theresa Kavanagh,12398,Robert Hill,1659,10739,71.71,14976,35473,43.77
+Councillor,13.0,Rideau-Rockcliffe,4,Rawlson King,8491,Clayton Fitzsimmons,859,7632,72.05,10593,28220,39.78

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T16:34:37+00:00",
+  "updated_at": "2026-09-25T23:46:59+00:00",
   "datasets": {
     "open_2025_contracts_awarded_greater_than_25_000_jul_dec": {
       "source_id": null,
@@ -3297,7 +3297,7 @@
       "origin_url": "https://open.ottawa.ca/datasets/ottawa::2022-elections-voting-subdivision-map",
       "rows": 24,
       "spatial": false,
-      "fetched_at": "2026-09-09T21:26:38+00:00",
+      "fetched_at": "2026-09-25T23:46:59+00:00",
       "parquet": "spine_wards.parquet",
       "notes": "dissolved from the 2022 election voting-subdivision map; geometry as WKT"
     },
@@ -3784,6 +3784,28 @@
       "fetched_at": "2026-09-19T16:34:36+00:00",
       "parquet": "spine_councillor_aliases.parquet",
       "notes": "resolved on surname plus first initial where the alias carries one. Written out so the crosswalk is auditable: an alias that should have matched and did not is visible as an absence here rather than as a silently low vote count."
+    },
+    "election_results_2022_polls": {
+      "source_id": "election-results-history",
+      "shape": "arcgis-hub",
+      "title": "2022 municipal election — poll-by-poll results",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::2022-elections-official-results",
+      "rows": 16701,
+      "spatial": false,
+      "fetched_at": "2026-09-25T23:46:00+00:00",
+      "parquet": "election_results_2022_polls.parquet",
+      "notes": "One row per (precinct, candidate). Mayor + 24 ward Councillor races only -- not school-board trustee zones or Declined/Rejected Ballots. See module docstring."
+    },
+    "election_results_2022_totals": {
+      "source_id": "election-results-history",
+      "shape": "arcgis-hub",
+      "title": "2022 municipal election — race totals by candidate",
+      "origin_url": "https://open.ottawa.ca/documents/ottawa::2022-elections-official-results",
+      "rows": 121,
+      "spatial": false,
+      "fetched_at": "2026-09-25T23:46:00+00:00",
+      "parquet": "election_results_2022_totals.parquet",
+      "notes": "One row per (race, candidate) -- the city-wide total for Mayor, or the ward-wide total for each Councillor race. Derived from the same file's own '- Total' rows, not re-summed here."
     }
   }
 }
