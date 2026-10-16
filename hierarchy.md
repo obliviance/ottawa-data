@@ -168,7 +168,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | OPS budget, business plan, chief's reports | 🟡 via Police Services Board eScribe | `[police-services-board]` |
 | Police Services Board agendas / minutes / reports | 🟡 eScribe | `[police-services-board]` |
 | Police collective agreement | 🔴 / 🟡 | — |
-| Public complaints against police (Law Enforcement Complaints Agency) | 🟡 LECA Ontario-wide stats | — |
+| Public complaints against police (Law Enforcement Complaints Agency) | 🟡 LECA Ontario-wide stats (now leca.ca; browser-checked 2026-10-16) | — |
 | Special Investigations Unit — Ottawa-area cases | 🟡 SIU director's reports | — |
 | Ottawa Fire Services — station locations, response times, call volumes, incident types | 🟢 to Open Ottawa | `[fire-paramedic]` |
 | Fire prevention / inspection / order data | 🔴 / ⚪ | — |
@@ -290,7 +290,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Ottawa Board of Health / Ottawa Public Health | See A10 | 🟡 | `[ottawa-public-health]` |
 | Ottawa Public Library Board | Board records, branch data, circulation statistics, local-history collections | 🟡 board PDF; 🟢 digitised collections; circulation 🟡 | `[opl]` |
 | Ottawa Community Housing Corp. (OCH) | ~15,500 homes, ~33,000 tenants; annual reports, AGM to Council, tenant surveys | 🟡 annual report PDF (och-lco.ca); unit-level portfolio / arrears / turnover 🔴 | — |
-| Ottawa Community Housing Foundation | Grants, programmes | 🟡 annual report | — |
+| Ottawa Community Housing Foundation | Grants, programmes | 🟡 annual report (now ochfoundation.ca; browser-checked 2026-10-16) | — |
 | Hydro Ottawa Holding Inc. (Hydro Ottawa Ltd., Envari, Portage Power) | Distribution performance, rate applications, annual report, outage map | 🟢 live outage map; 🟡 OEB rate filings; no open-data programme surfaced | `[hydro-ottawa] ⚑` |
 | Committee of Adjustment | Minor-variance & consent decisions — see A7 | 🟢 CanLII | `[committee-of-adjustment]` |
 | Built Heritage Committee | Heritage designations & permits — see A7 | 🟡 eScribe | — |
@@ -338,7 +338,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Body | What it holds | Status | Catalogue |
 | --- | --- | --- | --- |
 | National Capital Commission (NCC) | Greenbelt, Gatineau Park, parkways, waterfront, official residences; federal land-use / design / transaction approvals; master plans; board minutes; real-estate portfolio | 🟢 layer on Open Ottawa + federal portal; 🟡 approvals & minutes PDF | `[ncc]` |
-| Canada Lands Company | LeBreton Flats, Wateridge Village (ex-CFB Rockcliffe), Booth St. complex | 🟡 project pages | — |
+| Canada Lands Company | LeBreton Flats, Wateridge Village (ex-CFB Rockcliffe), Booth St. complex | 🟡 project pages (now clcl-sicl.ca; browser-checked 2026-10-16) | — |
 | Public Services & Procurement Canada (PSPC) | Federal building inventory, Parliamentary precinct, Long Term Vision & Plan; federal lease footprint in Ottawa | 🟢 Directory of Federal Real Property; 🟡 precinct | — |
 | Parks Canada — Rideau Canal (UNESCO) | Canal water levels, lock operations, management plan, heritage | 🟢 levels; 🟡 plan | — |
 | Department of National Defence | Bases/campuses (Uplands, Connaught, NDHQ Carling) | 🔴 / 🟡 land only | — |
@@ -347,7 +347,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Statistics Canada | Census Profile (CSD, CMA, CT, DA), National Household Survey successor, CHASS/PUMF | 🟢 bulk | `[statcan-census]` |
 | Elections Canada | Federal poll-level results, electoral geography for NCR ridings, financial returns | 🟢 bulk | — |
 | Open Government Canada | Federal datasets filterable to the NCR; transfers to municipality; federal employment | 🟢 API + bulk | `[open-canada]` |
-| RCMP | Federal policing; some NCR protective operations | 🔴 / 🟡 | — |
+| RCMP | Federal policing; some NCR protective operations | 🔴 / 🟡 (now rcmp.ca; browser-checked 2026-10-16) | — |
 | CMHC | Rental Market Survey, Housing Market Assessment, starts & completions (Ottawa CMA) | 🟢 / 🟡 tables + portal | — |
 | Federal MP constituency offices | Casework themes, householder mailings | 🔴 / 🟡 | — |
 
@@ -367,7 +367,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Courts (Ontario Court of Justice, Superior Court — Elgin St.) | Dockets, judgments | 🟡 CanLII for reported decisions; dockets 🔴 | `[committee-of-adjustment]` (CanLII) |
 | Provincial Offences Act court (administered by the City under transfer agreement) | Charge volumes, revenue, disposition | 🟡 revenue in budget; charge data 🔴 | — |
 | Landlord and Tenant Board | Application volumes, eviction orders (Ottawa) | 🟡 aggregate via Tribunals Ontario; unit data 🔴 | — |
-| Law Enforcement Complaints Agency (ex-OIPRD) | Police-complaint statistics | 🟡 Ontario-wide | — |
+| Law Enforcement Complaints Agency (ex-OIPRD) | Police-complaint statistics | 🟡 Ontario-wide (now leca.ca; browser-checked 2026-10-16) | — |
 | Special Investigations Unit | Director's reports on Ottawa-area incidents | 🟡 | — |
 | Ontario Energy Board | Hydro Ottawa & Enbridge rate cases, performance scorecards | 🟢 filings + scorecards | `[hydro-ottawa] ⚑` |
 | Elections Ontario | Provincial poll-level results, electoral geography, party/candidate finance | 🟢 bulk | — |
@@ -442,7 +442,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | ACORN Ottawa | Tenant / low-income advocacy; **housing-vote scorecard** | 🟡 report — `[acorn-voting-records]` |
 | Alliance to End Homelessness Ottawa | Independent progress reports, Housing Needs Assessment | 🟡 PDF — `[ateh]` |
 | Ecology Ottawa | Climate, trees, active transport campaigns; canvassing data | 🟡 / 🔴 |
-| Bike Ottawa | Cycling advocacy; **PODS** (bike-network stress map), collision/"ninja" map | 🟢 open map layers |
+| Bike Ottawa | Cycling advocacy; **PODS** (bike-network stress map), collision/"ninja" map | 🟢 open map layers (bikeottawa.ca works only at the apex (www has a bad certificate); browser-checked 2026-10-16) |
 | Healthy Transportation Coalition / Free Transit Ottawa | Transit-equity advocacy | 🟡 |
 | People's Official Plan | Grassroots planning critique | 🟡 |
 | Federation of Citizens' Associations (FCA) | Umbrella for ~65 community associations | 🟡 |
@@ -532,7 +532,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Body | What it holds | Status |
 | --- | --- | --- |
 | CUPE 503 (inside/outside city workers), ATU 279 (OC Transpo), IAFF 162 (fire), OPSEU, CUPE 4266 (OCH), teacher locals (ETFO/OECTA/OSSTF/AEFO) | Bargaining positions, grievance patterns, strike votes | 🔴 / 🟡 |
-| Ottawa & District Labour Council | Cross-sector labour signal | 🟡 |
+| Ottawa & District Labour Council | Cross-sector labour signal | 🟡 (now ottawalabour.labourcouncils.ca; browser-checked 2026-10-16) |
 | Collective agreements (settled) | Wage grids, benefits, staffing rules | 🟡 some tabled to Council; full set 🔴 |
 
 ---
@@ -543,8 +543,8 @@ with an open verify-flag, `—` = not yet catalogued.
 | --- | --- | --- |
 | City of Ottawa Archives | Pre-2012 & pre-amalgamation municipal records, photos, maps, drawings; 16,000-vol. reference library | 🔴 mostly paper, on-site — `[city-archives]` |
 | Library and Archives Canada | Federal + regional records, Topley/other photo collections, historical maps | 🟢 / 🔴 much digitised — see E |
-| Bibliothèque et Archives nationales du Québec (Gatineau) | Quebec-side regional records | 🟢 / 🔴 |
-| Archives of Ontario | Provincial records touching Ottawa, historical land records | 🟢 / 🔴 |
+| Bibliothèque et Archives nationales du Québec (Gatineau) | Quebec-side regional records | 🟢 / 🔴 (banq.qc.ca renders in a browser; curl is walled; browser-checked 2026-10-16) |
+| Archives of Ontario | Provincial records touching Ottawa, historical land records | 🟢 / 🔴 (archives.gov.on.ca renders in a browser; curl is walled; browser-checked 2026-10-16) |
 | OPL — Ottawa Room (Main branch) | Local-history collection, digitised photos, city directories | 🟢 digitised subset — `[opl]` |
 | Historical societies (Historical Society of Ottawa, Bytown Museum, Gloucester/Nepean/Cumberland/Osgoode societies) | Local histories, oral history, photo collections | 🟡 / 🔴 |
 | National Air Photo Library (NRCan) | Historical aerial imagery | 🟡 / 🔴 |
