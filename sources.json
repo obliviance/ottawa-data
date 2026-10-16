@@ -54,9 +54,9 @@
       "name": "geoOttawa",
       "category": "foundational",
       "operator": "City of Ottawa",
-      "urls": ["https://maps.ottawa.ca/geoottawa/"],
+      "urls": ["https://maps.ottawa.ca/geoottawa/", "https://maps.ottawa.ca/arcgis/rest/services/Basemap_Ottawa/MapServer", "https://maps.ottawa.ca/arcgis/rest/services/Climate_Resiliency/MapServer"],
       "access": ["html", "api"],
-      "description": "Public map viewer over the ArcGIS services. Search by address, intersection, street segment or facility. Use for reconnaissance, then pull the layer from REST. Verified: a Web AppBuilder viewer over the maps.ottawa.ca/arcgis services (see the ArcGIS REST services root) plus tiles.arcgis.com vector tiles.",
+      "description": "Public map viewer over the ArcGIS services. Search by address, intersection, street segment or facility. Use for reconnaissance, then pull the layer from REST. Verified: a Web AppBuilder viewer over the maps.ottawa.ca/arcgis services (see the ArcGIS REST services root) plus tiles.arcgis.com vector tiles. Survey 2026-10-16: stage 2 rendering shows the viewer calls Basemap_Ottawa, Climate_Resiliency and ArcGIS Online tree-canopy vector tile services.",
       "verify": false
     },
     {
@@ -394,9 +394,9 @@
       "name": "Road network, pathways, cycling infrastructure",
       "category": "transportation",
       "operator": "City of Ottawa",
-      "urls": ["https://open.ottawa.ca/datasets/pathway-links/api"],
+      "urls": ["https://maps.ottawa.ca/arcgis/rest/services/Road_Detail/MapServer/3", "https://maps.ottawa.ca/arcgis/rest/services/Road_Information/MapServer", "https://maps.ottawa.ca/arcgis/rest/services/CyclingMap/MapServer/3"],
       "access": ["api", "bulk"],
-      "description": "Centrelines, sidewalks, multi-use pathways, cycling routes, winter maintenance classes, as spatial layers with GeoJSON endpoints. Survey 2026-10-16: the catalogued URL (pathway-links) points at a parks layer rather than the road centreline; find the correct layer on Open Ottawa or maps.ottawa.ca before ingesting.",
+      "description": "Centrelines, sidewalks, multi-use pathways, cycling routes, winter maintenance classes, as spatial layers with GeoJSON endpoints. Survey 2026-10-16: the old URL (pathway-links) was a parks layer. Road centrelines are Road_Detail/MapServer/3 (29,457 segments, no speed-limit field); classification, truck routes and pavement age are in Road_Information; cycling network is CyclingMap/MapServer/3.",
       "verify": false
     },
     {
@@ -404,9 +404,9 @@
       "name": "Ottawa Police Community Safety Data Portal",
       "category": "safety",
       "operator": "Ottawa Police Service",
-      "urls": ["https://data.ottawapolice.ca/"],
+      "urls": ["https://data.ottawapolice.ca/", "https://data.ottawapolice.ca/api/feed/dcat-us/1.1.json", "https://services7.arcgis.com/2vhcNzw0NfUwAD3d/arcgis/rest/services/"],
       "access": ["api", "bulk"],
-      "description": "Separate ArcGIS Hub launched November 2023, reported as 11 datasets, 7 dashboards and 6 web maps. Dashboards for homicides, shootings and gun seizures, overdose calls, hate- and bias-motivated crime, auto theft, and calls for service by priority. Being an ArcGIS Hub, everything has a GeoJSON endpoint.",
+      "description": "Separate ArcGIS Hub launched November 2023, reported as 11 datasets, 7 dashboards and 6 web maps. Dashboards for homicides, shootings and gun seizures, overdose calls, hate- and bias-motivated crime, auto theft, and calls for service by priority. Being an ArcGIS Hub, everything has a GeoJSON endpoint. Survey 2026-10-16: DCAT feed lists 98 items. Keyless FeatureServers: Criminal_Offences_Open_Data (344,290 rows), Calls_For_Service (1,108,780), TSRDCP_TrafficStops_v1 (455,717, includes driver race), CrimeMap_YTD layer 8 (30,349). None are in the warehouse yet.",
       "verify": false
     },
     {
@@ -414,9 +414,9 @@
       "name": "Crime Map (year to date)",
       "category": "safety",
       "operator": "Ottawa Police Service / City of Ottawa",
-      "urls": ["https://open.ottawa.ca/datasets/crime-map-year-to-date/about", "https://services.arcgis.com/G6F8XLCl5KtfEqfF/arcgis/rest/services/CrimeMap_YTD/FeatureServer/8"],
+      "urls": ["https://open.ottawa.ca/datasets/crime-map-year-to-date/about", "https://services7.arcgis.com/2vhcNzw0NfUwAD3d/arcgis/rest/services/CrimeMap_YTD/FeatureServer/8"],
       "access": ["api", "bulk"],
-      "description": "Mirrored onto the city portal. Criminal offences open data also published directly by Ottawa Police. Verified: Open Ottawa ArcGIS Hub dataset (GeoServices API + CSV/GeoJSON/shapefile/KML). Survey 2026-10-16: the catalogued page is a stale mirror; the live layer is CrimeMap_YTD/FeatureServer/8 (URL host to be re-confirmed in a browser).",
+      "description": "Mirrored onto the city portal. Criminal offences open data also published directly by Ottawa Police. Verified: Open Ottawa ArcGIS Hub dataset (GeoServices API + CSV/GeoJSON/shapefile/KML). Survey 2026-10-16: the catalogued page is a stale mirror; the live layer is the OPS-hosted CrimeMap_YTD/FeatureServer/8 (30,349 features, keyless, verified). Survey 2026-10-16: the open.ottawa mirror was last modified 2024-10-03 and its description is an unfilled template.",
       "verify": false
     },
     {
@@ -514,9 +514,9 @@
       "name": "Conservation authorities (RVCA, MVCA, SNC)",
       "category": "environment",
       "operator": "Rideau Valley, Mississippi Valley and South Nation Conservation Authorities",
-      "urls": ["https://www.rvca.ca/", "https://mvc.on.ca/", "https://www.nation.on.ca/"],
-      "access": ["html", "bulk"],
-      "description": "Three authorities cover Ottawa's watersheds. Each publishes floodplain mapping, watershed report cards and regulated-area layers: the binding constraint on much development, and often absent from city-only datasets.",
+      "urls": ["https://www.rvca.ca/", "https://mvc.on.ca/", "https://www.nation.on.ca/", "https://gis.rvca.ca/geoportal", "https://rvcagis.github.io/jkan/"],
+      "access": ["html", "bulk", "api"],
+      "description": "Three authorities cover Ottawa's watersheds. Each publishes floodplain mapping, watershed report cards and regulated-area layers: the binding constraint on much development, and often absent from city-only datasets. Survey 2026-10-16: RVCA runs a 34-dataset JKAN portal (rvcagis.github.io/jkan) and an ArcGIS REST geoportal, including the O.Reg 174/06 regulation-limit layer (503 features); this makes access api as well as bulk.",
       "verify": true,
       "verify_note": "Individual authority URLs were not confirmed in search results."
     },
@@ -536,9 +536,9 @@
       "name": "Trees, parks and green space",
       "category": "environment",
       "operator": "City of Ottawa",
-      "urls": ["https://open.ottawa.ca/"],
+      "urls": ["https://open.ottawa.ca/", "https://maps.ottawa.ca/arcgis/rest/services/Forestry/MapServer/0"],
       "access": ["api", "bulk"],
-      "description": "Tree inventory, forest cover, park and facility locations, sports fields, as spatial layers with GeoJSON endpoints.",
+      "description": "Tree inventory, forest cover, park and facility locations, sports fields, as spatial layers with GeoJSON endpoints. Survey 2026-10-16: the tree inventory is Forestry/MapServer layer 0 (304,207 points, keyless), not yet in the warehouse.",
       "verify": false
     },
     {
@@ -588,7 +588,7 @@
       "operator": "Ottawa Neighbourhood Study",
       "urls": ["https://www.neighbourhoodstudy.ca/", "https://ons-sqo.ca/data-stories/", "https://ons-sqo.ca/wp-json/ons/v1/get-data/data"],
       "access": ["bulk", "api"],
-      "description": "Over 300 indicators per neighbourhood: demographics, socioeconomic conditions, housing, amenities, built environment, health. Custom boundaries built from census tracts plus fieldwork and stakeholder consultation. Layers also published to Open Ottawa. The richest small-area dataset for Ottawa. Survey 2026-10-16: open JSON API with 884 indicator rows across 116 neighbourhoods plus city total, and metadata for 386 indicators; lead with ons-sqo.ca, since neighbourhoodstudy.ca redirects there.",
+      "description": "Over 300 indicators per neighbourhood: demographics, socioeconomic conditions, housing, amenities, built environment, health. Custom boundaries built from census tracts plus fieldwork and stakeholder consultation. Layers also published to Open Ottawa. The richest small-area dataset for Ottawa. Survey 2026-10-16: open JSON API with 884 indicator rows across 116 neighbourhoods plus city total, and metadata for 386 indicators; lead with ons-sqo.ca, since neighbourhoodstudy.ca redirects there. Survey 2026-10-16: the neighbourhoods endpoint returns {columns: 5 names, rows: 116 neighbourhoods each with name, a blank, and polygon bounds + lat/lng vertices}; indicator values come from get-data/data.",
       "verify": false
     },
     {
