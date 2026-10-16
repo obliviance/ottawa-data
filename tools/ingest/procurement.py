@@ -100,6 +100,9 @@ def find_releases() -> list[dict]:
     found = []
     for dataset_id, meta in items:
         title = meta.get("title", "")
+        if not (warehouse.WH / meta.get("parquet", f"{dataset_id}.parquet")).exists():
+            print(f"  skip {dataset_id}: in manifest but parquet absent (re-ingest it)")
+            continue
         if not IS_AWARD_RELEASE.search(f"{dataset_id} {title}"):
             continue
         year, half = parse_period(title, dataset_id)

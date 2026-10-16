@@ -55,6 +55,9 @@ tools/
 verification/         machine-written records — DO NOT hand-edit
   verification*.json · snapshots.json
 warehouse/            DuckDB + Parquet — GITIGNORED except manifest.json (rebuild via ingesters)
+                      NOTE: `manifest.json` lists every dataset ever ingested (~352), but the default
+                      `arcgis_hub.py` run rebuilds only ~321; the rest need their own ingesters (police and
+                      riverkeeper hubs, CKAN, elections, devapps sample, spine, derived).
 catalog/              generated tearsheets, one per warehouse dataset
 questions/backlog.csv the running investigation list
 spine/                geography / timeline / entities reference tables (build first)

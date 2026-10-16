@@ -97,6 +97,14 @@ def _register_zip_csvs(did: str, zippath: pathlib.Path, source_id, title, origin
     return total
 
 
+def _is_pending_stub(path: pathlib.Path) -> bool:
+    """The Hub answers a first export request with a small JSON body
+    {"message": "Up to date download file is being generated...", "status": "Pending"}
+    instead of data; saving it as the table yields a one-row stub."""
+    head = path.read_bytes()[:600].decode("utf-8", "ignore")
+    return path.stat().st_size < 600 and '"status"' in head and "Pending" in head
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--hub", default="open.ottawa.ca")
@@ -147,7 +155,13 @@ def main() -> None:
                 fmt, url = pick
                 with tempfile.NamedTemporaryFile(suffix=f".{fmt}", delete=False) as tf:
                     tmp = pathlib.Path(tf.name)
-                download(url, tmp, max_bytes=int(args.max_mb * 1e6))
+                for attempt in range(4):
+                    download(url, tmp, max_bytes=int(args.max_mb * 1e6))
+                    if not _is_pending_stub(tmp):
+                        break
+                    time.sleep(5 * (attempt + 1))  # Hub is still generating the export file
+                else:
+                    raise ValueError("Hub export still pending after retries (stub, not data)")
                 warehouse.register(did, tmp, source_id=args.source_id, shape="arcgis-hub",
                                    title=title, origin_url=origin, notes=f"{fmt} · licence: {lic}")
             elif api.lower().split("?")[0].endswith(".zip"):  # mislabelled: it's a zip of CSVs
