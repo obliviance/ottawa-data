@@ -69,7 +69,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Corporate & strategic plans, term-of-council priorities | 🟡 PDF | — |
 | Annual reports (2020–2024 online) | 🟡 PDF | `[financial-reports]` |
 | Performance / service-standard reporting (City Scorecard etc.) | ⚪ historically intermittent | — |
-| Collective agreements (CUPE 503, ATU 279, IAFF, OPSEU, etc.) | 🟡 / 🔴 some tabled, some by request | — |
+| Collective agreements (CUPE 503, ATU 279, IAFF, OPSEU, etc.) | 🟡 / 🔴 some tabled, some by request (cupe503.com and cupe503.ca both fail the browser TLS check; the 2020-2024 award was arbitrated; ottawa.cupe.ca is the district council; search 2026-10-16) | — |
 | Workforce / staffing / diversity data | 🟡 aggregate in annual reports; unit data 🔴 | — |
 | Directives, policies, administrative procedures | 🟡 selective HTML; full set 🔴 by request | — |
 
@@ -297,11 +297,11 @@ with an open verify-flag, `—` = not yet catalogued.
 | Business Improvement Areas (~19, each a local board) | Individual budgets, levies, board minutes, AGMs | 🟡 / 🔴 varies wildly by BIA | — |
 | ByWard Market District Authority (Municipal Services Corp., est. 14 Jun 2023) | Manages ByWard + Parkdale public markets; annual report to Council; vendor/stall data | 🟡 annual report; operational data 🔴 | — |
 | Crime Prevention Ottawa | Research reports, community-safety data syntheses | 🟡 PDF | — |
-| Ottawa Community Lands Development Corp. (OCLDC) | Municipal land development (e.g. Greystone, Rochester) | 🟡 / 🔴 project pages | — |
+| Ottawa Community Lands Development Corp. (OCLDC) | Municipal land development (e.g. Greystone, Rochester) | 🟡 / 🔴 project pages (renamed "Build Ottawa" with an affordable-housing mandate per a committee recommendation; no official site found; search 2026-10-16) | — |
 | Election Compliance Audit Committee | Campaign-finance audit applications & decisions | ⚪ tabled, not indexed | — |
 | Property Standards & Licence Appeal committees | Appeal decisions | 🔴 / ⚪ | — |
 | Debenture Committee / Audit Committee | Debt issuance, audit workplan | 🟡 eScribe | — |
-| Pineview Municipal Golf Club | Board records, financials | 🔴 / ⚪ | — |
+| Pineview Municipal Golf Club | Board records, financials | 🔴 / ⚪ (operating: pineview.com is live (36 holes, 1471 Blair Rd), so "possibly gone" was wrong; no board or financial records located; search 2026-10-16) | — |
 | Rural clean-water / drainage boards | See A14 | 🔴 | — |
 
 ---
@@ -444,11 +444,11 @@ with an open verify-flag, `—` = not yet catalogued.
 | Ecology Ottawa | Climate, trees, active transport campaigns; canvassing data | 🟡 / 🔴 |
 | Bike Ottawa | Cycling advocacy; **PODS** (bike-network stress map), collision/"ninja" map | 🟢 open map layers (bikeottawa.ca works only at the apex (www has a bad certificate); browser-checked 2026-10-16) |
 | Healthy Transportation Coalition / Free Transit Ottawa | Transit-equity advocacy | 🟡 |
-| People's Official Plan | Grassroots planning critique | 🟡 |
+| People's Official Plan | Grassroots planning critique | 🟡 (a 2019-2021 coalition critiquing the 2021 Official Plan; no standing site found, material survives in news and community-association pages; search 2026-10-16) |
 | Federation of Citizens' Associations (FCA) | Umbrella for ~65 community associations | 🟡 |
 | Community & tenants' associations (100+) | Hyperlocal newsletters, development positions, traffic petitions | 🟡 / 🔴 scattered, ephemeral |
 | Council on Aging of Ottawa | Seniors' policy research | 🟡 PDF |
-| Ottawa Poverty Reduction Network / Make Poverty History | Income & social-policy monitoring | 🟡 |
+| Ottawa Poverty Reduction Network / Make Poverty History | Income & social-policy monitoring | 🟡 (own site not found; 2008 report archived in City Council documents; Social Planning Council (spcottawa.on.ca, live) was a member; search 2026-10-16) |
 | Greater Ottawa Home Builders' Association (GOHBA) | Industry positions, permit/starts commentary | 🟡 / 🔴 |
 | Ottawa Riverkeeper | Independent watershed monitoring, own ArcGIS Hub | 🟢 API + bulk — `[riverkeeper]` |
 | Environmental Defence / other national ENGOs (local files) | Campaign-specific analysis | 🟡 |
@@ -504,7 +504,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Body | What it holds | Status |
 | --- | --- | --- |
 | Ottawa Insights | Themed community indicators (environment, economy, wellbeing) drawn from city/health/social data | 🟡 web narratives — `[ottawa-insights]` |
-| Ottawa Community Foundation — Vital Signs | Periodic community check-up report | 🟡 PDF |
+| Ottawa Community Foundation — Vital Signs | Periodic community check-up report | 🟡 PDF (Ottawa-specific Vital Signs ran 2006-2010; successor is Ottawa Insights, ottawainsights.ca, live, themed indicators; ocf-fco.ca live; search 2026-10-16) |
 | United Way East Ontario | Community-need data, funded-agency outcomes | 🟡 |
 | Ottawa Food Bank — Hunger Report | Food-insecurity volume & demographics | 🟡 PDF |
 | Community Data Program (CCSD consortium) | Custom StatCan tabulations; Ottawa-region catalogue | 🔴 members-only (catalogue visible) — `[community-data-program]` |
