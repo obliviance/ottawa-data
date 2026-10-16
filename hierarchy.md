@@ -65,9 +65,9 @@ with an open verify-flag, `—` = not yet catalogued.
 
 | Source | Status | Catalogue |
 | --- | --- | --- |
-| Departmental structure / org charts | 🟡 HTML | — |
-| Corporate & strategic plans, term-of-council priorities | 🟡 PDF | — |
-| Annual reports (2020–2024 online) | 🟡 PDF | `[financial-reports]` |
+| Departmental structure / org charts | 🟡 HTML (page confirmed: /en/city-hall/city-manager-administration-and-policies/organizational-structure; browser-crawled 2026-10-16) | — |
+| Corporate & strategic plans, term-of-council priorities | 🟡 PDF (page confirmed: 2023-2026 City Strategic Plan under budget-finance-and-corporate-planning/understanding-your-city-budget/corporate-planning; browser-crawled 2026-10-16) | — |
+| Annual reports (2020–2024 online) | 🟡 PDF (confirmed: 2020-2024 annual report pages under budget-finance-and-corporate-planning/annual-reports; browser-crawled 2026-10-16) | `[financial-reports]` |
 | Performance / service-standard reporting (City Scorecard etc.) | ⚪ historically intermittent | — |
 | Collective agreements (CUPE 503, ATU 279, IAFF, OPSEU, etc.) | 🟡 / 🔴 some tabled, some by request (cupe503.com and cupe503.ca both fail the browser TLS check; the 2020-2024 award was arbitrated; ottawa.cupe.ca is the district council; search 2026-10-16) | — |
 | Workforce / staffing / diversity data | 🟡 aggregate in annual reports; unit data 🔴 | — |
@@ -78,7 +78,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Source | Status | Catalogue |
 | --- | --- | --- |
 | Budgets — draft, tabled, adopted (2022–present) | 🟡 line-item detail is PDF; some series mirrored to Open Ottawa | `[budget-documents]` |
-| Audited annual financial statements / ACFR | 🟡 PDF | `[financial-reports]` |
+| Audited annual financial statements / ACFR | 🟡 PDF (confirmed: annual-financial-statements page under financial-reports-and-statements; browser-crawled 2026-10-16) | `[financial-reports]` |
 | Quarterly operating & capital budget status reports | 🟡 PDF, actual-vs-budget by department | `[financial-reports]` |
 | Financial Information Return (province-wide schema, back to 1977) | 🟢 bulk; the one clean cross-municipality benchmark | `[fir]` |
 | **Vendor / supplier payment disclosure** (who got paid, how much) | 🔴 not published | — |
@@ -88,9 +88,9 @@ with an open verify-flag, `—` = not yet catalogued.
 | Development charges — rates, background studies, reserve balances | 🟡 PDF | — |
 | Reserve funds, debt, long-range financial plan | 🟡 PDF | — |
 | Asset management plan (O. Reg. 588/17) | 🟡 PDF; some condition data spatial | — |
-| Property tax rates, ratios, levy by class | 🟡 HTML / by-law | — |
+| Property tax rates, ratios, levy by class | 🟡 HTML / by-law (confirmed: tax-policy section has tax classes, ratios, distribution by class and taxes by ward pages; browser-crawled 2026-10-16) | — |
 | User-fee schedule | 🟡 by-law annex | — |
-| Grants & contributions (community, recreation, cultural funding) | 🟡 recipient lists in committee reports | — |
+| Grants & contributions (community, recreation, cultural funding) | 🟡 recipient lists in committee reports (confirmed: funding section with community, cultural, economic-development and environmental pages plus a grants-and-contributions policy and notice; browser-crawled 2026-10-16) | — |
 | Investment holdings / ONE Investment | 🟡 in financial statements | — |
 
 ### A5. Accountability & oversight offices
@@ -100,7 +100,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Office of the Auditor General — performance / financial / compliance audits | 🟡 standalone site, PDF reports | `[auditor-general]` |
 | Fraud & Waste Hotline annual reports | 🟡 PDF via OAG | — |
 | Integrity Commissioner — inquiry reports, advice, codes of conduct | 🟡 HTML / PDF | `[integrity-commissioner]` |
-| Meetings Investigator (closed-meeting investigations) | 🟡 report-by-report | `[integrity-commissioner]` |
+| Meetings Investigator (closed-meeting investigations) | 🟡 report-by-report (confirmed: dedicated Meetings Investigator page under open-transparent-and-accountable-government; browser-crawled 2026-10-16) | `[integrity-commissioner]` |
 | MFIPPA disclosure log (completed FOI requests of public interest) | 🟡 quarterly HTML list; records themselves 🔴 by request number | `[mfippa-disclosure]` |
 | MFIPPA access-request form / statistics | 🔴 / 🟡 annual stats to IPC only | `[mfippa-disclosure]` |
 | Members' office expense disclosure (monthly) | 🟡 HTML tables | `[office-expenses]` |
@@ -154,7 +154,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Road construction / closures / lane occupancy permits | 🟡 map feed | — |
 | Transportation Master Plan, Vision Zero, Complete Streets | 🟡 PDF | — |
 | Traffic-calming program pipeline & rankings | 🟡 PDF | — |
-| Speed limit / school zone / community safety zone layers | 🟢 likely spatial | — |
+| Speed limit / school zone / community safety zone layers | 🟡 not found as a layer: no match in the Open Ottawa feed or in any of the 77 maps.ottawa.ca MapServers (checked 2026-10-16); road centrelines carry no speed field | — |
 
 ### A9. Public safety & protective services
 
@@ -294,7 +294,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Hydro Ottawa Holding Inc. (Hydro Ottawa Ltd., Envari, Portage Power) | Distribution performance, rate applications, annual report, outage map | 🟢 live outage map; 🟡 OEB rate filings; no open-data programme surfaced | `[hydro-ottawa] ⚑` |
 | Committee of Adjustment | Minor-variance & consent decisions — see A7 | 🟢 CanLII | `[committee-of-adjustment]` |
 | Built Heritage Committee | Heritage designations & permits — see A7 | 🟡 eScribe | — |
-| Business Improvement Areas (~19, each a local board) | Individual budgets, levies, board minutes, AGMs | 🟡 / 🔴 varies wildly by BIA | — |
+| Business Improvement Areas (~19, each a local board) | Individual budgets, levies, board minutes, AGMs | 🟡 / 🔴 varies wildly by BIA (confirmed: city page business/economic-development-services/business-improvement-areas exists; browser-crawled 2026-10-16) | — |
 | ByWard Market District Authority (Municipal Services Corp., est. 14 Jun 2023) | Manages ByWard + Parkdale public markets; annual report to Council; vendor/stall data | 🟡 annual report; operational data 🔴 | — |
 | Crime Prevention Ottawa | Research reports, community-safety data syntheses | 🟡 PDF | — |
 | Ottawa Community Lands Development Corp. (OCLDC) | Municipal land development (e.g. Greystone, Rochester) | 🟡 / 🔴 project pages (renamed "Build Ottawa" with an affordable-housing mandate per a committee recommendation; no official site found; search 2026-10-16) | — |
