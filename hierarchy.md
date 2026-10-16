@@ -82,7 +82,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Quarterly operating & capital budget status reports | 🟡 PDF, actual-vs-budget by department | `[financial-reports]` |
 | Financial Information Return (province-wide schema, back to 1977) | 🟢 bulk; the one clean cross-municipality benchmark | `[fir]` |
 | **Vendor / supplier payment disclosure** (who got paid, how much) | 🔴 not published | — |
-| **Contract award register** (winner, value, amendments, sole-source) | 🔴 / ⚪ not published as data | — |
+| **Contract award register** (winner, value, amendments, sole-source) | 🟢 superseded: half-yearly award CSVs on Open Ottawa (see next row) | `[procurement]` |
 | Bid opportunities / tenders | 🟡 posted to a third-party e-tendering platform + Ottawa Construction Association bulletin; platform identity still needs confirming | `[procurement] ⚑` |
 | Contract awards (>$25k and delegated authority) | 🟢 half-yearly CSV on Open Ottawa, all-departments + Transit Commission streams — 5,648 awards / $5.97B since 2022 H2; normalised by `tools/ingest/procurement.py` | `[procurement]` |
 | Development charges — rates, background studies, reserve balances | 🟡 PDF | — |
@@ -148,7 +148,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Traffic collision data (all reportable, incl. PDO) — CSV + shapefile | 🟢 | `[collisions]` |
 | Fatal & major-injury collision detail / Road Safety Action Plan | 🟡 PDF + dataset | `[collisions]` |
 | Automated speed enforcement — monthly charges & speeds by camera | 🟢 bulk | `[automated-speed-enforcement]` |
-| Red-light camera data | ⚪ likely similar to ASE | — |
+| Red-light camera data | 🟢 locations + violations datasets on Open Ottawa (13 titles, CSV + GeoServices; verified against the DCAT feed 2026-10-16) | — |
 | Traffic counts / volumes / turning-movement counts | 🟡 some on portal, patchy | — |
 | Parking — on-street inventory, garages, permits, ticket/enforcement volumes | 🟡 / 🔴 ticket data by request | — |
 | Road construction / closures / lane occupancy permits | 🟡 map feed | — |
@@ -192,7 +192,7 @@ with an open verify-flag, `—` = not yet catalogued.
 | Immunization coverage (school / COVID) | 🟡 dashboard | `[ottawa-public-health]` |
 | City-run long-term care homes (4) — occupancy, inspections, quality | 🟡 provincial inspection reports; city ops data 🔴 | — |
 | Child care — subsidy caseload, licensed spaces, wait list, registry | 🟡 / 🔴 | — |
-| Ontario Works / social-assistance caseload | 🟡 aggregate; provincial | — |
+| Ontario Works / social-assistance caseload | 🟢 city caseload 2020-2025 on Open Ottawa (CSV); provincial aggregates elsewhere | — |
 | Housing Services — community housing portfolio, RGI, rent supplement | 🟡 in reports | `[housing-homelessness]` |
 | Centralized social-housing wait list (Social Housing Registry) | 🟡 annual figures in reports; unit data 🔴 | `[social-housing-registry]` |
 | Homelessness — shelter occupancy, HIFIS, coordinated access, point-in-time counts | 🟡 dashboards + periodic PDF counts | `[housing-homelessness]` |
@@ -476,7 +476,7 @@ with an open verify-flag, `—` = not yet catalogued.
 
 | Project | What it does | Status |
 | --- | --- | --- |
-| OttWatch | Scrapes ottawa.ca + eScribe for new documents; mirrors lobbyist registry; tracks open-data publications; own dev-app index | 🔴 **502 as of 2026-09-15** (root and /announcement/index; `v1.ottwatch.ca` does not resolve) — `[ottwatch] ⚑` |
+| OttWatch | Scrapes ottawa.ca + eScribe for new documents; mirrors lobbyist registry; tracks open-data publications; own dev-app index | 🟢 **live again** (re-checked 2026-10-16: `/` and RSS 200; the 2026-09-15 502 cleared; `v1.ottwatch.ca` still does not resolve); keyless RSS, no JSON API — `[ottwatch] ⚑` |
 | Horizon Ottawa Vote Tracker | Hand-keyed councillor votes 2022–26 | 🟡 — `[horizon-vote-tracker]` |
 | How They Voted (howtheyvoted.ca) | Dedicated Ottawa voting-record site | 🟢 ships the compiled record as JSON at `/data/ottawa/*.json`, verified current — `[howtheyvoted]` (site terms, not open data) |
 | ACORN housing-vote scorecard | Issue-specific vote compilation | 🟡 — `[acorn-voting-records]` |
