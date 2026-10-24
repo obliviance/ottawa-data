@@ -35,8 +35,8 @@
       "operator": "City of Ottawa",
       "urls": ["https://open.ottawa.ca/", "https://ouverte.ottawa.ca/", "https://open.ottawa.ca/pages/developer-resources"],
       "access": ["api", "bulk"],
-      "licence": "Open Government Licence",
-      "description": "The city's ArcGIS Hub catalogue. Every dataset exposes GeoService and GeoJSON endpoints alongside CSV, shapefile and KML download.",
+      "licence": "Open Data licence v2.0 (city nav); some pages still say Open Government Licence",
+      "description": "The city's ArcGIS Hub catalogue. Datasets with a download expose GeoService and GeoJSON endpoints alongside CSV, shapefile and KML. Survey 2026-10-16: the DCAT feed (open.ottawa.ca/api/feed/dcat-us/1.1.json) lists 703 items: 288 with a CSV/GeoJSON/zip download and a real REST endpoint, 291 \"documents\" (spreadsheets and PDFs fetched by item id at arcgis.com/sharing/rest/content/items/<id>/data), 58 datasets and 46 apps with no download, and 76 items labelled GeoServices whose link is an ordinary HTML page. 443 items cite \"Open Data licence version 2.0\"; about 99 link the policy page and 39 have no licence.",
       "verify": false
     },
     {

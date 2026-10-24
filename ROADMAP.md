@@ -40,6 +40,9 @@ tearsheet land in `releases/`.
       `procurement_awards` table; discovers new drops by pattern, not a hard-coded list
 - [x] `ingest/elections.py` — the 2026 candidate roster from the elections.ottawa.ca
       JSON web service; 181 candidates, plus a derived trustee zone→ward crosswalk
+- [x] `ingest/arcgis_layers.py` — named Feature/MapServer layers (OPS 1.9M rows, trees, roads, RVCA)
+- [x] `ingest/arcgis_documents.py` — Open Ottawa xlsx/csv *document* items (inventory + 291 tables)
+- [x] `ingest/ons.py`, `ingest/sunshine.py` (2021-25), `ingest/fir.py` (2000-25, Ottawa + peers)
 - [ ] `ingest/pdf_tables.py` — generic pdfplumber tables + text index (escribe, budgets, AG)
 - [ ] per-source HTML parsers — office-expenses, lobbyist registry, campaign finance,
       candidate list, drinking water, school boards (each ~1–4h; see `samples/<id>/README.md`)
@@ -57,8 +60,8 @@ tearsheet land in `releases/`.
 
 | Shape | Sources (catalogue ids) | Ingester | Status |
 | --- | --- | --- | --- |
-| **ArcGIS Hub** (~690 datasets behind 12 ids) | `open-ottawa` `ops-data-portal` `crime-map` `collisions` `road-network` `trees-parks` `recreation` `fire-paramedic` `election-results-history` `ncc` `riverkeeper` `open311` + `arcgis-rest-root` `geoottawa` `historical-imagery` | `arcgis_hub.py` | ✅ **288 datasets** (open.ottawa 273 · police 11 · riverkeeper 4); ~400 more expose only a GeoServices API — pending |
-| **CKAN** | `data-ontario` `open-canada` `fir` (+ `sunshine-list` `statcan-census` live here too) | `ckan.py` | ◐ 4 datasets (PSSD 2013/2015, Ontario funding). **FIR resource on data.ontario.ca is a mislabelled HTML link → use the EFIS portal.** open.canada / statcan: pending targeted queries |
+| **ArcGIS Hub** (~690 datasets behind 12 ids) | `open-ottawa` `ops-data-portal` `crime-map` `collisions` `road-network` `trees-parks` `recreation` `fire-paramedic` `election-results-history` `ncc` `riverkeeper` `open311` + `arcgis-rest-root` `geoottawa` `historical-imagery` | `arcgis_hub.py` | ✅ **288 datasets** (open.ottawa 273 · police 11 · riverkeeper 4); the other 414 items are documents/apps/pages: **291 tabular documents landed** by `arcgis_documents.py` (the "~400 API-only" estimate was wrong — see Log 2026-10-24) |
+| **CKAN** | `data-ontario` `open-canada` `fir` (+ `sunshine-list` `statcan-census` live here too) | `ckan.py` | ◐ CKAN: 4 datasets (PSSD 2013/2015, Ontario funding). **FIR → EFIS zips (`fir.py`, done); Sunshine List 2021-25 → ontario.ca manifest (`sunshine.py`, done).** open.canada / statcan: pending targeted queries (statcan WDS API is open) |
 | **Rolling CSV** | `automated-speed-enforcement` `open311` | `rolling_csv.py` | ✅ 311 current (266k) + last year (372k); ASE is on the ArcGIS hub |
 | **JSON API / feed** | `howtheyvoted` `devapps` `engage-ottawa` `escribe` `octranspo-gtfs` `traffic-ottawa` | per-source | ◐ **howtheyvoted done** (612 meetings, 7,621 motions, 6,374 recorded votes since 2022). devapps/engage need browser-assisted extraction; escribe/GTFS pending |
 | **PDF corpus** | `escribe` `budget-documents` `financial-reports` `auditor-general` `drinking-water` `official-plan` | `pdf_tables.py` | ☐ tool not built |
@@ -219,3 +222,62 @@ tearsheet land in `releases/`.
   **Then:** q0004 (ASE equity), q0016 (collisions), a 311 map; the per-source HTML parsers
   by backlog value. Before picking, re-score the `f2` backlog rows — q0002 shows the
   feasibility scores were guessed before the sweep landed and may be wrong elsewhere too.
+
+- **2026-10-24 (survey closed out)** — `explorations/survey/survey-log.md` passes 1-5 have the detail.
+  - Applied the verified catalogue corrections (tags, URLs, stale OttWatch note, dead Open311 `api`,
+    retired zoning service, FIR/Sunshine locations, OPS portal and road/forestry/RVCA endpoints).
+  - **Landed ~1.9M police rows, the tree inventory, ONS indicators, Sunshine 2021-25, FIR 2000-25, RVCA
+    hazard layers and 291 Open Ottawa document tables** (warehouse manifest now ~1,460 datasets).
+  - **Correction to this file:** the "~400 datasets expose only a GeoServices API" line was wrong.
+    Of the 703 DCAT items, 288 have a download + REST endpoint, 76 are mislabelled HTML links and the
+    rest are documents/apps/pages. Documents are reachable by item id (`arcgis_documents.py`).
+  - Tooling: Hub "Pending" stub detected; procurement skips absent releases; `verify.py` classes
+    Incapsula/Cloudflare shells as `botwall`, so ottawa.ca 200s no longer count as liveness.
+  - Backlog: duplicate `q0021` id fixed (the auto-generated row is now a new id), q0001/q0010 feasibility
+    2→3 and q0011 4→5 (data landed or located), eight survey-derived questions added.
+
+## Survey follow-ups and parked tasks
+
+Collected from the survey sessions; none is started unless marked.
+
+**Needs a human (search / judgement)**
+- [ ] Confirm the ottawa.ca `hierarchy.md` rows the crawl could not reach: collective agreements,
+      development charges, reserves/debt, asset management plan, user-fee schedule, gift registry,
+      heritage register, Vision Zero / traffic calming, emergency management, urban design panel,
+      fraud hotline, hospitality/travel.
+- [ ] Confirm: Poverty Reduction Network (does it still exist?), a working CUPE 503 site
+      (cupe503.com/.ca fail TLS), whether council finalised "Build Ottawa" (ex-OCLDC), any current
+      People's Official Plan site.
+- [ ] Ask the City's open-data team for a 311 service-completion timestamp (q0021) and to correct
+      the 76 mislabelled "GeoServices" hub items and the Open Data licence v2.0 vs OGL wording.
+
+**Data / ingest**
+- [ ] Hub ingester coverage tests: the stub-detection and mislabelled-link guards have no tests.
+- [ ] Manifest strategy: `warehouse/manifest.json` is now ~1,460 entries (~800 KB) and is rewritten on
+      every `register()`; consider sharding it or keeping `doc_*` entries out of the committed copy.
+- [ ] One-command rebuild (`justfile`/`Makefile`) that runs every ingester in order, so a clone is
+      queryable. Today a fresh clone rebuilds only part of the manifest.
+- [ ] Three unparseable Open Ottawa documents (empty workbook, unknown Excel format, malformed CSV).
+- [ ] Documents over 25 MB, and the 58 dataset-type Open Ottawa items with neither a download nor a REST endpoint.
+- [ ] FIR 1977-1999 (not in the EFIS multi-year zips) and the non-peer municipalities (`--all`).
+- [ ] Catalogue the new endpoints that only appeared in stage 2: geoottawa vector-tile services.
+- [ ] Sunshine List: check whether Addendum rows overlap Compendium rows (e.g. 2024 has 1,462 addendum rows) before any per-person analysis.
+- [ ] Police traffic stops, calls and offences use different location encodings (see survey log);
+      add a `profile.py` column-meaning pass before any cross-dataset join.
+- [ ] Scheduled snapshots (traffic closures, devapps status dates, GTFS) so planned-vs-actual delay
+      can be measured. Nothing is archived today.
+- [ ] Lobbyist registry scraper (plain viewstate POSTs, back to 2012); eScribe meeting index back to
+      2012 (`spine_meetings` starts 2018); OttWatch meeting GUIDs join to howtheyvoted `meeting_id`.
+- [ ] howtheyvoted records only ~4.5% of motions; fill the rest from eScribe minutes or OttWatch.
+- [ ] Browser-driven `html_scrape.py`: ottawa.ca is behind Incapsula, so `urllib` parsers will not work
+      (`/opt/browse/browse.js` and stage 2 do).
+
+**Products**
+- [ ] "SimpleGov for Ottawa" MVP: councillor profiles, votes and a ward lookup (discussion only).
+- [ ] Targeted scans reusing the survey warehouse (project delays: ~1-2 h structured, a day+ with documents).
+- [ ] Police traffic-stop and calls-for-service analyses (new questions in the backlog).
+
+**Held on instruction (election work — do not start without a go-ahead)**
+- [ ] NEI × 311 service equity, voting-place accessibility, further 2022-margin follow-ups.
+- [ ] Merge `election-2026` into `main`, then rebase `survey-scan` (it contains the election commits).
+- [ ] Campaign finance and lobbying→approvals (q0001, q0014): wait for 2026 filings (~March 2027).
