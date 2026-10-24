@@ -50,7 +50,12 @@ def pick_distribution(dists: list[dict], title: str) -> tuple[str, str] | None:
 def geoservices_url(dists: list[dict]) -> str | None:
     for d in dists:
         if "geoservices" in (d.get("format") or "").lower():
-            return d.get("accessURL") or d.get("downloadURL")
+            url = d.get("accessURL") or d.get("downloadURL") or ""
+            # Dashboards/apps/documents are labelled "GeoServices" but link to an ordinary
+            # HTML page (51 JSONDecodeError failures in the 2026-10-16 survey). Real REST
+            # endpoints contain rest/services; a mislabelled zip is handled by the caller.
+            if "rest/services" in url or url.lower().split("?")[0].endswith(".zip"):
+                return url
     return None
 
 

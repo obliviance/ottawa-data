@@ -50,14 +50,18 @@ tools/
   warehouse.py        DuckDB + Parquet store: register() / con() / CLI
   profile.py          dataset -> catalog/<id>.md tearsheet + questions/backlog.csv rows
   ingest/             one ingester per source SHAPE (arcgis_hub.py, ckan.py, …)
+                      survey-era ingesters: arcgis_layers.py (named Feature/MapServer layers: OPS, trees,
+                      roads, RVCA), arcgis_documents.py (Open Ottawa xlsx/csv *document* items),
+                      ons.py (Neighbourhood Study API), sunshine.py (2021-25), fir.py (EFIS zips)
   _http.py            shared polite fetch helpers
   requirements.txt
 verification/         machine-written records — DO NOT hand-edit
   verification*.json · snapshots.json
 warehouse/            DuckDB + Parquet — GITIGNORED except manifest.json (rebuild via ingesters)
-                      NOTE: `manifest.json` lists every dataset ever ingested (~352), but the default
-                      `arcgis_hub.py` run rebuilds only ~321; the rest need their own ingesters (police and
-                      riverkeeper hubs, CKAN, elections, devapps sample, spine, derived).
+                      NOTE: `manifest.json` lists every dataset ever ingested (~1,460, 2026-10-24), but
+                      the default `arcgis_hub.py` run rebuilds only ~321. The rest need their own
+                      ingesters: arcgis_layers / arcgis_documents / ons / sunshine / fir (survey era),
+                      plus police and riverkeeper hubs, CKAN, elections, devapps sample, spine, derived.
 catalog/              generated tearsheets, one per warehouse dataset
 questions/backlog.csv the running investigation list
 spine/                geography / timeline / entities reference tables (build first)

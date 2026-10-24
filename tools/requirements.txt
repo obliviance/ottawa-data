@@ -12,4 +12,5 @@ duckdb>=1.1
 pandas>=2.0
 pyarrow>=14
 openpyxl>=3.1
+xlrd>=2.0.1          # legacy .xls Open Ottawa documents (arcgis_documents.py)
 pymupdf>=1.24

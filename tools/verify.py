@@ -146,6 +146,19 @@ def title_of(body: bytes) -> str | None:
     return t[:160] or None
 
 
+_BOTWALL = (b"_Incapsula_Resource", b"Pardon Our Interruption", b"Incapsula incident",
+            b"cf-browser-verification", b"Just a moment...", b"Attention Required! | Cloudflare")
+
+
+def looks_like_botwall(body: bytes, content_type: str) -> list[str]:
+    """A bot-challenge shell that answers HTTP 200. ottawa.ca (Imperva/Incapsula) serves a
+    ~1 KB one to every non-browser client, so a 200 there is not liveness evidence (found in
+    the 2026-10-16 survey: stage 0 had counted these as reachable_html)."""
+    if "html" not in content_type:
+        return []
+    return [f"bot-wall marker {m.decode()}" for m in _BOTWALL if m in body[:20000]][:1]
+
+
 def looks_like_spa(body: bytes, content_type: str) -> list[str]:
     if "html" not in content_type:
         return []
@@ -329,8 +342,13 @@ def fingerprint(url: str, r: dict) -> dict:
                 fp["kind"] = "machine-readable"
 
     if fp["kind"] in (None, "html") and "html" in ct and not is_note_host:
-        spa = looks_like_spa(r["body"], ct)
-        if spa:
+        wall = looks_like_botwall(r["body"], ct)
+        spa = wall or looks_like_spa(r["body"], ct)
+        if wall:
+            fp["kind"] = "botwall"
+            fp["needs_browser"] = True
+            fp["signals"] += wall
+        elif spa:
             fp["kind"] = "spa"
             fp["needs_browser"] = True
             fp["signals"] += spa
